@@ -1,0 +1,332 @@
+F:\STUDENT PROJECT\VEHICLE\VWMS\VWMS\bin\Debug\VWMS.exe.config
+F:\STUDENT PROJECT\VEHICLE\VWMS\VWMS\bin\Debug\VWMS.exe
+F:\STUDENT PROJECT\VEHICLE\VWMS\VWMS\bin\Debug\VWMS.pdb
+F:\STUDENT PROJECT\VEHICLE\VWMS\VWMS\bin\Debug\BL.dll
+F:\STUDENT PROJECT\VEHICLE\VWMS\VWMS\bin\Debug\BL.pdb
+F:\STUDENT PROJECT\VEHICLE\VWMS\VWMS\obj\Debug\VWMS.csprojResolveAssemblyReference.cache
+F:\STUDENT PROJECT\VEHICLE\VWMS\VWMS\obj\Debug\VWMS.ENTITY.FrmBrands.resources
+F:\STUDENT PROJECT\VEHICLE\VWMS\VWMS\obj\Debug\VWMS.ENTITY.FrmCustomers.resources
+F:\STUDENT PROJECT\VEHICLE\VWMS\VWMS\obj\Debug\VWMS.ENTITY.FrmItems.resources
+F:\STUDENT PROJECT\VEHICLE\VWMS\VWMS\obj\Debug\VWMS.ENTITY.FrmLabour.resources
+F:\STUDENT PROJECT\VEHICLE\VWMS\VWMS\obj\Debug\VWMS.ENTITY.FrmModels.resources
+F:\STUDENT PROJECT\VEHICLE\VWMS\VWMS\obj\Debug\VWMS.ENTITY.FrmTasks.resources
+F:\STUDENT PROJECT\VEHICLE\VWMS\VWMS\obj\Debug\VWMS.FrmLogin.resources
+F:\STUDENT PROJECT\VEHICLE\VWMS\VWMS\obj\Debug\VWMS.FrmMain.resources
+F:\STUDENT PROJECT\VEHICLE\VWMS\VWMS\obj\Debug\VWMS.Properties.Resources.resources
+F:\STUDENT PROJECT\VEHICLE\VWMS\VWMS\obj\Debug\VWMS.WS.FrmVehicle.resources
+F:\STUDENT PROJECT\VEHICLE\VWMS\VWMS\obj\Debug\VWMS.csproj.GenerateResource.Cache
+F:\STUDENT PROJECT\VEHICLE\VWMS\VWMS\obj\Debug\VWMS.exe
+F:\STUDENT PROJECT\VEHICLE\VWMS\VWMS\obj\Debug\VWMS.pdb
+F:\STUDENT PROJECTS\VWMS\VWMS\bin\Debug\VWMS.exe.config
+F:\STUDENT PROJECTS\VWMS\VWMS\obj\Debug\VWMS.exe
+F:\STUDENT PROJECTS\VWMS\VWMS\obj\Debug\VWMS.pdb
+F:\STUDENT PROJECTS\VWMS\VWMS\bin\Debug\VWMS.exe
+F:\STUDENT PROJECTS\VWMS\VWMS\bin\Debug\VWMS.pdb
+F:\STUDENT PROJECTS\VWMS\VWMS\bin\Debug\BL.dll
+F:\STUDENT PROJECTS\VWMS\VWMS\bin\Debug\BL.pdb
+F:\STUDENT PROJECTS\VWMS\VWMS\obj\Debug\VWMS.csprojResolveAssemblyReference.cache
+F:\STUDENT PROJECTS\VWMS\VWMS\obj\Debug\VWMS.ENTITY.FrmBrands.resources
+F:\STUDENT PROJECTS\VWMS\VWMS\obj\Debug\VWMS.ENTITY.FrmCustomers.resources
+F:\STUDENT PROJECTS\VWMS\VWMS\obj\Debug\VWMS.ENTITY.FrmItems.resources
+F:\STUDENT PROJECTS\VWMS\VWMS\obj\Debug\VWMS.ENTITY.FrmLabour.resources
+F:\STUDENT PROJECTS\VWMS\VWMS\obj\Debug\VWMS.ENTITY.FrmModels.resources
+F:\STUDENT PROJECTS\VWMS\VWMS\obj\Debug\VWMS.ENTITY.FrmTasks.resources
+F:\STUDENT PROJECTS\VWMS\VWMS\obj\Debug\VWMS.FrmLogin.resources
+F:\STUDENT PROJECTS\VWMS\VWMS\obj\Debug\VWMS.FrmMain.resources
+F:\STUDENT PROJECTS\VWMS\VWMS\obj\Debug\VWMS.Properties.Resources.resources
+F:\STUDENT PROJECTS\VWMS\VWMS\obj\Debug\VWMS.USER.FrmChangePassword.resources
+F:\STUDENT PROJECTS\VWMS\VWMS\obj\Debug\VWMS.USER.FrmUpdateUser.resources
+F:\STUDENT PROJECTS\VWMS\VWMS\obj\Debug\VWMS.WS.FrmVehicle.resources
+F:\STUDENT PROJECTS\VWMS\VWMS\obj\Debug\VWMS.csproj.GenerateResource.Cache
+F:\STUDENT PROJECT\2015\2015-07-10\VWMS\VWMS\bin\Debug\VWMS.exe.config
+F:\STUDENT PROJECT\2015\2015-07-10\VWMS\VWMS\obj\Debug\VWMS.exe
+F:\STUDENT PROJECT\2015\2015-07-10\VWMS\VWMS\obj\Debug\VWMS.pdb
+F:\STUDENT PROJECT\2015\2015-07-10\VWMS\VWMS\bin\Debug\VWMS.exe
+F:\STUDENT PROJECT\2015\2015-07-10\VWMS\VWMS\bin\Debug\VWMS.pdb
+F:\STUDENT PROJECT\2015\2015-07-10\VWMS\VWMS\bin\Debug\BL.dll
+F:\STUDENT PROJECT\2015\2015-07-10\VWMS\VWMS\bin\Debug\BL.pdb
+F:\STUDENT PROJECT\2015\2015-07-10\VWMS\VWMS\obj\Debug\VWMS.csprojResolveAssemblyReference.cache
+F:\STUDENT PROJECT\2015\2015-07-10\VWMS\VWMS\obj\Debug\VWMS.ENTITY.FrmBrands.resources
+F:\STUDENT PROJECT\2015\2015-07-10\VWMS\VWMS\obj\Debug\VWMS.ENTITY.FrmCustomers.resources
+F:\STUDENT PROJECT\2015\2015-07-10\VWMS\VWMS\obj\Debug\VWMS.ENTITY.FrmItems.resources
+F:\STUDENT PROJECT\2015\2015-07-10\VWMS\VWMS\obj\Debug\VWMS.ENTITY.FrmLabour.resources
+F:\STUDENT PROJECT\2015\2015-07-10\VWMS\VWMS\obj\Debug\VWMS.ENTITY.FrmModels.resources
+F:\STUDENT PROJECT\2015\2015-07-10\VWMS\VWMS\obj\Debug\VWMS.ENTITY.FrmTasks.resources
+F:\STUDENT PROJECT\2015\2015-07-10\VWMS\VWMS\obj\Debug\VWMS.FrmLogin.resources
+F:\STUDENT PROJECT\2015\2015-07-10\VWMS\VWMS\obj\Debug\VWMS.FrmMain.resources
+F:\STUDENT PROJECT\2015\2015-07-10\VWMS\VWMS\obj\Debug\VWMS.Properties.Resources.resources
+F:\STUDENT PROJECT\2015\2015-07-10\VWMS\VWMS\obj\Debug\VWMS.USER.FrmChangePassword.resources
+F:\STUDENT PROJECT\2015\2015-07-10\VWMS\VWMS\obj\Debug\VWMS.USER.FrmUpdateUser.resources
+F:\STUDENT PROJECT\2015\2015-07-10\VWMS\VWMS\obj\Debug\VWMS.csproj.GenerateResource.Cache
+F:\STUDENT PROJECT\2015\2015-07-10\VWMS\VWMS\obj\Debug\VWMS.ENTITY.FrmVehicle.resources
+F:\STUDENT PROJECT\2015\2015-07-10\VWMS\VWMS\obj\Debug\VWMS.WS.FRMWS.resources
+F:\STUDENT PROJECTS\VWMS\2\VWMS\VWMS\bin\Debug\VWMS.exe.config
+F:\STUDENT PROJECTS\VWMS\2\VWMS\VWMS\obj\Debug\VWMS.exe
+F:\STUDENT PROJECTS\VWMS\2\VWMS\VWMS\bin\Debug\VWMS.exe
+F:\STUDENT PROJECTS\VWMS\2\VWMS\VWMS\bin\Debug\VWMS.pdb
+F:\STUDENT PROJECTS\VWMS\2\VWMS\VWMS\bin\Debug\BL.dll
+F:\STUDENT PROJECTS\VWMS\2\VWMS\VWMS\bin\Debug\BL.pdb
+F:\STUDENT PROJECTS\VWMS\2\VWMS\VWMS\obj\Debug\VWMS.csprojResolveAssemblyReference.cache
+F:\STUDENT PROJECTS\VWMS\2\VWMS\VWMS\obj\Debug\VWMS.ENTITY.FrmBrands.resources
+F:\STUDENT PROJECTS\VWMS\2\VWMS\VWMS\obj\Debug\VWMS.ENTITY.FrmCustomers.resources
+F:\STUDENT PROJECTS\VWMS\2\VWMS\VWMS\obj\Debug\VWMS.ENTITY.FrmItems.resources
+F:\STUDENT PROJECTS\VWMS\2\VWMS\VWMS\obj\Debug\VWMS.ENTITY.FrmLabour.resources
+F:\STUDENT PROJECTS\VWMS\2\VWMS\VWMS\obj\Debug\VWMS.ENTITY.FrmModels.resources
+F:\STUDENT PROJECTS\VWMS\2\VWMS\VWMS\obj\Debug\VWMS.ENTITY.FrmTasks.resources
+F:\STUDENT PROJECTS\VWMS\2\VWMS\VWMS\obj\Debug\VWMS.ENTITY.FrmVehicle.resources
+F:\STUDENT PROJECTS\VWMS\2\VWMS\VWMS\obj\Debug\VWMS.FrmLogin.resources
+F:\STUDENT PROJECTS\VWMS\2\VWMS\VWMS\obj\Debug\VWMS.FrmMain.resources
+F:\STUDENT PROJECTS\VWMS\2\VWMS\VWMS\obj\Debug\VWMS.Properties.Resources.resources
+F:\STUDENT PROJECTS\VWMS\2\VWMS\VWMS\obj\Debug\VWMS.USER.FrmChangePassword.resources
+F:\STUDENT PROJECTS\VWMS\2\VWMS\VWMS\obj\Debug\VWMS.USER.FrmUpdateUser.resources
+F:\STUDENT PROJECTS\VWMS\2\VWMS\VWMS\obj\Debug\VWMS.WS.FRMWS.resources
+F:\STUDENT PROJECTS\VWMS\2\VWMS\VWMS\obj\Debug\VWMS.csproj.GenerateResource.Cache
+F:\STUDENT PROJECTS\VWMS\2\VWMS\VWMS\obj\Debug\VWMS.pdb
+F:\STUDENT PROJECTS\VWMS\2\VWMS\VWMS\obj\Debug\VWMS.INVENTORY.FrmInventoryProcess.resources
+F:\STUDENT PROJECT\VEHICLE\2\vmsss\VWMS\VWMS\bin\Debug\VWMS.exe.config
+F:\STUDENT PROJECT\VEHICLE\2\vmsss\VWMS\VWMS\obj\Debug\VWMS.exe
+F:\STUDENT PROJECT\VEHICLE\2\vmsss\VWMS\VWMS\obj\Debug\VWMS.pdb
+F:\STUDENT PROJECT\VEHICLE\2\vmsss\VWMS\VWMS\bin\Debug\VWMS.exe
+F:\STUDENT PROJECT\VEHICLE\2\vmsss\VWMS\VWMS\bin\Debug\VWMS.pdb
+F:\STUDENT PROJECT\VEHICLE\2\vmsss\VWMS\VWMS\bin\Debug\BL.dll
+F:\STUDENT PROJECT\VEHICLE\2\vmsss\VWMS\VWMS\bin\Debug\BL.pdb
+F:\STUDENT PROJECT\VEHICLE\2\vmsss\VWMS\VWMS\obj\Debug\VWMS.csprojResolveAssemblyReference.cache
+F:\STUDENT PROJECT\VEHICLE\2\vmsss\VWMS\VWMS\obj\Debug\VWMS.ENTITY.FrmBrands.resources
+F:\STUDENT PROJECT\VEHICLE\2\vmsss\VWMS\VWMS\obj\Debug\VWMS.ENTITY.FrmCustomers.resources
+F:\STUDENT PROJECT\VEHICLE\2\vmsss\VWMS\VWMS\obj\Debug\VWMS.ENTITY.FrmItems.resources
+F:\STUDENT PROJECT\VEHICLE\2\vmsss\VWMS\VWMS\obj\Debug\VWMS.ENTITY.FrmLabour.resources
+F:\STUDENT PROJECT\VEHICLE\2\vmsss\VWMS\VWMS\obj\Debug\VWMS.ENTITY.FrmModels.resources
+F:\STUDENT PROJECT\VEHICLE\2\vmsss\VWMS\VWMS\obj\Debug\VWMS.ENTITY.FrmTasks.resources
+F:\STUDENT PROJECT\VEHICLE\2\vmsss\VWMS\VWMS\obj\Debug\VWMS.ENTITY.FrmVehicle.resources
+F:\STUDENT PROJECT\VEHICLE\2\vmsss\VWMS\VWMS\obj\Debug\VWMS.FrmLogin.resources
+F:\STUDENT PROJECT\VEHICLE\2\vmsss\VWMS\VWMS\obj\Debug\VWMS.FrmMain.resources
+F:\STUDENT PROJECT\VEHICLE\2\vmsss\VWMS\VWMS\obj\Debug\VWMS.INVENTORY.FrmInventoryProcess.resources
+F:\STUDENT PROJECT\VEHICLE\2\vmsss\VWMS\VWMS\obj\Debug\VWMS.Properties.Resources.resources
+F:\STUDENT PROJECT\VEHICLE\2\vmsss\VWMS\VWMS\obj\Debug\VWMS.USER.FrmChangePassword.resources
+F:\STUDENT PROJECT\VEHICLE\2\vmsss\VWMS\VWMS\obj\Debug\VWMS.USER.FrmUpdateUser.resources
+F:\STUDENT PROJECT\VEHICLE\2\vmsss\VWMS\VWMS\obj\Debug\VWMS.WS.FRMWS.resources
+F:\STUDENT PROJECT\VEHICLE\2\vmsss\VWMS\VWMS\obj\Debug\VWMS.csproj.GenerateResource.Cache
+E:\CHARITHA\new vmsss\2\vmsss\VWMS\VWMS\bin\Debug\VWMS.exe.config
+E:\CHARITHA\new vmsss\2\vmsss\VWMS\VWMS\obj\Debug\VWMS.exe
+E:\CHARITHA\new vmsss\2\vmsss\VWMS\VWMS\obj\Debug\VWMS.pdb
+E:\CHARITHA\new vmsss\2\vmsss\VWMS\VWMS\bin\Debug\VWMS.exe
+E:\CHARITHA\new vmsss\2\vmsss\VWMS\VWMS\bin\Debug\VWMS.pdb
+E:\CHARITHA\new vmsss\2\vmsss\VWMS\VWMS\bin\Debug\BL.dll
+E:\CHARITHA\new vmsss\2\vmsss\VWMS\VWMS\bin\Debug\BL.pdb
+E:\CHARITHA\new vmsss\2\vmsss\VWMS\VWMS\obj\Debug\VWMS.csprojResolveAssemblyReference.cache
+E:\CHARITHA\new vmsss\2\vmsss\VWMS\VWMS\obj\Debug\VWMS.ENTITY.FrmBrands.resources
+E:\CHARITHA\new vmsss\2\vmsss\VWMS\VWMS\obj\Debug\VWMS.ENTITY.FrmCustomers.resources
+E:\CHARITHA\new vmsss\2\vmsss\VWMS\VWMS\obj\Debug\VWMS.ENTITY.FrmItems.resources
+E:\CHARITHA\new vmsss\2\vmsss\VWMS\VWMS\obj\Debug\VWMS.ENTITY.FrmLabour.resources
+E:\CHARITHA\new vmsss\2\vmsss\VWMS\VWMS\obj\Debug\VWMS.ENTITY.FrmModels.resources
+E:\CHARITHA\new vmsss\2\vmsss\VWMS\VWMS\obj\Debug\VWMS.ENTITY.FrmTasks.resources
+E:\CHARITHA\new vmsss\2\vmsss\VWMS\VWMS\obj\Debug\VWMS.ENTITY.FrmVehicle.resources
+E:\CHARITHA\new vmsss\2\vmsss\VWMS\VWMS\obj\Debug\VWMS.FrmLogin.resources
+E:\CHARITHA\new vmsss\2\vmsss\VWMS\VWMS\obj\Debug\VWMS.FrmMain.resources
+E:\CHARITHA\new vmsss\2\vmsss\VWMS\VWMS\obj\Debug\VWMS.INVENTORY.FrmInventoryProcess.resources
+E:\CHARITHA\new vmsss\2\vmsss\VWMS\VWMS\obj\Debug\VWMS.Properties.Resources.resources
+E:\CHARITHA\new vmsss\2\vmsss\VWMS\VWMS\obj\Debug\VWMS.USER.FrmChangePassword.resources
+E:\CHARITHA\new vmsss\2\vmsss\VWMS\VWMS\obj\Debug\VWMS.USER.FrmUpdateUser.resources
+E:\CHARITHA\new vmsss\2\vmsss\VWMS\VWMS\obj\Debug\VWMS.WS.FRMWS.resources
+E:\CHARITHA\new vmsss\2\vmsss\VWMS\VWMS\obj\Debug\VWMS.csproj.GenerateResource.Cache
+E:\CHARITHA\new vmsss\2\vmsss\VWMS\VWMS\obj\Debug\VWMS.REPORTING.FrmReport.resources
+F:\roshan\CHARITHA\new vmsss\2\vmsss\VWMS\VWMS\bin\Debug\VWMS.exe.config
+F:\roshan\CHARITHA\new vmsss\2\vmsss\VWMS\VWMS\obj\Debug\VWMS.csprojResolveAssemblyReference.cache
+F:\roshan\CHARITHA\new vmsss\2\vmsss\VWMS\VWMS\obj\Debug\VWMS.ENTITY.FrmBrands.resources
+F:\roshan\CHARITHA\new vmsss\2\vmsss\VWMS\VWMS\obj\Debug\VWMS.ENTITY.FrmCustomers.resources
+F:\roshan\CHARITHA\new vmsss\2\vmsss\VWMS\VWMS\obj\Debug\VWMS.ENTITY.FrmItems.resources
+F:\roshan\CHARITHA\new vmsss\2\vmsss\VWMS\VWMS\obj\Debug\VWMS.ENTITY.FrmLabour.resources
+F:\roshan\CHARITHA\new vmsss\2\vmsss\VWMS\VWMS\obj\Debug\VWMS.ENTITY.FrmModels.resources
+F:\roshan\CHARITHA\new vmsss\2\vmsss\VWMS\VWMS\obj\Debug\VWMS.ENTITY.FrmTasks.resources
+F:\roshan\CHARITHA\new vmsss\2\vmsss\VWMS\VWMS\obj\Debug\VWMS.ENTITY.FrmVehicle.resources
+F:\roshan\CHARITHA\new vmsss\2\vmsss\VWMS\VWMS\obj\Debug\VWMS.FrmLogin.resources
+F:\roshan\CHARITHA\new vmsss\2\vmsss\VWMS\VWMS\obj\Debug\VWMS.FrmMain.resources
+F:\roshan\CHARITHA\new vmsss\2\vmsss\VWMS\VWMS\obj\Debug\VWMS.INVENTORY.FrmInventoryProcess.resources
+F:\roshan\CHARITHA\new vmsss\2\vmsss\VWMS\VWMS\obj\Debug\VWMS.Properties.Resources.resources
+F:\roshan\CHARITHA\new vmsss\2\vmsss\VWMS\VWMS\obj\Debug\VWMS.REPORTING.FrmReport.resources
+F:\roshan\CHARITHA\new vmsss\2\vmsss\VWMS\VWMS\obj\Debug\VWMS.USER.FrmChangePassword.resources
+F:\roshan\CHARITHA\new vmsss\2\vmsss\VWMS\VWMS\obj\Debug\VWMS.USER.FrmUpdateUser.resources
+F:\roshan\CHARITHA\new vmsss\2\vmsss\VWMS\VWMS\obj\Debug\VWMS.WS.FRMWS.resources
+F:\roshan\CHARITHA\new vmsss\2\vmsss\VWMS\VWMS\obj\Debug\VWMS.csproj.GenerateResource.Cache
+F:\roshan\CHARITHA\new vmsss\2\vmsss\VWMS\VWMS\bin\Debug\VWMS.exe
+F:\roshan\CHARITHA\new vmsss\2\vmsss\VWMS\VWMS\bin\Debug\VWMS.pdb
+F:\roshan\CHARITHA\new vmsss\2\vmsss\VWMS\VWMS\bin\Debug\BL.dll
+F:\roshan\CHARITHA\new vmsss\2\vmsss\VWMS\VWMS\bin\Debug\BL.pdb
+F:\roshan\CHARITHA\new vmsss\2\vmsss\VWMS\VWMS\obj\Debug\VWMS.exe
+F:\roshan\CHARITHA\new vmsss\2\vmsss\VWMS\VWMS\obj\Debug\VWMS.pdb
+E:\Project\Dropbox\VehicleWorkshop\VWMS_02.08.2015\VWMS\VWMS\bin\Debug\VWMS.exe.config
+E:\Project\Dropbox\VehicleWorkshop\VWMS_02.08.2015\VWMS\VWMS\obj\Debug\VWMS.exe
+E:\Project\Dropbox\VehicleWorkshop\VWMS_02.08.2015\VWMS\VWMS\obj\Debug\VWMS.pdb
+E:\Project\Dropbox\VehicleWorkshop\VWMS_02.08.2015\VWMS\VWMS\obj\Debug\VWMS.csprojResolveAssemblyReference.cache
+E:\Project\Dropbox\VehicleWorkshop\VWMS_02.08.2015\VWMS\VWMS\obj\Debug\VWMS.ENTITY.FrmBrands.resources
+E:\Project\Dropbox\VehicleWorkshop\VWMS_02.08.2015\VWMS\VWMS\obj\Debug\VWMS.ENTITY.FrmCustomers.resources
+E:\Project\Dropbox\VehicleWorkshop\VWMS_02.08.2015\VWMS\VWMS\obj\Debug\VWMS.ENTITY.FrmItems.resources
+E:\Project\Dropbox\VehicleWorkshop\VWMS_02.08.2015\VWMS\VWMS\obj\Debug\VWMS.ENTITY.FrmLabour.resources
+E:\Project\Dropbox\VehicleWorkshop\VWMS_02.08.2015\VWMS\VWMS\obj\Debug\VWMS.ENTITY.FrmModels.resources
+E:\Project\Dropbox\VehicleWorkshop\VWMS_02.08.2015\VWMS\VWMS\obj\Debug\VWMS.ENTITY.FrmTasks.resources
+E:\Project\Dropbox\VehicleWorkshop\VWMS_02.08.2015\VWMS\VWMS\obj\Debug\VWMS.ENTITY.FrmVehicle.resources
+E:\Project\Dropbox\VehicleWorkshop\VWMS_02.08.2015\VWMS\VWMS\obj\Debug\VWMS.FrmLogin.resources
+E:\Project\Dropbox\VehicleWorkshop\VWMS_02.08.2015\VWMS\VWMS\obj\Debug\VWMS.FrmMain.resources
+E:\Project\Dropbox\VehicleWorkshop\VWMS_02.08.2015\VWMS\VWMS\obj\Debug\VWMS.INVENTORY.FrmInventoryProcess.resources
+E:\Project\Dropbox\VehicleWorkshop\VWMS_02.08.2015\VWMS\VWMS\obj\Debug\VWMS.Properties.Resources.resources
+E:\Project\Dropbox\VehicleWorkshop\VWMS_02.08.2015\VWMS\VWMS\obj\Debug\VWMS.REPORTING.FrmReport.resources
+E:\Project\Dropbox\VehicleWorkshop\VWMS_02.08.2015\VWMS\VWMS\obj\Debug\VWMS.USER.FrmChangePassword.resources
+E:\Project\Dropbox\VehicleWorkshop\VWMS_02.08.2015\VWMS\VWMS\obj\Debug\VWMS.USER.FrmUpdateUser.resources
+E:\Project\Dropbox\VehicleWorkshop\VWMS_02.08.2015\VWMS\VWMS\obj\Debug\VWMS.WS.FRMWS.resources
+E:\Project\Dropbox\VehicleWorkshop\VWMS_02.08.2015\VWMS\VWMS\obj\Debug\VWMS.csproj.GenerateResource.Cache
+E:\Project\Dropbox\VehicleWorkshop\VWMS_02.08.2015\VWMS\VWMS\bin\Debug\VWMS.exe
+E:\Project\Dropbox\VehicleWorkshop\VWMS_02.08.2015\VWMS\VWMS\bin\Debug\VWMS.pdb
+E:\Project\Dropbox\VehicleWorkshop\VWMS_02.08.2015\VWMS\VWMS\bin\Debug\BL.dll
+E:\Project\Dropbox\VehicleWorkshop\VWMS_02.08.2015\VWMS\VWMS\bin\Debug\BL.pdb
+F:\roshan\CHARITHA\version 2 charitha\VWMS\VWMS\VWMS\bin\Debug\VWMS.exe.config
+F:\roshan\CHARITHA\version 2 charitha\VWMS\VWMS\VWMS\bin\Debug\VWMS.exe
+F:\roshan\CHARITHA\version 2 charitha\VWMS\VWMS\VWMS\bin\Debug\VWMS.pdb
+F:\roshan\CHARITHA\version 2 charitha\VWMS\VWMS\VWMS\bin\Debug\BL.dll
+F:\roshan\CHARITHA\version 2 charitha\VWMS\VWMS\VWMS\bin\Debug\BL.pdb
+F:\roshan\CHARITHA\version 2 charitha\VWMS\VWMS\VWMS\obj\Debug\VWMS.csprojResolveAssemblyReference.cache
+F:\roshan\CHARITHA\version 2 charitha\VWMS\VWMS\VWMS\obj\Debug\VWMS.ENTITY.FrmBrands.resources
+F:\roshan\CHARITHA\version 2 charitha\VWMS\VWMS\VWMS\obj\Debug\VWMS.ENTITY.FrmCustomers.resources
+F:\roshan\CHARITHA\version 2 charitha\VWMS\VWMS\VWMS\obj\Debug\VWMS.ENTITY.FrmItems.resources
+F:\roshan\CHARITHA\version 2 charitha\VWMS\VWMS\VWMS\obj\Debug\VWMS.ENTITY.FrmLabour.resources
+F:\roshan\CHARITHA\version 2 charitha\VWMS\VWMS\VWMS\obj\Debug\VWMS.ENTITY.FrmModels.resources
+F:\roshan\CHARITHA\version 2 charitha\VWMS\VWMS\VWMS\obj\Debug\VWMS.ENTITY.FrmTasks.resources
+F:\roshan\CHARITHA\version 2 charitha\VWMS\VWMS\VWMS\obj\Debug\VWMS.ENTITY.FrmVehicle.resources
+F:\roshan\CHARITHA\version 2 charitha\VWMS\VWMS\VWMS\obj\Debug\VWMS.ENTITY.Reservation.resources
+F:\roshan\CHARITHA\version 2 charitha\VWMS\VWMS\VWMS\obj\Debug\VWMS.FrmLogin.resources
+F:\roshan\CHARITHA\version 2 charitha\VWMS\VWMS\VWMS\obj\Debug\VWMS.FrmMain.resources
+F:\roshan\CHARITHA\version 2 charitha\VWMS\VWMS\VWMS\obj\Debug\VWMS.INVENTORY.FrmInventoryProcess.resources
+F:\roshan\CHARITHA\version 2 charitha\VWMS\VWMS\VWMS\obj\Debug\VWMS.Properties.Resources.resources
+F:\roshan\CHARITHA\version 2 charitha\VWMS\VWMS\VWMS\obj\Debug\VWMS.REPORTING.FrmReport.resources
+F:\roshan\CHARITHA\version 2 charitha\VWMS\VWMS\VWMS\obj\Debug\VWMS.USER.FrmChangePassword.resources
+F:\roshan\CHARITHA\version 2 charitha\VWMS\VWMS\VWMS\obj\Debug\VWMS.USER.FrmUpdateUser.resources
+F:\roshan\CHARITHA\version 2 charitha\VWMS\VWMS\VWMS\obj\Debug\VWMS.WS.FRMWS.resources
+F:\roshan\CHARITHA\version 2 charitha\VWMS\VWMS\VWMS\obj\Debug\VWMS.csproj.GenerateResource.Cache
+F:\roshan\CHARITHA\version 2 charitha\VWMS\VWMS\VWMS\obj\Debug\VWMS.exe
+F:\roshan\CHARITHA\version 2 charitha\VWMS\VWMS\VWMS\obj\Debug\VWMS.pdb
+D:\APPLICATIONS\SOMMEE\VMS\VWMS\VWMS\VWMS\VWMS\bin\Debug\VWMS.exe.config
+D:\APPLICATIONS\SOMMEE\VMS\VWMS\VWMS\VWMS\VWMS\obj\Debug\VWMS.exe
+D:\APPLICATIONS\SOMMEE\VMS\VWMS\VWMS\VWMS\VWMS\obj\Debug\VWMS.pdb
+D:\APPLICATIONS\SOMMEE\VMS\VWMS\VWMS\VWMS\VWMS\obj\Debug\VWMS.csprojResolveAssemblyReference.cache
+D:\APPLICATIONS\SOMMEE\VMS\VWMS\VWMS\VWMS\VWMS\obj\Debug\VWMS.ENTITY.FrmBrands.resources
+D:\APPLICATIONS\SOMMEE\VMS\VWMS\VWMS\VWMS\VWMS\obj\Debug\VWMS.ENTITY.FrmCustomers.resources
+D:\APPLICATIONS\SOMMEE\VMS\VWMS\VWMS\VWMS\VWMS\obj\Debug\VWMS.ENTITY.FrmItems.resources
+D:\APPLICATIONS\SOMMEE\VMS\VWMS\VWMS\VWMS\VWMS\obj\Debug\VWMS.ENTITY.FrmLabour.resources
+D:\APPLICATIONS\SOMMEE\VMS\VWMS\VWMS\VWMS\VWMS\obj\Debug\VWMS.ENTITY.FrmModels.resources
+D:\APPLICATIONS\SOMMEE\VMS\VWMS\VWMS\VWMS\VWMS\obj\Debug\VWMS.ENTITY.FrmTasks.resources
+D:\APPLICATIONS\SOMMEE\VMS\VWMS\VWMS\VWMS\VWMS\obj\Debug\VWMS.ENTITY.FrmVehicle.resources
+D:\APPLICATIONS\SOMMEE\VMS\VWMS\VWMS\VWMS\VWMS\obj\Debug\VWMS.ENTITY.Reservation.resources
+D:\APPLICATIONS\SOMMEE\VMS\VWMS\VWMS\VWMS\VWMS\obj\Debug\VWMS.FrmLogin.resources
+D:\APPLICATIONS\SOMMEE\VMS\VWMS\VWMS\VWMS\VWMS\obj\Debug\VWMS.FrmMain.resources
+D:\APPLICATIONS\SOMMEE\VMS\VWMS\VWMS\VWMS\VWMS\obj\Debug\VWMS.INVENTORY.FrmInventoryProcess.resources
+D:\APPLICATIONS\SOMMEE\VMS\VWMS\VWMS\VWMS\VWMS\obj\Debug\VWMS.Properties.Resources.resources
+D:\APPLICATIONS\SOMMEE\VMS\VWMS\VWMS\VWMS\VWMS\obj\Debug\VWMS.REPORTING.FrmReport.resources
+D:\APPLICATIONS\SOMMEE\VMS\VWMS\VWMS\VWMS\VWMS\obj\Debug\VWMS.USER.FrmChangePassword.resources
+D:\APPLICATIONS\SOMMEE\VMS\VWMS\VWMS\VWMS\VWMS\obj\Debug\VWMS.USER.FrmUpdateUser.resources
+D:\APPLICATIONS\SOMMEE\VMS\VWMS\VWMS\VWMS\VWMS\obj\Debug\VWMS.WS.FRMWS.resources
+D:\APPLICATIONS\SOMMEE\VMS\VWMS\VWMS\VWMS\VWMS\obj\Debug\VWMS.csproj.GenerateResource.Cache
+D:\APPLICATIONS\SOMMEE\VMS\VWMS\VWMS\VWMS\VWMS\bin\Debug\VWMS.exe
+D:\APPLICATIONS\SOMMEE\VMS\VWMS\VWMS\VWMS\VWMS\bin\Debug\VWMS.pdb
+D:\APPLICATIONS\SOMMEE\VMS\VWMS\VWMS\VWMS\VWMS\bin\Debug\BL.dll
+D:\APPLICATIONS\SOMMEE\VMS\VWMS\VWMS\VWMS\VWMS\bin\Debug\CrystalDecisions.CrystalReports.Engine.dll
+D:\APPLICATIONS\SOMMEE\VMS\VWMS\VWMS\VWMS\VWMS\bin\Debug\CrystalDecisions.ReportSource.dll
+D:\APPLICATIONS\SOMMEE\VMS\VWMS\VWMS\VWMS\VWMS\bin\Debug\CrystalDecisions.Shared.dll
+D:\APPLICATIONS\SOMMEE\VMS\VWMS\VWMS\VWMS\VWMS\bin\Debug\CrystalDecisions.Windows.Forms.dll
+D:\APPLICATIONS\SOMMEE\VMS\VWMS\VWMS\VWMS\VWMS\bin\Debug\FlashControlV71.dll
+D:\APPLICATIONS\SOMMEE\VMS\VWMS\VWMS\VWMS\VWMS\bin\Debug\CrystalDecisions.ReportAppServer.DataDefModel.dll
+D:\APPLICATIONS\SOMMEE\VMS\VWMS\VWMS\VWMS\VWMS\bin\Debug\CrystalDecisions.ReportAppServer.ClientDoc.dll
+D:\APPLICATIONS\SOMMEE\VMS\VWMS\VWMS\VWMS\VWMS\bin\Debug\CrystalDecisions.ReportAppServer.ReportDefModel.dll
+D:\APPLICATIONS\SOMMEE\VMS\VWMS\VWMS\VWMS\VWMS\bin\Debug\CrystalDecisions.ReportAppServer.Controllers.dll
+D:\APPLICATIONS\SOMMEE\VMS\VWMS\VWMS\VWMS\VWMS\bin\Debug\CrystalDecisions.ReportAppServer.CommLayer.dll
+D:\APPLICATIONS\SOMMEE\VMS\VWMS\VWMS\VWMS\VWMS\bin\Debug\CrystalDecisions.ReportAppServer.DataSetConversion.dll
+D:\APPLICATIONS\SOMMEE\VMS\VWMS\VWMS\VWMS\VWMS\bin\Debug\CrystalDecisions.ReportAppServer.Prompting.dll
+D:\APPLICATIONS\SOMMEE\VMS\VWMS\VWMS\VWMS\VWMS\bin\Debug\CrystalDecisions.ReportAppServer.XmlSerialize.dll
+D:\APPLICATIONS\SOMMEE\VMS\VWMS\VWMS\VWMS\VWMS\bin\Debug\CrystalDecisions.ReportAppServer.CubeDefModel.dll
+D:\APPLICATIONS\SOMMEE\VMS\VWMS\VWMS\VWMS\VWMS\bin\Debug\CrystalDecisions.ReportAppServer.ObjectFactory.dll
+D:\APPLICATIONS\SOMMEE\VMS\VWMS\VWMS\VWMS\VWMS\bin\Debug\CrystalDecisions.ReportAppServer.CommonObjectModel.dll
+D:\APPLICATIONS\SOMMEE\VMS\VWMS\VWMS\VWMS\VWMS\bin\Debug\ShockwaveFlashObjects.dll
+D:\APPLICATIONS\SOMMEE\VMS\VWMS\VWMS\VWMS\VWMS\bin\Debug\CrystalDecisions.ReportAppServer.CommonControls.dll
+D:\APPLICATIONS\SOMMEE\VMS\VWMS\VWMS\VWMS\VWMS\bin\Debug\stdole.dll
+D:\APPLICATIONS\SOMMEE\VMS\VWMS\VWMS\VWMS\VWMS\bin\Debug\BL.pdb
+G:\STUDENT PROJECTS\NADEESHA\1\VWMS2015-10-4\VWMS\VWMS\bin\Debug\VWMS.exe.config
+G:\STUDENT PROJECTS\NADEESHA\1\VWMS2015-10-4\VWMS\VWMS\obj\Debug\VWMS.exe
+G:\STUDENT PROJECTS\NADEESHA\1\VWMS2015-10-4\VWMS\VWMS\obj\Debug\VWMS.pdb
+G:\STUDENT PROJECTS\NADEESHA\1\VWMS2015-10-4\VWMS\VWMS\bin\Debug\VWMS.exe
+G:\STUDENT PROJECTS\NADEESHA\1\VWMS2015-10-4\VWMS\VWMS\bin\Debug\VWMS.pdb
+G:\STUDENT PROJECTS\NADEESHA\1\VWMS2015-10-4\VWMS\VWMS\bin\Debug\BL.dll
+G:\STUDENT PROJECTS\NADEESHA\1\VWMS2015-10-4\VWMS\VWMS\bin\Debug\CrystalDecisions.ReportAppServer.DataDefModel.dll
+G:\STUDENT PROJECTS\NADEESHA\1\VWMS2015-10-4\VWMS\VWMS\bin\Debug\CrystalDecisions.ReportAppServer.ClientDoc.dll
+G:\STUDENT PROJECTS\NADEESHA\1\VWMS2015-10-4\VWMS\VWMS\bin\Debug\CrystalDecisions.ReportAppServer.ReportDefModel.dll
+G:\STUDENT PROJECTS\NADEESHA\1\VWMS2015-10-4\VWMS\VWMS\bin\Debug\CrystalDecisions.ReportAppServer.Controllers.dll
+G:\STUDENT PROJECTS\NADEESHA\1\VWMS2015-10-4\VWMS\VWMS\bin\Debug\CrystalDecisions.ReportAppServer.CommLayer.dll
+G:\STUDENT PROJECTS\NADEESHA\1\VWMS2015-10-4\VWMS\VWMS\bin\Debug\CrystalDecisions.ReportAppServer.DataSetConversion.dll
+G:\STUDENT PROJECTS\NADEESHA\1\VWMS2015-10-4\VWMS\VWMS\bin\Debug\CrystalDecisions.ReportAppServer.Prompting.dll
+G:\STUDENT PROJECTS\NADEESHA\1\VWMS2015-10-4\VWMS\VWMS\bin\Debug\CrystalDecisions.ReportAppServer.XmlSerialize.dll
+G:\STUDENT PROJECTS\NADEESHA\1\VWMS2015-10-4\VWMS\VWMS\bin\Debug\CrystalDecisions.ReportAppServer.CubeDefModel.dll
+G:\STUDENT PROJECTS\NADEESHA\1\VWMS2015-10-4\VWMS\VWMS\bin\Debug\CrystalDecisions.ReportAppServer.ObjectFactory.dll
+G:\STUDENT PROJECTS\NADEESHA\1\VWMS2015-10-4\VWMS\VWMS\bin\Debug\CrystalDecisions.ReportAppServer.CommonObjectModel.dll
+G:\STUDENT PROJECTS\NADEESHA\1\VWMS2015-10-4\VWMS\VWMS\bin\Debug\ShockwaveFlashObjects.dll
+G:\STUDENT PROJECTS\NADEESHA\1\VWMS2015-10-4\VWMS\VWMS\bin\Debug\CrystalDecisions.ReportAppServer.CommonControls.dll
+G:\STUDENT PROJECTS\NADEESHA\1\VWMS2015-10-4\VWMS\VWMS\bin\Debug\BL.pdb
+G:\STUDENT PROJECTS\NADEESHA\1\VWMS2015-10-4\VWMS\VWMS\obj\Debug\VWMS.csprojResolveAssemblyReference.cache
+G:\STUDENT PROJECTS\NADEESHA\1\VWMS2015-10-4\VWMS\VWMS\obj\Debug\VWMS.ENTITY.FrmBrands.resources
+G:\STUDENT PROJECTS\NADEESHA\1\VWMS2015-10-4\VWMS\VWMS\obj\Debug\VWMS.ENTITY.FrmCustomers.resources
+G:\STUDENT PROJECTS\NADEESHA\1\VWMS2015-10-4\VWMS\VWMS\obj\Debug\VWMS.ENTITY.FrmItems.resources
+G:\STUDENT PROJECTS\NADEESHA\1\VWMS2015-10-4\VWMS\VWMS\obj\Debug\VWMS.ENTITY.FrmLabour.resources
+G:\STUDENT PROJECTS\NADEESHA\1\VWMS2015-10-4\VWMS\VWMS\obj\Debug\VWMS.ENTITY.FrmModels.resources
+G:\STUDENT PROJECTS\NADEESHA\1\VWMS2015-10-4\VWMS\VWMS\obj\Debug\VWMS.ENTITY.FrmTasks.resources
+G:\STUDENT PROJECTS\NADEESHA\1\VWMS2015-10-4\VWMS\VWMS\obj\Debug\VWMS.ENTITY.FrmVehicle.resources
+G:\STUDENT PROJECTS\NADEESHA\1\VWMS2015-10-4\VWMS\VWMS\obj\Debug\VWMS.ENTITY.Reservation.resources
+G:\STUDENT PROJECTS\NADEESHA\1\VWMS2015-10-4\VWMS\VWMS\obj\Debug\VWMS.FrmLogin.resources
+G:\STUDENT PROJECTS\NADEESHA\1\VWMS2015-10-4\VWMS\VWMS\obj\Debug\VWMS.FrmMain.resources
+G:\STUDENT PROJECTS\NADEESHA\1\VWMS2015-10-4\VWMS\VWMS\obj\Debug\VWMS.INVENTORY.FrmInventoryProcess.resources
+G:\STUDENT PROJECTS\NADEESHA\1\VWMS2015-10-4\VWMS\VWMS\obj\Debug\VWMS.Properties.Resources.resources
+G:\STUDENT PROJECTS\NADEESHA\1\VWMS2015-10-4\VWMS\VWMS\obj\Debug\VWMS.REPORTING.FrmReport.resources
+G:\STUDENT PROJECTS\NADEESHA\1\VWMS2015-10-4\VWMS\VWMS\obj\Debug\VWMS.USER.FrmChangePassword.resources
+G:\STUDENT PROJECTS\NADEESHA\1\VWMS2015-10-4\VWMS\VWMS\obj\Debug\VWMS.USER.FrmUpdateUser.resources
+G:\STUDENT PROJECTS\NADEESHA\1\VWMS2015-10-4\VWMS\VWMS\obj\Debug\VWMS.WS.FRMWS.resources
+G:\STUDENT PROJECTS\NADEESHA\1\VWMS2015-10-4\VWMS\VWMS\obj\Debug\VWMS.csproj.GenerateResource.Cache
+G:\STUDENT PROJECTS\NADEESHA\1\VWMS2015-10-4\VWMS\VWMS\bin\Debug\App.BL.dll
+G:\STUDENT PROJECTS\NADEESHA\1\VWMS2015-10-4\VWMS\VWMS\bin\Debug\App.Model.dll
+G:\STUDENT PROJECTS\NADEESHA\1\VWMS2015-10-4\VWMS\VWMS\bin\Debug\EntityFramework.dll
+G:\STUDENT PROJECTS\NADEESHA\1\VWMS2015-10-4\VWMS\VWMS\bin\Debug\EntityFramework.SqlServer.dll
+G:\STUDENT PROJECTS\NADEESHA\1\VWMS2015-10-4\VWMS\VWMS\bin\Debug\App.Dal.dll
+G:\STUDENT PROJECTS\NADEESHA\1\VWMS2015-10-4\VWMS\VWMS\bin\Debug\App.BL.pdb
+G:\STUDENT PROJECTS\NADEESHA\1\VWMS2015-10-4\VWMS\VWMS\bin\Debug\App.Model.pdb
+G:\STUDENT PROJECTS\NADEESHA\1\VWMS2015-10-4\VWMS\VWMS\bin\Debug\EntityFramework.xml
+G:\STUDENT PROJECTS\NADEESHA\1\VWMS2015-10-4\VWMS\VWMS\bin\Debug\EntityFramework.SqlServer.xml
+G:\STUDENT PROJECTS\NADEESHA\1\VWMS2015-10-4\VWMS\VWMS\bin\Debug\App.Dal.pdb
+G:\STUDENT PROJECTS\NADEESHA\1\VWMS2015-10-4\NADEESHA\VWMS\VWMS\bin\Debug\VWMS.exe.config
+G:\STUDENT PROJECTS\NADEESHA\1\VWMS2015-10-4\NADEESHA\VWMS\VWMS\obj\Debug\VWMS.exe
+G:\STUDENT PROJECTS\NADEESHA\1\VWMS2015-10-4\NADEESHA\VWMS\VWMS\obj\Debug\VWMS.pdb
+G:\STUDENT PROJECTS\NADEESHA\1\VWMS2015-10-4\NADEESHA\VWMS\VWMS\obj\Debug\VWMS.csprojResolveAssemblyReference.cache
+G:\STUDENT PROJECTS\NADEESHA\1\VWMS2015-10-4\NADEESHA\VWMS\VWMS\obj\Debug\VWMS.ENTITY.FrmBrands.resources
+G:\STUDENT PROJECTS\NADEESHA\1\VWMS2015-10-4\NADEESHA\VWMS\VWMS\obj\Debug\VWMS.ENTITY.FrmCustomers.resources
+G:\STUDENT PROJECTS\NADEESHA\1\VWMS2015-10-4\NADEESHA\VWMS\VWMS\obj\Debug\VWMS.ENTITY.FrmItems.resources
+G:\STUDENT PROJECTS\NADEESHA\1\VWMS2015-10-4\NADEESHA\VWMS\VWMS\obj\Debug\VWMS.ENTITY.FrmLabour.resources
+G:\STUDENT PROJECTS\NADEESHA\1\VWMS2015-10-4\NADEESHA\VWMS\VWMS\obj\Debug\VWMS.ENTITY.FrmModels.resources
+G:\STUDENT PROJECTS\NADEESHA\1\VWMS2015-10-4\NADEESHA\VWMS\VWMS\obj\Debug\VWMS.ENTITY.FrmTasks.resources
+G:\STUDENT PROJECTS\NADEESHA\1\VWMS2015-10-4\NADEESHA\VWMS\VWMS\obj\Debug\VWMS.ENTITY.FrmVehicle.resources
+G:\STUDENT PROJECTS\NADEESHA\1\VWMS2015-10-4\NADEESHA\VWMS\VWMS\obj\Debug\VWMS.ENTITY.Reservation.resources
+G:\STUDENT PROJECTS\NADEESHA\1\VWMS2015-10-4\NADEESHA\VWMS\VWMS\obj\Debug\VWMS.FrmLogin.resources
+G:\STUDENT PROJECTS\NADEESHA\1\VWMS2015-10-4\NADEESHA\VWMS\VWMS\obj\Debug\VWMS.FrmMain.resources
+G:\STUDENT PROJECTS\NADEESHA\1\VWMS2015-10-4\NADEESHA\VWMS\VWMS\obj\Debug\VWMS.INVENTORY.FrmInventoryProcess.resources
+G:\STUDENT PROJECTS\NADEESHA\1\VWMS2015-10-4\NADEESHA\VWMS\VWMS\obj\Debug\VWMS.Properties.Resources.resources
+G:\STUDENT PROJECTS\NADEESHA\1\VWMS2015-10-4\NADEESHA\VWMS\VWMS\obj\Debug\VWMS.REPORTING.FrmReport.resources
+G:\STUDENT PROJECTS\NADEESHA\1\VWMS2015-10-4\NADEESHA\VWMS\VWMS\obj\Debug\VWMS.USER.FrmChangePassword.resources
+G:\STUDENT PROJECTS\NADEESHA\1\VWMS2015-10-4\NADEESHA\VWMS\VWMS\obj\Debug\VWMS.USER.FrmUpdateUser.resources
+G:\STUDENT PROJECTS\NADEESHA\1\VWMS2015-10-4\NADEESHA\VWMS\VWMS\obj\Debug\VWMS.WS.FRMWS.resources
+G:\STUDENT PROJECTS\NADEESHA\1\VWMS2015-10-4\NADEESHA\VWMS\VWMS\obj\Debug\VWMS.csproj.GenerateResource.Cache
+G:\STUDENT PROJECTS\NADEESHA\1\VWMS2015-10-4\NADEESHA\VWMS\VWMS\bin\Debug\VWMS.exe
+G:\STUDENT PROJECTS\NADEESHA\1\VWMS2015-10-4\NADEESHA\VWMS\VWMS\bin\Debug\VWMS.pdb
+G:\STUDENT PROJECTS\NADEESHA\1\VWMS2015-10-4\NADEESHA\VWMS\VWMS\bin\Debug\App.BL.dll
+G:\STUDENT PROJECTS\NADEESHA\1\VWMS2015-10-4\NADEESHA\VWMS\VWMS\bin\Debug\App.Dal.dll
+G:\STUDENT PROJECTS\NADEESHA\1\VWMS2015-10-4\NADEESHA\VWMS\VWMS\bin\Debug\App.Model.dll
+G:\STUDENT PROJECTS\NADEESHA\1\VWMS2015-10-4\NADEESHA\VWMS\VWMS\bin\Debug\BL.dll
+G:\STUDENT PROJECTS\NADEESHA\1\VWMS2015-10-4\NADEESHA\VWMS\VWMS\bin\Debug\EntityFramework.dll
+G:\STUDENT PROJECTS\NADEESHA\1\VWMS2015-10-4\NADEESHA\VWMS\VWMS\bin\Debug\EntityFramework.SqlServer.dll
+G:\STUDENT PROJECTS\NADEESHA\1\VWMS2015-10-4\NADEESHA\VWMS\VWMS\bin\Debug\App.BL.pdb
+G:\STUDENT PROJECTS\NADEESHA\1\VWMS2015-10-4\NADEESHA\VWMS\VWMS\bin\Debug\App.Dal.pdb
+G:\STUDENT PROJECTS\NADEESHA\1\VWMS2015-10-4\NADEESHA\VWMS\VWMS\bin\Debug\App.Model.pdb
+G:\STUDENT PROJECTS\NADEESHA\1\VWMS2015-10-4\NADEESHA\VWMS\VWMS\bin\Debug\BL.pdb
+G:\STUDENT PROJECTS\NADEESHA\1\VWMS2015-10-4\NADEESHA\VWMS\VWMS\bin\Debug\EntityFramework.xml
+G:\STUDENT PROJECTS\NADEESHA\1\VWMS2015-10-4\NADEESHA\VWMS\VWMS\bin\Debug\EntityFramework.SqlServer.xml

@@ -1,0 +1,52 @@
+F:\STUDENT PROJECTS\VWMS\BL\bin\Debug\BL.dll
+F:\STUDENT PROJECTS\VWMS\BL\bin\Debug\BL.pdb
+F:\STUDENT PROJECTS\VWMS\BL\obj\Debug\BL.csprojResolveAssemblyReference.cache
+F:\STUDENT PROJECTS\VWMS\BL\obj\Debug\BL.dll
+F:\STUDENT PROJECTS\VWMS\BL\obj\Debug\BL.pdb
+F:\STUDENT PROJECT\2015\2015-07-10\VWMS\BL\bin\Debug\BL.dll
+F:\STUDENT PROJECT\2015\2015-07-10\VWMS\BL\bin\Debug\BL.pdb
+F:\STUDENT PROJECT\2015\2015-07-10\VWMS\BL\obj\Debug\BL.dll
+F:\STUDENT PROJECT\2015\2015-07-10\VWMS\BL\obj\Debug\BL.pdb
+F:\STUDENT PROJECT\2015\2015-07-10\VWMS\BL\obj\Debug\BL.csprojResolveAssemblyReference.cache
+F:\STUDENT PROJECTS\VWMS\2\VWMS\BL\bin\Debug\BL.dll
+F:\STUDENT PROJECTS\VWMS\2\VWMS\BL\bin\Debug\BL.pdb
+F:\STUDENT PROJECTS\VWMS\2\VWMS\BL\obj\Debug\BL.csprojResolveAssemblyReference.cache
+F:\STUDENT PROJECTS\VWMS\2\VWMS\BL\obj\Debug\BL.dll
+F:\STUDENT PROJECTS\VWMS\2\VWMS\BL\obj\Debug\BL.pdb
+F:\STUDENT PROJECT\VEHICLE\2\vmsss\VWMS\BL\bin\Debug\BL.dll
+F:\STUDENT PROJECT\VEHICLE\2\vmsss\VWMS\BL\bin\Debug\BL.pdb
+F:\STUDENT PROJECT\VEHICLE\2\vmsss\VWMS\BL\obj\Debug\BL.csprojResolveAssemblyReference.cache
+F:\STUDENT PROJECT\VEHICLE\2\vmsss\VWMS\BL\obj\Debug\BL.dll
+F:\STUDENT PROJECT\VEHICLE\2\vmsss\VWMS\BL\obj\Debug\BL.pdb
+E:\CHARITHA\new vmsss\2\vmsss\VWMS\BL\bin\Debug\BL.dll
+E:\CHARITHA\new vmsss\2\vmsss\VWMS\BL\bin\Debug\BL.pdb
+E:\CHARITHA\new vmsss\2\vmsss\VWMS\BL\obj\Debug\BL.dll
+E:\CHARITHA\new vmsss\2\vmsss\VWMS\BL\obj\Debug\BL.pdb
+F:\roshan\CHARITHA\new vmsss\2\vmsss\VWMS\BL\bin\Debug\BL.dll
+F:\roshan\CHARITHA\new vmsss\2\vmsss\VWMS\BL\bin\Debug\BL.pdb
+F:\roshan\CHARITHA\new vmsss\2\vmsss\VWMS\BL\obj\Debug\BL.dll
+F:\roshan\CHARITHA\new vmsss\2\vmsss\VWMS\BL\obj\Debug\BL.pdb
+E:\Project\Dropbox\VehicleWorkshop\VWMS_02.08.2015\VWMS\BL\bin\Debug\BL.dll
+E:\Project\Dropbox\VehicleWorkshop\VWMS_02.08.2015\VWMS\BL\bin\Debug\BL.pdb
+E:\Project\Dropbox\VehicleWorkshop\VWMS_02.08.2015\VWMS\BL\obj\Debug\BL.csprojResolveAssemblyReference.cache
+E:\Project\Dropbox\VehicleWorkshop\VWMS_02.08.2015\VWMS\BL\obj\Debug\BL.dll
+E:\Project\Dropbox\VehicleWorkshop\VWMS_02.08.2015\VWMS\BL\obj\Debug\BL.pdb
+F:\roshan\CHARITHA\version 2 charitha\VWMS\VWMS\BL\bin\Debug\BL.dll
+F:\roshan\CHARITHA\version 2 charitha\VWMS\VWMS\BL\bin\Debug\BL.pdb
+F:\roshan\CHARITHA\version 2 charitha\VWMS\VWMS\BL\obj\Debug\BL.dll
+F:\roshan\CHARITHA\version 2 charitha\VWMS\VWMS\BL\obj\Debug\BL.pdb
+F:\roshan\CHARITHA\version 2 charitha\VWMS\VWMS\BL\obj\Debug\BL.csprojResolveAssemblyReference.cache
+D:\APPLICATIONS\SOMMEE\VMS\VWMS\VWMS\VWMS\BL\bin\Debug\BL.dll
+D:\APPLICATIONS\SOMMEE\VMS\VWMS\VWMS\VWMS\BL\bin\Debug\BL.pdb
+D:\APPLICATIONS\SOMMEE\VMS\VWMS\VWMS\VWMS\BL\obj\Debug\BL.dll
+D:\APPLICATIONS\SOMMEE\VMS\VWMS\VWMS\VWMS\BL\obj\Debug\BL.pdb
+D:\APPLICATIONS\SOMMEE\VMS\VWMS\VWMS\VWMS\BL\obj\Debug\BL.csprojResolveAssemblyReference.cache
+G:\STUDENT PROJECTS\NADEESHA\1\VWMS2015-10-4\VWMS\BL\bin\Debug\BL.dll
+G:\STUDENT PROJECTS\NADEESHA\1\VWMS2015-10-4\VWMS\BL\bin\Debug\BL.pdb
+G:\STUDENT PROJECTS\NADEESHA\1\VWMS2015-10-4\VWMS\BL\obj\Debug\BL.csprojResolveAssemblyReference.cache
+G:\STUDENT PROJECTS\NADEESHA\1\VWMS2015-10-4\VWMS\BL\obj\Debug\BL.dll
+G:\STUDENT PROJECTS\NADEESHA\1\VWMS2015-10-4\VWMS\BL\obj\Debug\BL.pdb
+G:\STUDENT PROJECTS\NADEESHA\1\VWMS2015-10-4\NADEESHA\VWMS\BL\bin\Debug\BL.dll
+G:\STUDENT PROJECTS\NADEESHA\1\VWMS2015-10-4\NADEESHA\VWMS\BL\bin\Debug\BL.pdb
+G:\STUDENT PROJECTS\NADEESHA\1\VWMS2015-10-4\NADEESHA\VWMS\BL\obj\Debug\BL.dll
+G:\STUDENT PROJECTS\NADEESHA\1\VWMS2015-10-4\NADEESHA\VWMS\BL\obj\Debug\BL.pdb

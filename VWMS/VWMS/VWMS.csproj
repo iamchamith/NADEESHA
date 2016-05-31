@@ -1,0 +1,346 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{C5B4810F-DB9F-468B-89BE-771D46221F5C}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>VWMS</RootNamespace>
+    <AssemblyName>VWMS</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="FlashControlV71, Version=1.0.3187.32366, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="Microsoft.ReportViewer.Common, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ENTITY\FrmBrands.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ENTITY\FrmBrands.Designer.cs">
+      <DependentUpon>FrmBrands.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ENTITY\FrmCustomers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ENTITY\FrmCustomers.Designer.cs">
+      <DependentUpon>FrmCustomers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ENTITY\FrmItems.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ENTITY\FrmItems.Designer.cs">
+      <DependentUpon>FrmItems.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ENTITY\FrmLabour.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ENTITY\FrmLabour.Designer.cs">
+      <DependentUpon>FrmLabour.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ENTITY\FrmModels.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ENTITY\FrmModels.Designer.cs">
+      <DependentUpon>FrmModels.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ENTITY\FrmTasks.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ENTITY\FrmTasks.Designer.cs">
+      <DependentUpon>FrmTasks.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ENTITY\FrmVehicle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ENTITY\FrmVehicle.Designer.cs">
+      <DependentUpon>FrmVehicle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ENTITY\Reservation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ENTITY\Reservation.Designer.cs">
+      <DependentUpon>Reservation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmLogin.Designer.cs">
+      <DependentUpon>FrmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmMain.Designer.cs">
+      <DependentUpon>FrmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="INVENTORY\FrmInventoryProcess.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="INVENTORY\FrmInventoryProcess.Designer.cs">
+      <DependentUpon>FrmInventoryProcess.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="REPORTING\DSReports.cs">
+      <DependentUpon>DSReports.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="REPORTING\DSReports.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DSReports.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="REPORTING\FrmReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="REPORTING\FrmReport.Designer.cs">
+      <DependentUpon>FrmReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="REPORTING\RPTCustomer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RPTCustomer.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="REPORTING\RPTItems.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RPTItems.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="REPORTING\RPTLabour.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RPTLabour.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="REPORTING\RPTVehicle.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RPTVehicle.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="USER\FrmChangePassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="USER\FrmChangePassword.Designer.cs">
+      <DependentUpon>FrmChangePassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="USER\FrmUpdateUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="USER\FrmUpdateUser.Designer.cs">
+      <DependentUpon>FrmUpdateUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WS\FRMWS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WS\FRMWS.Designer.cs">
+      <DependentUpon>FRMWS.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="ENTITY\FrmBrands.resx">
+      <DependentUpon>FrmBrands.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ENTITY\FrmCustomers.resx">
+      <DependentUpon>FrmCustomers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ENTITY\FrmItems.resx">
+      <DependentUpon>FrmItems.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ENTITY\FrmLabour.resx">
+      <DependentUpon>FrmLabour.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ENTITY\FrmModels.resx">
+      <DependentUpon>FrmModels.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ENTITY\FrmTasks.resx">
+      <DependentUpon>FrmTasks.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ENTITY\FrmVehicle.resx">
+      <DependentUpon>FrmVehicle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ENTITY\Reservation.resx">
+      <DependentUpon>Reservation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmLogin.resx">
+      <DependentUpon>FrmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmMain.resx">
+      <DependentUpon>FrmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="INVENTORY\FrmInventoryProcess.resx">
+      <DependentUpon>FrmInventoryProcess.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="REPORTING\FrmReport.resx">
+      <DependentUpon>FrmReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="REPORTING\RPTCustomer.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>RPTCustomer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="REPORTING\RPTItems.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>RPTItems.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="REPORTING\RPTLabour.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>RPTLabour.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="REPORTING\RPTVehicle.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>RPTVehicle.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="USER\FrmChangePassword.resx">
+      <DependentUpon>FrmChangePassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="USER\FrmUpdateUser.resx">
+      <DependentUpon>FrmUpdateUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WS\FRMWS.resx">
+      <DependentUpon>FRMWS.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="REPORTING\DSReports.xsc">
+      <DependentUpon>DSReports.xsd</DependentUpon>
+    </None>
+    <None Include="REPORTING\DSReports.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DSReports.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="REPORTING\DSReports.xss">
+      <DependentUpon>DSReports.xsd</DependentUpon>
+    </None>
+    <None Include="Resources\branding-png.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\App.BL\App.BL.csproj">
+      <Project>{0b319a82-e061-45e2-a9d1-419416420cb7}</Project>
+      <Name>App.BL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\App.Dal\App.Dal.csproj">
+      <Project>{2e319f04-a6ff-4604-ac9b-4783d247dcf6}</Project>
+      <Name>App.Dal</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\App.Model\App.Model.csproj">
+      <Project>{f48e2617-d275-4adc-afe7-044c9495c6b4}</Project>
+      <Name>App.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BL\BL.csproj">
+      <Project>{84efad95-2827-403c-8563-712bac0ae9ff}</Project>
+      <Name>BL</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Refresh.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MODEL.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\task.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cars-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\garag.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\noPhotoAvailable.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="IMAGES\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\41805516-girl-tire-changing-machine.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\inventory-maintenance %281%29.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
