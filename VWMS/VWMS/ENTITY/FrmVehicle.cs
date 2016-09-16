@@ -29,7 +29,7 @@ namespace VWMS.ENTITY
             LoadInfoVehicle();
         }
         FRMWS objG = new FRMWS();
-        Reservation objres= new Reservation();
+        Reservation objres = new Reservation();
         public FrmVehicle(FRMWS obj)
         {
             InitializeComponent();
@@ -65,7 +65,7 @@ namespace VWMS.ENTITY
         private List<Model> lst = new List<Model>();
         private void LoadModels()
         {
-            lst = (List<Model>)new ModelDbService().Read().Content ;
+            lst = (List<Model>)new ModelDbService().Read().Content;
         }
 
         private void cmbBrands_SelectedIndexChanged(object sender, EventArgs e)
@@ -98,30 +98,31 @@ namespace VWMS.ENTITY
                 return;
             }
 
-            var x = new VehicleDbService().Update(new Vehicle
+            try
             {
-                BrandID = int.Parse(cmbBrands.SelectedValue.ToString()),
-                ChassiNumber = txtChassiNumber.Text,
-                Discription = txtDiscription.Text,
-                EngineNumber = txtEngineNo.Text,
-                ModelId = int.Parse(cmbModels.SelectedValue.ToString()),
-                OwnerID = int.Parse(lblOwnerID.Text),
-                RegDate = DateTime.Today,
-                UserEmail = Properties.Settings.Default.EMAIL,
-                VehicleID = txtVehicleNumber.Text,
-                Url = IsImageChange ? SaveImage() : imageName
+                var x = new VehicleDbService().Update(new Vehicle
+                {
+                    BrandID = int.Parse(cmbBrands.SelectedValue.ToString()),
+                    ChassiNumber = txtChassiNumber.Text,
+                    Discription = txtDiscription.Text,
+                    EngineNumber = txtEngineNo.Text,
+                    ModelId = int.Parse(cmbModels.SelectedValue.ToString()),
+                    OwnerID = int.Parse(lblOwnerID.Text),
+                    RegDate = DateTime.Today,
+                    UserEmail = Properties.Settings.Default.EMAIL,
+                    VehicleID = txtVehicleNumber.Text,
+                    Url = IsImageChange ? SaveImage() : imageName
 
-            });
-            if (x.State)
-            {
-                LoadInfoVehicle();
-                MessageBox.Show("vehicle update is succes");
+                });
+                   LoadInfoVehicle();
+                Helper.SuccessMessage();
+               
             }
-            else
+            catch (Exception ex)
             {
-                MessageBox.Show(x.Exception.Message);
+                Helper.ErrorMessage(ex.Message);
             }
-           
+
         }
 
         private void btnDelete_Click(object sender, EventArgs e)
@@ -130,16 +131,18 @@ namespace VWMS.ENTITY
             {
                 return;
             }
-            var x = new VehicleDbService().Delete(txtVehicleNumber.Text);
-            if (x.State)
+            try
             {
-                btnClear.PerformClick();
-                LoadInfoVehicle();
-                MessageBox.Show("vehicle delete is succes");
+                var x = new VehicleDbService().Delete(txtVehicleNumber.Text);
+                
+                    btnClear.PerformClick();
+                    LoadInfoVehicle();
+                Helper.SuccessMessage();
+
             }
-            else
+            catch (Exception ex)
             {
-                MessageBox.Show(x.Exception.Message);
+                Helper.ErrorMessage(ex.Message);
             }
         }
 
@@ -149,11 +152,11 @@ namespace VWMS.ENTITY
             FrmCustomers obj = new FrmCustomers(this);
             obj.ShowDialog();
         }
-        
+
         public void LoadCustomer(DataTable cus)
         {
             // ID, NAME, PHONE, ADDRESS, EMAIL, NIC, USER_EMAIL, REG_DATE, ENABLE
-            if (cus == null || cus.Rows.Count==0)
+            if (cus == null || cus.Rows.Count == 0)
             {
                 MessageBox.Show("invalied customer", "Information", MessageBoxButtons.OK, MessageBoxIcon.Error); return;
             }
@@ -173,7 +176,8 @@ namespace VWMS.ENTITY
                     string img = cus.Rows[0]["URL"].ToString();
                     pictureBox2.Image = Image.FromFile(Pathss.FilePath + img);
                 }
-                catch {
+                catch
+                {
 
                     pictureBox2.Image = Image.FromFile(Pathss.FilePath + "no.jpg");
                 }
@@ -183,7 +187,7 @@ namespace VWMS.ENTITY
         }
         List<Vehicle> LstGVehicle = new List<Vehicle>();
         private int taskID = 0;
-      
+
         void LoadInfoVehicle()
         {
             dataGridView1.DataSource = LstGVehicle = (List<Vehicle>)new VehicleDbService().Read().Content;
@@ -191,7 +195,7 @@ namespace VWMS.ENTITY
 
         private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            
+
         }
 
         void LoadCustomer(int customerID)
@@ -259,7 +263,7 @@ namespace VWMS.ENTITY
             {
                 if (int.Parse(dataGridView1.Rows[0].Cells["IS_FINISHED"].Value.ToString()) == (int)EIsFinished.No)
                 {
-                
+
                     MessageBox.Show("please finished current runing job before create new job"); return;
                 }
             }
@@ -267,31 +271,33 @@ namespace VWMS.ENTITY
             {
 
             }
-            var x = new VehicleDbService().Create(new Vehicle
+            try
             {
-                BrandID = int.Parse(cmbBrands.SelectedValue.ToString()),
-                ChassiNumber = txtChassiNumber.Text,
-                Discription = txtDiscription.Text,
-                EngineNumber = txtEngineNo.Text,
-                ModelId = int.Parse(cmbModels.SelectedValue.ToString()),
-                OwnerID = int.Parse(lblOwnerID.Text),
-                RegDate = DateTime.Today,
-                UserEmail = Properties.Settings.Default.EMAIL,
-                VehicleID = txtVehicleNumber.Text,
-                Url = IsImageChange ? SaveImage() : "no.jpg"
-            });
-            if (x.State)
-            {
+                var x = new VehicleDbService().Create(new Vehicle
+                {
+                    BrandID = int.Parse(cmbBrands.SelectedValue.ToString()),
+                    ChassiNumber = txtChassiNumber.Text,
+                    Discription = txtDiscription.Text,
+                    EngineNumber = txtEngineNo.Text,
+                    ModelId = int.Parse(cmbModels.SelectedValue.ToString()),
+                    OwnerID = int.Parse(lblOwnerID.Text),
+                    RegDate = DateTime.Today,
+                    UserEmail = Properties.Settings.Default.EMAIL,
+                    VehicleID = txtVehicleNumber.Text,
+                    Url = IsImageChange ? SaveImage() : "no.jpg"
+                });
+
                 btnClear.PerformClick();
                 LoadInfoVehicle();
-                MessageBox.Show("vehicle register is succes");
+                Helper.SuccessMessage();
+
             }
-            else
+            catch (Exception ex)
             {
-                MessageBox.Show(x.Exception.Message);
+                Helper.ErrorMessage(ex.Message);
             }
         }
-        
+
 
         #endregion
 
@@ -320,7 +326,8 @@ namespace VWMS.ENTITY
                     imageName = "no.jpg";
                 }
             }
-            catch (Exception ex) {
+            catch (Exception ex)
+            {
 
                 MessageBox.Show(ex.Message);
             }
@@ -329,7 +336,7 @@ namespace VWMS.ENTITY
         string imageName = string.Empty;
         private void btnGO_Click(object sender, EventArgs e)
         {
-            objG.LoadVehicleNumber(txtVehicleNumber.Text,ImageURL);
+            objG.LoadVehicleNumber(txtVehicleNumber.Text, ImageURL);
             this.Close();
         }
 
@@ -360,7 +367,7 @@ namespace VWMS.ENTITY
             dataGridView2.DataSource = null;
             IsImageChange = false;
             ImageURL = "car.jpg";
-            pictureBox1.Image = Image.FromFile(Pathss.FilePath+"car.jpg");
+            pictureBox1.Image = Image.FromFile(Pathss.FilePath + "car.jpg");
             pictureBox2.Image = Image.FromFile(Pathss.FilePath + "no.jpg");
         }
 
@@ -402,10 +409,11 @@ namespace VWMS.ENTITY
             }
         }
 
-        string SaveImage() {
+        string SaveImage()
+        {
 
             ImageURL = Guid.NewGuid() + Path.GetExtension(openFileDialog1.FileName);
-            pictureBox1.Image.Save(Pathss.FilePath+ ImageURL);
+            pictureBox1.Image.Save(Pathss.FilePath + ImageURL);
             return ImageURL;
         }
     }

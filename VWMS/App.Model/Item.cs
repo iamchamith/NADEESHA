@@ -8,6 +8,12 @@ namespace App.Model
 
     public partial class Item
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public Item()
+        {
+            VehicleJobTaskItems = new HashSet<VehicleJobTaskItem>();
+        }
+
         public int ID { get; set; }
 
         public int? CategoryId { get; set; }
@@ -24,5 +30,8 @@ namespace App.Model
         public int? Quantity { get; set; }
 
         public int? ReorderLevel { get; set; }
+
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<VehicleJobTaskItem> VehicleJobTaskItems { get; set; }
     }
 }

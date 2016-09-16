@@ -8,7 +8,7 @@ namespace App.Model
     public partial class Pluto : DbContext
     {
         public Pluto()
-            : base("name=Pluto")
+            : base("name=Pluto1")
         {
         }
 
@@ -145,6 +145,11 @@ namespace App.Model
                 .Property(e => e.Url)
                 .IsUnicode(false);
 
+            modelBuilder.Entity<Vehicle>()
+                .HasMany(e => e.VehicleJobs)
+                .WithOptional(e => e.Vehicle)
+                .HasForeignKey(e => e.VehicleNumber);
+
             modelBuilder.Entity<VehicleJob>()
                 .Property(e => e.VehicleNumber)
                 .IsUnicode(false);
@@ -152,6 +157,12 @@ namespace App.Model
             modelBuilder.Entity<VehicleJob>()
                 .Property(e => e.UserEmail)
                 .IsUnicode(false);
+
+            modelBuilder.Entity<VehicleJob>()
+                .HasMany(e => e.VehicleJobTasks)
+                .WithRequired(e => e.VehicleJob)
+                .HasForeignKey(e => e.JobId)
+                .WillCascadeOnDelete(false);
 
             modelBuilder.Entity<VehicleJobTaskItem>()
                 .Property(e => e.UserEmail)

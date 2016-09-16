@@ -28,9 +28,9 @@ namespace App.BL
                     });
  
             }
-            catch (Exception ex)
+            catch
             {
-                return Error(ex);
+                throw;
             }
         }
 
@@ -42,9 +42,9 @@ namespace App.BL
                 dba.SaveChanges();
                 return new DetailModel { State = true };
             }
-            catch (Exception ex)
+            catch
             {
-                return Error(ex);
+                throw;
             }
         }
 
@@ -60,9 +60,9 @@ namespace App.BL
                 dba.SaveChanges();
                 return new DetailModel { State = true };
             }
-            catch (Exception ex)
+            catch
             {
-                return Error(ex);
+                throw;
             }
         }
 
@@ -75,9 +75,9 @@ namespace App.BL
                  State = true
                 };
             }
-            catch (Exception ex)
+            catch
             {
-                 return Error(ex);
+                throw;
             }
         }
         public DetailModel Selectuser(string email)
@@ -91,9 +91,9 @@ namespace App.BL
                     State = true
                 };
             }
-            catch (Exception ex)
+            catch
             {
-                return Error(ex);
+                throw;
             }
         }
         public DetailModel ChangePassword(User obj,string NewPassword)
@@ -120,9 +120,9 @@ namespace App.BL
                 }
 
             }
-            catch (Exception ex)
+            catch
             {
-                return Error(ex);
+                throw;
             }
         }
     }

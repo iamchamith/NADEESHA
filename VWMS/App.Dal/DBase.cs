@@ -9,7 +9,7 @@ namespace App.Dal
     public partial class DBase : DbContext
     {
         public DBase()
-            : base(@"Data Source=DELL\SQLEXPRESS;Initial Catalog=NADEESHA;Integrated Security=True;Pooling=False")
+            : base(@"Data Source=DELL\SQLEXPRESS;Initial Catalog=nadeesha;Integrated Security=True;Pooling=False")
         {
         }
 
@@ -146,6 +146,11 @@ namespace App.Dal
                 .Property(e => e.Url)
                 .IsUnicode(false);
 
+            modelBuilder.Entity<Vehicle>()
+                .HasMany(e => e.VehicleJobs)
+                .WithOptional(e => e.Vehicle)
+                .HasForeignKey(e => e.VehicleNumber);
+
             modelBuilder.Entity<VehicleJob>()
                 .Property(e => e.VehicleNumber)
                 .IsUnicode(false);
@@ -153,6 +158,12 @@ namespace App.Dal
             modelBuilder.Entity<VehicleJob>()
                 .Property(e => e.UserEmail)
                 .IsUnicode(false);
+
+            modelBuilder.Entity<VehicleJob>()
+                .HasMany(e => e.VehicleJobTasks)
+                .WithRequired(e => e.VehicleJob)
+                .HasForeignKey(e => e.JobId)
+                .WillCascadeOnDelete(false);
 
             modelBuilder.Entity<VehicleJobTaskItem>()
                 .Property(e => e.UserEmail)

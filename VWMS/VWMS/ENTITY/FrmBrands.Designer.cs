@@ -133,7 +133,7 @@
             this.gvData.BackgroundColor = System.Drawing.Color.WhiteSmoke;
             this.gvData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.gvData.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.gvData.Location = new System.Drawing.Point(0, 299);
+            this.gvData.Location = new System.Drawing.Point(0, 312);
             this.gvData.Name = "gvData";
             this.gvData.Size = new System.Drawing.Size(475, 146);
             this.gvData.TabIndex = 8;
@@ -205,7 +205,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(475, 445);
+            this.ClientSize = new System.Drawing.Size(475, 458);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.txtSearchBy);

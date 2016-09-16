@@ -18,9 +18,9 @@ namespace App.BL
                 dba.SaveChanges();
                 return new DetailModel { State = true };
             }
-            catch (Exception ex)
+            catch
             {
-                return Error(ex);
+                throw;
             }
         }
 
@@ -48,9 +48,9 @@ namespace App.BL
                     return new DetailModel { State = true };
                 }
             }
-            catch (Exception ex)
+            catch
             {
-                return Error(ex);
+                throw;
             }
 
         }
@@ -65,9 +65,9 @@ namespace App.BL
                 dba.SaveChanges();
                 return new DetailModel { State = true };
             }
-            catch (Exception ex)
+            catch
             {
-                return Error(ex);
+                throw;
             }
         }
 
@@ -82,10 +82,9 @@ namespace App.BL
                     Content = dba.Vehicles.ToList()
                 };
             }
-            catch (Exception ex)
+            catch
             {
-                return Error(ex);
-
+                throw;
             }
         }
 
@@ -100,10 +99,9 @@ namespace App.BL
                     Content = dba.Vehicles.Where(p => p.VehicleID == vehicleID).FirstOrDefault()
                 };
             }
-            catch (Exception ex)
+            catch
             {
-                return Error(ex);
-
+                throw;
             }
         }
     }

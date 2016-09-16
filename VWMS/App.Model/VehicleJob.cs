@@ -8,6 +8,12 @@ namespace App.Model
 
     public partial class VehicleJob
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public VehicleJob()
+        {
+            VehicleJobTasks = new HashSet<VehicleJobTask>();
+        }
+
         public int ID { get; set; }
 
         [StringLength(50)]
@@ -27,5 +33,10 @@ namespace App.Model
         public DateTime? OpenTime { get; set; }
 
         public double? FinalAmount { get; set; }
+
+        public virtual Vehicle Vehicle { get; set; }
+
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<VehicleJobTask> VehicleJobTasks { get; set; }
     }
 }

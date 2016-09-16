@@ -17,3 +17,15 @@ G:\STUDENT PROJECTS\NADEESHA\1\VWMS2015-10-4\NADEESHA\VWMS\App.Model\bin\Debug\E
 G:\STUDENT PROJECTS\NADEESHA\1\VWMS2015-10-4\NADEESHA\VWMS\App.Model\obj\Debug\App.Model.csprojResolveAssemblyReference.cache
 G:\STUDENT PROJECTS\NADEESHA\1\VWMS2015-10-4\NADEESHA\VWMS\App.Model\obj\Debug\App.Model.dll
 G:\STUDENT PROJECTS\NADEESHA\1\VWMS2015-10-4\NADEESHA\VWMS\App.Model\obj\Debug\App.Model.pdb
+D:\GIT\NADEESHA\VWMS\App.Model\bin\Debug\App.Model.dll.config
+D:\GIT\NADEESHA\VWMS\App.Model\bin\Debug\App.Model.dll
+D:\GIT\NADEESHA\VWMS\App.Model\bin\Debug\App.Model.pdb
+D:\GIT\NADEESHA\VWMS\App.Model\bin\Debug\EntityFramework.dll
+D:\GIT\NADEESHA\VWMS\App.Model\bin\Debug\EntityFramework.SqlServer.dll
+D:\GIT\NADEESHA\VWMS\App.Model\bin\Debug\EntityFramework.xml
+D:\GIT\NADEESHA\VWMS\App.Model\bin\Debug\EntityFramework.SqlServer.xml
+D:\GIT\NADEESHA\VWMS\App.Model\obj\Debug\App.Model.csprojResolveAssemblyReference.cache
+D:\GIT\NADEESHA\VWMS\App.Model\obj\Debug\App.Model.dll
+D:\GIT\NADEESHA\VWMS\App.Model\obj\Debug\App.Model.pdb
+D:\GIT\NADEESHA\VWMS\App.Model\bin\Debug\AutoMapper.dll
+D:\GIT\NADEESHA\VWMS\App.Model\bin\Debug\AutoMapper.xml

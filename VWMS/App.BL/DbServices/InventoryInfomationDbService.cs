@@ -29,9 +29,9 @@ namespace App.BL
                 dba.SaveChanges();
                 return new DetailModel { State = true };
             }
-            catch (Exception ex)
+            catch
             {
-                return Error(ex);
+                throw;
             }
         }
          
@@ -57,9 +57,9 @@ namespace App.BL
                 dba.SaveChanges();
                 return new DetailModel { State = true };
             }
-            catch (Exception ex)
+            catch
             {
-                return Error(ex);
+                throw;
             }
         }
 
@@ -74,10 +74,9 @@ namespace App.BL
                     Content = dba.InventoryInfomations.ToList()
                 };
             }
-            catch (Exception ex)
+            catch
             {
-                return Error(ex);
-
+                throw;
             }
         }
 
@@ -92,10 +91,9 @@ namespace App.BL
                     Content = dba.InventoryInfomations.Where(p => p.ID == id).FirstOrDefault()
                 };
             }
-            catch (Exception ex)
+            catch
             {
-                return Error(ex);
-
+                throw;
             }
         }
     }

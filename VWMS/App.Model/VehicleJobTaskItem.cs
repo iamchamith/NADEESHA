@@ -26,5 +26,9 @@ namespace App.Model
         public string UserEmail { get; set; }
 
         public DateTime? RegDate { get; set; }
+
+        public virtual Item Item { get; set; }
+
+        public virtual Task Task { get; set; }
     }
 }

@@ -8,6 +8,12 @@ namespace App.Model
 
     public partial class Labour
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public Labour()
+        {
+            VehicleJobTaskLabours = new HashSet<VehicleJobTaskLabour>();
+        }
+
         public int ID { get; set; }
 
         [StringLength(50)]
@@ -22,5 +28,8 @@ namespace App.Model
 
         [StringLength(50)]
         public string Nic { get; set; }
+
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<VehicleJobTaskLabour> VehicleJobTaskLabours { get; set; }
     }
 }

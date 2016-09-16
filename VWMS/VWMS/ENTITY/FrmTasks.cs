@@ -56,25 +56,27 @@ namespace VWMS.ENTITY
         }
         private void btnInsert_Click(object sender, EventArgs e)
         {
-            if (!Helper.Confirmation()){
+            if (!Helper.Confirmation())
+            {
                 return;
             }
-            if (!IsValidate()) {
+            if (!IsValidate())
+            {
                 return;
             }
-            var x = new TaskDbService().Create(new App.Model.Task
+            try
             {
-                Discription = txtDiscription.Text,
-                TaskName = txtName.Text
-            });
-            if (x.State)
-            {
+                var x = new TaskDbService().Create(new App.Model.Task
+                {
+                    Discription = txtDiscription.Text,
+                    TaskName = txtName.Text
+                });
                 LoadInfo();
-                MessageBox.Show("update is success");
+                Helper.SuccessMessage();
             }
-            else
+            catch (Exception ex)
             {
-                MessageBox.Show(x.Exception.Message);
+                Helper.ErrorMessage(ex.Message);
             }
         }
 
@@ -84,42 +86,41 @@ namespace VWMS.ENTITY
             {
                 return;
             }
-            var x = new TaskDbService().Update(new App.Model.Task
+            try
             {
-                Discription = txtDiscription.Text,
-                ID = int.Parse(lblID.Text),
-                TaskName = txtName.Text
-            });
-            if (x.State)
-            {
+                var x = new TaskDbService().Update(new App.Model.Task
+                {
+                    Discription = txtDiscription.Text,
+                    ID = int.Parse(lblID.Text),
+                    TaskName = txtName.Text
+                });
                 LoadInfo();
-                MessageBox.Show("update is success");
+                Helper.SuccessMessage();
             }
-            else
+            catch (Exception ex)
             {
-                MessageBox.Show(x.Exception.Message);
+                Helper.ErrorMessage(ex.Message);
             }
-            
+
         }
-       
+
         private void btnDelete_Click(object sender, EventArgs e)
         {
             if (!Helper.Confirmation())
             {
                 return;
             }
-            var x = new TaskDbService().Delete(int.Parse(lblID.Text));
-            if (x.State)
+            try
             {
+                var x = new TaskDbService().Delete(int.Parse(lblID.Text));
                 btnClear.PerformClick();
                 LoadInfo();
-                MessageBox.Show("update is success");
+                Helper.SuccessMessage();
             }
-            else
+            catch (Exception ex)
             {
-                MessageBox.Show(x.Exception.Message);
+                Helper.ErrorMessage(ex.Message);
             }
-            
         }
 
         private void gvData_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
@@ -130,7 +131,7 @@ namespace VWMS.ENTITY
                 btnDelete.Enabled = true;
                 btnUpdate.Enabled = true;
                 btnInsert.Enabled = false;
-       
+
                 lblID.Text = dr.Cells["ID"].Value.ToString();
                 txtName.Text = dr.Cells["taskName"].Value.ToString();
                 txtDiscription.Text = dr.Cells["Discription"].Value.ToString();
@@ -148,13 +149,13 @@ namespace VWMS.ENTITY
         string SearchKey = string.Empty;
         private void gvData_ColumnHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
-            
+
 
         }
 
         private void btnGo_Click(object sender, EventArgs e)
         {
-            objVG.LoadTaskInfo(int.Parse(lblID.Text), txtDiscription.Text,txtName.Text);
+            objVG.LoadTaskInfo(int.Parse(lblID.Text), txtDiscription.Text, txtName.Text);
             this.Close();
         }
 
@@ -179,7 +180,7 @@ namespace VWMS.ENTITY
 
             lblID.Text = "0";
         }
-        
-        
+
+
     }
 }

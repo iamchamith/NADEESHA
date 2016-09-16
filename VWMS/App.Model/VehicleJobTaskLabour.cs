@@ -26,5 +26,7 @@ namespace App.Model
         public DateTime? OpenDateTime { get; set; }
 
         public DateTime? CloseDateTime { get; set; }
+
+        public virtual Labour Labour { get; set; }
     }
 }

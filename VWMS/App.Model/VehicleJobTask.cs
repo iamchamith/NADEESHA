@@ -10,9 +10,9 @@ namespace App.Model
     {
         public int ID { get; set; }
 
-        public int? JobId { get; set; }
+        public int JobId { get; set; }
 
-        public int? TaskId { get; set; }
+        public int TaskId { get; set; }
 
         public string Discription { get; set; }
 
@@ -24,5 +24,7 @@ namespace App.Model
         public int? IsClosed { get; set; }
 
         public double? TaskCost { get; set; }
+
+        public virtual VehicleJob VehicleJob { get; set; }
     }
 }

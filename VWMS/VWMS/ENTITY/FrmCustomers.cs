@@ -48,7 +48,7 @@ namespace VWMS.ENTITY
             LoadInfo();
         }
 
-        List<Customer> objreG = new List<Customer> ();
+        List<Customer> objreG = new List<Customer>();
         EOrderBy orderBy = EOrderBy.Desc;
         void LoadInfo(EOrderBy eOrderBy = EOrderBy.Desc)
         {
@@ -56,7 +56,7 @@ namespace VWMS.ENTITY
             gvData.DataSource = (eOrderBy == EOrderBy.Asc) ? objreG.OrderBy(p => p.ID).ToList() : objreG.OrderByDescending(p => p.ID).ToList();
             orderBy = eOrderBy;
         }
- 
+
         public bool IsValidate()
         {
             bool isOk = true;
@@ -93,7 +93,7 @@ namespace VWMS.ENTITY
                 msg.Append("invalied Phone no r \n");
                 isOk = false;
             }
-           
+
             if (!BL.BL.HELPER.Validation.IsValidEmail(txtEmail.Text))
             {
                 msg.Append("Invalid Email \n");
@@ -107,7 +107,7 @@ namespace VWMS.ENTITY
 
             if (isOk == false)
             {
-                Helper.ErrorMessage(message:msg.ToString());
+                Helper.ErrorMessage(message: msg.ToString());
             }
 
             return isOk;
@@ -115,34 +115,32 @@ namespace VWMS.ENTITY
         }
         private void btnInsert_Click(object sender, EventArgs e)
         {
-            if (!Helper.Confirmation()){
-                return;}
+            if (!Helper.Confirmation()) { return; }
 
-            if (!IsValidate()){
+            if (!IsValidate())
+            {
                 return;
             }
-
-            var x = new CustomerDbService().Create(new Customer
+            try
             {
-                Address = txtAddress.Text,
-                Email = txtEmail.Text,
-                Name = txtName.Text,
-                Nic = txtName.Text,
-                Phone = txtPhone.Text,
-                RegDate = DateTime.Today,
-                UserEmale = Properties.Settings.Default.EMAIL,
-                Url = (IsImageChange) ? SaveImage(): "no.jpg"
-            });
-
-            if (x.State)
-            {
+                var x = new CustomerDbService().Create(new Customer
+                {
+                    Address = txtAddress.Text,
+                    Email = txtEmail.Text,
+                    Name = txtName.Text,
+                    Nic = txtName.Text,
+                    Phone = txtPhone.Text,
+                    RegDate = DateTime.Today,
+                    UserEmale = Properties.Settings.Default.EMAIL,
+                    Url = (IsImageChange) ? SaveImage() : "no.jpg"
+                });
                 btnClear.PerformClick();
                 LoadInfo();
                 MessageBox.Show("customer registration is success");
             }
-            else
+            catch (Exception ex)
             {
-                MessageBox.Show(x.Exception.Message);
+                Helper.ErrorMessage(ex.Message);
             }
         }
 
@@ -157,27 +155,26 @@ namespace VWMS.ENTITY
                 return;
             }
 
-            var x = new CustomerDbService().Update(new Customer
+            try
             {
-                ID = int.Parse(lblID.Text),
-                Address = txtAddress.Text,
-                Email = txtEmail.Text,
-                Name = txtName.Text,
-                Nic = txtName.Text,
-                Phone = txtPhone.Text,
-                RegDate = DateTime.Today,
-                UserEmale = Properties.Settings.Default.EMAIL,
-                Url = (IsImageChange) ? SaveImage() : imageURL
-            });
-
-            if (x.State)
-            {
+                var x = new CustomerDbService().Update(new Customer
+                {
+                    ID = int.Parse(lblID.Text),
+                    Address = txtAddress.Text,
+                    Email = txtEmail.Text,
+                    Name = txtName.Text,
+                    Nic = txtName.Text,
+                    Phone = txtPhone.Text,
+                    RegDate = DateTime.Today,
+                    UserEmale = Properties.Settings.Default.EMAIL,
+                    Url = (IsImageChange) ? SaveImage() : imageURL
+                });
                 LoadInfo();
                 MessageBox.Show("customer update is success");
             }
-            else
+            catch (Exception ex)
             {
-                MessageBox.Show(x.Exception.Message);
+                Helper.ErrorMessage(ex.Message);
             }
         }
 
@@ -187,20 +184,20 @@ namespace VWMS.ENTITY
             {
                 return;
             }
-            var x = new CustomerDbService().Delete(int.Parse(lblID.Text));
 
-            if (x.State)
+            try
             {
+                var x = new CustomerDbService().Delete(int.Parse(lblID.Text));
                 LoadInfo();
                 MessageBox.Show("customer update is success");
             }
-            else
+            catch (Exception ex)
             {
-                MessageBox.Show(x.Exception.Message);
+                Helper.ErrorMessage(ex.Message);
             }
         }
 
-        
+
         string SaveImage()
         {
             imageURL = Guid.NewGuid().ToString() + Path.GetExtension(openFileDialog1.FileName);
@@ -223,7 +220,7 @@ namespace VWMS.ENTITY
                 txtEmail.Text = dr.Cells["EMAIL"].Value.ToString().Replace("#", "@");
                 txtAddress.Text = dr.Cells["ADDRESS"].Value.ToString();
                 txtPhone.Text = dr.Cells["PHONE"].Value.ToString();
-               
+
 
                 try
                 {
@@ -236,7 +233,8 @@ namespace VWMS.ENTITY
                     imageURL = "no.jpg";
                 }
             }
-            catch {
+            catch
+            {
                 Helper.ErrorMessage("invalied row selected");
             }
 
@@ -255,7 +253,7 @@ namespace VWMS.ENTITY
         int col = 0;
         private void gvData_ColumnHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
-            if (e.ColumnIndex==0)
+            if (e.ColumnIndex == 0)
             {
                 LoadInfo((orderBy == EOrderBy.Asc) ? EOrderBy.Desc : EOrderBy.Asc);
             }
@@ -277,10 +275,10 @@ namespace VWMS.ENTITY
 
         private void button4_Click(object sender, EventArgs e)
         {
-            REPORTING.FrmReport objReport = new FrmReport(EReports.Customers,0);
+            REPORTING.FrmReport objReport = new FrmReport(EReports.Customers, 0);
             objReport.ShowDialog();
         }
- 
+
         private void FrmCustomers_Load(object sender, EventArgs e)
         {
 

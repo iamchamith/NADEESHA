@@ -73,7 +73,7 @@ namespace VWMS.ENTITY
 
 
             }
-            if (cmbTypes.SelectedIndex==-1)
+            if (cmbTypes.SelectedIndex == -1)
             {
                 msg.Append("Enrollment Type is required \n");
                 isOk = false;
@@ -94,32 +94,34 @@ namespace VWMS.ENTITY
 
         private void btnInsert_Click(object sender, EventArgs e)
         {
-            if (!Helper.Confirmation()){
+            if (!Helper.Confirmation())
+            {
                 return;
             }
             if (!IsValidate())
             {
                 return;
             }
-            var x = new LaboursDbService().Create(new Labour
+            try
             {
-                Discription = txtDiscription.Text,
-                Name = txtName.Text,
-                Nic = txtNIC.Text,
-                Type = int.Parse(cmbTypes.SelectedValue.ToString()),
-                UserEmail = Properties.Settings.Default.EMAIL
+                var x = new LaboursDbService().Create(new Labour
+                {
+                    Discription = txtDiscription.Text,
+                    Name = txtName.Text,
+                    Nic = txtNIC.Text,
+                    Type = int.Parse(cmbTypes.SelectedValue.ToString()),
+                    UserEmail = Properties.Settings.Default.EMAIL
 
-            });
-            if (x.State)
-            {
+                });
+
                 LoadInfo();
-                MessageBox.Show("success");
+                Helper.SuccessMessage();
             }
-            else
+            catch (Exception ex)
             {
-                MessageBox.Show(x.Exception.Message);
+                Helper.ErrorMessage(ex.Message);
             }
-           
+
         }
 
         private void btnUpdate_Click(object sender, EventArgs e)
@@ -128,24 +130,24 @@ namespace VWMS.ENTITY
             {
                 return;
             }
-            var x = new LaboursDbService().Update(new Labour
+            try
             {
-                ID = int.Parse(lblID.Text),
-                Discription = txtDiscription.Text,
-                Name = txtName.Text,
-                Nic = txtNIC.Text,
-                Type = int.Parse(cmbTypes.SelectedValue.ToString()),
-                UserEmail = Properties.Settings.Default.EMAIL
+                var x = new LaboursDbService().Update(new Labour
+                {
+                    ID = int.Parse(lblID.Text),
+                    Discription = txtDiscription.Text,
+                    Name = txtName.Text,
+                    Nic = txtNIC.Text,
+                    Type = int.Parse(cmbTypes.SelectedValue.ToString()),
+                    UserEmail = Properties.Settings.Default.EMAIL
 
-            });
-            if (x.State)
-            {
+                });
                 LoadInfo();
-                MessageBox.Show("success");
+                Helper.SuccessMessage();
             }
-            else
+            catch (Exception ex)
             {
-                MessageBox.Show(x.Exception.Message);
+                Helper.ErrorMessage(ex.Message);
             }
         }
 
@@ -155,18 +157,18 @@ namespace VWMS.ENTITY
             {
                 return;
             }
-            var x = new LaboursDbService().Delete(int.Parse(lblID.Text));
-            if (x.State)
+            try
             {
+                var x = new LaboursDbService().Delete(int.Parse(lblID.Text));
                 btnClear.PerformClick();
                 LoadInfo();
-                MessageBox.Show("success");
+                Helper.SuccessMessage();
+
             }
-            else
+            catch (Exception ex)
             {
-                MessageBox.Show(x.Exception.Message);
+                Helper.ErrorMessage(ex.Message);
             }
-           
         }
 
         private void gvData_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
@@ -174,11 +176,11 @@ namespace VWMS.ENTITY
             try
             {
                 DataGridViewRow dr = gvData.Rows[e.RowIndex];
-               
+
                 btnDelete.Enabled = true;
                 btnUpdate.Enabled = true;
                 btnInsert.Enabled = false;
-                
+
                 lblID.Text = dr.Cells["ID"].Value.ToString();
                 txtName.Text = dr.Cells["NAME"].Value.ToString();
                 txtDiscription.Text = dr.Cells["Discription"].Value.ToString();
@@ -242,7 +244,7 @@ namespace VWMS.ENTITY
             txtName.Clear();
             txtDiscription.Clear();
             cmbTypes.SelectedIndex = 0;
-           
+
             lblID.Text = "0";
         }
     }

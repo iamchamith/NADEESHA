@@ -24,7 +24,7 @@ namespace VWMS.ENTITY
             InitializeComponent();
             LoadInfo();
             LoadBrands();
-         
+
         }
 
         private void LoadBrands()
@@ -49,7 +49,7 @@ namespace VWMS.ENTITY
         {
             bool isOk = true;
             StringBuilder msg = new StringBuilder();
-            if (cmbBrands.SelectedIndex==-1)
+            if (cmbBrands.SelectedIndex == -1)
             {
                 msg.Append("Brand Name is required \n");
                 isOk = false;
@@ -68,54 +68,58 @@ namespace VWMS.ENTITY
         }
         private void btnInsert_Click(object sender, EventArgs e)
         {
-            if (!Helper.Confirmation()){
+            if (!Helper.Confirmation())
+            {
                 return;
             }
-            if (!IsValidate()){
+            if (!IsValidate())
+            {
                 return;
             }
-
-            var x = new ModelDbService().Create(new Model
+            try
             {
-                BrandId = int.Parse(cmbBrands.SelectedValue.ToString()),
-                Discription = txtDiscription.Text,
-                Name = txtName.Text
-            });
 
-            if (x.State)
-            {
+                var x = new ModelDbService().Create(new Model
+                {
+                    BrandId = int.Parse(cmbBrands.SelectedValue.ToString()),
+                    Discription = txtDiscription.Text,
+                    Name = txtName.Text
+                });
                 LoadInfo();
-                MessageBox.Show("create is success");
+                Helper.SuccessMessage();
             }
-            else
+            catch (Exception ex)
             {
-                MessageBox.Show(x.Exception.Message);
+                Helper.ErrorMessage(ex.Message);
             }
-           
+
         }
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
-            if (!Helper.Confirmation()){
-                return;
-            }
-            if (!IsValidate()) {
-                return;
-            }
-            var x = new ModelDbService().Update(new Model
+            if (!Helper.Confirmation())
             {
-                BrandId = int.Parse(cmbBrands.SelectedValue.ToString()),
-                Discription = txtDiscription.Text,
-                Name = txtName.Text,
-                ID = int.Parse(lblID.Text)
-            });
-
-            if (x.State){
-                LoadInfo();
-                MessageBox.Show("create is success");
+                return;
             }
-            else{
-                MessageBox.Show(x.Exception.Message);
+            if (!IsValidate())
+            {
+                return;
+            }
+            try
+            {
+                var x = new ModelDbService().Update(new Model
+                {
+                    BrandId = int.Parse(cmbBrands.SelectedValue.ToString()),
+                    Discription = txtDiscription.Text,
+                    Name = txtName.Text,
+                    ID = int.Parse(lblID.Text)
+                });
+                LoadInfo();
+                Helper.SuccessMessage();
+            }
+            catch (Exception ex)
+            {
+                Helper.ErrorMessage(ex.Message);
             }
         }
 
@@ -125,18 +129,18 @@ namespace VWMS.ENTITY
             {
                 return;
             }
-            var x = new ModelDbService().Delete(int.Parse(lblID.Text));
-
-            if (x.State)
+            try
             {
-                MessageBox.Show("delete is success");
+                var x = new ModelDbService().Delete(int.Parse(lblID.Text));
+                LoadInfo();
+                Helper.SuccessMessage();
             }
-            else
+            catch (Exception ex)
             {
-                MessageBox.Show(x.Exception.Message);
+                Helper.ErrorMessage(ex.Message);
             }
         }
- 
+
         private void gvData_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
             try
@@ -150,7 +154,8 @@ namespace VWMS.ENTITY
                 txtDiscription.Text = dr.Cells["Discription"].Value.ToString();
                 cmbBrands.SelectedValue = dr.Cells["BrandId"].Value.ToString();
             }
-            catch (Exception ex){
+            catch (Exception ex)
+            {
                 MessageBox.Show(ex.Message);
             }
 
@@ -187,9 +192,9 @@ namespace VWMS.ENTITY
         string SearchKey = string.Empty;
         private void gvData_ColumnHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
-            if (e.ColumnIndex==0)
+            if (e.ColumnIndex == 0)
             {
-                LoadInfo((orderBy== EOrderBy.Asc)?EOrderBy.Desc:EOrderBy.Asc);
+                LoadInfo((orderBy == EOrderBy.Asc) ? EOrderBy.Desc : EOrderBy.Asc);
             }
 
             SearchKey = gvData.Columns[e.ColumnIndex].Name;
@@ -224,6 +229,6 @@ namespace VWMS.ENTITY
             btnDelete.Enabled = false;
         }
 
-       
+
     }
 }

@@ -63,7 +63,7 @@ namespace VWMS.ENTITY
                 msg.Append("Item name required \n");
                 isOk = false;
             }
-            if (cmbCategory.SelectedIndex==-1)
+            if (cmbCategory.SelectedIndex == -1)
             {
                 msg.Append("Category Name  required \n");
                 isOk = false;
@@ -83,16 +83,16 @@ namespace VWMS.ENTITY
                 msg.Append("Invalid Reoder leval \n");
                 isOk = false;
             }
-          
+
             if (isOk == false)
             {
-                MessageBox.Show(msg.ToString(), "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                Helper.SuccessMessage(message: msg.ToString());
             }
 
             return isOk;
 
         }
-        
+
         private void btnInsert_Click(object sender, EventArgs e)
         {
             if (!Helper.Confirmation())
@@ -108,10 +108,9 @@ namespace VWMS.ENTITY
             double sellingPrice = Convert.ToDouble(txtPriceOut.Text);
             if (CostPrice > sellingPrice)
             {
-                MessageBox.Show("Cost Price cannot be higher than selling price");
+                Helper.ErrorMessage(message: "Cost Price cannot be higher than selling price");
                 return;
             }
-
             try
             {
                 var x = new ItemDbService().Create(new Item
@@ -124,20 +123,14 @@ namespace VWMS.ENTITY
                     PriceOut = double.Parse(txtPriceOut.Text),
                     Quantity = 0,
                     ReorderLevel = Convert.ToInt32(txtReOrderLevel.Text),
-                    
+
                 });
-                if (x.State)
-                {
-                    LoadInfo();
-                    MessageBox.Show("Sucessfully Inserted", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
-                else
-                {
-                    MessageBox.Show(x.Exception.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
+                LoadInfo();
+                Helper.SuccessMessage(message: "Sucessfully Inserted");
             }
-            catch {
-                MessageBox.Show("invalied inputs");
+            catch (Exception ex)
+            {
+                Helper.ErrorMessage(ex.Message);
             }
         }
 
@@ -151,24 +144,28 @@ namespace VWMS.ENTITY
             {
                 return;
             }
-            var x = new ItemDbService().Update(new Item
+            try
             {
-                CategoryId = cmbCategory.SelectedIndex + 1,
-                Discription = txtDiscription.Text,
-                Name = txtName.Text,
-                PriceIn = double.Parse(txtPriceIn.Text),
-                PriceOut = double.Parse(txtPriceOut.Text),
-                ID = int.Parse(lblID.Text),
-                ReorderLevel = Convert.ToInt32(txtReOrderLevel.Text)
-            });
-            if (x.State)
-            {
-                LoadInfo();
-                //MessageBox.Show("Sucessfully Updated", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                var x = new ItemDbService().Update(new Item
+                {
+                    CategoryId = cmbCategory.SelectedIndex + 1,
+                    Discription = txtDiscription.Text,
+                    Name = txtName.Text,
+                    PriceIn = double.Parse(txtPriceIn.Text),
+                    PriceOut = double.Parse(txtPriceOut.Text),
+                    ID = int.Parse(lblID.Text),
+                    ReorderLevel = Convert.ToInt32(txtReOrderLevel.Text)
+                });
+                if (x.State)
+                {
+                    LoadInfo();
+                    Helper.SuccessMessage();
+                }
+
             }
-            else
+            catch (Exception ex)
             {
-                MessageBox.Show(x.Exception.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                Helper.ErrorMessage(ex.Message);
             }
         }
 
@@ -182,15 +179,15 @@ namespace VWMS.ENTITY
             {
                 return;
             }
-            var x = new ItemDbService().Delete(int.Parse(lblID.Text));
-            if (x.State)
+            try
             {
+                var x = new ItemDbService().Delete(int.Parse(lblID.Text));
                 LoadInfo();
-                MessageBox.Show("Sucessfully Deleted", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                Helper.SuccessMessage();
             }
-            else
+            catch (Exception ex)
             {
-                MessageBox.Show(x.Exception.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                Helper.ErrorMessage(ex.Message);
             }
         }
 
@@ -223,9 +220,9 @@ namespace VWMS.ENTITY
             else
             {
                 objFrmG.LoadItemInfo(lblID.Text, txtName.Text, lblQuntity.Text, txtPriceOut.Text);
-                this.Close();   
+                this.Close();
             }
-          
+
         }
 
         private void cmbCategory_SelectedIndexChanged(object sender, EventArgs e)
@@ -251,13 +248,13 @@ namespace VWMS.ENTITY
             btnUpdate.Enabled = false;
             btnDelete.Enabled = false;
             lblID.Text = "";
-            
+
         }
 
         private void FrmItems_Load(object sender, EventArgs e)
         {
             btnInsert.Enabled = true;
-            btnUpdate.Enabled=false;
+            btnUpdate.Enabled = false;
             btnDelete.Enabled = false;
         }
 

@@ -26,3 +26,19 @@ G:\STUDENT PROJECTS\NADEESHA\1\VWMS2015-10-4\NADEESHA\VWMS\App.BL\bin\Debug\Enti
 G:\STUDENT PROJECTS\NADEESHA\1\VWMS2015-10-4\NADEESHA\VWMS\App.BL\obj\Debug\App.BL.csprojResolveAssemblyReference.cache
 G:\STUDENT PROJECTS\NADEESHA\1\VWMS2015-10-4\NADEESHA\VWMS\App.BL\obj\Debug\App.BL.dll
 G:\STUDENT PROJECTS\NADEESHA\1\VWMS2015-10-4\NADEESHA\VWMS\App.BL\obj\Debug\App.BL.pdb
+D:\GIT\NADEESHA\VWMS\App.BL\bin\Debug\App.BL.dll.config
+D:\GIT\NADEESHA\VWMS\App.BL\bin\Debug\App.BL.dll
+D:\GIT\NADEESHA\VWMS\App.BL\bin\Debug\App.BL.pdb
+D:\GIT\NADEESHA\VWMS\App.BL\bin\Debug\App.Dal.dll
+D:\GIT\NADEESHA\VWMS\App.BL\bin\Debug\App.Model.dll
+D:\GIT\NADEESHA\VWMS\App.BL\bin\Debug\EntityFramework.dll
+D:\GIT\NADEESHA\VWMS\App.BL\bin\Debug\EntityFramework.SqlServer.dll
+D:\GIT\NADEESHA\VWMS\App.BL\bin\Debug\App.Dal.pdb
+D:\GIT\NADEESHA\VWMS\App.BL\bin\Debug\App.Model.pdb
+D:\GIT\NADEESHA\VWMS\App.BL\bin\Debug\EntityFramework.xml
+D:\GIT\NADEESHA\VWMS\App.BL\bin\Debug\EntityFramework.SqlServer.xml
+D:\GIT\NADEESHA\VWMS\App.BL\obj\Debug\App.BL.csprojResolveAssemblyReference.cache
+D:\GIT\NADEESHA\VWMS\App.BL\obj\Debug\App.BL.dll
+D:\GIT\NADEESHA\VWMS\App.BL\obj\Debug\App.BL.pdb
+D:\GIT\NADEESHA\VWMS\App.BL\bin\Debug\AutoMapper.dll
+D:\GIT\NADEESHA\VWMS\App.BL\bin\Debug\AutoMapper.xml
