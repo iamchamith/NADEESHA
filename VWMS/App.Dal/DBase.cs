@@ -9,7 +9,7 @@ namespace App.Dal
     public partial class DBase : DbContext
     {
         public DBase()
-            : base(@"Data Source=DELL\SQLEXPRESS;Initial Catalog=nadeesha;Integrated Security=True;Pooling=False")
+            : base(@"Data Source=DELL\SQLEXPRESS;Initial Catalog=nadeesha2;Integrated Security=True;Pooling=False")
         {
         }
 

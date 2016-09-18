@@ -35,7 +35,6 @@ namespace App.BL
                     throw new Exception("item not found");
                 }
                 x.Quantity = obj.Quantity;
-                x.Discription = obj.Discription;
                 dba.SaveChanges();
                 return new DetailModel { State = true };
             }
