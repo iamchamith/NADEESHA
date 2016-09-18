@@ -1,0 +1,5 @@
+﻿FrmLogin - done
+FrmMain - done
+FrmBrands  -done
+FrmLabour - done
+FrmCustomers - done

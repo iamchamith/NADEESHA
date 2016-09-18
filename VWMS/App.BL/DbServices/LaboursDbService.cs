@@ -1,5 +1,6 @@
 ﻿using App.BL.DbServices;
 using App.Model;
+using AutoMapper;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,11 +12,11 @@ namespace App.BL.DbServices
 {
     public class LaboursDbService : Repo
     {
-        public DetailModel Create(Labour obj)
+        public DetailModel Create(LabourViewModel obj)
         {
             try
             {
-                dba.Labours.Add(obj);
+                dba.Labours.Add(Mapper.Map<Labour>(obj));
                 dba.SaveChanges();
                 return new DetailModel { State = true };
             }
@@ -25,7 +26,7 @@ namespace App.BL.DbServices
             }
         }
 
-        public DetailModel Update(Labour obj)
+        public DetailModel Update(LabourViewModel obj)
         {
 
             try
@@ -50,7 +51,6 @@ namespace App.BL.DbServices
             {
                 throw;
             }
-
         }
 
         public DetailModel Delete(int id)
@@ -77,7 +77,7 @@ namespace App.BL.DbServices
                 return new DetailModel
                 {
                     State = true,
-                    Content = dba.Labours.ToList()
+                    Content = dba.Labours.ToList().Select(x => AutoMapper.Mapper.Map<LabourViewModel>(x)).ToList()
                 };
             }
             catch
@@ -88,13 +88,12 @@ namespace App.BL.DbServices
 
         public DetailModel Read(int id)
         {
-
             try
             {
                 return new DetailModel
                 {
                     State = true,
-                    Content = dba.Labours.Where(p => p.ID == id).FirstOrDefault()
+                    Content = Mapper.Map<LabourViewModel>(dba.Labours.Where(p => p.ID == id).FirstOrDefault())
                 };
             }
             catch

@@ -220,8 +220,6 @@ namespace VWMS.ENTITY
                 txtEmail.Text = dr.Cells["EMAIL"].Value.ToString().Replace("#", "@");
                 txtAddress.Text = dr.Cells["ADDRESS"].Value.ToString();
                 txtPhone.Text = dr.Cells["PHONE"].Value.ToString();
-
-
                 try
                 {
                     pictureBox1.Image = Image.FromFile(BL.MODEL.Pathss.FilePath + dr.Cells["URL"].Value.ToString());
@@ -245,7 +243,13 @@ namespace VWMS.ENTITY
         bool IsImageChange = false;
         private void txtSearchBy_TextChanged(object sender, EventArgs e)
         {
-            gvData.DataSource = Utiliry.CreateDataTable<Customer>(objreG).Select(string.Format("{0} like '{1}%'", lblSearchKey.Text, txtSearchBy.Text)).CopyToDataTable();
+            try
+            {
+                gvData.DataSource = Utiliry.CreateDataTable<Customer>(objreG).Select(string.Format("{0} like '{1}%'", lblSearchKey.Text, txtSearchBy.Text)).CopyToDataTable();
+            }
+            catch {
+                gvData.DataSource = null;
+            }
         }
 
         Func<BrandsModel, bool> searchPre = null;

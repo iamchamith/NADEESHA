@@ -65,25 +65,24 @@ namespace VWMS.USER
             {
                 return;
             }
-
-            if (new UserDbService().Register(new User
+            try
             {
-                Email = txtUserName.Text,
-                Name = txtName.Text,
-                Nic = txtNIC.Text,
-                Password = txtUserName.Text,
-                State = cmbUserType.SelectedIndex + 1
-            }).State)
-            {
-                LoadInfo();
-                MessageBox.Show("user create is success");
+                new UserDbService().Register(new User
+                {
+                    Email = txtUserName.Text,
+                    Name = txtName.Text,
+                    Nic = txtNIC.Text,
+                    Password = txtUserName.Text,
+                    State = cmbUserType.SelectedIndex + 1
+                });
+                Helper.SuccessMessage();
             }
-            else
+            catch (Exception ex)
             {
-                MessageBox.Show("user create is not success");
+                Helper.ErrorMessage(ex.Message);
             }
         }
- 
+
         void LoadInfo()
         {
             List<User> dt = (List<User>)new UserDbService().Selectuser().Content;
@@ -97,23 +96,22 @@ namespace VWMS.USER
                 return;
             }
 
-            var x = new UserDbService().UpdateUser(new User()
+            try
             {
-                Email = txtUserName.Text,
-                Name = txtName.Text,
-                Nic = txtNIC.Text,
-                State = cmbUserType.SelectedIndex + 1
-            });
-
-            if (x.State)
-            {
-                LoadInfo();
-                MessageBox.Show("user update success");
+                var x = new UserDbService().UpdateUser(new User()
+                {
+                    Email = txtUserName.Text,
+                    Name = txtName.Text,
+                    Nic = txtNIC.Text,
+                    State = cmbUserType.SelectedIndex + 1
+                });
+                Helper.SuccessMessage();
             }
-            else
+            catch (Exception ex)
             {
-                MessageBox.Show(x.Exception.Message);
+                Helper.ErrorMessage(ex.Message);
             }
+ 
         }
 
         private void btnDelete_Click(object sender, EventArgs e)
@@ -129,9 +127,9 @@ namespace VWMS.USER
         {
             try
             {
-                if (gvusers.Rows[e.RowIndex].Cells[1].Value.ToString().Trim()=="4")
+                if (gvusers.Rows[e.RowIndex].Cells[1].Value.ToString().Trim() == "4")
                 {
-                    MessageBox.Show("this user act as deleted.you cant update.");return;
+                    MessageBox.Show("this user act as deleted.you cant update."); return;
                 }
 
                 btnDelete.Enabled = true;
@@ -148,11 +146,11 @@ namespace VWMS.USER
 
         private void FrmUpdateUser_Load(object sender, EventArgs e)
         {
-          
+
             btnSave.Enabled = true;
             btnUpdate.Enabled = false;
-            btnDelete.Enabled=false;
-           
+            btnDelete.Enabled = false;
+
         }
 
         private void btnClear_Click(object sender, EventArgs e)

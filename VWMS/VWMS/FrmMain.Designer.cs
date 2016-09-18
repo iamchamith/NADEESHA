@@ -41,7 +41,6 @@
             this.tASKSToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cUSTOMERToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.iTEMSToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.rESERVATIONToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.wORKSTATIONToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.iNVENTORYToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.uSERToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -102,8 +101,7 @@
             this.lABARARToolStripMenuItem,
             this.tASKSToolStripMenuItem,
             this.cUSTOMERToolStripMenuItem,
-            this.iTEMSToolStripMenuItem1,
-            this.rESERVATIONToolStripMenuItem});
+            this.iTEMSToolStripMenuItem1});
             this.eNTITYToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("eNTITYToolStripMenuItem.Image")));
             this.eNTITYToolStripMenuItem.Name = "eNTITYToolStripMenuItem";
             this.eNTITYToolStripMenuItem.Size = new System.Drawing.Size(93, 23);
@@ -164,13 +162,6 @@
             this.iTEMSToolStripMenuItem1.Size = new System.Drawing.Size(192, 24);
             this.iTEMSToolStripMenuItem1.Text = "ITEMS";
             this.iTEMSToolStripMenuItem1.Click += new System.EventHandler(this.iTEMSToolStripMenuItem1_Click);
-            // 
-            // rESERVATIONToolStripMenuItem
-            // 
-            this.rESERVATIONToolStripMenuItem.Name = "rESERVATIONToolStripMenuItem";
-            this.rESERVATIONToolStripMenuItem.Size = new System.Drawing.Size(192, 24);
-            this.rESERVATIONToolStripMenuItem.Text = "RESERVATION";
-            this.rESERVATIONToolStripMenuItem.Click += new System.EventHandler(this.rESERVATIONToolStripMenuItem_Click);
             // 
             // wORKSTATIONToolStripMenuItem
             // 
@@ -261,6 +252,5 @@
         private System.Windows.Forms.ToolStripMenuItem iTEMSToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem vEHICLEToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem rESERVATIONToolStripMenuItem;
     }
 }

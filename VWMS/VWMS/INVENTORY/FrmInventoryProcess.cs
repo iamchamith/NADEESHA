@@ -28,7 +28,8 @@ namespace VWMS.INVENTORY
             obj.ShowDialog();
         }
 
-        public void LoadItemInfo(string id,string name,string qantity,string priceout) {
+        public void LoadItemInfo(string id, string name, string qantity, string priceout)
+        {
 
             lblID.Text = id;
             lblItemID.Text = id;
@@ -38,48 +39,35 @@ namespace VWMS.INVENTORY
 
         private void btnInsert_Click(object sender, EventArgs e)
         {
+            if (!Helper.Confirmation(message: "This Process canot be rall back"))
+            {
+                return;
+            }
+            if (!IsValidate())
+            {
+                return;
+            }
             try
             {
-                if (!Helper.Confirmation(message:"This Process canot be rall back"))
-                {
-                    return;
-                }
-                if (!IsValidate())
-                {
-                    return;
-                }
-                var x = new InventoryInfomationDbService().Insert(new InventoryInfomation()
+                new InventoryInfomationDbService().Insert(new InventoryInfomation()
                 {
                     ItemID = int.Parse(lblID.Text),
                     Qty = Convert.ToInt32(numericUpDown1.Value),
                     RegDate = DateTime.Now,
                     Type = (rdIn.Checked) ? 0 : 1,
                     UserName
-                     = Properties.Settings.Default.EMAIL
+                            = Properties.Settings.Default.EMAIL
                 });
-                if (x.State)
-                {
+                LoadInfo();
+                Helper.SuccessMessage(message: "Sucessfully Inserted");
 
-                    LoadInfo();
-                    MessageBox.Show("Sucessfully Inserted", "Information", MessageBoxButtons.OK,
-                        MessageBoxIcon.Information);
-                }
-                else
-                {
-                    MessageBox.Show("Insert is not Success", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-
-
-            }
-            catch (MyException exception)
-            {
-                MessageBox.Show(exception.Message);
             }
             catch (Exception ex)
             {
-
-                throw ex;
+                Helper.ErrorMessage(ex.Message);
             }
+
+
         }
         private List<InventoryInfomation> dtG = new List<InventoryInfomation>();
         private void LoadInfo()
@@ -91,7 +79,7 @@ namespace VWMS.INVENTORY
             bool isOk = true;
             StringBuilder msg = new StringBuilder();
 
-            if (lblID.Text=="0")
+            if (lblID.Text == "0")
             {
                 msg.Append("Item Id required \n");
                 isOk = false;
@@ -116,12 +104,12 @@ namespace VWMS.INVENTORY
             }
             var x = BL.BL.ItemsBL.UpdateInventory(new ItemModel
             {
-                ID =Convert.ToInt32(lblUpId.Text),
+                ID = Convert.ToInt32(lblUpId.Text),
                 ItemID = Convert.ToInt32(lblID.Text),
                 Qiantity = Convert.ToInt32(numericUpDown1.Text),
                 InventoryType = types == 1 ? InventoryType.stockIn : InventoryType.stockOut,
-                
-               
+
+
             });
             if (x)
             {
@@ -140,7 +128,7 @@ namespace VWMS.INVENTORY
             {
                 types = 1;
             }
-         
+
         }
 
         private void rdOut_CheckedChanged(object sender, EventArgs e)
@@ -149,7 +137,7 @@ namespace VWMS.INVENTORY
             {
                 types = 2;
             }
-           
+
         }
 
         private void btnDelete_Click(object sender, EventArgs e)
@@ -251,7 +239,7 @@ namespace VWMS.INVENTORY
         }
         private void chkFromDate_CheckedChanged(object sender, EventArgs e)
         {
-            
+
         }
 
         // search
@@ -262,9 +250,9 @@ namespace VWMS.INVENTORY
             bool IsFirstSelect = false;
             if (chkItem.Checked)
             {
-                if (lblItemID.Text=="0")
+                if (lblItemID.Text == "0")
                 {
-                    MessageBox.Show("please select item");return;
+                    MessageBox.Show("please select item"); return;
                 }
                 quary += " ITEM_ID = " + lblItemID.Text + "     and  ";
                 IsFirstSelect = true;
@@ -272,27 +260,27 @@ namespace VWMS.INVENTORY
 
             if (chkStockMode.Checked)
             {
-                quary += " TYPE = " + (cmbStockMode.SelectedIndex+1) + "     and  ";
+                quary += " TYPE = " + (cmbStockMode.SelectedIndex + 1) + "     and  ";
                 IsFirstSelect = true;
             }
- 
+
             if (chkToDate.Checked)
             {
-                quary += " REG_DATE between '" + dtFromDate.Value.ToShortDateString()+"' and '"+ dtToDate.Value.ToShortDateString() + "'     and  ";
+                quary += " REG_DATE between '" + dtFromDate.Value.ToShortDateString() + "' and '" + dtToDate.Value.ToShortDateString() + "'     and  ";
                 IsFirstSelect = true;
             }
             else if (chkFromDate.Checked)
             {
-                quary += " REG_DATE between '" + dtFromDate.Value.ToShortDateString() + "' and '" + dtFromDate.Value.AddDays(1).ToShortDateString()+ "'     and  ";
+                quary += " REG_DATE between '" + dtFromDate.Value.ToShortDateString() + "' and '" + dtFromDate.Value.AddDays(1).ToShortDateString() + "'     and  ";
                 IsFirstSelect = true;
             }
 
             if (IsFirstSelect)
             {
-                quary = "  where "+quary.Substring(0, quary.Length - 7);
+                quary = "  where " + quary.Substring(0, quary.Length - 7);
             }
- 
-            dataGridView1.DataSource = ItemsBL.SelectSearchItems(quary).Content; 
+
+            dataGridView1.DataSource = ItemsBL.SelectSearchItems(quary).Content;
         }
 
         private void chkToDate_CheckedChanged(object sender, EventArgs e)

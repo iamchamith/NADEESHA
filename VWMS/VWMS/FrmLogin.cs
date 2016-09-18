@@ -52,6 +52,7 @@ namespace VWMS
             }
         }
 
+        //validation 
         bool IsValied(User obj,out string messageOut) {
 
             bool isValied = true;

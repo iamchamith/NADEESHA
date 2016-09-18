@@ -291,6 +291,7 @@
             this.Name = "FrmLabour";
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Laburur";
             this.Load += new System.EventHandler(this.FrmLabour_Load);
             ((System.ComponentModel.ISupportInitialize)(this.gvData)).EndInit();
             this.groupBox1.ResumeLayout(false);

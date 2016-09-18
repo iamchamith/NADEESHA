@@ -1,4 +1,5 @@
 ﻿using App.BL;
+using App.BL.DbServices;
 using App.Model;
 using BL.BL;
 using BL.MODEL;
@@ -114,9 +115,9 @@ namespace VWMS.WS
                 return;
             }
 
-            using (var x = new VehicleJobDbService())
+            try
             {
-                var o = x.CreateVehicleJob(new App.Model.VehicleJobViewModel
+                new VehicleJobDbService().CreateVehicleJob(new App.Model.VehicleJobViewModel
                 {
                     IsFinished = (int)Enums.EIsClosed.NotClosed,
                     FinalAmount = 0.00,
@@ -125,16 +126,15 @@ namespace VWMS.WS
                     VehicleNumber = lblJobVehicleID.Text,
                     UserEmail = Properties.Settings.Default.EMAIL
                 });
-                if (!o.State)
-                {
-                    Helper.ErrorMessage(o.Message);
-                }
-                else
-                {
-                    LoadVehicleJobs(lblJobVehicleID.Text);
-                    Helper.SuccessMessage(message: "job creation is success");
-                }
+                LoadVehicleJobs(lblJobVehicleID.Text);
+                Helper.SuccessMessage(message: "job creation is success");
             }
+            catch (Exception ex)
+            {
+                Helper.ErrorMessage(ex.Message);
+            }
+
+
         }
 
         bool ValidateObject(ReturnObject ReturnObject)
@@ -201,7 +201,7 @@ namespace VWMS.WS
                     new TaskModel{ID = int.Parse(lblTaskId.Text)}
                  },
                     Discription = txtTaskDiscription.Text,
-                    
+
                     UserEmail = Properties.Settings.Default.EMAIL
                 }, db);
             }
@@ -215,10 +215,13 @@ namespace VWMS.WS
 
         private void btnInsert_Click(object sender, EventArgs e)
         {
-          
+            if (!Helper.Confirmation())
+            {
+                return;
+            }
             try
             {
-                var x = new VehicleJobTaskDbService().CreateVehicleJobTask(new VehicleJobTaskViewModel
+                new VehicleJobTaskDbService().CreateVehicleJobTask(new VehicleJobTaskViewModel
                 {
                     Date = DateTime.Today,
                     Discription = txtTaskDiscription.Text,
@@ -227,14 +230,10 @@ namespace VWMS.WS
                     IsClosed = (int)Enums.EIsClosed.NotClosed,
                     UserEmail = Properties.Settings.Default.EMAIL
                 });
-                if (x.State)
-                {
-                    Helper.SuccessMessage();
-                    LoadJobTasks();
-                }
-                else { LoadJobTasks(); }
+                LoadJobTasks();
+                Helper.SuccessMessage();
             }
-            catch { MessageBox.Show("invalied row selected"); return; }
+            catch (Exception ex) { Helper.ErrorMessage(ex.Message); }
 
         }
 
@@ -247,11 +246,12 @@ namespace VWMS.WS
                 {
                     LoadTaskLabours("123");
                 }
-                else {
+                else
+                {
                     Helper.ErrorMessage();
                 }
             }
-             
+
         }
         public void ResetTaskAllocation()
         {
@@ -284,7 +284,7 @@ namespace VWMS.WS
                 lblTaskJobID.Text = gvTask.Rows[e.RowIndex].Cells[1].Value.ToString();
                 lblTaskId.Text = gvTask.Rows[e.RowIndex].Cells[2].Value.ToString();
                 txtTaskDiscription.Text = gvTask.Rows[e.RowIndex].Cells[3].Value.ToString();
-               
+
                 if (lblTaskId.Text == "TASK")
                 {
                     MessageBox.Show("please select TaskId");
@@ -331,23 +331,24 @@ namespace VWMS.WS
                 MessageBox.Show("please select Labour Id");
                 return;
             }
-            var x = new VehicleJobTaskLabourDbService().CreateVehicleJobTask(new VehicleJobTaskLabourViewModel
+            try
             {
-                LabourId = int.Parse(lblTaskLabourEmpID.Text),
-                TaskId = int.Parse(lbJobTaskId.Text),
-                Discription = txtTaskLabourDiscription.Text,
-                UserEmail = Properties.Settings.Default.EMAIL,
-                OpenDateTime = DateTime.Now,
-                IsClosed = (int)Enums.EIsClosed.NotClosed
-            });
-            if (x.State)
-            {
+
+                var x = new VehicleJobTaskLabourDbService().CreateVehicleJobTask(new VehicleJobTaskLabourViewModel
+                {
+                    LabourId = int.Parse(lblTaskLabourEmpID.Text),
+                    TaskId = int.Parse(lbJobTaskId.Text),
+                    Discription = txtTaskLabourDiscription.Text,
+                    UserEmail = Properties.Settings.Default.EMAIL,
+                    OpenDateTime = DateTime.Now,
+                    IsClosed = (int)Enums.EIsClosed.NotClosed
+                });
                 LoadTaskLabours(lbJobTaskId.Text);
                 Helper.SuccessMessage();
             }
-            else
+            catch (Exception ex)
             {
-                Helper.ErrorMessage(message: x.Message);
+                Helper.ErrorMessage(message: ex.Message);
             }
         }
 
@@ -365,7 +366,8 @@ namespace VWMS.WS
 
             if (Helper.Confirmation())
             {
-                var x = new VehicleJobTaskLabourDbService().UpdatevehicleTask(new VehicleJobTaskLabourViewModel {
+                var x = new VehicleJobTaskLabourDbService().UpdatevehicleTask(new VehicleJobTaskLabourViewModel
+                {
                     CloseDateTime = DateTime.Today,
                     Discription = txtTaskLabourDiscription.Text,
                     IsClosed = (int)Enums.EIsClosed.Closed
@@ -405,14 +407,12 @@ namespace VWMS.WS
             {
                 lblTaskLabourID.Text = gvLabours.Rows[e.RowIndex].Cells[0].Value.ToString();
                 lblTaskLabourEmpID.Text = gvLabours.Rows[e.RowIndex].Cells[2].Value.ToString();
-                DataTable dt = (DataTable)BL.BL.LaboursBL.SelectLabours().Content;
+                lblTaskLabourName.Text = ((LabourViewModel)(new LaboursDbService().Read(int.Parse(gvLabours.Rows[e.RowIndex].Cells[2].Value.ToString())).Content)).Name;
                 txtTaskLabourDiscription.Text = gvLabours.Rows[e.RowIndex].Cells[3].Value.ToString();
-                lblTaskLabourName.Text = dt.Select("ID = " + lblTaskLabourEmpID.Text + "").CopyToDataTable().Rows[0]["NAME"].ToString();
             }
             catch (Exception ex)
             {
-
-                throw ex;
+                Helper.ErrorMessage(message: ex.Message);
             }
 
         }
@@ -433,14 +433,20 @@ namespace VWMS.WS
 
         void LoadTaskLabours(string taskID)
         {
-            gvLabours.DataSource = Helper.CreateDataTable<VehicleJobTaskLabourViewModel>((List<VehicleJobTaskLabourViewModel>)new VehicleJobTaskLabourDbService().SelectVehicleTask(int.Parse(taskID)).Content);
-            //rowColorLabur();
+            try
+            {
+                gvLabours.DataSource = Helper.CreateDataTable<VehicleJobTaskLabourViewModel>((List<VehicleJobTaskLabourViewModel>)new VehicleJobTaskLabourDbService().SelectVehicleTask(int.Parse(taskID)).Content);
+            }
+            catch (Exception ex) {
+                Helper.ErrorMessage(ex.Message);
+            }
+
         }
 
         void LoadMaterials(string taskID)
         {
-
-            gvMaterials.DataSource = WSBL.SelectMaterials(taskID).Content;
+            gvMaterials.DataSource = Helper.CreateDataTable<VehicleJobTaskItemViewModel>((List<VehicleJobTaskItemViewModel>)(new VehicleJobTaskItemDbService().SelectJobTaskItem(int.Parse(taskID)).Content));
+            
         }
         ReturnObject LabourUpdateModel(DBQ db)
         {
@@ -562,35 +568,26 @@ namespace VWMS.WS
 
                 try
                 {
-                    DataTable dt = (DataTable)WSBL.SelectItemsExists(Convert.ToInt32(lblJobTaskID.Text), Convert.ToInt32(lblItemsID.Text)).Content;
-                    if (dt.Rows.Count > 0)
+                    new VehicleJobTaskItemDbService().CreateJobTaskItem(new VehicleJobTaskItemViewModel
                     {
-                        MessageBox.Show("This item already assigned to this task");
-                        return;
-                    }
-                    if (qty > availableqty)
-                    {
-                        MessageBox.Show("invalid quantity");
-                        return;
-                    }
+                        ItemId = int.Parse(lblItemsID.Text),
+                        Price = double.Parse(lblItemPrice.Text),
+                        Quantity = Convert.ToInt32(txtQuantity.Value),
+                        UserEmail =  Properties.Settings.Default.EMAIL,
+                        RegDate = DateTime.Now,
+                        TaskId = int.Parse(lbltasksID.Text)
+                    });
+                    LoadMaterials(lbltasksID.Text);
+                    Helper.SuccessMessage();
                 }
-                catch
+                catch(Exception ex)
                 {
-                    MessageBox.Show("invalied row selected");
+                    Helper.ErrorMessage(ex.Message);
                 }
-                ReturnObject objre = MaterialUpdateModel(DBQ.Insert);
-                if (ValidateObject(objre))
-                {
-                    MessageBox.Show(objre.Message);
-                    UpdateQuantityLabal();
-                    LoadMaterials(lblJobTaskID.Text);
-                }
-
+               
             }
             catch (Exception ex)
-            {
-
-                throw ex;
+            {  Helper.ErrorMessage(ex.Message);
             }
         }
 
@@ -709,22 +706,23 @@ namespace VWMS.WS
             {
                 MessageBox.Show("invalied amount"); return;
             }
-
-            var x = new VehicleJobTaskDbService().UpdatevehicleTask(new VehicleJobTaskViewModel {
-                Discription = txtTaskDiscription.Text,
-                IsClosed =  (int)Enums.EIsClosed.Closed,
-                TaskCost = int.Parse(txtLabourCharge.Text)
-            });
-            if (x.State)
+            try
             {
+                new VehicleJobTaskDbService().UpdatevehicleTask(new VehicleJobTaskViewModel
+                {
+                    Discription = txtTaskDiscription.Text,
+                    IsClosed = (int)Enums.EIsClosed.Closed,
+                    TaskCost = int.Parse(txtLabourCharge.Text)
+                });
+
                 Helper.SuccessMessage("job close is success");
                 LoadJobTasks();
-                LoadJobTasks();  
             }
-            else
+            catch (Exception ex)
             {
-                Helper.ErrorMessage("job close is not success");
+                Helper.SuccessMessage(ex.Message);
             }
+            
         }
 
         public void rowColorTask()
@@ -784,7 +782,7 @@ namespace VWMS.WS
             lblTaskId.Text = "0";
             txtLabourCharge.Text = "TASK NAME";
             txtTaskDiscription.Text = "";
-          
+
             //WORDFOUCE allocation
 
             lblTaskLabourName.Text = "name";

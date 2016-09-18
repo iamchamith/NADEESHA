@@ -34,7 +34,7 @@ namespace VWMS
             return MessageBox.Show(message, caption, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes;
         }
 
-        public static void ErrorMessage(string caption = "invalied infomration", string message = "invalied infomration")
+        public static void ErrorMessage( string message = "invalied infomration", string caption = "invalied infomration")
         {
               MessageBox.Show(message, caption, MessageBoxButtons.OK, MessageBoxIcon.Error);
         }

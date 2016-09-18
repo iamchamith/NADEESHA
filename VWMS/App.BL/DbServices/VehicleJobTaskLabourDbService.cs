@@ -63,9 +63,10 @@ namespace App.BL
         {
             try
             {
+ 
                 return new DetailModel
                 {
-                    Content = dba.VehicleJobTaskLabours.Where(p => p.TaskId == TaskId)
+                    Content = dba.VehicleJobTaskLabours.Where(p => p.TaskId == TaskId).ToList()
                     .Select(x => AutoMapper.Mapper.Map<VehicleJobTaskLabourViewModel>(x)).ToList()
                 };
             }

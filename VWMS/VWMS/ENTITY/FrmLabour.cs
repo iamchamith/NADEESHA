@@ -53,11 +53,11 @@ namespace VWMS.ENTITY
             cmbTypes.DataSource = dt;
         }
 
-        List<Labour> dtG = new List<Labour>();
+        List<LabourViewModel> dtG = new List<LabourViewModel>();
         EOrderBy orderBy = EOrderBy.Desc;
         void LoadInfo(EOrderBy eOrderBy = EOrderBy.Desc)
         {
-            gvData.DataSource = dtG = (List<Labour>)new LaboursDbService().Read().Content;
+            gvData.DataSource = dtG = (List<LabourViewModel>)new LaboursDbService().Read().Content;
 
         }
 
@@ -70,8 +70,6 @@ namespace VWMS.ENTITY
             {
                 msg.Append("Name required \n");
                 isOk = false;
-
-
             }
             if (cmbTypes.SelectedIndex == -1)
             {
@@ -87,9 +85,7 @@ namespace VWMS.ENTITY
             {
                 MessageBox.Show(msg.ToString(), "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
-
             return isOk;
-
         }
 
         private void btnInsert_Click(object sender, EventArgs e)
@@ -104,7 +100,7 @@ namespace VWMS.ENTITY
             }
             try
             {
-                var x = new LaboursDbService().Create(new Labour
+                var x = new LaboursDbService().Create(new LabourViewModel
                 {
                     Discription = txtDiscription.Text,
                     Name = txtName.Text,
@@ -132,7 +128,7 @@ namespace VWMS.ENTITY
             }
             try
             {
-                var x = new LaboursDbService().Update(new Labour
+                var x = new LaboursDbService().Update(new LabourViewModel
                 {
                     ID = int.Parse(lblID.Text),
                     Discription = txtDiscription.Text,
@@ -176,11 +172,9 @@ namespace VWMS.ENTITY
             try
             {
                 DataGridViewRow dr = gvData.Rows[e.RowIndex];
-
                 btnDelete.Enabled = true;
                 btnUpdate.Enabled = true;
                 btnInsert.Enabled = false;
-
                 lblID.Text = dr.Cells["ID"].Value.ToString();
                 txtName.Text = dr.Cells["NAME"].Value.ToString();
                 txtDiscription.Text = dr.Cells["Discription"].Value.ToString();
@@ -197,7 +191,7 @@ namespace VWMS.ENTITY
         {
             try
             {
-                gvData.DataSource = Utiliry.CreateDataTable<Labour>(dtG).Select(string.Format("{0} like '{1}%'", lblSearchKey.Text, txtSearchBy.Text)).CopyToDataTable();
+                gvData.DataSource = Utiliry.CreateDataTable<LabourViewModel>(dtG).Select(string.Format("{0} like '{1}%'", lblSearchKey.Text, txtSearchBy.Text)).CopyToDataTable();
             }
             catch (Exception ex)
             {
@@ -213,7 +207,6 @@ namespace VWMS.ENTITY
             {
                 LoadInfo((orderBy == EOrderBy.Asc) ? EOrderBy.Desc : EOrderBy.Asc);
             }
-
         }
 
         private void btnGO_Click(object sender, EventArgs e)
@@ -244,7 +237,6 @@ namespace VWMS.ENTITY
             txtName.Clear();
             txtDiscription.Clear();
             cmbTypes.SelectedIndex = 0;
-
             lblID.Text = "0";
         }
     }

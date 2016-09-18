@@ -133,9 +133,9 @@
             this.gvData.BackgroundColor = System.Drawing.Color.WhiteSmoke;
             this.gvData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.gvData.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.gvData.Location = new System.Drawing.Point(0, 312);
+            this.gvData.Location = new System.Drawing.Point(0, 288);
             this.gvData.Name = "gvData";
-            this.gvData.Size = new System.Drawing.Size(475, 146);
+            this.gvData.Size = new System.Drawing.Size(475, 170);
             this.gvData.TabIndex = 8;
             this.gvData.ColumnHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.gvData_ColumnHeaderMouseClick);
             this.gvData.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.gvData_RowHeaderMouseClick);
@@ -220,6 +220,7 @@
             this.Name = "FrmBrands";
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "VEHICLE BRANDS";
             this.Load += new System.EventHandler(this.FrmBrands_Load);
             ((System.ComponentModel.ISupportInitialize)(this.gvData)).EndInit();
             this.groupBox1.ResumeLayout(false);

@@ -44,6 +44,10 @@ namespace App.BL
 
             Mapper.CreateMap<VehicleJobViewModel, VehicleJob>();
             Mapper.CreateMap<VehicleJob, VehicleJobViewModel>();
+
+            Mapper.CreateMap<LabourViewModel, Labour>();
+            Mapper.CreateMap<Labour,LabourViewModel>();
+
         }
     }
 

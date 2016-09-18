@@ -109,6 +109,7 @@
             // 
             // txtName
             // 
+            this.txtName.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtName.Location = new System.Drawing.Point(216, 86);
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(236, 23);
@@ -116,6 +117,7 @@
             // 
             // cmbBrands
             // 
+            this.cmbBrands.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbBrands.FormattingEnabled = true;
             this.cmbBrands.Location = new System.Drawing.Point(216, 55);
             this.cmbBrands.Name = "cmbBrands";
