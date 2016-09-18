@@ -29,7 +29,7 @@ namespace VWMS
     }
 
 
-
+    #region <Utilities>
     public class Helper
     {
         public static string FilePath = @"G:\STUDENT PROJECTS\NADEESHA\1\VWMS2015-10-4\NADEESHA\VWMS\VWMS\IMAGES\";
@@ -43,7 +43,7 @@ namespace VWMS
         {
             MessageBox.Show(message, caption, MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
-        public static void SuccessMessage(string message = "Success",string caption = "Success")
+        public static void SuccessMessage(string message = "Success", string caption = "Success")
         {
             MessageBox.Show(message, caption, MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
@@ -61,7 +61,8 @@ namespace VWMS
                     ErrorMessage();
                 }
             }
-            catch {
+            catch
+            {
                 ErrorMessage();
             }
         }
@@ -88,9 +89,10 @@ namespace VWMS
             return dataTable;
         }
     }
-
+    #endregion
 
 }
+#region <Utilities>
 namespace BL.BL.HELPER
 {
     public class Validation
@@ -110,8 +112,6 @@ namespace BL.BL.HELPER
         // validate telephone
         public static bool IsTelephone(string strTP)
         {
-
-
             if (strTP.Length == 10)
             {
                 try
@@ -124,7 +124,6 @@ namespace BL.BL.HELPER
                     return false;
                 }
             }
-
             return true;
         }
 
@@ -132,7 +131,6 @@ namespace BL.BL.HELPER
         // validate name
         public static bool IsName(string strName)
         {
-
             if (Regex.Match(strName, "[A-Z][a-zA-Z]").Success)
             {
                 return true;
@@ -203,3 +201,4 @@ namespace BL.BL.HELPER
         }
     }
 }
+#endregion
