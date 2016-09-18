@@ -34,15 +34,10 @@ namespace VWMS.ENTITY
             cmbBrands.DisplayMember = "Name";
             cmbBrands.DataSource = lst;
         }
-
-        EOrderBy orderBy = EOrderBy.Desc;
-        List<Model> objreG = new List<App.Model.Model>();
-        void LoadInfo(EOrderBy eorderBy = EOrderBy.Desc)
+        DataTable GTble = new DataTable();
+        void LoadInfo()
         {
-            objreG = (List<m.Model>)new ModelDbService().Read().Content;
-            gvData.DataSource = (eorderBy == EOrderBy.Asc) ?
-                objreG.OrderBy(p => p.ID).ToList() : objreG.OrderByDescending(p => p.ID).ToList();
-            orderBy = eorderBy;
+            gvData.DataSource = GTble = Helper.CreateDataTable<m.Model>((List<m.Model>)new ModelDbService().Read().Content);
         }
 
         public bool IsValidate()
@@ -78,7 +73,6 @@ namespace VWMS.ENTITY
             }
             try
             {
-
                 var x = new ModelDbService().Create(new Model
                 {
                     BrandId = int.Parse(cmbBrands.SelectedValue.ToString()),
@@ -92,7 +86,6 @@ namespace VWMS.ENTITY
             {
                 Helper.ErrorMessage(ex.Message);
             }
-
         }
 
         private void btnUpdate_Click(object sender, EventArgs e)
@@ -152,53 +145,28 @@ namespace VWMS.ENTITY
                 lblID.Text = dr.Cells["ID"].Value.ToString();
                 txtName.Text = dr.Cells["NAME"].Value.ToString();
                 txtDiscription.Text = dr.Cells["Discription"].Value.ToString();
-                cmbBrands.SelectedValue = dr.Cells["BrandId"].Value.ToString();
+                cmbBrands.SelectedValue = int.Parse(dr.Cells["BrandId"].Value.ToString());
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
-
         }
 
-        object X = null;
         private void txtSearchBy_TextChanged(object sender, EventArgs e)
         {
             try
             {
-                var searchBrands = new List<Model>();
-                X = txtSearchBy.Text.Trim().ToLower();
-                if (lblSearchKey.Text.ToLower().StartsWith("i"))
-                {
-                    searchBrands = objreG.Where(p => p.ID.ToString().ToLower().StartsWith(X.ToString())).ToList();
-                }
-                else if (lblSearchKey.Text.ToLower().StartsWith("n"))
-                {
-                    searchBrands = objreG.Where(p => p.Name.ToString().ToLower().StartsWith(X.ToString())).ToList();
-                }
-                else
-                {
-                    searchBrands = objreG.Where(p => p.Discription.ToString().ToLower().StartsWith(X.ToString())).ToList();
-                }
-
-                gvData.DataSource = searchBrands;
+                gvData.DataSource = GTble.Select($"{lblSearchKey.Text} like '{txtSearchBy.Text}%'").CopyToDataTable();
             }
-            catch (Exception EX)
+            catch (Exception ex)
             {
                 LoadInfo();
             }
         }
-
-        string SearchKey = string.Empty;
         private void gvData_ColumnHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
-            if (e.ColumnIndex == 0)
-            {
-                LoadInfo((orderBy == EOrderBy.Asc) ? EOrderBy.Desc : EOrderBy.Asc);
-            }
-
-            SearchKey = gvData.Columns[e.ColumnIndex].Name;
-            lblSearchKey.Text = string.Format("{0}", SearchKey);
+            lblSearchKey.Text = string.Format("{0}", gvData.Columns[e.ColumnIndex].Name);
         }
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -228,7 +196,5 @@ namespace VWMS.ENTITY
             btnUpdate.Enabled = false;
             btnDelete.Enabled = false;
         }
-
-
     }
 }

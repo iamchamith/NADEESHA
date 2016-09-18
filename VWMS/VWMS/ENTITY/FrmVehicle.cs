@@ -29,7 +29,6 @@ namespace VWMS.ENTITY
             LoadInfoVehicle();
         }
         FRMWS objG = new FRMWS();
-        Reservation objres = new Reservation();
         public FrmVehicle(FRMWS obj)
         {
             InitializeComponent();
@@ -41,14 +40,7 @@ namespace VWMS.ENTITY
             objG = obj;
         }
 
-        public FrmVehicle(Reservation obj)
-        {
-            InitializeComponent();
-            LoadInfoVehicle();
-            btnGO.Visible = false;
-            btnNavReser.Visible = true;
-            objres = obj;
-        }
+     
 
 
 
@@ -345,13 +337,7 @@ namespace VWMS.ENTITY
             REPORTING.FrmReport objReport = new FrmReport(EReports.Vehicle, 0);
             objReport.ShowDialog();
         }
-
-        private void btnNavReser_Click(object sender, EventArgs e)
-        {
-            objres.LoadVehicleNumber(txtVehicleNumber.Text);
-            this.Close();
-        }
-
+ 
         private void btnClear_Click(object sender, EventArgs e)
         {
             btnDelete.Enabled = false;

@@ -102,12 +102,6 @@
     <Compile Include="ENTITY\FrmVehicle.Designer.cs">
       <DependentUpon>FrmVehicle.cs</DependentUpon>
     </Compile>
-    <Compile Include="ENTITY\Reservation.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ENTITY\Reservation.Designer.cs">
-      <DependentUpon>Reservation.cs</DependentUpon>
-    </Compile>
     <Compile Include="FrmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -204,9 +198,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ENTITY\FrmVehicle.resx">
       <DependentUpon>FrmVehicle.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ENTITY\Reservation.resx">
-      <DependentUpon>Reservation.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmLogin.resx">
       <DependentUpon>FrmLogin.cs</DependentUpon>

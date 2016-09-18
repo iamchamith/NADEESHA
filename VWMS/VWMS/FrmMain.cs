@@ -140,15 +140,7 @@ namespace VWMS
         {
 
         }
-
-        private void rESERVATIONToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            var obj = new Reservation();
-            obj.MdiParent = this;
-            obj.Show();
-        }
-
-
+       
         void SetPrevilage() {
 
             EUser UserType = (EUser)int.Parse(Properties.Settings.Default.STATE);

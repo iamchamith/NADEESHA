@@ -42,15 +42,14 @@ namespace VWMS
                 Properties.Settings.Default.EMAIL = txtEmail.Text.Trim();
                 Properties.Settings.Default.NAME = xx.Name;
                 Properties.Settings.Default.STATE = ((int)xx.State).ToString();
-                FrmMain obj = new FrmMain();
-                obj.Show();
-                this.Hide();
+                timer1.Start();
             }
             else {
-
                 Helper.ErrorMessage(message: x.Exception.Message);
             }
         }
+
+        
 
         //validation 
         bool IsValied(User obj,out string messageOut) {
@@ -76,6 +75,18 @@ namespace VWMS
         {
             Application.Exit();
         }
- 
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            progressBar1.Value += 1;
+            if (progressBar1.Value==100)
+            {
+                timer1.Stop();
+                FrmMain obj = new FrmMain();
+                obj.Show();
+                this.Hide();
+            }
+
+        }
     }
 }

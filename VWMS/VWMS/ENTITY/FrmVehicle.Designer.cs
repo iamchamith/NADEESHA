@@ -312,7 +312,6 @@
             this.btnNavReser.Text = "GO>>";
             this.btnNavReser.UseVisualStyleBackColor = true;
             this.btnNavReser.Visible = false;
-            this.btnNavReser.Click += new System.EventHandler(this.btnNavReser_Click);
             // 
             // button2
             // 

@@ -36,18 +36,7 @@ namespace VWMS.ENTITY
             btnNavCus.Visible = false;
             LoadInfo();
         }
-
-        private Reservation objRes = new Reservation();
-
-        public FrmCustomers(Reservation objReservation)
-        {
-            InitializeComponent();
-            objRes = objReservation;
-            btnGo.Visible = false;
-            btnNavCus.Visible = true;
-            LoadInfo();
-        }
-
+        
         List<Customer> objreG = new List<Customer>();
         EOrderBy orderBy = EOrderBy.Desc;
         void LoadInfo(EOrderBy eOrderBy = EOrderBy.Desc)

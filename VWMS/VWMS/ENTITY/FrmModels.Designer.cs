@@ -101,6 +101,7 @@
             // 
             // txtDiscription
             // 
+            this.txtDiscription.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDiscription.Location = new System.Drawing.Point(216, 116);
             this.txtDiscription.Multiline = true;
             this.txtDiscription.Name = "txtDiscription";
@@ -127,6 +128,7 @@
             // lblID
             // 
             this.lblID.AutoSize = true;
+            this.lblID.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblID.Location = new System.Drawing.Point(302, 12);
             this.lblID.Name = "lblID";
             this.lblID.Size = new System.Drawing.Size(14, 15);
@@ -135,6 +137,7 @@
             // 
             // txtSearchBy
             // 
+            this.txtSearchBy.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSearchBy.Location = new System.Drawing.Point(173, 294);
             this.txtSearchBy.Name = "txtSearchBy";
             this.txtSearchBy.Size = new System.Drawing.Size(180, 23);
@@ -220,7 +223,7 @@
             // 
             this.TYPE.AutoSize = true;
             this.TYPE.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TYPE.Location = new System.Drawing.Point(126, 55);
+            this.TYPE.Location = new System.Drawing.Point(155, 55);
             this.TYPE.Name = "TYPE";
             this.TYPE.Size = new System.Drawing.Size(36, 14);
             this.TYPE.TabIndex = 31;
@@ -230,9 +233,9 @@
             // 
             this.btnRefresh.BackgroundImage = global::VWMS.Properties.Resources.Refresh;
             this.btnRefresh.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnRefresh.Location = new System.Drawing.Point(461, 55);
+            this.btnRefresh.Location = new System.Drawing.Point(461, 46);
             this.btnRefresh.Name = "btnRefresh";
-            this.btnRefresh.Size = new System.Drawing.Size(36, 24);
+            this.btnRefresh.Size = new System.Drawing.Size(36, 33);
             this.btnRefresh.TabIndex = 37;
             this.btnRefresh.UseVisualStyleBackColor = true;
             this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
@@ -268,7 +271,7 @@
             this.Controls.Add(this.txtName);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label1);
-            this.Font = new System.Drawing.Font("Calibri", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Name = "FrmModels";
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
