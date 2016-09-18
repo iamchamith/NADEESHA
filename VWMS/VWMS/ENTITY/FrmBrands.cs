@@ -97,7 +97,7 @@ namespace VWMS.ENTITY
             }
             catch (Exception ex)
             {
-                Helper.ErrorMessage(ex.Message);
+                Helper.ErrorMessage(ex);
             }
         }
 

@@ -16,11 +16,6 @@ namespace VWMS.ENTITY
 {
     public partial class FrmLabour : Form
     {
-        private readonly object X = null;
-        private string SearchKey = string.Empty;
-        private ReturnObject objreG;
-        private Func<BrandsModel, bool> searchPre;
-
         public FrmLabour()
         {
             InitializeComponent();
@@ -43,22 +38,18 @@ namespace VWMS.ENTITY
             DataTable dt = new DataTable();
             dt.Columns.Add("ID");
             dt.Columns.Add("NAME");
-
             dt.Rows.Add("1", "TECHNICIAN");
             dt.Rows.Add("2", "SERVICE_ADVISOR");
             dt.Rows.Add("3", "TEAM_LEAD");
-
             cmbTypes.ValueMember = "ID";
             cmbTypes.DisplayMember = "NAME";
             cmbTypes.DataSource = dt;
         }
 
-        List<LabourViewModel> dtG = new List<LabourViewModel>();
-        EOrderBy orderBy = EOrderBy.Desc;
+        DataTable  dtG = new DataTable();
         void LoadInfo(EOrderBy eOrderBy = EOrderBy.Desc)
         {
-            gvData.DataSource = dtG = (List<LabourViewModel>)new LaboursDbService().Read().Content;
-
+            gvData.DataSource = dtG = Helper.CreateDataTable<LabourViewModel>((List<LabourViewModel>)new LaboursDbService().Read().Content);
         }
 
         public bool IsValidate()
@@ -109,7 +100,6 @@ namespace VWMS.ENTITY
                     UserEmail = Properties.Settings.Default.EMAIL
 
                 });
-
                 LoadInfo();
                 Helper.SuccessMessage();
             }
@@ -191,7 +181,7 @@ namespace VWMS.ENTITY
         {
             try
             {
-                gvData.DataSource = Utiliry.CreateDataTable<LabourViewModel>(dtG).Select(string.Format("{0} like '{1}%'", lblSearchKey.Text, txtSearchBy.Text)).CopyToDataTable();
+                gvData.DataSource = dtG.Select(string.Format("{0} like '{1}%'", lblSearchKey.Text, txtSearchBy.Text)).CopyToDataTable();
             }
             catch (Exception ex)
             {
@@ -201,12 +191,7 @@ namespace VWMS.ENTITY
 
         private void gvData_ColumnHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
-            SearchKey = gvData.Columns[e.ColumnIndex].Name;
-            lblSearchKey.Text = string.Format("{0}", SearchKey);
-            if (e.ColumnIndex == 0)
-            {
-                LoadInfo((orderBy == EOrderBy.Asc) ? EOrderBy.Desc : EOrderBy.Asc);
-            }
+            lblSearchKey.Text = string.Format("{0}", gvData.Columns[e.ColumnIndex].Name);
         }
 
         private void btnGO_Click(object sender, EventArgs e)

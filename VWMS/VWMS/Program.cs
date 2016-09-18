@@ -1,7 +1,9 @@
 ﻿using App.Model;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Reflection;
 using System.Threading.Tasks;
@@ -25,25 +27,43 @@ namespace VWMS
         }
     }
 
- 
-     
-    public class Helper {
 
-        public static bool Confirmation(string caption="confirmation",string message = " Are you sure ?") {
+
+    public class Helper
+    {
+
+        public static bool Confirmation(string caption = "confirmation", string message = " Are you sure ?")
+        {
 
             return MessageBox.Show(message, caption, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes;
         }
 
-        public static void ErrorMessage( string message = "invalied infomration", string caption = "invalied infomration")
+        public static void ErrorMessage(string message = "invalied infomration", string caption = "invalied infomration")
         {
-              MessageBox.Show(message, caption, MessageBoxButtons.OK, MessageBoxIcon.Error);
+            MessageBox.Show(message, caption, MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
-        public static void SuccessMessage(string caption = "Success", string message = "Success")
+        public static void SuccessMessage(string message = "Success",string caption = "Success")
         {
             MessageBox.Show(message, caption, MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
-
+        public static void ErrorMessage(Exception ex, string message = "invalied infomration", string caption = "invalied infomration")
+        {
+            try
+            {
+                if ((ex.InnerException.InnerException as SqlException).Number == 547)
+                {
+                    ErrorMessage(message: "This tupple reference to another table", caption: "FK validation error");
+                }
+                else
+                {
+                    ErrorMessage();
+                }
+            }
+            catch {
+                ErrorMessage();
+            }
+        }
         public static DataTable CreateDataTable<T>(IEnumerable<T> list)
         {
             Type type = typeof(T);
@@ -68,5 +88,5 @@ namespace VWMS
         }
     }
 
- 
+
 }

@@ -32,7 +32,6 @@ namespace App.BL
 
         void Automapper()
         {
-
             Mapper.CreateMap<VehicleJobTaskItemViewModel, VehicleJobTaskItem>();
             Mapper.CreateMap<VehicleJobTaskItem, VehicleJobTaskItemViewModel>();
 
@@ -46,8 +45,13 @@ namespace App.BL
             Mapper.CreateMap<VehicleJob, VehicleJobViewModel>();
 
             Mapper.CreateMap<LabourViewModel, Labour>();
-            Mapper.CreateMap<Labour,LabourViewModel>();
+            Mapper.CreateMap<Labour, LabourViewModel>();
 
+            Mapper.CreateMap<App.Model.Task, TaskViewModel>();
+            Mapper.CreateMap<TaskViewModel, App.Model.Task>();
+
+            Mapper.CreateMap<Vehicle, VehicleViewModel>();
+            Mapper.CreateMap<VehicleViewModel, Vehicle>();
         }
     }
 

@@ -1,20 +1,20 @@
 ﻿using App.BL.DbServices;
-using  m = App.Model;
+using m = App.Model;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using AutoMapper;
 namespace App.BL
 {
     public class TaskDbService : Repo
     {
-        public DetailModel Create(m.Task obj)
+        public DetailModel Create(m.TaskViewModel obj)
         {
             try
             {
-                dba.Tasks.Add(obj);
+                dba.Tasks.Add(Mapper.Map<m.Task>(obj));
                 dba.SaveChanges();
                 return new DetailModel { State = true };
             }
@@ -24,9 +24,8 @@ namespace App.BL
             }
         }
 
-        public DetailModel Update(m.Task obj)
+        public DetailModel Update(m.TaskViewModel obj)
         {
-
             try
             {
                 var x = dba.Tasks.Where(p => p.ID == obj.ID).FirstOrDefault();
@@ -67,13 +66,12 @@ namespace App.BL
 
         public DetailModel Read()
         {
-
             try
             {
                 return new DetailModel
                 {
                     State = true,
-                    Content = dba.Tasks.ToList()
+                    Content = dba.Tasks.ToList().Select(x => AutoMapper.Mapper.Map<m.TaskViewModel>(x)).ToList()
                 };
             }
             catch
@@ -84,13 +82,12 @@ namespace App.BL
 
         public DetailModel Read(int id)
         {
-
             try
             {
                 return new DetailModel
                 {
                     State = true,
-                    Content = dba.Tasks.Where(p => p.ID == id).FirstOrDefault()
+                    Content = Mapper.Map<m.Task>(dba.Tasks.Where(p => p.ID == id).FirstOrDefault())
                 };
             }
             catch

@@ -73,10 +73,12 @@
     <Compile Include="VehicleJobTaskLabour.cs" />
     <Compile Include="ViewModel\Enums.cs" />
     <Compile Include="ViewModel\LabourViewModel.cs" />
+    <Compile Include="ViewModel\TaskViewModel.cs" />
     <Compile Include="ViewModel\VehicleJobTaskItemViewModel.cs" />
     <Compile Include="ViewModel\VehicleJobTaskLabourViewModel.cs" />
     <Compile Include="ViewModel\VehicleJobTaskViewModel.cs" />
     <Compile Include="ViewModel\VehicleJobViewModel.cs" />
+    <Compile Include="ViewModel\VehicleViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

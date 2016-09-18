@@ -28,6 +28,7 @@ namespace VWMS.ENTITY
         }
 
         private FrmVehicle objVG = new FrmVehicle();
+        DataTable objreG = new DataTable();
         public FrmCustomers(FrmVehicle objV)
         {
             objVG = objV;
@@ -36,14 +37,10 @@ namespace VWMS.ENTITY
             btnNavCus.Visible = false;
             LoadInfo();
         }
-        
-        List<Customer> objreG = new List<Customer>();
-        EOrderBy orderBy = EOrderBy.Desc;
-        void LoadInfo(EOrderBy eOrderBy = EOrderBy.Desc)
+     
+        void LoadInfo()
         {
-            objreG = (List<Customer>)new CustomerDbService().Read().Content;
-            gvData.DataSource = (eOrderBy == EOrderBy.Asc) ? objreG.OrderBy(p => p.ID).ToList() : objreG.OrderByDescending(p => p.ID).ToList();
-            orderBy = eOrderBy;
+            gvData.DataSource = objreG = Helper.CreateDataTable<Customer>((List<Customer>)new CustomerDbService().Read().Content);
         }
 
         public bool IsValidate()
@@ -159,7 +156,7 @@ namespace VWMS.ENTITY
                     Url = (IsImageChange) ? SaveImage() : imageURL
                 });
                 LoadInfo();
-                MessageBox.Show("customer update is success");
+                Helper.SuccessMessage();
             }
             catch (Exception ex)
             {
@@ -173,16 +170,16 @@ namespace VWMS.ENTITY
             {
                 return;
             }
-
             try
             {
                 var x = new CustomerDbService().Delete(int.Parse(lblID.Text));
                 LoadInfo();
-                MessageBox.Show("customer update is success");
+                Helper.SuccessMessage();
+                btnClear.PerformClick();
             }
             catch (Exception ex)
             {
-                Helper.ErrorMessage(ex.Message);
+                Helper.ErrorMessage(ex);
             }
         }
 
@@ -234,38 +231,30 @@ namespace VWMS.ENTITY
         {
             try
             {
-                gvData.DataSource = Utiliry.CreateDataTable<Customer>(objreG).Select(string.Format("{0} like '{1}%'", lblSearchKey.Text, txtSearchBy.Text)).CopyToDataTable();
+                gvData.DataSource = objreG.Select(string.Format("{0} like '{1}%'", lblSearchKey.Text, txtSearchBy.Text)).CopyToDataTable();
             }
             catch {
-                gvData.DataSource = null;
+                if (string.IsNullOrEmpty(txtSearchBy.Text))
+                {
+                    LoadInfo();
+                }
+                else
+                {
+                    gvData.DataSource = null;
+                }
+               
             }
         }
-
-        Func<BrandsModel, bool> searchPre = null;
-        string SearchKey = string.Empty;
-        int col = 0;
         private void gvData_ColumnHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
-            if (e.ColumnIndex == 0)
-            {
-                LoadInfo((orderBy == EOrderBy.Asc) ? EOrderBy.Desc : EOrderBy.Asc);
-            }
-            SearchKey = gvData.Columns[e.ColumnIndex].Name;
-            lblSearchKey.Text = string.Format("{0} ", SearchKey);
-            col = e.ColumnIndex;
+            lblSearchKey.Text = string.Format("{0} ", gvData.Columns[e.ColumnIndex].Name);
         }
 
         private void btnGo_Click(object sender, EventArgs e)
         {
-            objVG.LoadCustomer(Utiliry.CreateDataTable<Customer>(objreG).Select(string.Format("ID = " + lblID.Text + "")).CopyToDataTable());
+            objVG.LoadCustomer(objreG.Select(string.Format("ID = " + lblID.Text + "")).CopyToDataTable());
             this.Close();
         }
-
-        private void lblSearchKey_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void button4_Click(object sender, EventArgs e)
         {
             REPORTING.FrmReport objReport = new FrmReport(EReports.Customers, 0);
@@ -295,11 +284,6 @@ namespace VWMS.ENTITY
             IsImageChange = false;
             pictureBox1.Image = Image.FromFile(Pathss.FilePath + "no.jpg");
         }
-
-        private void txtName_TextChanged(object sender, EventArgs e)
-        {
-        }
-
         private void btnBrowse_Click(object sender, EventArgs e)
         {
             if (openFileDialog1.ShowDialog() == DialogResult.OK)

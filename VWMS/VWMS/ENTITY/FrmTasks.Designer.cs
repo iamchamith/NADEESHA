@@ -58,7 +58,6 @@
             this.gvData.Name = "gvData";
             this.gvData.Size = new System.Drawing.Size(528, 194);
             this.gvData.TabIndex = 17;
-            this.gvData.ColumnHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.gvData_ColumnHeaderMouseClick);
             this.gvData.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.gvData_RowHeaderMouseClick);
             // 
             // btnDelete

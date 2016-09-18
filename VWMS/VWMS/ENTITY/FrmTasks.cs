@@ -32,10 +32,9 @@ namespace VWMS.ENTITY
             LoadInfo();
             btnGo.Visible = true;
         }
-        List<App.Model.Task> g = new List<App.Model.Task>();
         void LoadInfo()
         {
-            gvData.DataSource = g = (List<App.Model.Task>)new TaskDbService().Read().Content;
+            gvData.DataSource = Helper.CreateDataTable<TaskViewModel>((List<App.Model.TaskViewModel>)new TaskDbService().Read().Content);
         }
         public bool IsValidate()
         {
@@ -66,7 +65,7 @@ namespace VWMS.ENTITY
             }
             try
             {
-                var x = new TaskDbService().Create(new App.Model.Task
+                var x = new TaskDbService().Create(new App.Model.TaskViewModel
                 {
                     Discription = txtDiscription.Text,
                     TaskName = txtName.Text
@@ -88,7 +87,7 @@ namespace VWMS.ENTITY
             }
             try
             {
-                var x = new TaskDbService().Update(new App.Model.Task
+                var x = new TaskDbService().Update(new App.Model.TaskViewModel
                 {
                     Discription = txtDiscription.Text,
                     ID = int.Parse(lblID.Text),
@@ -119,7 +118,7 @@ namespace VWMS.ENTITY
             }
             catch (Exception ex)
             {
-                Helper.ErrorMessage(ex.Message);
+                Helper.ErrorMessage(ex);
             }
         }
 
@@ -140,32 +139,13 @@ namespace VWMS.ENTITY
 
         }
 
-        object X = null;
-        private void txtSearchBy_TextChanged(object sender, EventArgs e)
-        {
-        }
-
-        Func<TaskModel, bool> searchPre = null;
-        string SearchKey = string.Empty;
-        private void gvData_ColumnHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
-        {
-
-
-        }
-
         private void btnGo_Click(object sender, EventArgs e)
         {
             objVG.LoadTaskInfo(int.Parse(lblID.Text), txtDiscription.Text, txtName.Text);
             this.Close();
         }
-
-        private void lblSearchKey_Click(object sender, EventArgs e)
-        {
-        }
-
         private void FrmTasks_Load(object sender, EventArgs e)
         {
-
             btnDelete.Enabled = false;
             btnUpdate.Enabled = false;
         }

@@ -39,11 +39,6 @@ namespace VWMS.ENTITY
             btnNavReser.Visible = false;
             objG = obj;
         }
-
-     
-
-
-
         #region register tab
         private void LoadBrands()
         {
@@ -73,12 +68,6 @@ namespace VWMS.ENTITY
                 MessageBox.Show(ex.Message);
             }
         }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnUpdate_Click(object sender, EventArgs e)
         {
             if (!Helper.Confirmation())
@@ -106,9 +95,8 @@ namespace VWMS.ENTITY
                     Url = IsImageChange ? SaveImage() : imageName
 
                 });
-                   LoadInfoVehicle();
+                LoadInfoVehicle();
                 Helper.SuccessMessage();
-               
             }
             catch (Exception ex)
             {
@@ -126,15 +114,13 @@ namespace VWMS.ENTITY
             try
             {
                 var x = new VehicleDbService().Delete(txtVehicleNumber.Text);
-                
-                    btnClear.PerformClick();
-                    LoadInfoVehicle();
+                btnClear.PerformClick();
+                LoadInfoVehicle();
                 Helper.SuccessMessage();
-
             }
             catch (Exception ex)
             {
-                Helper.ErrorMessage(ex.Message);
+                Helper.ErrorMessage(ex);
             }
         }
 
@@ -177,17 +163,12 @@ namespace VWMS.ENTITY
                 lblOwnerID.Text = cus.Rows[0]["ID"].ToString();
             }
         }
-        List<Vehicle> LstGVehicle = new List<Vehicle>();
+        List<VehicleViewModel> LstGVehicle = new List<VehicleViewModel>();
         private int taskID = 0;
 
         void LoadInfoVehicle()
         {
-            dataGridView1.DataSource = LstGVehicle = (List<Vehicle>)new VehicleDbService().Read().Content;
-        }
-
-        private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-
+            dataGridView1.DataSource = LstGVehicle = (List<VehicleViewModel>)new VehicleDbService().Read().Content;
         }
 
         void LoadCustomer(int customerID)
@@ -265,7 +246,7 @@ namespace VWMS.ENTITY
             }
             try
             {
-                var x = new VehicleDbService().Create(new Vehicle
+                var x = new VehicleDbService().Create(new VehicleViewModel
                 {
                     BrandID = int.Parse(cmbBrands.SelectedValue.ToString()),
                     ChassiNumber = txtChassiNumber.Text,
@@ -305,8 +286,8 @@ namespace VWMS.ENTITY
                 txtChassiNumber.Text = dataGridView1.Rows[e.RowIndex].Cells[4].Value.ToString();
                 txtDiscription.Text = dataGridView1.Rows[e.RowIndex].Cells[5].Value.ToString();
                 LoadCustomer(int.Parse(dataGridView1.Rows[e.RowIndex].Cells[6].Value.ToString()));
-                cmbBrands.SelectedValue = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
-                cmbModels.SelectedValue = dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString();
+                cmbBrands.SelectedValue = int.Parse(dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString());
+                cmbModels.SelectedValue = int.Parse(dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString());
                 try
                 {
                     pictureBox1.Image = Image.FromFile(BL.MODEL.Pathss.FilePath + dataGridView1.Rows[e.RowIndex].Cells[9].Value.ToString());
@@ -320,8 +301,6 @@ namespace VWMS.ENTITY
             }
             catch (Exception ex)
             {
-
-                MessageBox.Show(ex.Message);
             }
         }
 
@@ -337,24 +316,30 @@ namespace VWMS.ENTITY
             REPORTING.FrmReport objReport = new FrmReport(EReports.Vehicle, 0);
             objReport.ShowDialog();
         }
- 
+
         private void btnClear_Click(object sender, EventArgs e)
         {
-            btnDelete.Enabled = false;
-            btnUpdate.Enabled = false;
-            btnInsert.Enabled = true;
-            txtVehicleNumber.Clear();
-            txtEngineNo.Clear();
-            txtChassiNumber.Clear();
-            txtDiscription.Clear();
-            cmbBrands.SelectedIndex = 0;
-            cmbModels.SelectedIndex = 0;
-            lblOwnerID.Text = "0";
-            dataGridView2.DataSource = null;
-            IsImageChange = false;
-            ImageURL = "car.jpg";
-            pictureBox1.Image = Image.FromFile(Pathss.FilePath + "car.jpg");
-            pictureBox2.Image = Image.FromFile(Pathss.FilePath + "no.jpg");
+            try
+            {
+                btnDelete.Enabled = false;
+                btnUpdate.Enabled = false;
+                btnInsert.Enabled = true;
+                txtVehicleNumber.Clear();
+                txtEngineNo.Clear();
+                txtChassiNumber.Clear();
+                txtDiscription.Clear();
+                cmbBrands.SelectedIndex = 0;
+                cmbModels.SelectedIndex = 0;
+                lblOwnerID.Text = "0";
+                dataGridView2.DataSource = null;
+                IsImageChange = false;
+                ImageURL = "car.jpg";
+                pictureBox1.Image = Image.FromFile(Pathss.FilePath + "car.png");
+                pictureBox2.Image = Image.FromFile(Pathss.FilePath + "no.jpg");
+            }
+            catch (Exception ex) {
+                Helper.ErrorMessage(ex.Message);
+            }
         }
 
         private void FrmVehicle_Load(object sender, EventArgs e)
@@ -375,7 +360,7 @@ namespace VWMS.ENTITY
             try
             {
                 X = txtSearchBy.Text.Trim();
-                dataGridView1.DataSource = Utiliry.CreateDataTable<Vehicle>(LstGVehicle).Select(string.Format("{0} like '{1}%'", lblSearchKey.Text, X)).CopyToDataTable();
+                dataGridView1.DataSource = Utiliry.CreateDataTable<VehicleViewModel>(LstGVehicle).Select(string.Format("{0} like '{1}%'", lblSearchKey.Text, X)).CopyToDataTable();
             }
             catch
             {
@@ -397,7 +382,6 @@ namespace VWMS.ENTITY
 
         string SaveImage()
         {
-
             ImageURL = Guid.NewGuid() + Path.GetExtension(openFileDialog1.FileName);
             pictureBox1.Image.Save(Pathss.FilePath + ImageURL);
             return ImageURL;

@@ -1,6 +1,8 @@
 ﻿FrmLogin - DONE 
 FrmMain -  DONE
 FrmBrands  -  DONE
-FrmLabour -  
-FrmCustomers - 
+FrmLabour -  DONE
+FrmCustomers - DONE
 FrmModel  - DONE
+FrmTasks - DONE
+FrmVehicles - DONE

@@ -1,5 +1,6 @@
 ﻿using App.BL.DbServices;
 using App.Model;
+using AutoMapper;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,11 +11,11 @@ namespace App.BL
 {
     public class VehicleDbService : Repo
     {
-        public DetailModel Create(Vehicle obj)
+        public DetailModel Create(VehicleViewModel obj)
         {
             try
             {
-                dba.Vehicles.Add(obj);
+                dba.Vehicles.Add(Mapper.Map<Vehicle>(obj));
                 dba.SaveChanges();
                 return new DetailModel { State = true };
             }
@@ -26,7 +27,6 @@ namespace App.BL
 
         public DetailModel Update(Vehicle obj)
         {
-
             try
             {
                 var x = dba.Vehicles.Where(p => p.VehicleID == obj.VehicleID).FirstOrDefault();
@@ -57,7 +57,6 @@ namespace App.BL
 
         public DetailModel Delete(string vehicleID)
         {
-
             try
             {
                 var x = dba.Vehicles.Where(p => p.VehicleID == vehicleID).FirstOrDefault();
@@ -79,8 +78,8 @@ namespace App.BL
                 return new DetailModel
                 {
                     State = true,
-                    Content = dba.Vehicles.ToList()
-                };
+                    Content = dba.Vehicles.ToList().Select(x => AutoMapper.Mapper.Map<VehicleViewModel>(x)).ToList()
+            };
             }
             catch
             {
@@ -90,13 +89,12 @@ namespace App.BL
 
         public DetailModel Read(string vehicleID)
         {
-
             try
             {
                 return new DetailModel
                 {
                     State = true,
-                    Content = dba.Vehicles.Where(p => p.VehicleID == vehicleID).FirstOrDefault()
+                    Content = Mapper.Map<VehicleViewModel>(dba.Vehicles.Where(p => p.VehicleID == vehicleID).FirstOrDefault())
                 };
             }
             catch

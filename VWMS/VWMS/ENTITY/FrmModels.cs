@@ -1,8 +1,6 @@
 ﻿using App.BL;
 using App.BL.DbServices;
 using App.Model;
-using BL.BL;
-using BL.MODEL;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -12,9 +10,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using b = App.BL;
-using d = App.Dal;
-using m = App.Model;
 namespace VWMS.ENTITY
 {
     public partial class FrmModels : Form
@@ -37,7 +32,7 @@ namespace VWMS.ENTITY
         DataTable GTble = new DataTable();
         void LoadInfo()
         {
-            gvData.DataSource = GTble = Helper.CreateDataTable<m.Model>((List<m.Model>)new ModelDbService().Read().Content);
+            gvData.DataSource = GTble = Helper.CreateDataTable<Model>((List<Model>)new ModelDbService().Read().Content);
         }
 
         public bool IsValidate()

@@ -83,6 +83,16 @@ namespace VWMS.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Car_icon {
+            get {
+                object obj = ResourceManager.GetObject("Car-icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap cars_icon {
             get {
                 object obj = ResourceManager.GetObject("cars-icon", resourceCulture);

@@ -131,7 +131,6 @@
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(331, 20);
             this.txtName.TabIndex = 6;
-            this.txtName.TextChanged += new System.EventHandler(this.txtName_TextChanged);
             // 
             // txtNIC
             // 
@@ -224,7 +223,6 @@
             this.lblSearchKey.Size = new System.Drawing.Size(47, 14);
             this.lblSearchKey.TabIndex = 15;
             this.lblSearchKey.Text = "SEARCH";
-            this.lblSearchKey.Click += new System.EventHandler(this.lblSearchKey_Click);
             // 
             // lblID
             // 
