@@ -23,11 +23,6 @@ namespace VWMS.USER
             InitializeComponent();
             LoadInfo();
         }
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
         public bool IsValidate()
         {
             bool isOk = true;
@@ -85,8 +80,7 @@ namespace VWMS.USER
 
         void LoadInfo()
         {
-            List<User> dt = (List<User>)new UserDbService().Selectuser().Content;
-            gvusers.DataSource = dt;
+            gvusers.DataSource = (List<UserViewModel>)new UserDbService().Selectuser().Content;
         }
 
         private void btnUpdate_Click(object sender, EventArgs e)
@@ -95,7 +89,6 @@ namespace VWMS.USER
             {
                 return;
             }
-
             try
             {
                 var x = new UserDbService().UpdateUser(new User()
@@ -111,7 +104,6 @@ namespace VWMS.USER
             {
                 Helper.ErrorMessage(ex.Message);
             }
- 
         }
 
         private void btnDelete_Click(object sender, EventArgs e)
@@ -140,17 +132,16 @@ namespace VWMS.USER
                 txtUserName.Text = dr.Cells["EMAIL"].Value.ToString();
                 txtName.Text = dr.Cells["NAME"].Value.ToString();
                 txtNIC.Text = dr.Cells["NIC"].Value.ToString();
+                cmbUserType.SelectedIndex = int.Parse(dr.Cells["STATE"].Value.ToString()) - 1;
             }
             catch { }
         }
 
         private void FrmUpdateUser_Load(object sender, EventArgs e)
         {
-
             btnSave.Enabled = true;
             btnUpdate.Enabled = false;
             btnDelete.Enabled = false;
-
         }
 
         private void btnClear_Click(object sender, EventArgs e)
@@ -164,5 +155,6 @@ namespace VWMS.USER
             txtUserName.Enabled = true;
 
         }
+ 
     }
 }

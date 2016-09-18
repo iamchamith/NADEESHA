@@ -316,9 +316,7 @@
   <ItemGroup>
     <None Include="Resources\noPhotoAvailable.jpg" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="IMAGES\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="Resources\41805516-girl-tire-changing-machine.jpg" />
   </ItemGroup>
@@ -327,6 +325,25 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="done.txt" />
+    <Content Include="IMAGES\2c8b61ab-7f7a-4d2b-934e-128577bd3840.jpg" />
+    <Content Include="IMAGES\367d5a78-203c-4865-92a9-ff178a68f31f.jpg" />
+    <Content Include="IMAGES\3b9ebf5a-488e-4305-8784-cb34ecd24803.jpg" />
+    <Content Include="IMAGES\4997bfd3-3851-4d78-80a0-42261d2f77fa.PNG" />
+    <Content Include="IMAGES\588949bd-94e2-4d1e-b29e-52f3b086a25b.gif" />
+    <Content Include="IMAGES\5b803653-9e4e-4b13-aca3-1a1c07b30317.png" />
+    <Content Include="IMAGES\5c339640-3600-4169-a4dc-9fd4e31052be.PNG" />
+    <Content Include="IMAGES\5d9a102f-4ab5-45fd-b057-52ac0860e2e1.jpg" />
+    <Content Include="IMAGES\74558419-297b-428b-8ce4-2c8d921474e2.PNG" />
+    <Content Include="IMAGES\95cbc5d1-9de2-4337-8102-fbf566561607.PNG" />
+    <Content Include="IMAGES\a1a36eef-432b-4d35-990f-bde1478c2fac.PNG" />
+    <Content Include="IMAGES\c7e36da0-aaea-4601-a473-f492fa1207ca.png" />
+    <Content Include="IMAGES\car.jpg" />
+    <Content Include="IMAGES\cc2ddf34-ba39-424e-92e5-ccb596cd3c3b.JPG" />
+    <Content Include="IMAGES\e3c21caf-7027-48d9-a527-ba9e31b3b180.gif" />
+    <Content Include="IMAGES\e816d900-2c54-4737-a133-91f5529884ae.jpg" />
+    <Content Include="IMAGES\f253eae0-1f76-4683-894e-fefb7ebe3dd9.jpg" />
+    <Content Include="IMAGES\ffe25d59-3eb7-49b5-8291-defce8df8981.png" />
+    <Content Include="IMAGES\no.jpg" />
     <None Include="Resources\Car-icon.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

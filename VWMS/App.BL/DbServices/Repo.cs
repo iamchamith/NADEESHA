@@ -52,6 +52,9 @@ namespace App.BL
 
             Mapper.CreateMap<Vehicle, VehicleViewModel>();
             Mapper.CreateMap<VehicleViewModel, Vehicle>();
+             
+            Mapper.CreateMap<User, UserViewModel>();
+            Mapper.CreateMap<UserViewModel, User>();
         }
     }
 

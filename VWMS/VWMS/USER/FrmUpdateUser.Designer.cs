@@ -143,12 +143,12 @@
             this.gvusers.AllowUserToDeleteRows = false;
             this.gvusers.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.gvusers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.gvusers.Location = new System.Drawing.Point(29, 262);
+            this.gvusers.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.gvusers.Location = new System.Drawing.Point(0, 262);
             this.gvusers.Name = "gvusers";
             this.gvusers.ReadOnly = true;
-            this.gvusers.Size = new System.Drawing.Size(436, 175);
+            this.gvusers.Size = new System.Drawing.Size(501, 196);
             this.gvusers.TabIndex = 12;
-            this.gvusers.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             this.gvusers.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.gvusers_RowHeaderMouseClick);
             // 
             // label2

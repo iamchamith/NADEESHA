@@ -32,17 +32,14 @@ namespace VWMS.USER
                 Password = txtCurrentPassword.Text
             }, txtNewPassword.Text).State) {
 
-                MessageBox.Show("change password success");
+                Helper.SuccessMessage("change password success");
             }
             else
             {
-                MessageBox.Show("change password not success");
+                Helper.ErrorMessage("change password not success");
             }
- 
-
             Reset();
         }
-
         void Reset() {
 
             txtNewPassword.Clear();

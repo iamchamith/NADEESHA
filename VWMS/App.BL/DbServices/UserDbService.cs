@@ -71,7 +71,7 @@ namespace App.BL
             try
             {
                 return new DetailModel { 
-                 Content = dba.Users.ToList(),
+                 Content = dba.Users.ToList().Select(x => AutoMapper.Mapper.Map<UserViewModel>(x)).ToList(),
                  State = true
                 };
             }
