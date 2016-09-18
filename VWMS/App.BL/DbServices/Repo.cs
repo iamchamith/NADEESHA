@@ -55,6 +55,9 @@ namespace App.BL
              
             Mapper.CreateMap<User, UserViewModel>();
             Mapper.CreateMap<UserViewModel, User>();
+
+            Mapper.CreateMap<Item, ItemViewModel>();
+            Mapper.CreateMap<ItemViewModel, Item>();
         }
     }
 

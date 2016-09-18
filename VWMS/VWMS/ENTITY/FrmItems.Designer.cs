@@ -38,8 +38,6 @@
             this.txtName = new System.Windows.Forms.TextBox();
             this.txtDiscription = new System.Windows.Forms.TextBox();
             this.cmbCategory = new System.Windows.Forms.ComboBox();
-            this.txtPriceIn = new System.Windows.Forms.TextBox();
-            this.txtPriceOut = new System.Windows.Forms.TextBox();
             this.btnInsert = new System.Windows.Forms.Button();
             this.btnUpdate = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
@@ -51,12 +49,17 @@
             this.btnClear = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.button1 = new System.Windows.Forms.Button();
-            this.txtReOrderLevel = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.txtPriceIn = new System.Windows.Forms.NumericUpDown();
+            this.txtPriceOut = new System.Windows.Forms.NumericUpDown();
+            this.txtReOrderLevel = new System.Windows.Forms.NumericUpDown();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtPriceIn)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtPriceOut)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtReOrderLevel)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -151,21 +154,6 @@
             this.cmbCategory.Name = "cmbCategory";
             this.cmbCategory.Size = new System.Drawing.Size(166, 21);
             this.cmbCategory.TabIndex = 8;
-            this.cmbCategory.SelectedIndexChanged += new System.EventHandler(this.cmbCategory_SelectedIndexChanged);
-            // 
-            // txtPriceIn
-            // 
-            this.txtPriceIn.Location = new System.Drawing.Point(217, 165);
-            this.txtPriceIn.Name = "txtPriceIn";
-            this.txtPriceIn.Size = new System.Drawing.Size(166, 20);
-            this.txtPriceIn.TabIndex = 9;
-            // 
-            // txtPriceOut
-            // 
-            this.txtPriceOut.Location = new System.Drawing.Point(217, 199);
-            this.txtPriceOut.Name = "txtPriceOut";
-            this.txtPriceOut.Size = new System.Drawing.Size(166, 20);
-            this.txtPriceOut.TabIndex = 10;
             // 
             // btnInsert
             // 
@@ -210,7 +198,6 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(578, 183);
             this.dataGridView1.TabIndex = 14;
-            this.dataGridView1.ColumnHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView1_ColumnHeaderMouseClick);
             this.dataGridView1.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView1_RowHeaderMouseClick);
             // 
             // lblID
@@ -289,13 +276,6 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // txtReOrderLevel
-            // 
-            this.txtReOrderLevel.Location = new System.Drawing.Point(217, 236);
-            this.txtReOrderLevel.Name = "txtReOrderLevel";
-            this.txtReOrderLevel.Size = new System.Drawing.Size(166, 20);
-            this.txtReOrderLevel.TabIndex = 41;
-            // 
             // label10
             // 
             this.label10.AutoSize = true;
@@ -316,22 +296,58 @@
             this.pictureBox1.TabIndex = 42;
             this.pictureBox1.TabStop = false;
             // 
+            // txtPriceIn
+            // 
+            this.txtPriceIn.Location = new System.Drawing.Point(217, 165);
+            this.txtPriceIn.Maximum = new decimal(new int[] {
+            100000,
+            0,
+            0,
+            0});
+            this.txtPriceIn.Name = "txtPriceIn";
+            this.txtPriceIn.Size = new System.Drawing.Size(120, 20);
+            this.txtPriceIn.TabIndex = 43;
+            // 
+            // txtPriceOut
+            // 
+            this.txtPriceOut.Location = new System.Drawing.Point(217, 199);
+            this.txtPriceOut.Maximum = new decimal(new int[] {
+            100000,
+            0,
+            0,
+            0});
+            this.txtPriceOut.Name = "txtPriceOut";
+            this.txtPriceOut.Size = new System.Drawing.Size(120, 20);
+            this.txtPriceOut.TabIndex = 44;
+            // 
+            // txtReOrderLevel
+            // 
+            this.txtReOrderLevel.Location = new System.Drawing.Point(217, 232);
+            this.txtReOrderLevel.Maximum = new decimal(new int[] {
+            100000,
+            0,
+            0,
+            0});
+            this.txtReOrderLevel.Name = "txtReOrderLevel";
+            this.txtReOrderLevel.Size = new System.Drawing.Size(120, 20);
+            this.txtReOrderLevel.TabIndex = 45;
+            // 
             // FrmItems
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(578, 532);
-            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.txtReOrderLevel);
+            this.Controls.Add(this.txtPriceOut);
+            this.Controls.Add(this.txtPriceIn);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.lblQuntity);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.txtPriceOut);
             this.Controls.Add(this.lblID);
-            this.Controls.Add(this.txtPriceIn);
             this.Controls.Add(this.cmbCategory);
             this.Controls.Add(this.txtDiscription);
             this.Controls.Add(this.txtName);
@@ -344,10 +360,14 @@
             this.Name = "FrmItems";
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "ITEMS REGISTER";
             this.Load += new System.EventHandler(this.FrmItems_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtPriceIn)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtPriceOut)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtReOrderLevel)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -364,8 +384,6 @@
         private System.Windows.Forms.TextBox txtName;
         private System.Windows.Forms.TextBox txtDiscription;
         private System.Windows.Forms.ComboBox cmbCategory;
-        private System.Windows.Forms.TextBox txtPriceIn;
-        private System.Windows.Forms.TextBox txtPriceOut;
         private System.Windows.Forms.Button btnInsert;
         private System.Windows.Forms.Button btnUpdate;
         private System.Windows.Forms.Button btnDelete;
@@ -377,8 +395,10 @@
         private System.Windows.Forms.Button btnClear;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox txtReOrderLevel;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.NumericUpDown txtPriceIn;
+        private System.Windows.Forms.NumericUpDown txtPriceOut;
+        private System.Windows.Forms.NumericUpDown txtReOrderLevel;
     }
 }

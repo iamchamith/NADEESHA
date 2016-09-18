@@ -6,3 +6,5 @@ FrmCustomers - DONE
 FrmModel  - DONE
 FrmTasks - DONE
 FrmVehicles - DONE
+frmChangePassword - DONE
+frmRegisterUser - DONE

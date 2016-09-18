@@ -43,15 +43,9 @@ namespace VWMS.ENTITY
             this.objFrmG2 = objFrm;
         }
 
-        private List<Item> dtG = new List<Item>();
-
-        EOrderBy orderBy = EOrderBy.Asc;
-        private void LoadInfo(EOrderBy eorderBy = EOrderBy.Asc)
+        private void LoadInfo()
         {
-            dtG = (List<Item>)new ItemDbService().Read().Content;
-            dataGridView1.DataSource = (eorderBy == EOrderBy.Asc) ? dtG.OrderBy(p => p.ID).ToList() :
-             dtG.OrderByDescending(p => p.ID).ToList();
-            orderBy = eorderBy;
+            dataGridView1.DataSource = Helper.CreateDataTable<ItemViewModel>((List<ItemViewModel>)new ItemDbService().Read().Content);
         }
         public bool IsValidate()
         {
@@ -104,8 +98,8 @@ namespace VWMS.ENTITY
                 return;
             }
 
-            double CostPrice = Convert.ToDouble(txtPriceIn.Text);
-            double sellingPrice = Convert.ToDouble(txtPriceOut.Text);
+            double CostPrice = Convert.ToDouble(txtPriceIn.Value.ToString());
+            double sellingPrice = Convert.ToDouble(txtPriceOut.Value.ToString());
             if (CostPrice > sellingPrice)
             {
                 Helper.ErrorMessage(message: "Cost Price cannot be higher than selling price");
@@ -113,16 +107,16 @@ namespace VWMS.ENTITY
             }
             try
             {
-                var x = new ItemDbService().Create(new Item
+                new ItemDbService().Create(new ItemViewModel
                 {
 
                     CategoryId = cmbCategory.SelectedIndex + 1,
                     Discription = txtDiscription.Text.Trim(),
                     Name = txtName.Text,
-                    PriceIn = double.Parse(txtPriceIn.Text),
-                    PriceOut = double.Parse(txtPriceOut.Text),
+                    PriceIn = double.Parse(txtPriceIn.Value.ToString()),
+                    PriceOut = double.Parse(txtPriceOut.Value.ToString()),
                     Quantity = 0,
-                    ReorderLevel = Convert.ToInt32(txtReOrderLevel.Text),
+                    ReorderLevel = Convert.ToInt32(txtReOrderLevel.Value.ToString()),
 
                 });
                 LoadInfo();
@@ -146,21 +140,18 @@ namespace VWMS.ENTITY
             }
             try
             {
-                var x = new ItemDbService().Update(new Item
+                new ItemDbService().Update(new ItemViewModel
                 {
                     CategoryId = cmbCategory.SelectedIndex + 1,
                     Discription = txtDiscription.Text,
                     Name = txtName.Text,
-                    PriceIn = double.Parse(txtPriceIn.Text),
-                    PriceOut = double.Parse(txtPriceOut.Text),
+                    PriceIn = double.Parse(txtPriceIn.Value.ToString()),
+                    PriceOut = double.Parse(txtPriceOut.Value.ToString()),
                     ID = int.Parse(lblID.Text),
                     ReorderLevel = Convert.ToInt32(txtReOrderLevel.Text)
                 });
-                if (x.State)
-                {
-                    LoadInfo();
-                    Helper.SuccessMessage();
-                }
+                LoadInfo();
+                Helper.SuccessMessage();
 
             }
             catch (Exception ex)
@@ -187,7 +178,7 @@ namespace VWMS.ENTITY
             }
             catch (Exception ex)
             {
-                Helper.ErrorMessage(ex.Message);
+                Helper.ErrorMessage(ex);
             }
         }
 
@@ -202,12 +193,12 @@ namespace VWMS.ENTITY
                 cmbCategory.SelectedIndex = int.Parse(dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString()) - 1;
                 txtName.Text = dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString();
                 txtDiscription.Text = dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString();
-                txtPriceIn.Text = dataGridView1.Rows[e.RowIndex].Cells[4].Value.ToString();
-                txtPriceOut.Text = dataGridView1.Rows[e.RowIndex].Cells[5].Value.ToString();
-                txtReOrderLevel.Text = dataGridView1.Rows[e.RowIndex].Cells[7].Value.ToString();
+                txtPriceIn.Value = Convert.ToDecimal(dataGridView1.Rows[e.RowIndex].Cells[4].Value.ToString());
+                txtPriceOut.Value = Convert.ToDecimal(dataGridView1.Rows[e.RowIndex].Cells[5].Value.ToString());
+                txtReOrderLevel.Value = Convert.ToDecimal(dataGridView1.Rows[e.RowIndex].Cells[7].Value.ToString());
                 lblQuntity.Text = dataGridView1.Rows[e.RowIndex].Cells[6].Value.ToString();
             }
-            catch (Exception ex) { MessageBox.Show(ex.Message); }
+            catch (Exception ex) { Console.WriteLine(ex.Message); }
         }
 
         private void btnGO_Click(object sender, EventArgs e)
@@ -225,11 +216,6 @@ namespace VWMS.ENTITY
 
         }
 
-        private void cmbCategory_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void button1_Click(object sender, EventArgs e)
         {
             REPORTING.FrmReport objReport = new FrmReport(EReports.Items, 0);
@@ -240,15 +226,14 @@ namespace VWMS.ENTITY
         {
             txtDiscription.Clear();
             txtName.Clear();
-            txtPriceIn.Clear();
-            txtPriceOut.Clear();
-            txtReOrderLevel.Clear();
+            txtPriceIn.Value = 0.0M;
+            txtPriceOut.Value = 0.0M;
+            txtReOrderLevel.Value = 0.0M;
             cmbCategory.SelectedIndex = -1;
             btnInsert.Enabled = true;
             btnUpdate.Enabled = false;
             btnDelete.Enabled = false;
             lblID.Text = "";
-
         }
 
         private void FrmItems_Load(object sender, EventArgs e)
@@ -256,16 +241,6 @@ namespace VWMS.ENTITY
             btnInsert.Enabled = true;
             btnUpdate.Enabled = false;
             btnDelete.Enabled = false;
-        }
-
-        private void txtSearchBy_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void dataGridView1_ColumnHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
-        {
-            LoadInfo((orderBy == EOrderBy.Asc) ? EOrderBy.Desc : EOrderBy.Asc);
         }
     }
 }
