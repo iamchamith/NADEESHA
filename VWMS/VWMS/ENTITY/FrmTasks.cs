@@ -1,6 +1,4 @@
-﻿using BL.BL;
-using BL.MODEL;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;

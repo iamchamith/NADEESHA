@@ -1,4 +1,5 @@
-﻿using System;
+﻿using App.Model;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -7,8 +8,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using BL.BL;
-using BL.MODEL;
+using App.BL;
+using App.BL.DbServices;
 
 namespace VWMS.REPORTING
 {
@@ -22,35 +23,37 @@ namespace VWMS.REPORTING
         private void FrmReport_Load(object sender, EventArgs e)
         {
 
-           // this.crystalReportViewer1.RefreshReport();
-           // this.reportViewer1.RefreshReport();
+            // this.crystalReportViewer1.RefreshReport();
+            // this.reportViewer1.RefreshReport();
         }
 
-        public FrmReport(EReports eReports,int id)
+        public FrmReport(Enums.EReports eReports, int id)
         {
             InitializeComponent();
-            if (eReports==EReports.Customers)
+            if (eReports == Enums.EReports.Customers)
             {
                 CustomerReport();
-            }else if (eReports==EReports.Vehicle)
+            }
+            else if (eReports == Enums.EReports.Vehicle)
             {
                 VehicleReport();
-            }else if (eReports==EReports.Labours)
+            }
+            else if (eReports == Enums.EReports.Labours)
             {
 
                 LabourReport();
 
-            }else if (eReports==EReports.Items)
+            }
+            else if (eReports == Enums.EReports.Items)
             {
                 ItemReport();
 
             }
         }
 
-
         public void CustomerReport()
         {
-            DataTable dt = (DataTable) CustomerBL.SelectCustomer().Content;
+            DataTable dt = Helper.CreateDataTable<Customer>((List<Customer>)(new CustomerDbService().Read().Content));
             DSReports ds = new DSReports();
             foreach (DataRow items in dt.Rows)
             {
@@ -67,7 +70,7 @@ namespace VWMS.REPORTING
 
         public void VehicleReport()
         {
-            DataTable dt = (DataTable) VehicleBL.VehicleReport().Content;
+            DataTable dt = Helper.CreateDataTable<VehicleViewModel>((List<VehicleViewModel>)new VehicleDbService().Read().Content);
             DSReports ds = new DSReports();
             foreach (DataRow items in dt.Rows)
             {
@@ -85,13 +88,13 @@ namespace VWMS.REPORTING
         public void LabourReport()
         {
 
-            DataTable dt = (DataTable)LaboursBL.SelectLabours().Content;
+            DataTable dt = Helper.CreateDataTable<LabourViewModel>((List<LabourViewModel>)(new LaboursDbService().Read().Content));
             DSReports ds = new DSReports();
             foreach (DataRow items in dt.Rows)
             {
                 ds.Tables["TB_LABOUR"].Rows.Add(items["ID"].ToString(),
                     items["NAME"].ToString(), items["DISCRIPTION"].ToString(), items["NIC"].ToString()
-              
+
                     );
             }
 
@@ -105,7 +108,7 @@ namespace VWMS.REPORTING
         public void ItemReport()
         {
 
-            DataTable dt = (DataTable) ItemsBL.SelectItemList().Content;
+            DataTable dt = Helper.CreateDataTable<ItemViewModel>((List<ItemViewModel>)(new ItemDbService().Read().Content));
             DSReports ds = new DSReports();
             foreach (DataRow items in dt.Rows)
             {
@@ -114,14 +117,9 @@ namespace VWMS.REPORTING
 
                     );
             }
-
             RPTItems objcus = new RPTItems();
             objcus.SetDataSource(ds.Tables["TB_ITEMS"]);
             crystalReportViewer1.ReportSource = objcus;
-
-
         }
-
-
     }
 }

@@ -1,5 +1,0 @@
-E:\Project\Dropbox\VehicleWorkshop\VWMS_02.08.2015\VWMS\BL\bin\Release\BL.dll
-E:\Project\Dropbox\VehicleWorkshop\VWMS_02.08.2015\VWMS\BL\bin\Release\BL.pdb
-E:\Project\Dropbox\VehicleWorkshop\VWMS_02.08.2015\VWMS\BL\obj\Release\BL.csprojResolveAssemblyReference.cache
-E:\Project\Dropbox\VehicleWorkshop\VWMS_02.08.2015\VWMS\BL\obj\Release\BL.dll
-E:\Project\Dropbox\VehicleWorkshop\VWMS_02.08.2015\VWMS\BL\obj\Release\BL.pdb

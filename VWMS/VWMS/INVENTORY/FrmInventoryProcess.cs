@@ -7,11 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using BL.BL;
-using BL.DAL;
-using BL.MODEL;
 using App.BL;
 using App.Model;
+using static App.Model.Enums;
 
 namespace VWMS.INVENTORY
 {
@@ -95,32 +93,7 @@ namespace VWMS.INVENTORY
         {
 
         }
-
-        private void btnUpdate_Click(object sender, EventArgs e)
-        {
-            if (!Helper.Confirmation())
-            {
-                return;
-            }
-            var x = BL.BL.ItemsBL.UpdateInventory(new ItemModel
-            {
-                ID = Convert.ToInt32(lblUpId.Text),
-                ItemID = Convert.ToInt32(lblID.Text),
-                Qiantity = Convert.ToInt32(numericUpDown1.Text),
-                InventoryType = types == 1 ? InventoryType.stockIn : InventoryType.stockOut,
-
-
-            });
-            if (x)
-            {
-                LoadInfo();
-                MessageBox.Show("Sucessfully Updated", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-            else
-            {
-                MessageBox.Show("Update is not success", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
+         
         int types = 0;
         private void rdIn_CheckedChanged(object sender, EventArgs e)
         {
@@ -161,10 +134,7 @@ namespace VWMS.INVENTORY
         private void FrmInventoryProcess_Load(object sender, EventArgs e)
         {
             LoadInfo();
-
-            btnUpdate.Enabled = false;
             btnDelete.Enabled = false;
-
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -173,7 +143,6 @@ namespace VWMS.INVENTORY
             lblID.Text = "0";
             numericUpDown1.Value = 1;
             btnInsert.Enabled = true;
-            btnUpdate.Enabled = false;
             btnDelete.Enabled = false;
             groupBox1.Enabled = true;
 
@@ -184,7 +153,6 @@ namespace VWMS.INVENTORY
             try
             {
                 btnInsert.Enabled = false;
-                btnUpdate.Enabled = true;
                 btnDelete.Enabled = true;
 
                 lblUpId.Text = dgvInventory.Rows[e.RowIndex].Cells[0].Value.ToString();
@@ -201,9 +169,9 @@ namespace VWMS.INVENTORY
                     rdOut.Checked = true;
                     rdIn.Checked = false;
                 }
-                lblItemName.Text = dgvInventory.Rows[e.RowIndex].Cells[6].Value.ToString();
+                lblItemName.Text = ((ItemViewModel)(new ItemDbService().Read(int.Parse(dgvInventory.Rows[e.RowIndex].Cells[1].Value.ToString())).Content)).Name;
             }
-            catch { MessageBox.Show("invalied data"); }
+            catch(Exception ex) { Helper.ErrorMessage(ex.Message); }
         }
 
         private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -280,7 +248,7 @@ namespace VWMS.INVENTORY
                 quary = "  where " + quary.Substring(0, quary.Length - 7);
             }
 
-            dataGridView1.DataSource = ItemsBL.SelectSearchItems(quary).Content;
+            //dataGridView1.DataSource = ItemsBL.SelectSearchItems(quary).Content;
         }
 
         private void chkToDate_CheckedChanged(object sender, EventArgs e)

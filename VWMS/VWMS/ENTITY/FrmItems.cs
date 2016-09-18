@@ -7,12 +7,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using BL.BL;
-using BL.MODEL;
 using VWMS.REPORTING;
 using App.BL;
 using App.Dal;
 using App.Model;
+using static App.Model.Enums;
 
 namespace VWMS.ENTITY
 {

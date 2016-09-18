@@ -87,7 +87,7 @@ namespace App.BL
                 return new DetailModel
                 {
                     State = true,
-                    Content = Mapper.Map<m.Task>(dba.Tasks.Where(p => p.ID == id).FirstOrDefault())
+                    Content = Mapper.Map<m.TaskViewModel>(dba.Tasks.Where(p => p.ID == id).FirstOrDefault())
                 };
             }
             catch

@@ -2,8 +2,6 @@
 using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
-using BL.BL;
-using BL.MODEL;
 using VWMS.Properties;
 using System.Data;
 using VWMS.REPORTING;
@@ -12,6 +10,8 @@ using App.BL;
 using App.Model;
 using App.BL.DbServices;
 using System.Collections.Generic;
+using static App.Model.Enums;
+
 namespace VWMS.ENTITY
 {
     public partial class FrmLabour : Form
@@ -47,7 +47,7 @@ namespace VWMS.ENTITY
         }
 
         DataTable  dtG = new DataTable();
-        void LoadInfo(EOrderBy eOrderBy = EOrderBy.Desc)
+        void LoadInfo()
         {
             gvData.DataSource = dtG = Helper.CreateDataTable<LabourViewModel>((List<LabourViewModel>)new LaboursDbService().Read().Content);
         }

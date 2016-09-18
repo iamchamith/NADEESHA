@@ -30,9 +30,7 @@
         {
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label21 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lblCurrentJobStatus = new System.Windows.Forms.Label();
             this.lblJobID = new System.Windows.Forms.Label();
             this.btnGo = new System.Windows.Forms.Button();
@@ -43,6 +41,7 @@
             this.lblJobVehicleID = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.label23 = new System.Windows.Forms.Label();
             this.button7 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnInsert = new System.Windows.Forms.Button();
@@ -64,6 +63,9 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.label24 = new System.Windows.Forms.Label();
+            this.lbJobTaskId = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnTaskLaboburInsert = new System.Windows.Forms.Button();
             this.btnTaskLaboburUpdate = new System.Windows.Forms.Button();
@@ -117,14 +119,16 @@
             this.btnRefreshCost = new System.Windows.Forms.Button();
             this.label20 = new System.Windows.Forms.Label();
             this.gvItemCost = new System.Windows.Forms.DataGridView();
-            this.label23 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label24 = new System.Windows.Forms.Label();
-            this.lbJobTaskId = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label25 = new System.Windows.Forms.Label();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.tabPage2.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -139,6 +143,11 @@
             this.tabPage5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gvLabourCost)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvItemCost)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -171,7 +180,7 @@
             this.tabPage1.Controls.Add(this.btnJobSelectVehicle);
             this.tabPage1.Controls.Add(this.lblJobVehicleID);
             this.tabPage1.Controls.Add(this.label1);
-            this.tabPage1.Font = new System.Drawing.Font("Calibri", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tabPage1.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
@@ -179,17 +188,6 @@
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "REPAIR ORDER";
             this.tabPage1.UseVisualStyleBackColor = true;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::VWMS.Properties.Resources.garag;
-            this.pictureBox2.Location = new System.Drawing.Point(402, 34);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(162, 110);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 17;
-            this.pictureBox2.TabStop = false;
             // 
             // label21
             // 
@@ -201,17 +199,6 @@
             this.label21.Size = new System.Drawing.Size(112, 19);
             this.label21.TabIndex = 16;
             this.label21.Text = "REPARE ORDER";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::VWMS.Properties.Resources.garag;
-            this.pictureBox1.Location = new System.Drawing.Point(18, 11);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(72, 68);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 15;
-            this.pictureBox1.TabStop = false;
             // 
             // lblCurrentJobStatus
             // 
@@ -254,7 +241,6 @@
             this.btnJobUpdate.TabIndex = 7;
             this.btnJobUpdate.Text = "FINIED JOB";
             this.btnJobUpdate.UseVisualStyleBackColor = true;
-            this.btnJobUpdate.Click += new System.EventHandler(this.btnJobUpdate_Click);
             // 
             // btnJobInsert
             // 
@@ -313,6 +299,7 @@
             // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.label6);
             this.tabPage2.Controls.Add(this.label23);
             this.tabPage2.Controls.Add(this.button7);
             this.tabPage2.Controls.Add(this.panel1);
@@ -331,7 +318,8 @@
             this.tabPage2.Controls.Add(this.lblTaskId);
             this.tabPage2.Controls.Add(this.label5);
             this.tabPage2.Controls.Add(this.label4);
-            this.tabPage2.Font = new System.Drawing.Font("Calibri", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tabPage2.Controls.Add(this.pictureBox3);
+            this.tabPage2.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
@@ -339,6 +327,16 @@
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "TASK";
             this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label23.Location = new System.Drawing.Point(28, 122);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(70, 15);
+            this.label23.TabIndex = 23;
+            this.label23.Text = "JOB TASK ID";
             // 
             // button7
             // 
@@ -551,6 +549,7 @@
             // 
             // tabPage3
             // 
+            this.tabPage3.Controls.Add(this.label9);
             this.tabPage3.Controls.Add(this.label24);
             this.tabPage3.Controls.Add(this.lbJobTaskId);
             this.tabPage3.Controls.Add(this.label3);
@@ -565,13 +564,44 @@
             this.tabPage3.Controls.Add(this.label11);
             this.tabPage3.Controls.Add(this.lblTaskLabourName);
             this.tabPage3.Controls.Add(this.label7);
-            this.tabPage3.Font = new System.Drawing.Font("Calibri", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tabPage3.Controls.Add(this.pictureBox4);
+            this.tabPage3.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabPage3.Location = new System.Drawing.Point(4, 22);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Size = new System.Drawing.Size(640, 419);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "LABURUS";
             this.tabPage3.UseVisualStyleBackColor = true;
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label24.Location = new System.Drawing.Point(426, 125);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(70, 15);
+            this.label24.TabIndex = 20;
+            this.label24.Text = "JOB TASK ID";
+            // 
+            // lbJobTaskId
+            // 
+            this.lbJobTaskId.AutoSize = true;
+            this.lbJobTaskId.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbJobTaskId.Location = new System.Drawing.Point(502, 125);
+            this.lbJobTaskId.Name = "lbJobTaskId";
+            this.lbJobTaskId.Size = new System.Drawing.Size(14, 15);
+            this.lbJobTaskId.TabIndex = 19;
+            this.lbJobTaskId.Text = "0";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(397, 110);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(99, 15);
+            this.label3.TabIndex = 18;
+            this.label3.Text = "LABURUR TASK ID";
             // 
             // panel2
             // 
@@ -724,6 +754,8 @@
             // 
             // tabPage4
             // 
+            this.tabPage4.Controls.Add(this.pictureBox5);
+            this.tabPage4.Controls.Add(this.label25);
             this.tabPage4.Controls.Add(this.panel3);
             this.tabPage4.Controls.Add(this.label18);
             this.tabPage4.Controls.Add(this.label2);
@@ -743,7 +775,7 @@
             this.tabPage4.Controls.Add(this.label14);
             this.tabPage4.Controls.Add(this.label12);
             this.tabPage4.Controls.Add(this.label10);
-            this.tabPage4.Font = new System.Drawing.Font("Calibri", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tabPage4.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabPage4.Location = new System.Drawing.Point(4, 22);
             this.tabPage4.Name = "tabPage4";
             this.tabPage4.Size = new System.Drawing.Size(640, 419);
@@ -883,7 +915,7 @@
             // 
             this.lblItemName.AutoSize = true;
             this.lblItemName.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblItemName.Location = new System.Drawing.Point(184, 102);
+            this.lblItemName.Location = new System.Drawing.Point(184, 109);
             this.lblItemName.Name = "lblItemName";
             this.lblItemName.Size = new System.Drawing.Size(64, 15);
             this.lblItemName.TabIndex = 10;
@@ -893,7 +925,7 @@
             // 
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(49, 105);
+            this.label15.Location = new System.Drawing.Point(49, 112);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(69, 15);
             this.label15.TabIndex = 9;
@@ -903,6 +935,11 @@
             // 
             this.txtQuantity.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtQuantity.Location = new System.Drawing.Point(490, 121);
+            this.txtQuantity.Maximum = new decimal(new int[] {
+            100000,
+            0,
+            0,
+            0});
             this.txtQuantity.Minimum = new decimal(new int[] {
             1,
             0,
@@ -933,7 +970,7 @@
             // 
             this.btnLoadItems.AutoSize = true;
             this.btnLoadItems.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLoadItems.Location = new System.Drawing.Point(254, 71);
+            this.btnLoadItems.Location = new System.Drawing.Point(254, 90);
             this.btnLoadItems.Name = "btnLoadItems";
             this.btnLoadItems.Size = new System.Drawing.Size(72, 15);
             this.btnLoadItems.TabIndex = 6;
@@ -955,7 +992,7 @@
             // 
             this.lblItemsID.AutoSize = true;
             this.lblItemsID.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblItemsID.Location = new System.Drawing.Point(184, 71);
+            this.lblItemsID.Location = new System.Drawing.Point(184, 90);
             this.lblItemsID.Name = "lblItemsID";
             this.lblItemsID.Size = new System.Drawing.Size(14, 15);
             this.lblItemsID.TabIndex = 3;
@@ -985,7 +1022,7 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(49, 71);
+            this.label10.Location = new System.Drawing.Point(49, 90);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(49, 15);
             this.label10.TabIndex = 0;
@@ -1168,45 +1205,87 @@
             this.gvItemCost.Size = new System.Drawing.Size(473, 130);
             this.gvItemCost.TabIndex = 0;
             // 
-            // label23
+            // label6
             // 
-            this.label23.AutoSize = true;
-            this.label23.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label23.Location = new System.Drawing.Point(28, 122);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(70, 15);
-            this.label23.TabIndex = 23;
-            this.label23.Text = "JOB TASK ID";
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(91, 13);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(175, 19);
+            this.label6.TabIndex = 25;
+            this.label6.Text = "ALLOCATE TASKS TO JOB";
             // 
-            // label3
+            // label9
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(397, 110);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(99, 15);
-            this.label3.TabIndex = 18;
-            this.label3.Text = "LABURUR TASK ID";
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(92, 17);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(171, 19);
+            this.label9.TabIndex = 22;
+            this.label9.Text = "ASSIGN LABOR TO TASK";
             // 
-            // label24
+            // label25
             // 
-            this.label24.AutoSize = true;
-            this.label24.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label24.Location = new System.Drawing.Point(426, 125);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(70, 15);
-            this.label24.TabIndex = 20;
-            this.label24.Text = "JOB TASK ID";
+            this.label25.AutoSize = true;
+            this.label25.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label25.Location = new System.Drawing.Point(122, 27);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(167, 19);
+            this.label25.TabIndex = 23;
+            this.label25.Text = "ASSIGN ITEMS TO TASK";
             // 
-            // lbJobTaskId
+            // pictureBox2
             // 
-            this.lbJobTaskId.AutoSize = true;
-            this.lbJobTaskId.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbJobTaskId.Location = new System.Drawing.Point(502, 125);
-            this.lbJobTaskId.Name = "lbJobTaskId";
-            this.lbJobTaskId.Size = new System.Drawing.Size(14, 15);
-            this.lbJobTaskId.TabIndex = 19;
-            this.lbJobTaskId.Text = "0";
+            this.pictureBox2.Image = global::VWMS.Properties.Resources.cars_icon;
+            this.pictureBox2.Location = new System.Drawing.Point(402, 34);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(162, 110);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 17;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::VWMS.Properties.Resources.Car_icon;
+            this.pictureBox1.Location = new System.Drawing.Point(18, 11);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(72, 68);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 15;
+            this.pictureBox1.TabStop = false;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = global::VWMS.Properties.Resources.Oxygen_Icons_org_Oxygen_Status_mail_task;
+            this.pictureBox3.Location = new System.Drawing.Point(11, 13);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(74, 56);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 24;
+            this.pictureBox3.TabStop = false;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Image = global::VWMS.Properties.Resources.labor_worker_icon_22953_120x120;
+            this.pictureBox4.Location = new System.Drawing.Point(8, 13);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(58, 51);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox4.TabIndex = 21;
+            this.pictureBox4.TabStop = false;
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.Image = global::VWMS.Properties.Resources.DDS_Home_Inventory_Icon;
+            this.pictureBox5.Location = new System.Drawing.Point(8, 5);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(80, 63);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox5.TabIndex = 24;
+            this.pictureBox5.TabStop = false;
             // 
             // FRMWS
             // 
@@ -1221,8 +1300,6 @@
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
@@ -1241,6 +1318,11 @@
             this.tabPage5.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gvLabourCost)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvItemCost)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1340,5 +1422,11 @@
         private System.Windows.Forms.Label label24;
         private System.Windows.Forms.Label lbJobTaskId;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.PictureBox pictureBox5;
+        private System.Windows.Forms.Label label25;
     }
 }

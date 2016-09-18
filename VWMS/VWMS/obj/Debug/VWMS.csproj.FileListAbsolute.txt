@@ -338,14 +338,12 @@ D:\GIT\NADEESHA\VWMS\VWMS\bin\Debug\VWMS.pdb
 D:\GIT\NADEESHA\VWMS\VWMS\bin\Debug\App.BL.dll
 D:\GIT\NADEESHA\VWMS\VWMS\bin\Debug\App.Dal.dll
 D:\GIT\NADEESHA\VWMS\VWMS\bin\Debug\App.Model.dll
-D:\GIT\NADEESHA\VWMS\VWMS\bin\Debug\BL.dll
 D:\GIT\NADEESHA\VWMS\VWMS\bin\Debug\EntityFramework.dll
 D:\GIT\NADEESHA\VWMS\VWMS\bin\Debug\EntityFramework.SqlServer.dll
 D:\GIT\NADEESHA\VWMS\VWMS\bin\Debug\Microsoft.ReportViewer.WinForms.dll
 D:\GIT\NADEESHA\VWMS\VWMS\bin\Debug\App.BL.pdb
 D:\GIT\NADEESHA\VWMS\VWMS\bin\Debug\App.Dal.pdb
 D:\GIT\NADEESHA\VWMS\VWMS\bin\Debug\App.Model.pdb
-D:\GIT\NADEESHA\VWMS\VWMS\bin\Debug\BL.pdb
 D:\GIT\NADEESHA\VWMS\VWMS\bin\Debug\EntityFramework.xml
 D:\GIT\NADEESHA\VWMS\VWMS\bin\Debug\EntityFramework.SqlServer.xml
 D:\GIT\NADEESHA\VWMS\VWMS\bin\Debug\de\Microsoft.ReportViewer.WinForms.resources.dll

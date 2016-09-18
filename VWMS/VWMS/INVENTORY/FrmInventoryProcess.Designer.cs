@@ -39,7 +39,6 @@
             this.label8 = new System.Windows.Forms.Label();
             this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             this.btnInsert = new System.Windows.Forms.Button();
-            this.btnUpdate = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.rdOut = new System.Windows.Forms.RadioButton();
@@ -47,6 +46,7 @@
             this.button1 = new System.Windows.Forms.Button();
             this.lblUpId = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.button2 = new System.Windows.Forms.Button();
             this.lblItemID = new System.Windows.Forms.Label();
             this.chkStockMode = new System.Windows.Forms.CheckBox();
             this.chkItem = new System.Windows.Forms.CheckBox();
@@ -67,8 +67,8 @@
             this.label10 = new System.Windows.Forms.Label();
             this.dgvInventory = new System.Windows.Forms.DataGridView();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.button2 = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -77,13 +77,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvInventory)).BeginInit();
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(144, 16);
+            this.label1.Location = new System.Drawing.Point(176, 16);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(178, 23);
             this.label1.TabIndex = 0;
@@ -93,7 +94,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(85, 60);
+            this.label2.Location = new System.Drawing.Point(101, 62);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(49, 15);
             this.label2.TabIndex = 1;
@@ -103,7 +104,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(65, 75);
+            this.label3.Location = new System.Drawing.Point(81, 77);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(69, 15);
             this.label3.TabIndex = 2;
@@ -113,7 +114,7 @@
             // 
             this.lbl.AutoSize = true;
             this.lbl.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl.Location = new System.Drawing.Point(19, 90);
+            this.lbl.Location = new System.Drawing.Point(35, 92);
             this.lbl.Name = "lbl";
             this.lbl.Size = new System.Drawing.Size(115, 15);
             this.lbl.TabIndex = 3;
@@ -166,7 +167,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(73, 108);
+            this.label8.Location = new System.Drawing.Point(89, 110);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(61, 15);
             this.label8.TabIndex = 8;
@@ -205,18 +206,6 @@
             this.btnInsert.Text = "INSERT";
             this.btnInsert.UseVisualStyleBackColor = true;
             this.btnInsert.Click += new System.EventHandler(this.btnInsert_Click);
-            // 
-            // btnUpdate
-            // 
-            this.btnUpdate.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUpdate.Location = new System.Drawing.Point(360, 154);
-            this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(87, 27);
-            this.btnUpdate.TabIndex = 11;
-            this.btnUpdate.Text = "UPDATE";
-            this.btnUpdate.UseVisualStyleBackColor = true;
-            this.btnUpdate.Visible = false;
-            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // btnDelete
             // 
@@ -312,6 +301,15 @@
             this.groupBox2.TabIndex = 21;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "SEARCH";
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(469, 128);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(90, 37);
+            this.button2.TabIndex = 15;
+            this.button2.Text = "PRINT";
+            this.button2.UseVisualStyleBackColor = true;
             // 
             // lblItemID
             // 
@@ -467,11 +465,12 @@
             this.tabControl1.Location = new System.Drawing.Point(0, 0);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(629, 375);
+            this.tabControl1.Size = new System.Drawing.Size(629, 451);
             this.tabControl1.TabIndex = 22;
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.pictureBox1);
             this.tabPage1.Controls.Add(this.label9);
             this.tabPage1.Controls.Add(this.label10);
             this.tabPage1.Controls.Add(this.dgvInventory);
@@ -486,15 +485,15 @@
             this.tabPage1.Controls.Add(this.lblItemName);
             this.tabPage1.Controls.Add(this.btnDelete);
             this.tabPage1.Controls.Add(this.lblID);
-            this.tabPage1.Controls.Add(this.btnUpdate);
             this.tabPage1.Controls.Add(this.linkLabel1);
             this.tabPage1.Controls.Add(this.btnInsert);
             this.tabPage1.Controls.Add(this.label8);
             this.tabPage1.Controls.Add(this.numericUpDown1);
+            this.tabPage1.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabPage1.Location = new System.Drawing.Point(4, 24);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(621, 347);
+            this.tabPage1.Size = new System.Drawing.Size(621, 423);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "PROCESS";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -523,12 +522,13 @@
             // 
             // dgvInventory
             // 
+            this.dgvInventory.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvInventory.BackgroundColor = System.Drawing.Color.WhiteSmoke;
             this.dgvInventory.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvInventory.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.dgvInventory.Location = new System.Drawing.Point(3, 224);
+            this.dgvInventory.Location = new System.Drawing.Point(3, 216);
             this.dgvInventory.Name = "dgvInventory";
-            this.dgvInventory.Size = new System.Drawing.Size(615, 120);
+            this.dgvInventory.Size = new System.Drawing.Size(615, 204);
             this.dgvInventory.TabIndex = 14;
             this.dgvInventory.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvInventory_RowHeaderMouseClick);
             // 
@@ -539,40 +539,43 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 24);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(621, 347);
+            this.tabPage2.Size = new System.Drawing.Size(621, 423);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "SEARCH";
             this.tabPage2.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(469, 128);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(90, 37);
-            this.button2.TabIndex = 15;
-            this.button2.Text = "PRINT";
-            this.button2.UseVisualStyleBackColor = true;
             // 
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.dataGridView1.Location = new System.Drawing.Point(3, 214);
+            this.dataGridView1.Location = new System.Drawing.Point(3, 228);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 33;
-            this.dataGridView1.Size = new System.Drawing.Size(615, 130);
+            this.dataGridView1.Size = new System.Drawing.Size(615, 192);
             this.dataGridView1.TabIndex = 22;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::VWMS.Properties.Resources.DDS_Home_Inventory_Icon;
+            this.pictureBox1.Location = new System.Drawing.Point(8, 7);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(87, 70);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 34;
+            this.pictureBox1.TabStop = false;
             // 
             // FrmInventoryProcess
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(629, 375);
+            this.ClientSize = new System.Drawing.Size(629, 451);
             this.Controls.Add(this.tabControl1);
             this.Font = new System.Drawing.Font("Calibri", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Name = "FrmInventoryProcess";
             this.ShowIcon = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "INVENTORY PROCESS";
             this.Load += new System.EventHandler(this.FrmInventoryProcess_Load);
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             this.groupBox1.ResumeLayout(false);
@@ -585,6 +588,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvInventory)).EndInit();
             this.tabPage2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -602,7 +606,6 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.NumericUpDown numericUpDown1;
         private System.Windows.Forms.Button btnInsert;
-        private System.Windows.Forms.Button btnUpdate;
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.RadioButton rdOut;
@@ -632,5 +635,6 @@
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label lblItemID;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

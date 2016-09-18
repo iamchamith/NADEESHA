@@ -8,9 +8,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using VWMS.ENTITY;
-using BL.MODEL;
 using VWMS.USER;
 using VWMS.INVENTORY;
+using static App.Model.Enums;
 
 namespace VWMS
 {

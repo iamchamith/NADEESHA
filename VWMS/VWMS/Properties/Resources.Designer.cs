@@ -103,6 +103,16 @@ namespace VWMS.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap DDS_Home_Inventory_Icon {
+            get {
+                object obj = ResourceManager.GetObject("DDS_Home_Inventory-Icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap garag {
             get {
                 object obj = ResourceManager.GetObject("garag", resourceCulture);
@@ -123,6 +133,16 @@ namespace VWMS.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap labor_worker_icon_22953_120x120 {
+            get {
+                object obj = ResourceManager.GetObject("labor-worker-icon-22953-120x120", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap MODEL {
             get {
                 object obj = ResourceManager.GetObject("MODEL", resourceCulture);
@@ -136,6 +156,16 @@ namespace VWMS.Properties {
         internal static System.Drawing.Bitmap noPhotoAvailable {
             get {
                 object obj = ResourceManager.GetObject("noPhotoAvailable", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Oxygen_Icons_org_Oxygen_Status_mail_task {
+            get {
+                object obj = ResourceManager.GetObject("Oxygen-Icons.org-Oxygen-Status-mail-task", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -1,6 +1,4 @@
-﻿using BL.BL;
-using BL.MODEL;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -16,6 +14,7 @@ using App.Model;
 using App.Dal;
 using App.BL;
 using App.BL.DbServices;
+using static App.Model.Enums;
 
 namespace VWMS.ENTITY
 {
@@ -187,7 +186,7 @@ namespace VWMS.ENTITY
         string SaveImage()
         {
             imageURL = Guid.NewGuid().ToString() + Path.GetExtension(openFileDialog1.FileName);
-            pictureBox1.Image.Save(Pathss.FilePath + imageURL);
+            pictureBox1.Image.Save(Helper.FilePath + imageURL);
             return imageURL;
         }
 
@@ -208,12 +207,12 @@ namespace VWMS.ENTITY
                 txtPhone.Text = dr.Cells["PHONE"].Value.ToString();
                 try
                 {
-                    pictureBox1.Image = Image.FromFile(BL.MODEL.Pathss.FilePath + dr.Cells["URL"].Value.ToString());
+                    pictureBox1.Image = Image.FromFile(Helper.FilePath + dr.Cells["URL"].Value.ToString());
                     imageURL = dr.Cells["URL"].Value.ToString();
                 }
                 catch
                 {
-                    pictureBox1.Image = Image.FromFile(BL.MODEL.Pathss.FilePath + "no.jpg");
+                    pictureBox1.Image = Image.FromFile(Helper.FilePath + "no.jpg");
                     imageURL = "no.jpg";
                 }
             }
@@ -282,7 +281,7 @@ namespace VWMS.ENTITY
             txtPhone.Clear();
             imageURL = "no.jpg";
             IsImageChange = false;
-            pictureBox1.Image = Image.FromFile(Pathss.FilePath + "no.jpg");
+            pictureBox1.Image = Image.FromFile(Helper.FilePath + "no.jpg");
         }
         private void btnBrowse_Click(object sender, EventArgs e)
         {

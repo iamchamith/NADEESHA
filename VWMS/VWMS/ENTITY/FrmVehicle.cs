@@ -1,6 +1,4 @@
-﻿using BL.BL;
-using BL.MODEL;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -16,6 +14,7 @@ using App.BL;
 using App.Dal;
 using App.Model;
 using App.BL.DbServices;
+using static App.Model.Enums;
 
 namespace VWMS.ENTITY
 {
@@ -152,12 +151,12 @@ namespace VWMS.ENTITY
                 try
                 {
                     string img = cus.Rows[0]["URL"].ToString();
-                    pictureBox2.Image = Image.FromFile(Pathss.FilePath + img);
+                    pictureBox2.Image = Image.FromFile(Helper.FilePath + img);
                 }
                 catch
                 {
 
-                    pictureBox2.Image = Image.FromFile(Pathss.FilePath + "no.jpg");
+                    pictureBox2.Image = Image.FromFile(Helper.FilePath + "no.jpg");
                 }
                 dataGridView2.DataSource = dt;
                 lblOwnerID.Text = cus.Rows[0]["ID"].ToString();
@@ -231,19 +230,7 @@ namespace VWMS.ENTITY
             {
                 return;
             }
-
-            try
-            {
-                if (int.Parse(dataGridView1.Rows[0].Cells["IS_FINISHED"].Value.ToString()) == (int)EIsFinished.No)
-                {
-
-                    MessageBox.Show("please finished current runing job before create new job"); return;
-                }
-            }
-            catch
-            {
-
-            }
+ 
             try
             {
                 var x = new VehicleDbService().Create(new VehicleViewModel
@@ -290,12 +277,12 @@ namespace VWMS.ENTITY
                 cmbModels.SelectedValue = int.Parse(dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString());
                 try
                 {
-                    pictureBox1.Image = Image.FromFile(BL.MODEL.Pathss.FilePath + dataGridView1.Rows[e.RowIndex].Cells[9].Value.ToString());
+                    pictureBox1.Image = Image.FromFile(Helper.FilePath + dataGridView1.Rows[e.RowIndex].Cells[9].Value.ToString());
                     imageName = dataGridView1.Rows[e.RowIndex].Cells[9].Value.ToString();
                 }
                 catch
                 {
-                    pictureBox1.Image = Image.FromFile(BL.MODEL.Pathss.FilePath + dataGridView1.Rows[e.RowIndex].Cells[9].Value.ToString());
+                    pictureBox1.Image = Image.FromFile(Helper.FilePath + dataGridView1.Rows[e.RowIndex].Cells[9].Value.ToString());
                     imageName = "no.jpg";
                 }
             }
@@ -334,8 +321,8 @@ namespace VWMS.ENTITY
                 dataGridView2.DataSource = null;
                 IsImageChange = false;
                 ImageURL = "car.jpg";
-                pictureBox1.Image = Image.FromFile(Pathss.FilePath + "car.png");
-                pictureBox2.Image = Image.FromFile(Pathss.FilePath + "no.jpg");
+                pictureBox1.Image = Image.FromFile(Helper.FilePath + "car.png");
+                pictureBox2.Image = Image.FromFile(Helper.FilePath + "no.jpg");
             }
             catch (Exception ex) {
                 Helper.ErrorMessage(ex.Message);
@@ -383,8 +370,13 @@ namespace VWMS.ENTITY
         string SaveImage()
         {
             ImageURL = Guid.NewGuid() + Path.GetExtension(openFileDialog1.FileName);
-            pictureBox1.Image.Save(Pathss.FilePath + ImageURL);
+            pictureBox1.Image.Save(Helper.FilePath + ImageURL);
             return ImageURL;
+        }
+
+        private void btnNavReser_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

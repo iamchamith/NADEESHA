@@ -7,8 +7,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using BL.MODEL;
-using BL.BL;
 using App.BL;
 using App.Model;
 

@@ -15,9 +15,25 @@ namespace App.BL
         {
             try
             {
+                if (IsJobTaskLabararAvaiable(obj.TaskId.Value,obj.LabourId.Value))
+                {
+                    throw new Exception("this labarar is already assign to this job task");
+                }
                 dba.VehicleJobTaskLabours.Add(Mapper.Map<VehicleJobTaskLabour>(obj));
                 dba.SaveChanges();
                 return new DetailModel { State = true };
+            }
+            catch  
+            {
+                throw;
+            }
+        }
+
+        bool IsJobTaskLabararAvaiable(int jobTaskId,int labararId) {
+
+            try
+            {
+                return dba.VehicleJobTaskLabours.ToList().Exists(p => p.TaskId == jobTaskId && p.LabourId == labararId);
             }
             catch  
             {

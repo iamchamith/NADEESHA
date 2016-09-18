@@ -287,10 +287,6 @@
       <Project>{f48e2617-d275-4adc-afe7-044c9495c6b4}</Project>
       <Name>App.Model</Name>
     </ProjectReference>
-    <ProjectReference Include="..\BL\BL.csproj">
-      <Project>{84efad95-2827-403c-8563-712bac0ae9ff}</Project>
-      <Name>BL</Name>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Refresh.png" />
@@ -344,6 +340,9 @@
     <Content Include="IMAGES\f253eae0-1f76-4683-894e-fefb7ebe3dd9.jpg" />
     <Content Include="IMAGES\ffe25d59-3eb7-49b5-8291-defce8df8981.png" />
     <Content Include="IMAGES\no.jpg" />
+    <None Include="Resources\DDS_Home_Inventory-Icon.png" />
+    <None Include="Resources\labor-worker-icon-22953-120x120.png" />
+    <None Include="Resources\Oxygen-Icons.org-Oxygen-Status-mail-task.ico" />
     <None Include="Resources\Car-icon.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

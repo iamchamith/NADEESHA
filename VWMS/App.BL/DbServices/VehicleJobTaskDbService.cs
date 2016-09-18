@@ -14,9 +14,25 @@ namespace App.BL
         public DetailModel CreateVehicleJobTask(VehicleJobTaskViewModel obj) {
             try
             {
+                if (IsTaskExcist(obj.JobId,obj.TaskId))
+                {
+                    throw new Exception("job task already exist");
+                }
                 dba.VehicleJobTasks.Add(Mapper.Map<VehicleJobTask>(obj));
                 dba.SaveChanges();
                 return new DetailModel { State = true };
+            }
+            catch  
+            {
+                throw;
+            }
+        }
+
+        bool IsTaskExcist(int jobid,int taskid) {
+
+            try
+            {
+                return dba.VehicleJobTasks.ToList().Exists(p => p.JobId == jobid && p.TaskId == taskid);
             }
             catch  
             {
@@ -49,6 +65,7 @@ namespace App.BL
             {
                 var x = dba.VehicleJobTasks.Where(p => p.ID == id).FirstOrDefault();
                 dba.VehicleJobTasks.Remove(x);
+                dba.SaveChanges();
                 return new DetailModel { State = true };
             }
             catch
