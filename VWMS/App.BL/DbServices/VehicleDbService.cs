@@ -79,7 +79,7 @@ namespace App.BL
                 {
                     State = true,
                     Content = dba.Vehicles.ToList().Select(x => AutoMapper.Mapper.Map<VehicleViewModel>(x)).ToList()
-            };
+                };
             }
             catch
             {
@@ -95,6 +95,46 @@ namespace App.BL
                 {
                     State = true,
                     Content = Mapper.Map<VehicleViewModel>(dba.Vehicles.Where(p => p.VehicleID == vehicleID).FirstOrDefault())
+                };
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
+        public DetailModel ReadVehicleWithCustomer()
+        {
+
+            try
+            {
+                var x = from cust in dba.Customers
+                        join v in dba.Vehicles
+                             on cust.ID equals v.OwnerID
+                        select new
+                        {
+                            cusNic = cust.Nic,
+                            cusName = cust.Name,
+                            vnum = v.VehicleID,
+                            chassy = v.ChassiNumber,
+                            eng = v.EngineNumber
+                        };
+                var lst = new List<VehicleCustomerViewModel>();
+                foreach (var item in x)
+                {
+                    lst.Add(new VehicleCustomerViewModel
+                    {
+                        ChassiNumber = item.chassy,
+                        CustomerName = item.cusName,
+                        CustomerNic = item.cusNic,
+                        EngineNumber = item.eng,
+                        VehicleID = item.vnum
+                    });
+                }
+                return new DetailModel
+                {
+                    State = true,
+                    Content = lst
                 };
             }
             catch

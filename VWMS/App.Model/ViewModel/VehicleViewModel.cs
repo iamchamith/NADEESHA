@@ -19,4 +19,12 @@ namespace App.Model
         public DateTime? RegDate { get; set; }
         public string Url { get; set; }
     }
+
+    public class VehicleCustomerViewModel {
+        public string VehicleID { get; set; }
+        public string EngineNumber { get; set; }
+        public string ChassiNumber { get; set; }
+        public string CustomerName { get; set; }
+        public string CustomerNic { get; set; }
+    }
 }
