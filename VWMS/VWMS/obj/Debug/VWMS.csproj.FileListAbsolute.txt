@@ -394,3 +394,5 @@ D:\GIT\NADEESHA\VWMS\VWMS\bin\Debug\CrystalDecisions.ReportAppServer.ObjectFacto
 D:\GIT\NADEESHA\VWMS\VWMS\bin\Debug\ShockwaveFlashObjects.dll
 D:\GIT\NADEESHA\VWMS\VWMS\bin\Debug\CrystalDecisions.ReportAppServer.CommonControls.dll
 D:\GIT\NADEESHA\VWMS\VWMS\bin\Debug\stdole.dll
+D:\GIT\NADEESHA\VWMS\VWMS\obj\Debug\VWMS.AboutUs.resources
+D:\GIT\NADEESHA\VWMS\VWMS\obj\Debug\VWMS.WS.FrmInputDialog.resources

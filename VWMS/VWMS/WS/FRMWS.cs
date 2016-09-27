@@ -65,31 +65,6 @@ namespace VWMS.WS
             }
         }
 
-        public void rowColor()
-        {
-            try
-            {
-                for (int i = 0; i < dataGridView1.Rows.Count - 1; i++)
-                {
-
-                    int val = Convert.ToInt32(dataGridView1.Rows[i].Cells["is_finished"].Value.ToString());
-
-                    if (val == 1)
-                    {
-                        dataGridView1.Rows[i].DefaultCellStyle.BackColor = Color.Red;
-                    }
-                    else
-                    {
-                        dataGridView1.Rows[i].DefaultCellStyle.BackColor = Color.Green;
-                    }
-                }
-            }
-            catch
-            {
-
-                MessageBox.Show("invalied job");
-            }
-        }
 
         bool IsCurrentJobFinished = true;
         void LoadVehicleJobs(string vehicleNumber)
@@ -136,9 +111,14 @@ namespace VWMS.WS
 
 
         }
-        
+
         private void btnGo_Click(object sender, EventArgs e)
         {
+            if (lblJobID.Text == "0" || string.IsNullOrEmpty(lblJobID.Text))
+            {
+                Helper.ErrorMessage("please select valied vehicle job"); return;
+            }
+
             LoadJobTasks();
             tabControl1.SelectedIndex = 1;
         }
@@ -150,6 +130,7 @@ namespace VWMS.WS
                 lblJobID.Text = lblTaskJobID.Text = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
                 IsCurrentJobFinished = int.Parse(dataGridView1.Rows[e.RowIndex].Cells["IsFinished"].Value.ToString()) == 1 ? false : true;
                 EnableFunctionsByCurrentJobState();
+                btnJobUpdate.Enabled = !IsCurrentJobFinished;
             }
             catch
             {
@@ -172,7 +153,7 @@ namespace VWMS.WS
             lblTaskName.Text = name;
             txtTaskDiscription.Text = description;
         }
- 
+
         private void btnInsert_Click(object sender, EventArgs e)
         {
             if (!Helper.Confirmation())
@@ -228,9 +209,12 @@ namespace VWMS.WS
 
         void LoadJobTasks()
         {
-            gvTask.DataSource = Helper.CreateDataTable<VehicleJobTaskViewModel>((List<VehicleJobTaskViewModel>)
-                new VehicleJobTaskDbService().SelectVehicleTask(int.Parse(lblJobID.Text)).Content);
-            rowColorTask();
+            try
+            {
+                gvTask.DataSource = Helper.CreateDataTable<VehicleJobTaskViewModel>((List<VehicleJobTaskViewModel>)
+                    new VehicleJobTaskDbService().SelectVehicleTask(int.Parse(lblJobID.Text)).Content);
+            }
+            catch (Exception ex) { Helper.ErrorMessage(ex); }
         }
         private void gvTask_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
@@ -253,7 +237,7 @@ namespace VWMS.WS
                 LoadTaskLabours(lblJobTaskID.Text);
                 LoadMaterials(lblJobTaskID.Text);
             }
-            catch (Exception ex) { Console.WriteLine(ex.Message);}
+            catch (Exception ex) { Console.WriteLine(ex.Message); }
 
         }
 
@@ -290,7 +274,7 @@ namespace VWMS.WS
             try
             {
 
-                var x = new VehicleJobTaskLabourDbService().CreateVehicleJobTask(new VehicleJobTaskLabourViewModel
+                var x = new VehicleJobTaskLabourDbService().CreateVehicleJobTaskLaborur(new VehicleJobTaskLabourViewModel
                 {
                     LabourId = int.Parse(lblTaskLabourEmpID.Text),
                     TaskId = int.Parse(lbJobTaskId.Text),
@@ -320,41 +304,42 @@ namespace VWMS.WS
         private void btnTaskLaboburUpdate_Click(object sender, EventArgs e)
         {
 
-            if (Helper.Confirmation())
+            if (!Helper.Confirmation())
             {
-                var x = new VehicleJobTaskLabourDbService().UpdatevehicleTask(new VehicleJobTaskLabourViewModel
+                return;
+            }
+            try
+            {
+                var x = new VehicleJobTaskLabourDbService().UpdatevehicleTaskLaborur(new VehicleJobTaskLabourViewModel
                 {
                     CloseDateTime = DateTime.Today,
                     Discription = txtTaskLabourDiscription.Text,
-                    IsClosed = (int)Enums.EIsClosed.Closed
+                    IsClosed = (int)Enums.EIsClosed.Closed,
+                    LabourId = Convert.ToInt32(lblTaskLabourEmpID.Text),
+                    ID = Convert.ToInt32(lblTaskLabourID.Text)
                 });
-                if (x.State)
-                {
-                    Helper.SuccessMessage();
-                    LoadTaskLabours("123");
-                }
-                else
-                {
-                    Helper.ErrorMessage();
-                }
+                Helper.SuccessMessage();
+                LoadTaskLabours(lbJobTaskId.Text);
             }
+            catch (Exception ex) { Helper.ErrorMessage(ex); }
+
         }
 
         private void btnTaskLaboburDelete_Click(object sender, EventArgs e)
         {
-
-            if (Helper.Confirmation())
+            if (!Helper.Confirmation())
+            { return; }
+            try
             {
-                var x = new VehicleJobTaskLabourDbService().DeleteVehicleTasks(123);
-                if (x.State)
-                {
-                    LoadTaskLabours("123");
-                }
-                else
-                {
-                    Helper.ErrorMessage();
-                }
+                var x = new VehicleJobTaskLabourDbService().DeleteVehicleTasksLabourur(Convert.ToInt32(lblTaskLabourID.Text));
+                Helper.SuccessMessage();
+                LoadTaskLabours(lbJobTaskId.Text);
             }
+            catch (Exception ex)
+            {
+                Helper.ErrorMessage(ex);
+            }
+
         }
 
         private void dataGridView2_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
@@ -379,12 +364,12 @@ namespace VWMS.WS
             lblTaskLabourEmpID.Text = empID;
             lblTaskLabourName.Text = name;
         }
-  
+
         void LoadTaskLabours(string taskID)
         {
             try
             {
-                gvLabours.DataSource = Helper.CreateDataTable<VehicleJobTaskLabourViewModel>((List<VehicleJobTaskLabourViewModel>)new VehicleJobTaskLabourDbService().SelectVehicleTask(int.Parse(taskID)).Content);
+                gvLabours.DataSource = Helper.CreateDataTable<VehicleJobTaskLabourViewModel>((List<VehicleJobTaskLabourViewModel>)new VehicleJobTaskLabourDbService().SelectVehicleTasklaburur(int.Parse(taskID)).Content);
             }
             catch (Exception ex)
             {
@@ -452,7 +437,7 @@ namespace VWMS.WS
         int updateQuantityFinal = 0;
         int updateQuantityOld = 0;
         private void button5_Click(object sender, EventArgs e)
-        { 
+        {
         }
 
         void ClearMatirialIssue()
@@ -466,7 +451,7 @@ namespace VWMS.WS
         }
 
         private void button3_Click(object sender, EventArgs e)
-        { 
+        {
         }
 
 
@@ -518,7 +503,7 @@ namespace VWMS.WS
 
             lblAvaiableQuantity.Text = (int.Parse(lblAvaiableQuantity.Text) - txtQuantity.Value) + "";
         }
- 
+
 
         private void gvMaterials_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
@@ -558,7 +543,7 @@ namespace VWMS.WS
         double finalAmount = 0.0;
         private void btnRefreshCost_Click(object sender, EventArgs e)
         {
-            
+
         }
 
         #endregion
@@ -576,14 +561,15 @@ namespace VWMS.WS
             }
             double cost = 0.0;
 
-            //if (!IsLabourAllFinished())
-            //{
-            //    MessageBox.Show("please close all labour tasks"); return;
-            //}
+
+            if (!new VehicleJobTaskDbService().IsLaburursFinishedTheTask(Convert.ToInt32(lblTaskId.Text)))
+            {
+                Helper.ErrorMessage("please closed all laburur"); return;
+            }
 
             if (!double.TryParse(txtLabourCharge.Text, out cost))
             {
-                MessageBox.Show("invalied amount"); return;
+                Helper.ErrorMessage("invalied amount"); return;
             }
             try
             {
@@ -591,7 +577,8 @@ namespace VWMS.WS
                 {
                     Discription = txtTaskDiscription.Text,
                     IsClosed = (int)Enums.EIsClosed.Closed,
-                    TaskCost = int.Parse(txtLabourCharge.Text)
+                    TaskCost = int.Parse(txtLabourCharge.Text),
+                    ID = Convert.ToInt32(lblJobTaskID.Text)
                 });
 
                 Helper.SuccessMessage("job close is success");
@@ -599,12 +586,13 @@ namespace VWMS.WS
             }
             catch (Exception ex)
             {
-                Helper.SuccessMessage(ex.Message);
+                Helper.ErrorMessage(ex.Message);
             }
 
         }
 
-        public void rowColorTask()
+        #region <Color Grid>
+        public void rowColorTask1()
         {
 
             for (int i = 0; i < gvTask.Rows.Count - 1; i++)
@@ -624,7 +612,7 @@ namespace VWMS.WS
             }
         }
 
-        public void rowColorLabur()
+        public void rowColorLabur1()
         {
 
             for (int i = 0; i < gvLabours.Rows.Count - 1; i++)
@@ -644,12 +632,36 @@ namespace VWMS.WS
             }
         }
 
+        public void rowColor1()
+        {
+            try
+            {
+                for (int i = 0; i < dataGridView1.Rows.Count - 1; i++)
+                {
+
+                    int val = Convert.ToInt32(dataGridView1.Rows[i].Cells["is_finished"].Value.ToString());
+
+                    if (val == 1)
+                    {
+                        dataGridView1.Rows[i].DefaultCellStyle.BackColor = Color.Red;
+                    }
+                    else
+                    {
+                        dataGridView1.Rows[i].DefaultCellStyle.BackColor = Color.Green;
+                    }
+                }
+            }
+            catch
+            {
+
+                MessageBox.Show("invalied job");
+            }
+        }
+
+        #endregion
+
         private void tabControl1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            //rowColorTask();
-            //rowColorLabur();
-            //rowColor();
-            //ResetValues();
         }
 
         void ResetValues()
@@ -684,16 +696,44 @@ namespace VWMS.WS
         }
 
 
-        private void btnCloseJob_Click(object sender, EventArgs e)
-        {
-
-
-        }
-
         private void button7_Click(object sender, EventArgs e)
         {
             tabControl1.SelectedIndex = 0;
         }
- 
+
+        decimal labararCost = 0.0M;
+        public void SetLabururCost(decimal lcost = 0.0m) {
+            this.labararCost = lcost;
+            lbllabururAmount.Text = $"Rs {labararCost}";
+        }
+        private void btnJobUpdate_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                // get labarur amount
+                var x = new FrmInputDialog("Laburur Cost", "Insert laburur Cost", this);
+                x.ShowDialog();
+
+                if (!Helper.Confirmation(message: "Sure finied job? (it cannot be roll back)")) { return; }
+                 
+                if (!new VehicleJobDbService().CheckJobTasksAreClosed(Convert.ToInt32(lblJobID.Text)))
+                {
+                    Helper.ErrorMessage("please closed job tasks"); return;
+                }
+
+                new VehicleJobDbService().CloseVehicleJob(new VehicleJobViewModel
+                {
+                    FinalAmount = Convert.ToDouble(labararCost),
+                    ID = int.Parse(lblJobID.Text)
+                });
+                Helper.SuccessMessage("job is closed");
+                LoadVehicleJobs(lblJobVehicleID.Text);
+
+            }
+            catch (Exception ex)
+            {
+                Helper.ErrorMessage(ex);
+            }
+        }
     }
 }

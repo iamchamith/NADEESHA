@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static App.Model.Enums;
 
 namespace App.BL
 {
@@ -36,7 +37,7 @@ namespace App.BL
                 }
                 x.CloseDate = DateTime.Now;
                 x.CloseTime = DateTime.Now;
-                x.IsFinished = 1;
+                x.IsFinished = (int)EIsClosed.Closed;
                 x.FinalAmount = obj.FinalAmount;
                 dba.SaveChanges();
                 return new DetailModel { State = true };
@@ -57,7 +58,7 @@ namespace App.BL
                     .Select(x => AutoMapper.Mapper.Map<VehicleJobViewModel>(x)).ToList()
                 };
             }
-            catch  
+            catch
             {
                 throw;
             }
@@ -77,11 +78,25 @@ namespace App.BL
                     return new DetailModel
                     {
                         Content
-                         = ((List<VehicleJob>)result.Content).Exists(p => p.IsFinished == 0) ? false : true
+                         = ((List<VehicleJob>)result.Content).Exists(p => p.IsFinished == (int)EIsClosed.NotClosed) ? false : true
                     };
                 }
             }
             catch { throw; }
+        }
+
+        public bool CheckJobTasksAreClosed(int jobid)
+        {
+
+            try
+            {
+                return (dba.VehicleJobTasks.Count(p => p.IsClosed == (int)EIsClosed.NotClosed && p.JobId == jobid) == 0) ? true : false;
+            }
+            catch
+            {
+
+                throw;
+            }
         }
     }
 }

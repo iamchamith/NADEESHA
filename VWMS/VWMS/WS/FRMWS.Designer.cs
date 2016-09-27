@@ -41,6 +41,8 @@
             this.lblJobVehicleID = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.label26 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
             this.label23 = new System.Windows.Forms.Label();
             this.button7 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -63,6 +65,8 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.label27 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
             this.label24 = new System.Windows.Forms.Label();
             this.lbJobTaskId = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -81,6 +85,7 @@
             this.lblTaskLabourName = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.label25 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.btnMaterialInsert = new System.Windows.Forms.Button();
             this.btnMaterialDelete = new System.Windows.Forms.Button();
@@ -105,28 +110,27 @@
             this.label10 = new System.Windows.Forms.Label();
             this.tabPage5 = new System.Windows.Forms.TabPage();
             this.button10 = new System.Windows.Forms.Button();
-            this.button11 = new System.Windows.Forms.Button();
             this.button9 = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
             this.btnCloseJob = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.lblTotalCost = new System.Windows.Forms.Label();
-            this.lblLabourCoustTotal = new System.Windows.Forms.Label();
-            this.label22 = new System.Windows.Forms.Label();
-            this.gvLabourCost = new System.Windows.Forms.DataGridView();
             this.lblItemCostTotal = new System.Windows.Forms.Label();
             this.btnRefreshCost = new System.Windows.Forms.Button();
             this.label20 = new System.Windows.Forms.Label();
             this.gvItemCost = new System.Windows.Forms.DataGridView();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label25 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.lbllabururAmount = new System.Windows.Forms.Label();
+            this.label29 = new System.Windows.Forms.Label();
+            this.label28 = new System.Windows.Forms.Label();
+            this.label30 = new System.Windows.Forms.Label();
+            this.lblItemCost = new System.Windows.Forms.Label();
+            this.label22 = new System.Windows.Forms.Label();
+            this.lblLabururCost = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -141,7 +145,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtQuantity)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvMaterials)).BeginInit();
             this.tabPage5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gvLabourCost)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvItemCost)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -168,6 +171,11 @@
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.label30);
+            this.tabPage1.Controls.Add(this.lblItemCost);
+            this.tabPage1.Controls.Add(this.label28);
+            this.tabPage1.Controls.Add(this.lbllabururAmount);
+            this.tabPage1.Controls.Add(this.label29);
             this.tabPage1.Controls.Add(this.pictureBox2);
             this.tabPage1.Controls.Add(this.label21);
             this.tabPage1.Controls.Add(this.pictureBox1);
@@ -193,7 +201,7 @@
             // 
             this.label21.AutoSize = true;
             this.label21.Font = new System.Drawing.Font("Calibri", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label21.Location = new System.Drawing.Point(117, 34);
+            this.label21.Location = new System.Drawing.Point(122, 24);
             this.label21.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(112, 19);
@@ -215,7 +223,7 @@
             // 
             this.lblJobID.AutoSize = true;
             this.lblJobID.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblJobID.Location = new System.Drawing.Point(382, 82);
+            this.lblJobID.Location = new System.Drawing.Point(46, 120);
             this.lblJobID.Name = "lblJobID";
             this.lblJobID.Size = new System.Drawing.Size(14, 15);
             this.lblJobID.TabIndex = 10;
@@ -234,18 +242,20 @@
             // 
             // btnJobUpdate
             // 
+            this.btnJobUpdate.Enabled = false;
             this.btnJobUpdate.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnJobUpdate.Location = new System.Drawing.Point(261, 111);
+            this.btnJobUpdate.Location = new System.Drawing.Point(259, 133);
             this.btnJobUpdate.Name = "btnJobUpdate";
             this.btnJobUpdate.Size = new System.Drawing.Size(75, 23);
             this.btnJobUpdate.TabIndex = 7;
             this.btnJobUpdate.Text = "FINIED JOB";
             this.btnJobUpdate.UseVisualStyleBackColor = true;
+            this.btnJobUpdate.Click += new System.EventHandler(this.btnJobUpdate_Click);
             // 
             // btnJobInsert
             // 
             this.btnJobInsert.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnJobInsert.Location = new System.Drawing.Point(137, 111);
+            this.btnJobInsert.Location = new System.Drawing.Point(135, 133);
             this.btnJobInsert.Name = "btnJobInsert";
             this.btnJobInsert.Size = new System.Drawing.Size(75, 23);
             this.btnJobInsert.TabIndex = 6;
@@ -269,7 +279,7 @@
             // 
             this.btnJobSelectVehicle.AutoSize = true;
             this.btnJobSelectVehicle.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnJobSelectVehicle.Location = new System.Drawing.Point(258, 82);
+            this.btnJobSelectVehicle.Location = new System.Drawing.Point(220, 82);
             this.btnJobSelectVehicle.Name = "btnJobSelectVehicle";
             this.btnJobSelectVehicle.Size = new System.Drawing.Size(89, 15);
             this.btnJobSelectVehicle.TabIndex = 2;
@@ -281,7 +291,7 @@
             // 
             this.lblJobVehicleID.AutoSize = true;
             this.lblJobVehicleID.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblJobVehicleID.Location = new System.Drawing.Point(224, 82);
+            this.lblJobVehicleID.Location = new System.Drawing.Point(240, 64);
             this.lblJobVehicleID.Name = "lblJobVehicleID";
             this.lblJobVehicleID.Size = new System.Drawing.Size(14, 15);
             this.lblJobVehicleID.TabIndex = 1;
@@ -291,7 +301,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(118, 82);
+            this.label1.Location = new System.Drawing.Point(134, 64);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(100, 15);
             this.label1.TabIndex = 0;
@@ -299,6 +309,7 @@
             // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.label26);
             this.tabPage2.Controls.Add(this.label6);
             this.tabPage2.Controls.Add(this.label23);
             this.tabPage2.Controls.Add(this.button7);
@@ -327,6 +338,26 @@
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "TASK";
             this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // label26
+            // 
+            this.label26.BackColor = System.Drawing.Color.Red;
+            this.label26.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label26.Location = new System.Drawing.Point(498, 143);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(116, 37);
+            this.label26.TabIndex = 26;
+            this.label26.Text = "Closed (2)\r\nNot Closed (1)\t";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(91, 13);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(175, 19);
+            this.label6.TabIndex = 25;
+            this.label6.Text = "ALLOCATE TASKS TO JOB";
             // 
             // label23
             // 
@@ -425,7 +456,7 @@
             // button2
             // 
             this.button2.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(350, 179);
+            this.button2.Location = new System.Drawing.Point(350, 198);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(154, 23);
             this.button2.TabIndex = 16;
@@ -436,7 +467,7 @@
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(510, 179);
+            this.button1.Location = new System.Drawing.Point(510, 198);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(113, 23);
             this.button1.TabIndex = 15;
@@ -549,6 +580,7 @@
             // 
             // tabPage3
             // 
+            this.tabPage3.Controls.Add(this.label27);
             this.tabPage3.Controls.Add(this.label9);
             this.tabPage3.Controls.Add(this.label24);
             this.tabPage3.Controls.Add(this.lbJobTaskId);
@@ -573,11 +605,31 @@
             this.tabPage3.Text = "LABURUS";
             this.tabPage3.UseVisualStyleBackColor = true;
             // 
+            // label27
+            // 
+            this.label27.BackColor = System.Drawing.Color.Red;
+            this.label27.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label27.Location = new System.Drawing.Point(509, 102);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(116, 37);
+            this.label27.TabIndex = 27;
+            this.label27.Text = "Closed (2)\r\nNot Closed (1)\t";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(92, 17);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(171, 19);
+            this.label9.TabIndex = 22;
+            this.label9.Text = "ASSIGN LABOR TO TASK";
+            // 
             // label24
             // 
             this.label24.AutoSize = true;
             this.label24.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label24.Location = new System.Drawing.Point(426, 125);
+            this.label24.Location = new System.Drawing.Point(397, 124);
             this.label24.Name = "label24";
             this.label24.Size = new System.Drawing.Size(70, 15);
             this.label24.TabIndex = 20;
@@ -587,7 +639,7 @@
             // 
             this.lbJobTaskId.AutoSize = true;
             this.lbJobTaskId.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbJobTaskId.Location = new System.Drawing.Point(502, 125);
+            this.lbJobTaskId.Location = new System.Drawing.Point(473, 124);
             this.lbJobTaskId.Name = "lbJobTaskId";
             this.lbJobTaskId.Size = new System.Drawing.Size(14, 15);
             this.lbJobTaskId.TabIndex = 19;
@@ -597,7 +649,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(397, 110);
+            this.label3.Location = new System.Drawing.Point(368, 109);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(99, 15);
             this.label3.TabIndex = 18;
@@ -675,7 +727,7 @@
             // 
             this.lblTaskLabourID.AutoSize = true;
             this.lblTaskLabourID.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTaskLabourID.Location = new System.Drawing.Point(502, 110);
+            this.lblTaskLabourID.Location = new System.Drawing.Point(473, 109);
             this.lblTaskLabourID.Name = "lblTaskLabourID";
             this.lblTaskLabourID.Size = new System.Drawing.Size(14, 15);
             this.lblTaskLabourID.TabIndex = 9;
@@ -782,6 +834,16 @@
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "ITEMS";
             this.tabPage4.UseVisualStyleBackColor = true;
+            // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label25.Location = new System.Drawing.Point(122, 27);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(167, 19);
+            this.label25.TabIndex = 23;
+            this.label25.Text = "ASSIGN ITEMS TO TASK";
             // 
             // panel3
             // 
@@ -1030,17 +1092,14 @@
             // 
             // tabPage5
             // 
+            this.tabPage5.Controls.Add(this.lblLabururCost);
+            this.tabPage5.Controls.Add(this.label22);
             this.tabPage5.Controls.Add(this.button10);
-            this.tabPage5.Controls.Add(this.button11);
             this.tabPage5.Controls.Add(this.button9);
             this.tabPage5.Controls.Add(this.button8);
             this.tabPage5.Controls.Add(this.btnCloseJob);
-            this.tabPage5.Controls.Add(this.button6);
             this.tabPage5.Controls.Add(this.button5);
             this.tabPage5.Controls.Add(this.lblTotalCost);
-            this.tabPage5.Controls.Add(this.lblLabourCoustTotal);
-            this.tabPage5.Controls.Add(this.label22);
-            this.tabPage5.Controls.Add(this.gvLabourCost);
             this.tabPage5.Controls.Add(this.lblItemCostTotal);
             this.tabPage5.Controls.Add(this.btnRefreshCost);
             this.tabPage5.Controls.Add(this.label20);
@@ -1054,42 +1113,32 @@
             // 
             // button10
             // 
-            this.button10.Location = new System.Drawing.Point(513, 317);
+            this.button10.Location = new System.Drawing.Point(321, 311);
             this.button10.Margin = new System.Windows.Forms.Padding(2);
             this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(120, 48);
+            this.button10.Size = new System.Drawing.Size(180, 48);
             this.button10.TabIndex = 16;
-            this.button10.Text = "REPORT FOR WORK STATION";
+            this.button10.Text = "REPORT FOR WORK STATION LABURUR TASKS";
             this.button10.UseVisualStyleBackColor = true;
-            // 
-            // button11
-            // 
-            this.button11.Location = new System.Drawing.Point(513, 260);
-            this.button11.Margin = new System.Windows.Forms.Padding(2);
-            this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(120, 40);
-            this.button11.TabIndex = 15;
-            this.button11.Text = "REPORT FOR CUSTOMER";
-            this.button11.UseVisualStyleBackColor = true;
             // 
             // button9
             // 
-            this.button9.Location = new System.Drawing.Point(508, 148);
+            this.button9.Location = new System.Drawing.Point(161, 311);
             this.button9.Margin = new System.Windows.Forms.Padding(2);
             this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(120, 48);
+            this.button9.Size = new System.Drawing.Size(132, 48);
             this.button9.TabIndex = 12;
-            this.button9.Text = "REPORT FOR WORK STATION";
+            this.button9.Text = "REPORT FOR WORK STATION ITEMS";
             this.button9.UseVisualStyleBackColor = true;
             // 
             // button8
             // 
-            this.button8.Location = new System.Drawing.Point(508, 82);
+            this.button8.Location = new System.Drawing.Point(21, 315);
             this.button8.Margin = new System.Windows.Forms.Padding(2);
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(120, 40);
             this.button8.TabIndex = 11;
-            this.button8.Text = "REPORT FOR CUSTOMER";
+            this.button8.Text = "REPORT FOR CUSTOMER COST OF ITEMS";
             this.button8.UseVisualStyleBackColor = true;
             // 
             // btnCloseJob
@@ -1101,21 +1150,10 @@
             this.btnCloseJob.TabIndex = 10;
             this.btnCloseJob.Text = "CLOSE JOB";
             this.btnCloseJob.UseVisualStyleBackColor = true;
-            this.btnCloseJob.Click += new System.EventHandler(this.btnCloseJob_Click);
-            // 
-            // button6
-            // 
-            this.button6.Location = new System.Drawing.Point(14, 398);
-            this.button6.Margin = new System.Windows.Forms.Padding(2);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(169, 24);
-            this.button6.TabIndex = 9;
-            this.button6.Text = "PRINT JOB LABOUR";
-            this.button6.UseVisualStyleBackColor = true;
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(15, 214);
+            this.button5.Location = new System.Drawing.Point(14, 187);
             this.button5.Margin = new System.Windows.Forms.Padding(2);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(169, 24);
@@ -1134,40 +1172,10 @@
             this.lblTotalCost.TabIndex = 7;
             this.lblTotalCost.Text = "0";
             // 
-            // lblLabourCoustTotal
-            // 
-            this.lblLabourCoustTotal.AutoSize = true;
-            this.lblLabourCoustTotal.Location = new System.Drawing.Point(474, 404);
-            this.lblLabourCoustTotal.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblLabourCoustTotal.Name = "lblLabourCoustTotal";
-            this.lblLabourCoustTotal.Size = new System.Drawing.Size(13, 13);
-            this.lblLabourCoustTotal.TabIndex = 6;
-            this.lblLabourCoustTotal.Text = "0";
-            // 
-            // label22
-            // 
-            this.label22.AutoSize = true;
-            this.label22.Location = new System.Drawing.Point(18, 245);
-            this.label22.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(115, 13);
-            this.label22.TabIndex = 5;
-            this.label22.Text = "COST FOR LABOURS";
-            // 
-            // gvLabourCost
-            // 
-            this.gvLabourCost.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.gvLabourCost.Location = new System.Drawing.Point(14, 259);
-            this.gvLabourCost.Margin = new System.Windows.Forms.Padding(2);
-            this.gvLabourCost.Name = "gvLabourCost";
-            this.gvLabourCost.RowTemplate.Height = 33;
-            this.gvLabourCost.Size = new System.Drawing.Size(473, 130);
-            this.gvLabourCost.TabIndex = 4;
-            // 
             // lblItemCostTotal
             // 
             this.lblItemCostTotal.AutoSize = true;
-            this.lblItemCostTotal.Location = new System.Drawing.Point(484, 225);
+            this.lblItemCostTotal.Location = new System.Drawing.Point(523, 154);
             this.lblItemCostTotal.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblItemCostTotal.Name = "lblItemCostTotal";
             this.lblItemCostTotal.Size = new System.Drawing.Size(13, 13);
@@ -1188,7 +1196,7 @@
             // label20
             // 
             this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(18, 66);
+            this.label20.Location = new System.Drawing.Point(17, 39);
             this.label20.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(97, 13);
@@ -1198,47 +1206,17 @@
             // gvItemCost
             // 
             this.gvItemCost.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.gvItemCost.Location = new System.Drawing.Point(14, 81);
+            this.gvItemCost.Location = new System.Drawing.Point(13, 54);
             this.gvItemCost.Margin = new System.Windows.Forms.Padding(2);
             this.gvItemCost.Name = "gvItemCost";
             this.gvItemCost.RowTemplate.Height = 33;
             this.gvItemCost.Size = new System.Drawing.Size(473, 130);
             this.gvItemCost.TabIndex = 0;
             // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(91, 13);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(175, 19);
-            this.label6.TabIndex = 25;
-            this.label6.Text = "ALLOCATE TASKS TO JOB";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(92, 17);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(171, 19);
-            this.label9.TabIndex = 22;
-            this.label9.Text = "ASSIGN LABOR TO TASK";
-            // 
-            // label25
-            // 
-            this.label25.AutoSize = true;
-            this.label25.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label25.Location = new System.Drawing.Point(122, 27);
-            this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(167, 19);
-            this.label25.TabIndex = 23;
-            this.label25.Text = "ASSIGN ITEMS TO TASK";
-            // 
             // pictureBox2
             // 
             this.pictureBox2.Image = global::VWMS.Properties.Resources.cars_icon;
-            this.pictureBox2.Location = new System.Drawing.Point(402, 34);
+            this.pictureBox2.Location = new System.Drawing.Point(482, 34);
             this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(162, 110);
@@ -1287,6 +1265,72 @@
             this.pictureBox5.TabIndex = 24;
             this.pictureBox5.TabStop = false;
             // 
+            // lbllabururAmount
+            // 
+            this.lbllabururAmount.AutoSize = true;
+            this.lbllabururAmount.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbllabururAmount.Location = new System.Drawing.Point(409, 55);
+            this.lbllabururAmount.Name = "lbllabururAmount";
+            this.lbllabururAmount.Size = new System.Drawing.Size(14, 15);
+            this.lbllabururAmount.TabIndex = 19;
+            this.lbllabururAmount.Text = "0";
+            // 
+            // label29
+            // 
+            this.label29.AutoSize = true;
+            this.label29.Font = new System.Drawing.Font("Calibri", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label29.Location = new System.Drawing.Point(314, 24);
+            this.label29.Name = "label29";
+            this.label29.Size = new System.Drawing.Size(93, 15);
+            this.label29.TabIndex = 18;
+            this.label29.Text = "FINAL AMOUNT";
+            // 
+            // label28
+            // 
+            this.label28.AutoSize = true;
+            this.label28.Location = new System.Drawing.Point(327, 55);
+            this.label28.Name = "label28";
+            this.label28.Size = new System.Drawing.Size(76, 15);
+            this.label28.TabIndex = 20;
+            this.label28.Text = "laborur Cost";
+            // 
+            // label30
+            // 
+            this.label30.AutoSize = true;
+            this.label30.Location = new System.Drawing.Point(327, 82);
+            this.label30.Name = "label30";
+            this.label30.Size = new System.Drawing.Size(57, 15);
+            this.label30.TabIndex = 22;
+            this.label30.Text = "item cost";
+            // 
+            // lblItemCost
+            // 
+            this.lblItemCost.AutoSize = true;
+            this.lblItemCost.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblItemCost.Location = new System.Drawing.Point(409, 82);
+            this.lblItemCost.Name = "lblItemCost";
+            this.lblItemCost.Size = new System.Drawing.Size(14, 15);
+            this.lblItemCost.TabIndex = 21;
+            this.lblItemCost.Text = "0";
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Location = new System.Drawing.Point(72, 247);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(91, 13);
+            this.label22.TabIndex = 17;
+            this.label22.Text = "LABURUR COST";
+            // 
+            // lblLabururCost
+            // 
+            this.lblLabururCost.AutoSize = true;
+            this.lblLabururCost.Location = new System.Drawing.Point(186, 247);
+            this.lblLabururCost.Name = "lblLabururCost";
+            this.lblLabururCost.Size = new System.Drawing.Size(28, 13);
+            this.lblLabururCost.TabIndex = 18;
+            this.lblLabururCost.Text = "0.00";
+            // 
             // FRMWS
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1316,7 +1360,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.gvMaterials)).EndInit();
             this.tabPage5.ResumeLayout(false);
             this.tabPage5.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gvLabourCost)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvItemCost)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -1400,11 +1443,7 @@
         private System.Windows.Forms.Button btnRefreshCost;
         private System.Windows.Forms.Label lblItemCostTotal;
         private System.Windows.Forms.Button btnJobTaskUpdate;
-        private System.Windows.Forms.Label lblLabourCoustTotal;
-        private System.Windows.Forms.Label label22;
-        private System.Windows.Forms.DataGridView gvLabourCost;
         private System.Windows.Forms.Label lblTotalCost;
-        private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button btnCloseJob;
         private System.Windows.Forms.PictureBox pictureBox1;
@@ -1415,7 +1454,6 @@
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Button button10;
-        private System.Windows.Forms.Button button11;
         private System.Windows.Forms.Button button9;
         private System.Windows.Forms.Button button8;
         private System.Windows.Forms.Label label23;
@@ -1428,5 +1466,14 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.Label label25;
+        private System.Windows.Forms.Label label26;
+        private System.Windows.Forms.Label label27;
+        private System.Windows.Forms.Label lbllabururAmount;
+        private System.Windows.Forms.Label label29;
+        private System.Windows.Forms.Label label30;
+        private System.Windows.Forms.Label lblItemCost;
+        private System.Windows.Forms.Label label28;
+        private System.Windows.Forms.Label lblLabururCost;
+        private System.Windows.Forms.Label label22;
     }
 }

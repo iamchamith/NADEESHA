@@ -50,6 +50,7 @@ namespace App.BL
             {
                 var x = dba.VehicleJobTaskItems.Where(p => p.ID == id).FirstOrDefault();
                 dba.VehicleJobTaskItems.Remove(x);
+                dba.SaveChanges();
                 return new DetailModel { State = true };
             }
             catch

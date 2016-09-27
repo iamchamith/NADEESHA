@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static App.Model.Enums;
 
 namespace App.BL
 {
@@ -120,6 +121,18 @@ namespace App.BL
             }
             catch
             {
+                throw;
+            }
+        }
+
+        public bool IsLaburursFinishedTheTask(int taskId) {
+            try
+            {
+                return dba.VehicleJobTaskLabours.Count(p => p.IsClosed == (int)EIsClosed.NotClosed) == 0 ? true : false;
+            }
+            catch
+            {
+
                 throw;
             }
         }

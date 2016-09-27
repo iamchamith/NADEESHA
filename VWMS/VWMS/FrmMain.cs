@@ -158,6 +158,11 @@ namespace VWMS
                 wORKSTATIONToolStripMenuItem.Enabled = false;
             }
         }
-        
+
+        private void aBOUTToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var aboutUs = new AboutUs();
+            aboutUs.ShowDialog();
+        }
     }
 }

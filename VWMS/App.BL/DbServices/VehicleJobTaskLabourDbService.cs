@@ -11,7 +11,7 @@ namespace App.BL
 {
     public class VehicleJobTaskLabourDbService : Repo
     {
-        public DetailModel CreateVehicleJobTask(VehicleJobTaskLabourViewModel obj)
+        public DetailModel CreateVehicleJobTaskLaborur(VehicleJobTaskLabourViewModel obj)
         {
             try
             {
@@ -41,14 +41,14 @@ namespace App.BL
             }
         }
 
-        public DetailModel UpdatevehicleTask(VehicleJobTaskLabourViewModel obj)
+        public DetailModel UpdatevehicleTaskLaborur(VehicleJobTaskLabourViewModel obj)
         {
             try
             {
                 var x = dba.VehicleJobTaskLabours.Where(p => p.ID == obj.ID).FirstOrDefault();
                 if (x == null)
                 {
-                    throw new Exception("item not found");
+                    throw new Exception("laborur not found");
                 }
                 x.IsClosed = obj.IsClosed;
                 x.Discription = obj.Discription;
@@ -62,12 +62,13 @@ namespace App.BL
             }
         }
 
-        public DetailModel DeleteVehicleTasks(int id)
+        public DetailModel DeleteVehicleTasksLabourur(int id)
         {
             try
             {
                 var x = dba.VehicleJobTaskLabours.Where(p => p.ID == id).FirstOrDefault();
                 dba.VehicleJobTaskLabours.Remove(x);
+                dba.SaveChanges();
                 return new DetailModel { State = true };
             }
             catch
@@ -75,7 +76,7 @@ namespace App.BL
                 throw;
             }
         }
-        public DetailModel SelectVehicleTask(int TaskId)
+        public DetailModel SelectVehicleTasklaburur(int TaskId)
         {
             try
             {

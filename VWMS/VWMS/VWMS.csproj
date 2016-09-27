@@ -60,6 +60,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AboutUs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AboutUs.Designer.cs">
+      <DependentUpon>AboutUs.cs</DependentUpon>
+    </Compile>
     <Compile Include="ENTITY\FrmBrands.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -172,12 +178,21 @@
     <Compile Include="USER\FrmUpdateUser.Designer.cs">
       <DependentUpon>FrmUpdateUser.cs</DependentUpon>
     </Compile>
+    <Compile Include="WS\FrmInputDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WS\FrmInputDialog.Designer.cs">
+      <DependentUpon>FrmInputDialog.cs</DependentUpon>
+    </Compile>
     <Compile Include="WS\FRMWS.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="WS\FRMWS.Designer.cs">
       <DependentUpon>FRMWS.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="AboutUs.resx">
+      <DependentUpon>AboutUs.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ENTITY\FrmBrands.resx">
       <DependentUpon>FrmBrands.cs</DependentUpon>
     </EmbeddedResource>
@@ -242,6 +257,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="USER\FrmUpdateUser.resx">
       <DependentUpon>FrmUpdateUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WS\FrmInputDialog.resx">
+      <DependentUpon>FrmInputDialog.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="WS\FRMWS.resx">
       <DependentUpon>FRMWS.cs</DependentUpon>
