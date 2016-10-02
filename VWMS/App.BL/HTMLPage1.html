@@ -1,0 +1,78 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+</head>
+<body>
+
+    <div class="main_container">
+
+        <div class="container">
+            <div class="terminal">
+                <h3>string4</h3>
+            </div>
+            <div class="terminal">
+                <h3>string6</h3>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="terminal">
+                <h3>string1</h3>
+            </div>
+            <div class="terminal">
+                <h3>string3</h3>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="terminal">
+                <h3>string2</h3>
+            </div>
+            <div class="terminal">
+                <h3>string5</h3>
+            </div>
+        </div>
+    </div>
+    <input type="button" id="gen" value="genarate" />
+    <script>
+        $(() => {
+
+            $('#gen').on('click', gen);
+
+        });
+
+        function gen() {
+            var arr = [];
+            $.each($('h3'), (i, d) => {
+                arr.push($(d).html());
+            });
+            arr.sort();
+            console.log(arr);
+
+            var index = 0;
+            $('.main_container').html("");
+            for (var i = 0; i < arr.length; i++) {
+
+                for (var k = 0; k < 2; k++) {
+                    $('.main_container').append($('<div></div>').addClass('container'));
+
+                    try {
+                        $('.container').append("<div class='terminal'><h3>" + arr[i] + "</h3></div>")
+                        $('.container').append("<div class='terminal'><h3>" + arr[i + 1] + "</h3></div>")
+                    } catch (e) {
+                        break;
+                    } finally {
+                        k += 2;
+                    }
+                   
+                }
+                i += 1;
+            }
+        }
+    </script>
+</body>
+</html>
