@@ -50,7 +50,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DbServices\BookingDbService.cs" />
     <Compile Include="DbServices\BrandsDbService.cs" />
     <Compile Include="DbServices\CustomerDbService.cs" />
     <Compile Include="DbServices\DetailModel.cs" />

@@ -33,6 +33,7 @@
             this.fILEToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.lOGOUTToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.eXITToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.aBOUTToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.eNTITYToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.bRANDToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mODELToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -40,14 +41,14 @@
             this.lABARARToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tASKSToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cUSTOMERToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.iTEMSToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.wORKSTATIONToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.iNVENTORYToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.uSERToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.rEGISTRATIONToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cHANGESETTINGSToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.aBOUTToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.pROCESSToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.iTEMSToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -82,7 +83,7 @@
             // 
             this.lOGOUTToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("lOGOUTToolStripMenuItem.Image")));
             this.lOGOUTToolStripMenuItem.Name = "lOGOUTToolStripMenuItem";
-            this.lOGOUTToolStripMenuItem.Size = new System.Drawing.Size(152, 24);
+            this.lOGOUTToolStripMenuItem.Size = new System.Drawing.Size(142, 24);
             this.lOGOUTToolStripMenuItem.Text = "LOGOUT";
             this.lOGOUTToolStripMenuItem.Click += new System.EventHandler(this.lOGOUTToolStripMenuItem_Click);
             // 
@@ -90,9 +91,17 @@
             // 
             this.eXITToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("eXITToolStripMenuItem.Image")));
             this.eXITToolStripMenuItem.Name = "eXITToolStripMenuItem";
-            this.eXITToolStripMenuItem.Size = new System.Drawing.Size(152, 24);
+            this.eXITToolStripMenuItem.Size = new System.Drawing.Size(142, 24);
             this.eXITToolStripMenuItem.Text = "EXIT";
             this.eXITToolStripMenuItem.Click += new System.EventHandler(this.eXITToolStripMenuItem_Click);
+            // 
+            // aBOUTToolStripMenuItem
+            // 
+            this.aBOUTToolStripMenuItem.Image = global::VWMS.Properties.Resources.branding_png;
+            this.aBOUTToolStripMenuItem.Name = "aBOUTToolStripMenuItem";
+            this.aBOUTToolStripMenuItem.Size = new System.Drawing.Size(142, 24);
+            this.aBOUTToolStripMenuItem.Text = "ABOUT";
+            this.aBOUTToolStripMenuItem.Click += new System.EventHandler(this.aBOUTToolStripMenuItem_Click);
             // 
             // eNTITYToolStripMenuItem
             // 
@@ -102,12 +111,11 @@
             this.vEHICLEToolStripMenuItem,
             this.lABARARToolStripMenuItem,
             this.tASKSToolStripMenuItem,
-            this.cUSTOMERToolStripMenuItem,
-            this.iTEMSToolStripMenuItem1});
+            this.cUSTOMERToolStripMenuItem});
             this.eNTITYToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("eNTITYToolStripMenuItem.Image")));
             this.eNTITYToolStripMenuItem.Name = "eNTITYToolStripMenuItem";
-            this.eNTITYToolStripMenuItem.Size = new System.Drawing.Size(93, 23);
-            this.eNTITYToolStripMenuItem.Text = "ENTITY";
+            this.eNTITYToolStripMenuItem.Size = new System.Drawing.Size(98, 23);
+            this.eNTITYToolStripMenuItem.Text = "MASTER";
             // 
             // bRANDToolStripMenuItem
             // 
@@ -157,14 +165,6 @@
             this.cUSTOMERToolStripMenuItem.Text = "CUSTOMER";
             this.cUSTOMERToolStripMenuItem.Click += new System.EventHandler(this.cUSTOMERToolStripMenuItem_Click);
             // 
-            // iTEMSToolStripMenuItem1
-            // 
-            this.iTEMSToolStripMenuItem1.Image = ((System.Drawing.Image)(resources.GetObject("iTEMSToolStripMenuItem1.Image")));
-            this.iTEMSToolStripMenuItem1.Name = "iTEMSToolStripMenuItem1";
-            this.iTEMSToolStripMenuItem1.Size = new System.Drawing.Size(192, 24);
-            this.iTEMSToolStripMenuItem1.Text = "ITEMS";
-            this.iTEMSToolStripMenuItem1.Click += new System.EventHandler(this.iTEMSToolStripMenuItem1_Click);
-            // 
             // wORKSTATIONToolStripMenuItem
             // 
             this.wORKSTATIONToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("wORKSTATIONToolStripMenuItem.Image")));
@@ -175,6 +175,9 @@
             // 
             // iNVENTORYToolStripMenuItem
             // 
+            this.iNVENTORYToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.pROCESSToolStripMenuItem,
+            this.iTEMSToolStripMenuItem});
             this.iNVENTORYToolStripMenuItem.Image = global::VWMS.Properties.Resources.inventory_maintenance__1_;
             this.iNVENTORYToolStripMenuItem.Name = "iNVENTORYToolStripMenuItem";
             this.iNVENTORYToolStripMenuItem.Size = new System.Drawing.Size(126, 23);
@@ -213,13 +216,21 @@
             this.toolStripMenuItem1.Size = new System.Drawing.Size(39, 23);
             this.toolStripMenuItem1.Text = "---";
             // 
-            // aBOUTToolStripMenuItem
+            // pROCESSToolStripMenuItem
             // 
-            this.aBOUTToolStripMenuItem.Image = global::VWMS.Properties.Resources.branding_png;
-            this.aBOUTToolStripMenuItem.Name = "aBOUTToolStripMenuItem";
-            this.aBOUTToolStripMenuItem.Size = new System.Drawing.Size(152, 24);
-            this.aBOUTToolStripMenuItem.Text = "ABOUT";
-            this.aBOUTToolStripMenuItem.Click += new System.EventHandler(this.aBOUTToolStripMenuItem_Click);
+            this.pROCESSToolStripMenuItem.Image = global::VWMS.Properties.Resources.MODEL;
+            this.pROCESSToolStripMenuItem.Name = "pROCESSToolStripMenuItem";
+            this.pROCESSToolStripMenuItem.Size = new System.Drawing.Size(152, 24);
+            this.pROCESSToolStripMenuItem.Text = "PROCESS";
+            this.pROCESSToolStripMenuItem.Click += new System.EventHandler(this.pROCESSToolStripMenuItem_Click);
+            // 
+            // iTEMSToolStripMenuItem
+            // 
+            this.iTEMSToolStripMenuItem.Image = global::VWMS.Properties.Resources.branding_png;
+            this.iTEMSToolStripMenuItem.Name = "iTEMSToolStripMenuItem";
+            this.iTEMSToolStripMenuItem.Size = new System.Drawing.Size(152, 24);
+            this.iTEMSToolStripMenuItem.Text = "ITEMS";
+            this.iTEMSToolStripMenuItem.Click += new System.EventHandler(this.iTEMSToolStripMenuItem_Click_1);
             // 
             // FrmMain
             // 
@@ -259,9 +270,10 @@
         private System.Windows.Forms.ToolStripMenuItem rEGISTRATIONToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem cHANGESETTINGSToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem cUSTOMERToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem iTEMSToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem vEHICLEToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem aBOUTToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem pROCESSToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem iTEMSToolStripMenuItem;
     }
 }

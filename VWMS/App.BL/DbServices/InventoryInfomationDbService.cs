@@ -1,5 +1,6 @@
 ﻿using App.BL.DbServices;
 using App.Model;
+using App.Model.ViewModel;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,13 +17,13 @@ namespace App.BL
             {
                 dba.InventoryInfomations.Add(obj);
                 var x = dba.Items.Where(p => p.ID == obj.ItemID).FirstOrDefault();
-                if (x==null)
+                if (x == null)
                 {
                     throw new Exception("invalied item id");
                 }
 
                 x.Quantity = (obj.Type == 0) ? x.Quantity + obj.Qty : x.Quantity - obj.Qty;
-                if (x.Quantity<0)
+                if (x.Quantity < 0)
                 {
                     throw new Exception("item count must be > 0");
                 }
@@ -34,7 +35,7 @@ namespace App.BL
                 throw;
             }
         }
-         
+
         public DetailModel Delete(int orderID)
         {
 
@@ -42,7 +43,7 @@ namespace App.BL
             {
                 var c = dba.InventoryInfomations.Where(p => p.ID == orderID).First();
                 int ItemId = c.ItemID;
-                 
+
                 var x = dba.Items.Where(p => p.ID == ItemId).FirstOrDefault();
                 if (x == null)
                 {
@@ -71,7 +72,7 @@ namespace App.BL
                 return new DetailModel
                 {
                     State = true,
-                    Content = dba.InventoryInfomations.ToList()
+                    Content = dba.InventoryInfomations.ToList().OrderByDescending(p => p.ID).ToList()
                 };
             }
             catch
@@ -96,5 +97,46 @@ namespace App.BL
                 throw;
             }
         }
+
+        public DetailModel ReadReportInfomation()
+        {
+
+            string sql = @"SELECT   Items.Name, InventoryInfomation.Qty, InventoryInfomation.RegDate, Items.PriceIn
+                FROM Items INNER JOIN InventoryInfomation ON Items.ID = InventoryInfomation.ItemID ";
+            try
+            {
+                return new DetailModel
+                {
+                    State = true,
+                    Content = dba.Database.SqlQuery<SearchInventoryReport>(sql).ToList()
+                };
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
+        public DetailModel TestCrud(string taskName,string discript) {
+
+            string sql = @"insert into dbo.Tasks(TaskName, Discription) values(@TaskName, @Discription)";
+            try
+            {
+                return new DetailModel
+                {
+                    State = true,
+                    Content = dba.Database.SqlQuery<int>(sql, new { TaskName = taskName,
+                        Discription = discript
+                    })
+                };
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
+       
+
     }
 }

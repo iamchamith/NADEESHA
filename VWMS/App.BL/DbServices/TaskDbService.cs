@@ -71,7 +71,7 @@ namespace App.BL
                 return new DetailModel
                 {
                     State = true,
-                    Content = dba.Tasks.ToList().Select(x => AutoMapper.Mapper.Map<m.TaskViewModel>(x)).ToList()
+                    Content = dba.Tasks.ToList().Select(x => AutoMapper.Mapper.Map<m.TaskViewModel>(x)).ToList().OrderByDescending(p => p.ID).ToList()
                 };
             }
             catch

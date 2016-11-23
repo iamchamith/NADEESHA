@@ -74,6 +74,7 @@
     <Compile Include="ViewModel\Enums.cs" />
     <Compile Include="ViewModel\ItemViewModel.cs" />
     <Compile Include="ViewModel\LabourViewModel.cs" />
+    <Compile Include="ViewModel\SearchInventoryReport.cs" />
     <Compile Include="ViewModel\TaskViewModel.cs" />
     <Compile Include="ViewModel\UserViewModel.cs" />
     <Compile Include="ViewModel\VehicleJobTaskItemViewModel.cs" />

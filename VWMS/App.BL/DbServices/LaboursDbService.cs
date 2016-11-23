@@ -77,10 +77,10 @@ namespace App.BL.DbServices
                 return new DetailModel
                 {
                     State = true,
-                    Content = dba.Labours.ToList().Select(x => AutoMapper.Mapper.Map<LabourViewModel>(x)).ToList()
+                    Content = dba.Labours.ToList().Select(x => AutoMapper.Mapper.Map<LabourViewModel>(x)).ToList().OrderByDescending(p => p.ID).ToList()
                 };
             }
-            catch
+            catch (Exception ex)
             {
                 throw;
             }

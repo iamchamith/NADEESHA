@@ -8,14 +8,15 @@ using System.Threading.Tasks;
 
 namespace App.BL
 {
-    public class BrandsDbService:Repo
+    public class BrandsDbService : Repo
     {
-        public DetailModel Create(Brand obj) {
+        public DetailModel Create(Brand obj)
+        {
             try
             {
                 dba.Brands.Add(obj);
                 dba.SaveChanges();
-                return new DetailModel {State=true };
+                return new DetailModel { State = true };
             }
             catch
             {
@@ -23,12 +24,13 @@ namespace App.BL
             }
         }
 
-        public DetailModel Update(Brand obj) {
+        public DetailModel Update(Brand obj)
+        {
 
             try
             {
-                var x = dba.Brands.Where(p => p.ID==obj.ID).FirstOrDefault();
-                if (x==null)
+                var x = dba.Brands.Where(p => p.ID == obj.ID).FirstOrDefault();
+                if (x == null)
                 {
                     throw new Exception("invalied item");
                 }
@@ -47,7 +49,8 @@ namespace App.BL
 
         }
 
-        public DetailModel Delete(int id) {
+        public DetailModel Delete(int id)
+        {
 
             try
             {
@@ -62,14 +65,15 @@ namespace App.BL
             }
         }
 
-        public DetailModel Read() {
+        public DetailModel Read()
+        {
 
             try
             {
                 return new DetailModel
                 {
                     State = true,
-                    Content = dba.Brands.ToList() 
+                    Content = dba.Brands.ToList().OrderByDescending(p => p.ID).ToList()
                 };
             }
             catch

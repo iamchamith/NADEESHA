@@ -55,7 +55,7 @@ namespace App.BL
                 return new DetailModel
                 {
                     Content = dba.VehicleJobs.Where(p => p.VehicleNumber == vehicleId).ToList()
-                    .Select(x => AutoMapper.Mapper.Map<VehicleJobViewModel>(x)).ToList()
+                    .Select(x => AutoMapper.Mapper.Map<VehicleJobViewModel>(x)).ToList().OrderByDescending(p => p.ID).ToList()
                 };
             }
             catch

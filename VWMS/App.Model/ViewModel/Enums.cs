@@ -18,7 +18,8 @@ namespace App.Model
             Customers = 1,
             Vehicle = 2,
             Labours = 3,
-            Items = 4
+            Items = 4,
+            SearchItemReport = 5
         }
 
         public enum EUser

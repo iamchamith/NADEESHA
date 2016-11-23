@@ -255,5 +255,11 @@ namespace VWMS.INVENTORY
         {
             chkFromDate.Checked = chkToDate.Checked;
         }
+
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+            var x = new REPORTING.FrmReport(Enums.EReports.SearchItemReport);
+            x.ShowDialog();
+        }
     }
 }

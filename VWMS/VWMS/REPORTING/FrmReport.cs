@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using App.BL;
 using App.BL.DbServices;
+using App.Model.ViewModel;
 
 namespace VWMS.REPORTING
 {
@@ -27,7 +28,7 @@ namespace VWMS.REPORTING
             // this.reportViewer1.RefreshReport();
         }
 
-        public FrmReport(Enums.EReports eReports, int id)
+        public FrmReport(Enums.EReports eReports, int id=0)
         {
             InitializeComponent();
             if (eReports == Enums.EReports.Customers)
@@ -40,14 +41,15 @@ namespace VWMS.REPORTING
             }
             else if (eReports == Enums.EReports.Labours)
             {
-
                 LabourReport();
-
             }
             else if (eReports == Enums.EReports.Items)
             {
                 ItemReport();
-
+            }
+            else if (eReports == Enums.EReports.SearchItemReport)
+            {
+                ItemInfomationReport();
             }
         }
 
@@ -132,5 +134,24 @@ namespace VWMS.REPORTING
             }
             catch { throw; }
         }
+
+        public void ItemInfomationReport() {
+            try
+            {
+                var dt = (List<SearchInventoryReport>)(new InventoryInfomationDbService().ReadReportInfomation().Content);
+                DSReports ds = new DSReports();
+                foreach (var items in dt)
+                {
+                    ds.Tables["ItemSearch"].Rows.Add(items.Name, items.Qty, items.RegDate, items.PriceIn);
+                }
+                SearchItemReport objcus = new SearchItemReport();
+                objcus.SetDataSource(ds.Tables["ItemSearch"]);
+                crystalReportViewer1.ReportSource = objcus;
+            }
+            catch { throw; }
+
+        }
     }
+
+
 }

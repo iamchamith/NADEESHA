@@ -78,7 +78,7 @@ namespace App.BL
                 return new DetailModel
                 {
                     State = true,
-                    Content = dba.Vehicles.ToList().Select(x => AutoMapper.Mapper.Map<VehicleViewModel>(x)).ToList()
+                    Content = dba.Vehicles.ToList().Select(x => AutoMapper.Mapper.Map<VehicleViewModel>(x)).ToList().OrderByDescending(p => p.RegDate).ToList()
                 };
             }
             catch

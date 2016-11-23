@@ -131,9 +131,7 @@ namespace VWMS
 
         private void iNVENTORYToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            VWMS.INVENTORY.FrmInventoryProcess obj = new VWMS.INVENTORY.FrmInventoryProcess();
-            obj.MdiParent = this;
-            obj.Show();
+            
         }
 
         private void FrmMain_Load(object sender, EventArgs e)
@@ -149,7 +147,7 @@ namespace VWMS
             {
                 iNVENTORYToolStripMenuItem.Enabled = false;
                 rEGISTRATIONToolStripMenuItem.Enabled = false;
-                iTEMSToolStripMenuItem1.Enabled = false;
+ 
             }
             else if(UserType == EUser.StockKeeper)
             {
@@ -163,6 +161,20 @@ namespace VWMS
         {
             var aboutUs = new AboutUs();
             aboutUs.ShowDialog();
+        }
+
+        private void pROCESSToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            VWMS.INVENTORY.FrmInventoryProcess obj = new VWMS.INVENTORY.FrmInventoryProcess();
+            obj.MdiParent = this;
+            obj.Show();
+        }
+
+        private void iTEMSToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            FrmItems obj = new FrmItems();
+            obj.MdiParent = this;
+            obj.Show();
         }
     }
 }

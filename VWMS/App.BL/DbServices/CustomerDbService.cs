@@ -80,7 +80,7 @@ namespace App.BL.DbServices
                 return new DetailModel
                 {
                     State = true,
-                    Content = dba.Customers.ToList()
+                    Content = dba.Customers.ToList().OrderByDescending(p => p.ID).ToList()
                 };
             }
             catch
