@@ -13,5 +13,6 @@ namespace App.Model.ViewModel
         public string TaskName { get; set; }
         public int Quantity { get; set; }
         public int Id { get; set; }
+        public double? Price { get; set; }
     }
 }

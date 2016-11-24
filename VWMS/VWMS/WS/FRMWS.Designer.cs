@@ -119,16 +119,18 @@
             this.label12 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.tabPage5 = new System.Windows.Forms.TabPage();
+            this.lblFinalAmount = new System.Windows.Forms.Label();
+            this.label34 = new System.Windows.Forms.Label();
+            this.lblItemAmount = new System.Windows.Forms.Label();
+            this.label32 = new System.Windows.Forms.Label();
             this.lblLabururCost = new System.Windows.Forms.Label();
             this.label22 = new System.Windows.Forms.Label();
             this.button10 = new System.Windows.Forms.Button();
             this.button9 = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
             this.btnCloseJob = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
             this.lblTotalCost = new System.Windows.Forms.Label();
             this.lblItemCostTotal = new System.Windows.Forms.Label();
-            this.btnRefreshCost = new System.Windows.Forms.Button();
             this.label20 = new System.Windows.Forms.Label();
             this.gvItemCost = new System.Windows.Forms.DataGridView();
             this.tabControl1.SuspendLayout();
@@ -1192,16 +1194,18 @@
             // 
             // tabPage5
             // 
+            this.tabPage5.Controls.Add(this.lblFinalAmount);
+            this.tabPage5.Controls.Add(this.label34);
+            this.tabPage5.Controls.Add(this.lblItemAmount);
+            this.tabPage5.Controls.Add(this.label32);
             this.tabPage5.Controls.Add(this.lblLabururCost);
             this.tabPage5.Controls.Add(this.label22);
             this.tabPage5.Controls.Add(this.button10);
             this.tabPage5.Controls.Add(this.button9);
             this.tabPage5.Controls.Add(this.button8);
             this.tabPage5.Controls.Add(this.btnCloseJob);
-            this.tabPage5.Controls.Add(this.button5);
             this.tabPage5.Controls.Add(this.lblTotalCost);
             this.tabPage5.Controls.Add(this.lblItemCostTotal);
-            this.tabPage5.Controls.Add(this.btnRefreshCost);
             this.tabPage5.Controls.Add(this.label20);
             this.tabPage5.Controls.Add(this.gvItemCost);
             this.tabPage5.Location = new System.Drawing.Point(4, 22);
@@ -1211,10 +1215,46 @@
             this.tabPage5.Text = "REPAIR ORDER SUMMARY";
             this.tabPage5.UseVisualStyleBackColor = true;
             // 
+            // lblFinalAmount
+            // 
+            this.lblFinalAmount.AutoSize = true;
+            this.lblFinalAmount.Location = new System.Drawing.Point(453, 271);
+            this.lblFinalAmount.Name = "lblFinalAmount";
+            this.lblFinalAmount.Size = new System.Drawing.Size(28, 13);
+            this.lblFinalAmount.TabIndex = 22;
+            this.lblFinalAmount.Text = "0.00";
+            // 
+            // label34
+            // 
+            this.label34.AutoSize = true;
+            this.label34.Location = new System.Drawing.Point(339, 271);
+            this.label34.Name = "label34";
+            this.label34.Size = new System.Drawing.Size(87, 13);
+            this.label34.TabIndex = 21;
+            this.label34.Text = "FINAL AMOUNT";
+            // 
+            // lblItemAmount
+            // 
+            this.lblItemAmount.AutoSize = true;
+            this.lblItemAmount.Location = new System.Drawing.Point(453, 238);
+            this.lblItemAmount.Name = "lblItemAmount";
+            this.lblItemAmount.Size = new System.Drawing.Size(28, 13);
+            this.lblItemAmount.TabIndex = 20;
+            this.lblItemAmount.Text = "0.00";
+            // 
+            // label32
+            // 
+            this.label32.AutoSize = true;
+            this.label32.Location = new System.Drawing.Point(339, 238);
+            this.label32.Name = "label32";
+            this.label32.Size = new System.Drawing.Size(83, 13);
+            this.label32.TabIndex = 19;
+            this.label32.Text = "ITEM AMOUNT";
+            // 
             // lblLabururCost
             // 
             this.lblLabururCost.AutoSize = true;
-            this.lblLabururCost.Location = new System.Drawing.Point(186, 247);
+            this.lblLabururCost.Location = new System.Drawing.Point(453, 207);
             this.lblLabururCost.Name = "lblLabururCost";
             this.lblLabururCost.Size = new System.Drawing.Size(28, 13);
             this.lblLabururCost.TabIndex = 18;
@@ -1223,7 +1263,7 @@
             // label22
             // 
             this.label22.AutoSize = true;
-            this.label22.Location = new System.Drawing.Point(72, 247);
+            this.label22.Location = new System.Drawing.Point(339, 207);
             this.label22.Name = "label22";
             this.label22.Size = new System.Drawing.Size(91, 13);
             this.label22.TabIndex = 17;
@@ -1231,7 +1271,7 @@
             // 
             // button10
             // 
-            this.button10.Location = new System.Drawing.Point(321, 311);
+            this.button10.Location = new System.Drawing.Point(325, 346);
             this.button10.Margin = new System.Windows.Forms.Padding(2);
             this.button10.Name = "button10";
             this.button10.Size = new System.Drawing.Size(180, 48);
@@ -1242,7 +1282,7 @@
             // 
             // button9
             // 
-            this.button9.Location = new System.Drawing.Point(161, 311);
+            this.button9.Location = new System.Drawing.Point(165, 346);
             this.button9.Margin = new System.Windows.Forms.Padding(2);
             this.button9.Name = "button9";
             this.button9.Size = new System.Drawing.Size(132, 48);
@@ -1253,13 +1293,14 @@
             // 
             // button8
             // 
-            this.button8.Location = new System.Drawing.Point(21, 315);
+            this.button8.Location = new System.Drawing.Point(25, 350);
             this.button8.Margin = new System.Windows.Forms.Padding(2);
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(120, 40);
             this.button8.TabIndex = 11;
             this.button8.Text = "REPORT FOR CUSTOMER COST OF ITEMS";
             this.button8.UseVisualStyleBackColor = true;
+            this.button8.Click += new System.EventHandler(this.button8_Click);
             // 
             // btnCloseJob
             // 
@@ -1270,16 +1311,6 @@
             this.btnCloseJob.TabIndex = 10;
             this.btnCloseJob.Text = "CLOSE JOB";
             this.btnCloseJob.UseVisualStyleBackColor = true;
-            // 
-            // button5
-            // 
-            this.button5.Location = new System.Drawing.Point(14, 187);
-            this.button5.Margin = new System.Windows.Forms.Padding(2);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(169, 24);
-            this.button5.TabIndex = 8;
-            this.button5.Text = "PRINT JOB ITEMS";
-            this.button5.UseVisualStyleBackColor = true;
             // 
             // lblTotalCost
             // 
@@ -1295,28 +1326,17 @@
             // lblItemCostTotal
             // 
             this.lblItemCostTotal.AutoSize = true;
-            this.lblItemCostTotal.Location = new System.Drawing.Point(523, 154);
+            this.lblItemCostTotal.Location = new System.Drawing.Point(42, 227);
             this.lblItemCostTotal.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblItemCostTotal.Name = "lblItemCostTotal";
             this.lblItemCostTotal.Size = new System.Drawing.Size(13, 13);
             this.lblItemCostTotal.TabIndex = 3;
             this.lblItemCostTotal.Text = "0";
             // 
-            // btnRefreshCost
-            // 
-            this.btnRefreshCost.Location = new System.Drawing.Point(443, 26);
-            this.btnRefreshCost.Margin = new System.Windows.Forms.Padding(2);
-            this.btnRefreshCost.Name = "btnRefreshCost";
-            this.btnRefreshCost.Size = new System.Drawing.Size(170, 23);
-            this.btnRefreshCost.TabIndex = 2;
-            this.btnRefreshCost.Text = "Get Current Cost";
-            this.btnRefreshCost.UseVisualStyleBackColor = true;
-            this.btnRefreshCost.Click += new System.EventHandler(this.btnRefreshCost_Click);
-            // 
             // label20
             // 
             this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(17, 39);
+            this.label20.Location = new System.Drawing.Point(22, 20);
             this.label20.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(97, 13);
@@ -1325,12 +1345,13 @@
             // 
             // gvItemCost
             // 
+            this.gvItemCost.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.gvItemCost.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.gvItemCost.Location = new System.Drawing.Point(13, 54);
+            this.gvItemCost.Location = new System.Drawing.Point(13, 35);
             this.gvItemCost.Margin = new System.Windows.Forms.Padding(2);
             this.gvItemCost.Name = "gvItemCost";
             this.gvItemCost.RowTemplate.Height = 33;
-            this.gvItemCost.Size = new System.Drawing.Size(473, 130);
+            this.gvItemCost.Size = new System.Drawing.Size(604, 149);
             this.gvItemCost.TabIndex = 0;
             // 
             // FRMWS
@@ -1442,11 +1463,9 @@
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.DataGridView gvItemCost;
-        private System.Windows.Forms.Button btnRefreshCost;
         private System.Windows.Forms.Label lblItemCostTotal;
         private System.Windows.Forms.Button btnJobTaskUpdate;
         private System.Windows.Forms.Label lblTotalCost;
-        private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button btnCloseJob;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label21;
@@ -1477,5 +1496,9 @@
         private System.Windows.Forms.Label label28;
         private System.Windows.Forms.Label lblLabururCost;
         private System.Windows.Forms.Label label22;
+        private System.Windows.Forms.Label lblFinalAmount;
+        private System.Windows.Forms.Label label34;
+        private System.Windows.Forms.Label lblItemAmount;
+        private System.Windows.Forms.Label label32;
     }
 }

@@ -55,7 +55,43 @@ namespace App.BL.DbServices
                 throw;
             }
         }
+        public DetailModel SelectItemsByJobId(int jobId)
+        {
+            try
+            {
+                string sql = $@" SELECT Items.Name, VehicleJobTaskItem.Quantity, Tasks.TaskName, VehicleJobs.ID, Items.ID AS ItemId, VehicleJobTaskItem.Price
+                FROM Items INNER JOIN
+                 VehicleJobTaskItem ON Items.ID = VehicleJobTaskItem.ItemId INNER JOIN
+                 VehicleJobTasks ON VehicleJobTaskItem.TaskId = VehicleJobTasks.ID INNER JOIN
+                  VehicleJobs ON VehicleJobTasks.JobId = VehicleJobs.ID INNER JOIN
+                 Tasks ON VehicleJobTasks.TaskId = Tasks.ID
+                    WHERE(VehicleJobs.ID = {jobId});";
 
+                var itemList = dba.Database.SqlQuery<JobItemReportViewModel>(sql).ToList();
+                double sum = 0.00;
+                foreach (var item in itemList)
+                {
+                    sum += item.Quantity * item.Price ?? 0.00;
+                }
+
+                var labourCost = dba.VehicleJobs.FirstOrDefault(p => p.ID == jobId).FinalAmount;
+
+                return new DetailModel
+                {
+                    Content = new CustomerInvoiceViewModel
+                    {
+                        ItemSum = sum,
+                        JobItemReportViewModel = itemList,
+                        labourCost = labourCost ?? 0
+                    }
+                };
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
 
 
     }

@@ -21,7 +21,8 @@ namespace App.Model
             Items = 4,
             SearchItemReport = 5,
             JobItemRerport = 6,
-            JobLaborurReport = 7
+            JobLaborurReport = 7,
+            CustomerInvoice = 8
         }
 
         public enum EUser

@@ -1,6 +1,7 @@
 ﻿using App.BL;
 using App.BL.DbServices;
 using App.Model;
+using App.Model.ViewModel;
 //using BL.BL;
 //using BL.MODEL;
 using System;
@@ -98,6 +99,7 @@ namespace VWMS.WS
                     IsFinished = (int)Enums.EIsClosed.NotClosed,
                     FinalAmount = 0.00,
                     OpenDate = DateTime.Now,
+                    OpenTime = DateTime.Now,
                     CloseTime = DateTime.Now,
                     VehicleNumber = lblJobVehicleID.Text,
                     UserEmail = Properties.Settings.Default.EMAIL
@@ -129,15 +131,33 @@ namespace VWMS.WS
             try
             {
                 lblJobID.Text = lblTaskJobID.Text = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
+                lbllabururAmount.Text = lblLabururCost.Text = $"Rs {dataGridView1.Rows[e.RowIndex].Cells[8].Value.ToString()}";
                 IsCurrentJobFinished = int.Parse(dataGridView1.Rows[e.RowIndex].Cells["IsFinished"].Value.ToString()) == 1 ? false : true;
                 EnableFunctionsByCurrentJobState();
                 btnJobUpdate.Enabled = !IsCurrentJobFinished;
+                lblItemCost.Text = lblItemAmount.Text = $"Rs {new VehicleJobTaskItemDbService().SelectJobItemCost(int.Parse(lblJobID.Text)).Content.ToString()}";
+                lblFinalAmount.Text = $"Rs {(double.Parse(lblItemCost.Text.Replace("Rs","")) + double.Parse(lbllabururAmount.Text.Replace("Rs", ""))).ToString()}";
+                LoadJobItemInfo(int.Parse(lblJobID.Text));
             }
-            catch
+            catch(Exception ex)
             {
-
+                Helper.ErrorMessage(ex.Message);
             }
         }
+
+        void LoadJobItemInfo(int jobId) {
+
+            try
+            {
+                gvItemCost.DataSource = Helper
+                    .CreateDataTable<JobItemReportViewModel>((List<JobItemReportViewModel>)new VehicleJobTaskItemDbService().SelectItemsByJobId(jobId).Content);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
         #endregion
 
         #region task
@@ -512,10 +532,9 @@ namespace VWMS.WS
             {
                 lblItemsID.Text = gvMaterials.Rows[e.RowIndex].Cells[2].Value.ToString();
                 //select item base info
-                DataTable dt = new DataTable();
-
-                lblItemName.Text = dt.Rows[0]["NAME"].ToString();
-                lblAvaiableQuantity.Text = dt.Rows[0]["QUANTITY"].ToString();
+              
+                lblItemName.Text = ((ItemViewModel)new ItemDbService().Read(int.Parse(gvMaterials.Rows[e.RowIndex].Cells["ItemId"].Value.ToString())).Content).Name;
+                lblAvaiableQuantity.Text = gvMaterials.Rows[e.RowIndex].Cells["Quantity"].Value.ToString();
 
                 lblID.Text = lblTaskId.Text = gvMaterials.Rows[e.RowIndex].Cells[0].Value.ToString();
 
@@ -524,8 +543,9 @@ namespace VWMS.WS
                 lbltasksID.Text = gvMaterials.Rows[e.RowIndex].Cells[1].Value.ToString();
                 updateQuantityOld = int.Parse(txtQuantity.Text);
             }
-            catch
+            catch(Exception ex)
             {
+                Console.WriteLine(ex.Message);
                 MessageBox.Show("some problem with selected item");
             }
         }
@@ -542,10 +562,7 @@ namespace VWMS.WS
 
         #region cost
         double finalAmount = 0.0;
-        private void btnRefreshCost_Click(object sender, EventArgs e)
-        {
-
-        }
+        
 
         #endregion
 
@@ -703,7 +720,8 @@ namespace VWMS.WS
         }
 
         decimal labararCost = 0.0M;
-        public void SetLabururCost(decimal lcost = 0.0m) {
+        public void SetLabururCost(decimal lcost = 0.0m)
+        {
             this.labararCost = lcost;
             lbllabururAmount.Text = $"Rs {labararCost}";
         }
@@ -715,8 +733,13 @@ namespace VWMS.WS
                 var x = new FrmInputDialog("Laburur Cost", "Insert laburur Cost", this);
                 x.ShowDialog();
 
+                if (labararCost == 0.00M)
+                {
+                    return;
+                }
+
                 if (!Helper.Confirmation(message: "Sure finied job? (it cannot be roll back)")) { return; }
-                 
+
                 if (!new VehicleJobDbService().CheckJobTasksAreClosed(Convert.ToInt32(lblJobID.Text)))
                 {
                     Helper.ErrorMessage("please closed job tasks"); return;
@@ -746,6 +769,11 @@ namespace VWMS.WS
         private void button10_Click(object sender, EventArgs e)
         {
             new FrmReport(Enums.EReports.JobLaborurReport, int.Parse(lblJobID.Text)).ShowDialog();
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            new FrmReport(Enums.EReports.CustomerInvoice, int.Parse(lblJobID.Text)).ShowDialog();
         }
     }
 }

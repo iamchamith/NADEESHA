@@ -16,6 +16,6 @@ namespace App.Model
         public DateTime? CloseTime { get; set; }
         public DateTime? OpenDate { get; set; }
         public DateTime? OpenTime { get; set; }
-        public double? FinalAmount { get; set; }
+        public double? FinalAmount { get; set; } // labouru amount
     }
 }

@@ -121,6 +121,18 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
+        <xs:element name="JobItemsForCustomer" msprop:Generator_TableClassName="JobItemsForCustomerDataTable" msprop:Generator_TableVarName="tableJobItemsForCustomer" msprop:Generator_TablePropName="JobItemsForCustomer" msprop:Generator_RowDeletingName="JobItemsForCustomerRowDeleting" msprop:Generator_RowChangingName="JobItemsForCustomerRowChanging" msprop:Generator_RowEvHandlerName="JobItemsForCustomerRowChangeEventHandler" msprop:Generator_RowDeletedName="JobItemsForCustomerRowDeleted" msprop:Generator_UserTableName="JobItemsForCustomer" msprop:Generator_RowChangedName="JobItemsForCustomerRowChanged" msprop:Generator_RowEvArgName="JobItemsForCustomerRowChangeEvent" msprop:Generator_RowClassName="JobItemsForCustomerRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="TaskName" msprop:Generator_ColumnVarNameInTable="columnTaskName" msprop:Generator_ColumnPropNameInRow="TaskName" msprop:Generator_ColumnPropNameInTable="TaskNameColumn" msprop:Generator_UserColumnName="TaskName" type="xs:string" minOccurs="0" />
+              <xs:element name="Name" msprop:Generator_ColumnVarNameInTable="columnName" msprop:Generator_ColumnPropNameInRow="Name" msprop:Generator_ColumnPropNameInTable="NameColumn" msprop:Generator_UserColumnName="Name" type="xs:string" minOccurs="0" />
+              <xs:element name="ItemId" msprop:Generator_ColumnVarNameInTable="columnItemId" msprop:Generator_ColumnPropNameInRow="ItemId" msprop:Generator_ColumnPropNameInTable="ItemIdColumn" msprop:Generator_UserColumnName="ItemId" type="xs:string" minOccurs="0" />
+              <xs:element name="Quantity" msprop:Generator_ColumnVarNameInTable="columnQuantity" msprop:Generator_ColumnPropNameInRow="Quantity" msprop:Generator_ColumnPropNameInTable="QuantityColumn" msprop:Generator_UserColumnName="Quantity" type="xs:string" minOccurs="0" />
+              <xs:element name="Id" msprop:Generator_ColumnVarNameInTable="columnId" msprop:Generator_ColumnPropNameInRow="Id" msprop:Generator_ColumnPropNameInTable="IdColumn" msprop:Generator_UserColumnName="Id" type="xs:string" minOccurs="0" />
+              <xs:element name="Price" msprop:Generator_ColumnVarNameInTable="columnPrice" msprop:Generator_ColumnPropNameInRow="Price" msprop:Generator_ColumnPropNameInTable="PriceColumn" msprop:Generator_UserColumnName="Price" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
       </xs:choice>
     </xs:complexType>
     <xs:unique name="Constraint1" msdata:PrimaryKey="true">

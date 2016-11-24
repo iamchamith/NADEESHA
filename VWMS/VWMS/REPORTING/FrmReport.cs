@@ -11,6 +11,8 @@ using System.Windows.Forms;
 using App.BL;
 using App.BL.DbServices;
 using App.Model.ViewModel;
+using CrystalDecisions.ReportSource;
+using CrystalDecisions.CrystalReports.Engine;
 
 namespace VWMS.REPORTING
 {
@@ -28,7 +30,7 @@ namespace VWMS.REPORTING
             // this.reportViewer1.RefreshReport();
         }
 
-        public FrmReport(Enums.EReports eReports, int id=0)
+        public FrmReport(Enums.EReports eReports, int id = 0)
         {
             InitializeComponent();
             if (eReports == Enums.EReports.Customers)
@@ -59,9 +61,52 @@ namespace VWMS.REPORTING
             {
                 JobLaborurReport(id);
             }
+            else if (eReports == Enums.EReports.CustomerInvoice)
+            {
+                CustomerReport(id);
+            }
         }
 
-        public void JobLaborurReport(int id) {
+        public void CustomerReport(int id)
+        {
+            try
+            {
+                var data = (CustomerInvoiceViewModel)(new WizardReporting().SelectItemsByJobId(id).Content);
+                var dt = data.JobItemReportViewModel;
+
+                DSReports ds = new DSReports();
+                foreach (var items in dt)
+                {
+                    ds.Tables["JobItemsForCustomer"].Rows.Add(items.TaskName.ToString(),
+                        items.Name.ToString(), items.ItemId.ToString(), items.Quantity.ToString(),
+                        items.Id.ToString(), $"$ {items.Price.ToString()}");
+                }
+
+                RptReciptForCustomer objcus = new RptReciptForCustomer();
+                objcus.SetDataSource(ds.Tables["JobItemsForCustomer"]);
+                crystalReportViewer1.ReportSource = objcus;
+
+                TextObject txtItemCost, txtLabourCost, txtGrandTotal;
+                txtItemCost = (TextObject)objcus.ReportDefinition.ReportObjects["txtItemCost"];
+                txtLabourCost = (TextObject)objcus.ReportDefinition.ReportObjects["txtLabourCost"];
+                txtGrandTotal = (TextObject)objcus.ReportDefinition.ReportObjects["txtGrandTotal"];
+                txtItemCost.Text = $"$ {data.ItemSum}";
+                txtLabourCost.Text = $"$ {data.labourCost}";
+                txtGrandTotal.Text = $"$ {data.ItemSum + data.labourCost}";
+
+
+
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+
+        }
+
+        public void JobLaborurReport(int id)
+        {
 
             try
             {
@@ -85,7 +130,8 @@ namespace VWMS.REPORTING
             }
         }
 
-        public void JobItemreport(int id) {
+        public void JobItemreport(int id)
+        {
             try
             {
                 var dt = (List<JobItemReportViewModel>)(new WizardReporting().GetJobItemReport(id).Content);
@@ -191,7 +237,8 @@ namespace VWMS.REPORTING
             catch { throw; }
         }
 
-        public void ItemInfomationReport() {
+        public void ItemInfomationReport()
+        {
             try
             {
                 var dt = (List<SearchInventoryReport>)(new InventoryInfomationDbService().ReadReportInfomation().Content);

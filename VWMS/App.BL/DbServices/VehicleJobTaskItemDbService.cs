@@ -1,5 +1,6 @@
 ﻿using App.BL.DbServices;
 using App.Model;
+using App.Model.ViewModel;
 using AutoMapper;
 using System;
 using System.Collections.Generic;
@@ -70,6 +71,61 @@ namespace App.BL
             }
             catch
             {
+                throw;
+            }
+        }
+
+        public DetailModel SelectJobItemCost(int jobId)
+        {
+
+            try
+            {
+                var res = from jobItems in dba.VehicleJobTaskItems
+                          join tasks in dba.VehicleJobTasks
+                               on jobItems.TaskId equals tasks.ID
+                          where tasks.JobId == jobId
+                          select new
+                          {
+                              Price = jobItems.Price,
+                              Qty = jobItems.Quantity
+                          };
+
+                double sum = 0.0;
+                foreach (var item in res)
+                {
+                    sum += (item.Qty * item.Price.Value ?? 0);
+                }
+                return new DetailModel
+                {
+                    Content = sum
+                };
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
+
+        public DetailModel SelectItemsByJobId(int jobId)
+        {
+            try
+            {
+                string sql = $@" SELECT Items.Name, VehicleJobTaskItem.Quantity, Tasks.TaskName, VehicleJobs.ID, Items.ID AS ItemId, VehicleJobTaskItem.Price
+                FROM Items INNER JOIN
+                 VehicleJobTaskItem ON Items.ID = VehicleJobTaskItem.ItemId INNER JOIN
+                 VehicleJobTasks ON VehicleJobTaskItem.TaskId = VehicleJobTasks.ID INNER JOIN
+                  VehicleJobs ON VehicleJobTasks.JobId = VehicleJobs.ID INNER JOIN
+                 Tasks ON VehicleJobTasks.TaskId = Tasks.ID
+                    WHERE(VehicleJobs.ID = {jobId});";
+                return new DetailModel
+                {
+                    Content = dba.Database.SqlQuery<JobItemReportViewModel>(sql).ToList()
+                };
+            }
+            catch (Exception)
+            {
+
                 throw;
             }
         }
