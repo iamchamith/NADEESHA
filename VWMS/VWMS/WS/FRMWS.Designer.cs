@@ -30,7 +30,14 @@
         {
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.label30 = new System.Windows.Forms.Label();
+            this.lblItemCost = new System.Windows.Forms.Label();
+            this.label28 = new System.Windows.Forms.Label();
+            this.lbllabururAmount = new System.Windows.Forms.Label();
+            this.label29 = new System.Windows.Forms.Label();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label21 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lblCurrentJobStatus = new System.Windows.Forms.Label();
             this.lblJobID = new System.Windows.Forms.Label();
             this.btnGo = new System.Windows.Forms.Button();
@@ -64,6 +71,7 @@
             this.lblTaskId = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.label27 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
@@ -84,7 +92,9 @@
             this.label11 = new System.Windows.Forms.Label();
             this.lblTaskLabourName = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.label25 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.btnMaterialInsert = new System.Windows.Forms.Button();
@@ -109,6 +119,8 @@
             this.label12 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.tabPage5 = new System.Windows.Forms.TabPage();
+            this.lblLabururCost = new System.Windows.Forms.Label();
+            this.label22 = new System.Windows.Forms.Label();
             this.button10 = new System.Windows.Forms.Button();
             this.button9 = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
@@ -119,38 +131,26 @@
             this.btnRefreshCost = new System.Windows.Forms.Button();
             this.label20 = new System.Windows.Forms.Label();
             this.gvItemCost = new System.Windows.Forms.DataGridView();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.lbllabururAmount = new System.Windows.Forms.Label();
-            this.label29 = new System.Windows.Forms.Label();
-            this.label28 = new System.Windows.Forms.Label();
-            this.label30 = new System.Windows.Forms.Label();
-            this.lblItemCost = new System.Windows.Forms.Label();
-            this.label22 = new System.Windows.Forms.Label();
-            this.lblLabururCost = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.tabPage2.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gvTask)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.tabPage3.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gvLabours)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.tabPage4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtQuantity)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvMaterials)).BeginInit();
             this.tabPage5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gvItemCost)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -197,6 +197,65 @@
             this.tabPage1.Text = "REPAIR ORDER";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
+            // label30
+            // 
+            this.label30.AutoSize = true;
+            this.label30.Location = new System.Drawing.Point(327, 82);
+            this.label30.Name = "label30";
+            this.label30.Size = new System.Drawing.Size(57, 15);
+            this.label30.TabIndex = 22;
+            this.label30.Text = "item cost";
+            // 
+            // lblItemCost
+            // 
+            this.lblItemCost.AutoSize = true;
+            this.lblItemCost.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblItemCost.Location = new System.Drawing.Point(409, 82);
+            this.lblItemCost.Name = "lblItemCost";
+            this.lblItemCost.Size = new System.Drawing.Size(14, 15);
+            this.lblItemCost.TabIndex = 21;
+            this.lblItemCost.Text = "0";
+            // 
+            // label28
+            // 
+            this.label28.AutoSize = true;
+            this.label28.Location = new System.Drawing.Point(327, 55);
+            this.label28.Name = "label28";
+            this.label28.Size = new System.Drawing.Size(76, 15);
+            this.label28.TabIndex = 20;
+            this.label28.Text = "laborur Cost";
+            // 
+            // lbllabururAmount
+            // 
+            this.lbllabururAmount.AutoSize = true;
+            this.lbllabururAmount.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbllabururAmount.Location = new System.Drawing.Point(409, 55);
+            this.lbllabururAmount.Name = "lbllabururAmount";
+            this.lbllabururAmount.Size = new System.Drawing.Size(14, 15);
+            this.lbllabururAmount.TabIndex = 19;
+            this.lbllabururAmount.Text = "0";
+            // 
+            // label29
+            // 
+            this.label29.AutoSize = true;
+            this.label29.Font = new System.Drawing.Font("Calibri", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label29.Location = new System.Drawing.Point(314, 24);
+            this.label29.Name = "label29";
+            this.label29.Size = new System.Drawing.Size(93, 15);
+            this.label29.TabIndex = 18;
+            this.label29.Text = "FINAL AMOUNT";
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::VWMS.Properties.Resources.cars_icon;
+            this.pictureBox2.Location = new System.Drawing.Point(482, 34);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(162, 110);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 17;
+            this.pictureBox2.TabStop = false;
+            // 
             // label21
             // 
             this.label21.AutoSize = true;
@@ -207,6 +266,17 @@
             this.label21.Size = new System.Drawing.Size(112, 19);
             this.label21.TabIndex = 16;
             this.label21.Text = "REPARE ORDER";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::VWMS.Properties.Resources.Car_icon;
+            this.pictureBox1.Location = new System.Drawing.Point(18, 11);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(72, 68);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 15;
+            this.pictureBox1.TabStop = false;
             // 
             // lblCurrentJobStatus
             // 
@@ -578,6 +648,16 @@
             this.label4.TabIndex = 0;
             this.label4.Text = "TASK ID";
             // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = global::VWMS.Properties.Resources.Oxygen_Icons_org_Oxygen_Status_mail_task;
+            this.pictureBox3.Location = new System.Drawing.Point(11, 13);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(74, 56);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 24;
+            this.pictureBox3.TabStop = false;
+            // 
             // tabPage3
             // 
             this.tabPage3.Controls.Add(this.label27);
@@ -804,6 +884,16 @@
             this.label7.TabIndex = 1;
             this.label7.Text = "NAME";
             // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Image = global::VWMS.Properties.Resources.labor_worker_icon_22953_120x120;
+            this.pictureBox4.Location = new System.Drawing.Point(8, 13);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(58, 51);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox4.TabIndex = 21;
+            this.pictureBox4.TabStop = false;
+            // 
             // tabPage4
             // 
             this.tabPage4.Controls.Add(this.pictureBox5);
@@ -834,6 +924,16 @@
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "ITEMS";
             this.tabPage4.UseVisualStyleBackColor = true;
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.Image = global::VWMS.Properties.Resources.DDS_Home_Inventory_Icon;
+            this.pictureBox5.Location = new System.Drawing.Point(8, 5);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(80, 63);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox5.TabIndex = 24;
+            this.pictureBox5.TabStop = false;
             // 
             // label25
             // 
@@ -1111,6 +1211,24 @@
             this.tabPage5.Text = "REPAIR ORDER SUMMARY";
             this.tabPage5.UseVisualStyleBackColor = true;
             // 
+            // lblLabururCost
+            // 
+            this.lblLabururCost.AutoSize = true;
+            this.lblLabururCost.Location = new System.Drawing.Point(186, 247);
+            this.lblLabururCost.Name = "lblLabururCost";
+            this.lblLabururCost.Size = new System.Drawing.Size(28, 13);
+            this.lblLabururCost.TabIndex = 18;
+            this.lblLabururCost.Text = "0.00";
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Location = new System.Drawing.Point(72, 247);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(91, 13);
+            this.label22.TabIndex = 17;
+            this.label22.Text = "LABURUR COST";
+            // 
             // button10
             // 
             this.button10.Location = new System.Drawing.Point(321, 311);
@@ -1120,6 +1238,7 @@
             this.button10.TabIndex = 16;
             this.button10.Text = "REPORT FOR WORK STATION LABURUR TASKS";
             this.button10.UseVisualStyleBackColor = true;
+            this.button10.Click += new System.EventHandler(this.button10_Click);
             // 
             // button9
             // 
@@ -1130,6 +1249,7 @@
             this.button9.TabIndex = 12;
             this.button9.Text = "REPORT FOR WORK STATION ITEMS";
             this.button9.UseVisualStyleBackColor = true;
+            this.button9.Click += new System.EventHandler(this.button9_Click);
             // 
             // button8
             // 
@@ -1213,124 +1333,6 @@
             this.gvItemCost.Size = new System.Drawing.Size(473, 130);
             this.gvItemCost.TabIndex = 0;
             // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::VWMS.Properties.Resources.cars_icon;
-            this.pictureBox2.Location = new System.Drawing.Point(482, 34);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(162, 110);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 17;
-            this.pictureBox2.TabStop = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::VWMS.Properties.Resources.Car_icon;
-            this.pictureBox1.Location = new System.Drawing.Point(18, 11);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(72, 68);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 15;
-            this.pictureBox1.TabStop = false;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Image = global::VWMS.Properties.Resources.Oxygen_Icons_org_Oxygen_Status_mail_task;
-            this.pictureBox3.Location = new System.Drawing.Point(11, 13);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(74, 56);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox3.TabIndex = 24;
-            this.pictureBox3.TabStop = false;
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.Image = global::VWMS.Properties.Resources.labor_worker_icon_22953_120x120;
-            this.pictureBox4.Location = new System.Drawing.Point(8, 13);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(58, 51);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox4.TabIndex = 21;
-            this.pictureBox4.TabStop = false;
-            // 
-            // pictureBox5
-            // 
-            this.pictureBox5.Image = global::VWMS.Properties.Resources.DDS_Home_Inventory_Icon;
-            this.pictureBox5.Location = new System.Drawing.Point(8, 5);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(80, 63);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox5.TabIndex = 24;
-            this.pictureBox5.TabStop = false;
-            // 
-            // lbllabururAmount
-            // 
-            this.lbllabururAmount.AutoSize = true;
-            this.lbllabururAmount.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbllabururAmount.Location = new System.Drawing.Point(409, 55);
-            this.lbllabururAmount.Name = "lbllabururAmount";
-            this.lbllabururAmount.Size = new System.Drawing.Size(14, 15);
-            this.lbllabururAmount.TabIndex = 19;
-            this.lbllabururAmount.Text = "0";
-            // 
-            // label29
-            // 
-            this.label29.AutoSize = true;
-            this.label29.Font = new System.Drawing.Font("Calibri", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label29.Location = new System.Drawing.Point(314, 24);
-            this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(93, 15);
-            this.label29.TabIndex = 18;
-            this.label29.Text = "FINAL AMOUNT";
-            // 
-            // label28
-            // 
-            this.label28.AutoSize = true;
-            this.label28.Location = new System.Drawing.Point(327, 55);
-            this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(76, 15);
-            this.label28.TabIndex = 20;
-            this.label28.Text = "laborur Cost";
-            // 
-            // label30
-            // 
-            this.label30.AutoSize = true;
-            this.label30.Location = new System.Drawing.Point(327, 82);
-            this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(57, 15);
-            this.label30.TabIndex = 22;
-            this.label30.Text = "item cost";
-            // 
-            // lblItemCost
-            // 
-            this.lblItemCost.AutoSize = true;
-            this.lblItemCost.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblItemCost.Location = new System.Drawing.Point(409, 82);
-            this.lblItemCost.Name = "lblItemCost";
-            this.lblItemCost.Size = new System.Drawing.Size(14, 15);
-            this.lblItemCost.TabIndex = 21;
-            this.lblItemCost.Text = "0";
-            // 
-            // label22
-            // 
-            this.label22.AutoSize = true;
-            this.label22.Location = new System.Drawing.Point(72, 247);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(91, 13);
-            this.label22.TabIndex = 17;
-            this.label22.Text = "LABURUR COST";
-            // 
-            // lblLabururCost
-            // 
-            this.lblLabururCost.AutoSize = true;
-            this.lblLabururCost.Location = new System.Drawing.Point(186, 247);
-            this.lblLabururCost.Name = "lblLabururCost";
-            this.lblLabururCost.Size = new System.Drawing.Size(28, 13);
-            this.lblLabururCost.TabIndex = 18;
-            this.lblLabururCost.Text = "0.00";
-            // 
             // FRMWS
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1344,28 +1346,28 @@
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gvTask)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.tabPage3.ResumeLayout(false);
             this.tabPage3.PerformLayout();
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gvLabours)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.tabPage4.ResumeLayout(false);
             this.tabPage4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             this.panel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.txtQuantity)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvMaterials)).EndInit();
             this.tabPage5.ResumeLayout(false);
             this.tabPage5.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gvItemCost)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             this.ResumeLayout(false);
 
         }

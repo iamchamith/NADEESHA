@@ -4,12 +4,16 @@
 
     public partial class DSReports
     {
-        partial class ItemsDataTable
+        partial class JobLaborurDataTable
         {
-        }
 
-        partial class VehicleDataTable
-        {
+            partial class ItemsDataTable
+            {
+            }
+
+            partial class VehicleDataTable
+            {
+            }
         }
     }
 }

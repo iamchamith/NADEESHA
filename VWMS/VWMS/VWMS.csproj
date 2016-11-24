@@ -134,6 +134,18 @@
       <DependentUpon>RPTItems.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="REPORTING\RptJobItems.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RptJobItems.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="REPORTING\RptJobLaborurReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RptJobLaborurReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="REPORTING\RPTVehicle.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -242,6 +254,14 @@
     <EmbeddedResource Include="REPORTING\RPTItems.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>RPTItems.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="REPORTING\RptJobItems.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>RptJobItems.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="REPORTING\RptJobLaborurReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>RptJobLaborurReport.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="REPORTING\RPTVehicle.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>

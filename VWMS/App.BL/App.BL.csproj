@@ -58,6 +58,7 @@
     <Compile Include="DbServices\LaboursDbService.cs" />
     <Compile Include="DbServices\ModelDbService.cs" />
     <Compile Include="DbServices\Repo.cs" />
+    <Compile Include="DbServices\WizardReporting.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="DbServices\TaskDbService.cs" />
     <Compile Include="DbServices\UserDbService.cs" />

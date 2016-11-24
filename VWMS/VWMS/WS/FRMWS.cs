@@ -13,6 +13,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using VWMS.ENTITY;
+using VWMS.REPORTING;
 
 namespace VWMS.WS
 {
@@ -734,6 +735,17 @@ namespace VWMS.WS
             {
                 Helper.ErrorMessage(ex);
             }
+        }
+
+        //report for work station items summary
+        private void button9_Click(object sender, EventArgs e)
+        {
+            new FrmReport(Enums.EReports.JobItemRerport, int.Parse(lblJobID.Text)).ShowDialog();
+        }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+            new FrmReport(Enums.EReports.JobLaborurReport, int.Parse(lblJobID.Text)).ShowDialog();
         }
     }
 }

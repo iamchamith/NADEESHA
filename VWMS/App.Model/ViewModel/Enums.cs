@@ -19,7 +19,9 @@ namespace App.Model
             Vehicle = 2,
             Labours = 3,
             Items = 4,
-            SearchItemReport = 5
+            SearchItemReport = 5,
+            JobItemRerport = 6,
+            JobLaborurReport = 7
         }
 
         public enum EUser

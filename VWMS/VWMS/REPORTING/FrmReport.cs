@@ -51,6 +51,62 @@ namespace VWMS.REPORTING
             {
                 ItemInfomationReport();
             }
+            else if (eReports == Enums.EReports.JobItemRerport)
+            {
+                JobItemreport(id);
+            }
+            else if (eReports == Enums.EReports.JobLaborurReport)
+            {
+                JobLaborurReport(id);
+            }
+        }
+
+        public void JobLaborurReport(int id) {
+
+            try
+            {
+                var dt = (List<JobLaborReportInfo>)(new WizardReporting().GetLaborurJobsInfo(id).Content);
+                DSReports ds = new DSReports();
+                foreach (var items in dt)
+                {
+                    ds.Tables["JobLaborur"].Rows.Add(items.JobId.ToString(),
+                        items.TaskId.ToString(), items.TaskName.ToString(), items.LaboursId.ToString(),
+                        items.Name.ToString());
+                }
+
+                RptJobLaborurReport objcus = new RptJobLaborurReport();
+                objcus.SetDataSource(ds.Tables["JobLaborur"]);
+                crystalReportViewer1.ReportSource = objcus;
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
+
+        public void JobItemreport(int id) {
+            try
+            {
+                var dt = (List<JobItemReportViewModel>)(new WizardReporting().GetJobItemReport(id).Content);
+                DSReports ds = new DSReports();
+                foreach (var items in dt)
+                {
+                    ds.Tables["JobItems"].Rows.Add(items.TaskName.ToString(),
+                        items.Name.ToString(), items.ItemId.ToString(), items.Quantity.ToString(),
+                        items.Id.ToString());
+                }
+
+                RptJobItems objcus = new RptJobItems();
+                objcus.SetDataSource(ds.Tables["JobItems"]);
+                crystalReportViewer1.ReportSource = objcus;
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+
         }
 
         public void CustomerReport()
