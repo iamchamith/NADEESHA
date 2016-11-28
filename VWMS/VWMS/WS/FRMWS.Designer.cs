@@ -532,7 +532,7 @@
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(154, 23);
             this.button2.TabIndex = 16;
-            this.button2.Text = "ALLOCATE WORK FORCE ";
+            this.button2.Text = "ASSIGN LABOURUS";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
@@ -684,7 +684,7 @@
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Size = new System.Drawing.Size(640, 419);
             this.tabPage3.TabIndex = 2;
-            this.tabPage3.Text = "LABURUS";
+            this.tabPage3.Text = "LABOURUS";
             this.tabPage3.UseVisualStyleBackColor = true;
             // 
             // label27

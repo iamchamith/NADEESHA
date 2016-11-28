@@ -117,14 +117,14 @@ namespace BL.BL.HELPER
                 try
                 {
                     double i = double.Parse(strTP);
+                    return true;
                 }
                 catch (Exception)
                 {
-
                     return false;
                 }
             }
-            return true;
+            return false;
         }
 
 

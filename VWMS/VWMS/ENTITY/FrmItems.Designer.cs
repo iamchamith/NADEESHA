@@ -80,7 +80,7 @@
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(67, 14);
             this.label2.TabIndex = 1;
-            this.label2.Text = "ITEM_CODE";
+            this.label2.Text = "ITEM NAME";
             // 
             // label3
             // 

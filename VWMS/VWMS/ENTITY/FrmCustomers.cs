@@ -58,11 +58,6 @@ namespace VWMS.ENTITY
                 isOk = false;
 
             }
-            if (string.IsNullOrEmpty(txtNIC.Text))
-            {
-                msg.Append("NIC requred \n");
-                isOk = false;
-            }
             if (string.IsNullOrEmpty(txtEmail.Text))
             {
                 msg.Append("Email requred \n");
@@ -75,7 +70,7 @@ namespace VWMS.ENTITY
             }
             if (!BL.BL.HELPER.Validation.IsTelephone(txtPhone.Text))
             {
-                msg.Append("invalied Phone no r \n");
+                msg.Append("invalied Phone no  \n");
                 isOk = false;
             }
 
@@ -84,9 +79,9 @@ namespace VWMS.ENTITY
                 msg.Append("Invalid Email \n");
                 isOk = false;
             }
-            if (!BL.BL.HELPER.Validation.IsTelephone(txtPhone.Text) || !BL.BL.HELPER.Validation.IsNumber(txtPhone.Text))
+            if (!BL.BL.HELPER.Validation.IsNIC(txtNIC.Text))
             {
-                msg.Append("Invalid Phone no \n");
+                msg.Append("Invalid Nic \n");
                 isOk = false;
             }
 

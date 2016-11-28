@@ -730,7 +730,7 @@ namespace VWMS.WS
             try
             {
                 // get labarur amount
-                var x = new FrmInputDialog("Laburur Cost", "Insert laburur Cost", this);
+                var x = new FrmInputDialog("SERVICE CHARGE", "INSERT SERVICE CHARGE", this);
                 x.ShowDialog();
 
                 if (labararCost == 0.00M)

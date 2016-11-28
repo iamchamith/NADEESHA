@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using App.Model;
 using App.Dal;
 using App.BL;
+using BL.BL.HELPER;
 
 namespace VWMS.USER
 {
@@ -27,22 +28,27 @@ namespace VWMS.USER
 
             if (string.IsNullOrEmpty(txtUserName.Text))
             {
-                msg.Append("username requred \n");
+                msg.Append("Username(Email) requred. \n");
                 isOk = false;
             }
-            else if (string.IsNullOrEmpty(txtName.Text))
+            if (!Validation.IsValidEmail(txtUserName.Text))
             {
-                msg.Append("name requred \n");
+                msg.Append("Invalied Username(Email).\n");
                 isOk = false;
             }
-            else if (string.IsNullOrEmpty(txtNIC.Text))
+            if (string.IsNullOrEmpty(txtName.Text))
             {
-                msg.Append("Nic no requred \n");
+                msg.Append("Name requred \n");
+                isOk = false;
+            }
+            if (!Validation.IsNIC(txtNIC.Text))
+            {
+                msg.Append("Invalied Nic\n");
                 isOk = false;
             }
             if (isOk == false)
             {
-                MessageBox.Show(msg.ToString(), "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                Helper.ErrorMessage(msg.ToString(), "Information");
             }
             return isOk;
 
@@ -67,6 +73,7 @@ namespace VWMS.USER
                     Password = txtUserName.Text,
                     State = cmbUserType.SelectedIndex + 1
                 });
+                LoadInfo();
                 Helper.SuccessMessage();
             }
             catch (Exception ex)
@@ -95,6 +102,7 @@ namespace VWMS.USER
                     Nic = txtNIC.Text,
                     State = cmbUserType.SelectedIndex + 1
                 });
+                LoadInfo();
                 Helper.SuccessMessage();
             }
             catch (Exception ex)
