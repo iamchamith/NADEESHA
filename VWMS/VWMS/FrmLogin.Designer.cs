@@ -102,11 +102,11 @@
             // 
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Calibri", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(76, 21);
+            this.label3.Location = new System.Drawing.Point(27, 20);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(305, 19);
+            this.label3.Size = new System.Drawing.Size(375, 24);
             this.label3.TabIndex = 5;
             this.label3.Text = "VEHICLE WORKSHOP MANEGMENT SYSTEM";
             // 
@@ -126,7 +126,7 @@
             // progressBar1
             // 
             this.progressBar1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.progressBar1.Location = new System.Drawing.Point(0, 237);
+            this.progressBar1.Location = new System.Drawing.Point(0, 199);
             this.progressBar1.Name = "progressBar1";
             this.progressBar1.Size = new System.Drawing.Size(506, 23);
             this.progressBar1.TabIndex = 27;
@@ -143,7 +143,7 @@
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImage = global::VWMS.Properties.Resources.final;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(506, 260);
+            this.ClientSize = new System.Drawing.Size(506, 222);
             this.ControlBox = false;
             this.Controls.Add(this.progressBar1);
             this.Controls.Add(this.btnExit);

@@ -57,12 +57,12 @@ namespace VWMS
             if (string.IsNullOrEmpty(txtEmail.Text))
             {
                 isValied = false;
-                message.Append("email requred \n");
+                message.Append("email required \n");
             }
             if (string.IsNullOrEmpty(txtPassword.Text))
             {
                 isValied = false;
-                message.Append("password requred \n");
+                message.Append("password required \n");
             }
 
             messageOut = message.ToString();

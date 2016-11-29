@@ -297,9 +297,9 @@
             this.btnJobUpdate.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnJobUpdate.Location = new System.Drawing.Point(233, 133);
             this.btnJobUpdate.Name = "btnJobUpdate";
-            this.btnJobUpdate.Size = new System.Drawing.Size(75, 23);
+            this.btnJobUpdate.Size = new System.Drawing.Size(95, 23);
             this.btnJobUpdate.TabIndex = 7;
-            this.btnJobUpdate.Text = "FINIED JOB";
+            this.btnJobUpdate.Text = "FINISHED JOB";
             this.btnJobUpdate.UseVisualStyleBackColor = true;
             this.btnJobUpdate.Click += new System.EventHandler(this.btnJobUpdate_Click);
             // 

@@ -49,23 +49,23 @@ namespace VWMS.ENTITY
 
             if (string.IsNullOrEmpty(txtName.Text))
             {
-                msg.Append("Customer name requred \n");
+                msg.Append("Customer name required \n");
                 isOk = false;
             }
             if (string.IsNullOrEmpty(txtAddress.Text))
             {
-                msg.Append("Address is requred \n");
+                msg.Append("Address is required \n");
                 isOk = false;
 
             }
             if (string.IsNullOrEmpty(txtEmail.Text))
             {
-                msg.Append("Email requred \n");
+                msg.Append("Email required \n");
                 isOk = false;
             }
             if (string.IsNullOrEmpty(txtPhone.Text))
             {
-                msg.Append("Phone no requred \n");
+                msg.Append("Phone no required \n");
                 isOk = false;
             }
             if (!BL.BL.HELPER.Validation.IsTelephone(txtPhone.Text))

@@ -31,7 +31,7 @@ namespace VWMS.ENTITY
 
             if (string.IsNullOrEmpty(txtName.Text))
             {
-                msg.Append("Make name requred \n");
+                msg.Append("Make name required \n");
                 isOk = false;
             }
             if (isOk == false)

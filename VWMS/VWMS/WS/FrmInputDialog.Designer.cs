@@ -37,6 +37,8 @@
             // lblText
             // 
             this.lblText.AutoSize = true;
+            this.lblText.BackColor = System.Drawing.Color.Transparent;
+            this.lblText.ForeColor = System.Drawing.Color.White;
             this.lblText.Location = new System.Drawing.Point(48, 22);
             this.lblText.Name = "lblText";
             this.lblText.Size = new System.Drawing.Size(35, 13);
@@ -74,6 +76,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::VWMS.Properties.Resources.final;
             this.ClientSize = new System.Drawing.Size(326, 122);
             this.Controls.Add(this.btnOk);
             this.Controls.Add(this.btnClosed);

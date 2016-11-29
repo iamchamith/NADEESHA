@@ -28,22 +28,22 @@ namespace VWMS.USER
 
             if (string.IsNullOrEmpty(txtUserName.Text))
             {
-                msg.Append("Username(Email) requred. \n");
+                msg.Append("Username(Email) required. \n");
                 isOk = false;
             }
             if (!Validation.IsValidEmail(txtUserName.Text))
             {
-                msg.Append("Invalied Username(Email).\n");
+                msg.Append("invalid Username(Email).\n");
                 isOk = false;
             }
             if (string.IsNullOrEmpty(txtName.Text))
             {
-                msg.Append("Name requred \n");
+                msg.Append("Name required \n");
                 isOk = false;
             }
             if (!Validation.IsNIC(txtNIC.Text))
             {
-                msg.Append("Invalied Nic\n");
+                msg.Append("invalid Nic\n");
                 isOk = false;
             }
             if (isOk == false)

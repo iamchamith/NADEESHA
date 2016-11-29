@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmCustomers));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.gvData = new System.Windows.Forms.DataGridView();
@@ -55,11 +54,9 @@
             this.btnBrowse = new System.Windows.Forms.Button();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.gvData)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -68,7 +65,7 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Calibri", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(149, 39);
+            this.label1.Location = new System.Drawing.Point(12, 16);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(197, 24);
             this.label1.TabIndex = 0;
@@ -80,7 +77,7 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(71, 113);
+            this.label2.Location = new System.Drawing.Point(71, 85);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(38, 14);
             this.label2.TabIndex = 1;
@@ -92,9 +89,9 @@
             this.gvData.BackgroundColor = System.Drawing.Color.WhiteSmoke;
             this.gvData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.gvData.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.gvData.Location = new System.Drawing.Point(0, 344);
+            this.gvData.Location = new System.Drawing.Point(0, 322);
             this.gvData.Name = "gvData";
-            this.gvData.Size = new System.Drawing.Size(882, 160);
+            this.gvData.Size = new System.Drawing.Size(882, 182);
             this.gvData.TabIndex = 2;
             this.gvData.ColumnHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.gvData_ColumnHeaderMouseClick);
             this.gvData.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.gvData_RowHeaderMouseClick);
@@ -129,7 +126,7 @@
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(54, 146);
+            this.label5.Location = new System.Drawing.Point(54, 118);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(55, 14);
             this.label5.TabIndex = 5;
@@ -137,7 +134,7 @@
             // 
             // txtName
             // 
-            this.txtName.Location = new System.Drawing.Point(129, 110);
+            this.txtName.Location = new System.Drawing.Point(129, 82);
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(331, 20);
             this.txtName.TabIndex = 6;
@@ -160,7 +157,7 @@
             // 
             // txtAddress
             // 
-            this.txtAddress.Location = new System.Drawing.Point(129, 146);
+            this.txtAddress.Location = new System.Drawing.Point(129, 118);
             this.txtAddress.Multiline = true;
             this.txtAddress.Name = "txtAddress";
             this.txtAddress.Size = new System.Drawing.Size(331, 76);
@@ -220,7 +217,7 @@
             // 
             // txtSearchBy
             // 
-            this.txtSearchBy.Location = new System.Drawing.Point(126, 300);
+            this.txtSearchBy.Location = new System.Drawing.Point(126, 272);
             this.txtSearchBy.Name = "txtSearchBy";
             this.txtSearchBy.Size = new System.Drawing.Size(331, 20);
             this.txtSearchBy.TabIndex = 16;
@@ -232,7 +229,7 @@
             this.lblSearchKey.BackColor = System.Drawing.Color.Transparent;
             this.lblSearchKey.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSearchKey.ForeColor = System.Drawing.Color.White;
-            this.lblSearchKey.Location = new System.Drawing.Point(59, 303);
+            this.lblSearchKey.Location = new System.Drawing.Point(59, 275);
             this.lblSearchKey.Name = "lblSearchKey";
             this.lblSearchKey.Size = new System.Drawing.Size(47, 14);
             this.lblSearchKey.TabIndex = 15;
@@ -243,7 +240,7 @@
             this.lblID.AutoSize = true;
             this.lblID.BackColor = System.Drawing.Color.Transparent;
             this.lblID.ForeColor = System.Drawing.Color.White;
-            this.lblID.Location = new System.Drawing.Point(382, 50);
+            this.lblID.Location = new System.Drawing.Point(366, 27);
             this.lblID.Name = "lblID";
             this.lblID.Size = new System.Drawing.Size(13, 13);
             this.lblID.TabIndex = 17;
@@ -279,7 +276,7 @@
             this.groupBox1.Controls.Add(this.btnClear);
             this.groupBox1.Controls.Add(this.btnUpdate);
             this.groupBox1.Controls.Add(this.btnDelete);
-            this.groupBox1.Location = new System.Drawing.Point(126, 228);
+            this.groupBox1.Location = new System.Drawing.Point(126, 200);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(370, 59);
             this.groupBox1.TabIndex = 27;
@@ -333,16 +330,6 @@
             this.pictureBox1.TabIndex = 32;
             this.pictureBox1.TabStop = false;
             // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(0, 2);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(110, 97);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 34;
-            this.pictureBox2.TabStop = false;
-            // 
             // FrmCustomers
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -350,7 +337,6 @@
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImage = global::VWMS.Properties.Resources.final;
             this.ClientSize = new System.Drawing.Size(882, 504);
-            this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.btnBrowse);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnNavCus);
@@ -375,12 +361,11 @@
             this.Name = "FrmCustomers";
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "`";
+            this.Text = "CUSTOMERS REGISTER";
             this.Load += new System.EventHandler(this.FrmCustomers_Load);
             ((System.ComponentModel.ISupportInitialize)(this.gvData)).EndInit();
             this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -414,6 +399,5 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button btnBrowse;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
-        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }

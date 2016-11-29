@@ -24,15 +24,8 @@ namespace VWMS
         }
 
         void UserInfo() {
-            //error
-            /*toolStripMenuItem1.Text = string.Format("hi {0} ({1}) login as {2}",
+            toolStripMenuItem1.Text = string.Format("hi {0} login as {1}",
                Properties.Settings.Default.NAME,
-               Properties.Settings.Default.EMAIL,
-               ((EUser)int.Parse(Properties.Settings.Default.STATE)).ToString());*/
-
-            toolStripMenuItem1.Text = string.Format("hi {0} ({1}) login as {2}",
-               Properties.Settings.Default.NAME,
-               Properties.Settings.Default.EMAIL,
                ((EUser)int.Parse(Properties.Settings.Default.STATE)).ToString());
         }
 

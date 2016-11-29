@@ -738,7 +738,7 @@ namespace VWMS.WS
                     return;
                 }
 
-                if (!Helper.Confirmation(message: "Sure finied job? (it cannot be roll back)")) { return; }
+                if (!Helper.Confirmation(message: "Are you sure to finish this job? (it cannot be roll back)")) { return; }
 
                 if (!new VehicleJobDbService().CheckJobTasksAreClosed(Convert.ToInt32(lblJobID.Text)))
                 {
