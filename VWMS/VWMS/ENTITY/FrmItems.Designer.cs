@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmItems));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -50,13 +49,11 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.button1 = new System.Windows.Forms.Button();
             this.label10 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.txtPriceIn = new System.Windows.Forms.NumericUpDown();
             this.txtPriceOut = new System.Windows.Forms.NumericUpDown();
             this.txtReOrderLevel = new System.Windows.Forms.NumericUpDown();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPriceIn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPriceOut)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtReOrderLevel)).BeginInit();
@@ -65,8 +62,10 @@
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Calibri", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(112, 9);
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(17, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(145, 24);
             this.label1.TabIndex = 0;
@@ -75,8 +74,10 @@
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(129, 61);
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(54, 61);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(67, 14);
             this.label2.TabIndex = 1;
@@ -85,8 +86,10 @@
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(121, 94);
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(46, 94);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(74, 14);
             this.label3.TabIndex = 2;
@@ -95,8 +98,10 @@
             // label4
             // 
             this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(129, 128);
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(54, 128);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(60, 14);
             this.label4.TabIndex = 3;
@@ -105,8 +110,10 @@
             // label5
             // 
             this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(124, 165);
+            this.label5.ForeColor = System.Drawing.Color.White;
+            this.label5.Location = new System.Drawing.Point(49, 165);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(65, 14);
             this.label5.TabIndex = 4;
@@ -115,8 +122,10 @@
             // label6
             // 
             this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(115, 201);
+            this.label6.ForeColor = System.Drawing.Color.White;
+            this.label6.Location = new System.Drawing.Point(40, 201);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(81, 14);
             this.label6.TabIndex = 5;
@@ -124,14 +133,14 @@
             // 
             // txtName
             // 
-            this.txtName.Location = new System.Drawing.Point(217, 58);
+            this.txtName.Location = new System.Drawing.Point(142, 58);
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(268, 20);
             this.txtName.TabIndex = 6;
             // 
             // txtDiscription
             // 
-            this.txtDiscription.Location = new System.Drawing.Point(217, 94);
+            this.txtDiscription.Location = new System.Drawing.Point(142, 94);
             this.txtDiscription.Multiline = true;
             this.txtDiscription.Name = "txtDiscription";
             this.txtDiscription.Size = new System.Drawing.Size(268, 18);
@@ -150,7 +159,7 @@
             "PAINT",
             "AIR CONDITION PARTS",
             "GENERAL ITEMS"});
-            this.cmbCategory.Location = new System.Drawing.Point(217, 128);
+            this.cmbCategory.Location = new System.Drawing.Point(142, 128);
             this.cmbCategory.Name = "cmbCategory";
             this.cmbCategory.Size = new System.Drawing.Size(166, 21);
             this.cmbCategory.TabIndex = 8;
@@ -203,6 +212,8 @@
             // lblID
             // 
             this.lblID.AutoSize = true;
+            this.lblID.BackColor = System.Drawing.Color.Transparent;
+            this.lblID.ForeColor = System.Drawing.Color.White;
             this.lblID.Location = new System.Drawing.Point(379, 28);
             this.lblID.Name = "lblID";
             this.lblID.Size = new System.Drawing.Size(13, 13);
@@ -224,8 +235,10 @@
             // label7
             // 
             this.label7.AutoSize = true;
+            this.label7.BackColor = System.Drawing.Color.Transparent;
             this.label7.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(408, 215);
+            this.label7.ForeColor = System.Drawing.Color.White;
+            this.label7.Location = new System.Drawing.Point(328, 222);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(116, 14);
             this.label7.TabIndex = 17;
@@ -234,7 +247,9 @@
             // lblQuntity
             // 
             this.lblQuntity.AutoSize = true;
-            this.lblQuntity.Location = new System.Drawing.Point(553, 215);
+            this.lblQuntity.BackColor = System.Drawing.Color.Transparent;
+            this.lblQuntity.ForeColor = System.Drawing.Color.White;
+            this.lblQuntity.Location = new System.Drawing.Point(473, 222);
             this.lblQuntity.Name = "lblQuntity";
             this.lblQuntity.Size = new System.Drawing.Size(13, 13);
             this.lblQuntity.TabIndex = 18;
@@ -253,6 +268,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.BackColor = System.Drawing.Color.Transparent;
             this.groupBox1.Controls.Add(this.button1);
             this.groupBox1.Controls.Add(this.btnInsert);
             this.groupBox1.Controls.Add(this.btnClear);
@@ -279,26 +295,18 @@
             // label10
             // 
             this.label10.AutoSize = true;
+            this.label10.BackColor = System.Drawing.Color.Transparent;
             this.label10.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(115, 238);
+            this.label10.ForeColor = System.Drawing.Color.White;
+            this.label10.Location = new System.Drawing.Point(28, 234);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(92, 14);
             this.label10.TabIndex = 40;
             this.label10.Text = "RE-ORDER LEVEL";
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(6, 9);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(100, 84);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 42;
-            this.pictureBox1.TabStop = false;
-            // 
             // txtPriceIn
             // 
-            this.txtPriceIn.Location = new System.Drawing.Point(217, 165);
+            this.txtPriceIn.Location = new System.Drawing.Point(142, 165);
             this.txtPriceIn.Maximum = new decimal(new int[] {
             100000,
             0,
@@ -310,7 +318,7 @@
             // 
             // txtPriceOut
             // 
-            this.txtPriceOut.Location = new System.Drawing.Point(217, 199);
+            this.txtPriceOut.Location = new System.Drawing.Point(142, 199);
             this.txtPriceOut.Maximum = new decimal(new int[] {
             100000,
             0,
@@ -322,7 +330,7 @@
             // 
             // txtReOrderLevel
             // 
-            this.txtReOrderLevel.Location = new System.Drawing.Point(217, 232);
+            this.txtReOrderLevel.Location = new System.Drawing.Point(142, 232);
             this.txtReOrderLevel.Maximum = new decimal(new int[] {
             100000,
             0,
@@ -337,11 +345,11 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
+            this.BackgroundImage = global::VWMS.Properties.Resources.final;
             this.ClientSize = new System.Drawing.Size(578, 532);
             this.Controls.Add(this.txtReOrderLevel);
             this.Controls.Add(this.txtPriceOut);
             this.Controls.Add(this.txtPriceIn);
-            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.lblQuntity);
@@ -364,7 +372,6 @@
             this.Load += new System.EventHandler(this.FrmItems_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.groupBox1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPriceIn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPriceOut)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtReOrderLevel)).EndInit();
@@ -396,7 +403,6 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.NumericUpDown txtPriceIn;
         private System.Windows.Forms.NumericUpDown txtPriceOut;
         private System.Windows.Forms.NumericUpDown txtReOrderLevel;

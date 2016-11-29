@@ -398,6 +398,8 @@
     <Content Include="IMAGES\f253eae0-1f76-4683-894e-fefb7ebe3dd9.jpg" />
     <Content Include="IMAGES\ffe25d59-3eb7-49b5-8291-defce8df8981.png" />
     <Content Include="IMAGES\no.jpg" />
+    <None Include="Resources\final.jpg" />
+    <None Include="Resources\47028453-blue-wallpaper.jpg" />
     <None Include="Resources\DDS_Home_Inventory-Icon.png" />
     <None Include="Resources\labor-worker-icon-22953-120x120.png" />
     <None Include="Resources\Oxygen-Icons.org-Oxygen-Status-mail-task.ico" />

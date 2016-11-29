@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmBrands));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -43,17 +42,17 @@
             this.txtSearchBy = new System.Windows.Forms.TextBox();
             this.btnClear = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.gvData)).BeginInit();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Calibri", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(154, 40);
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(19, 24);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(134, 24);
             this.label1.TabIndex = 0;
@@ -62,8 +61,10 @@
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(98, 102);
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(98, 64);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(38, 14);
             this.label2.TabIndex = 1;
@@ -72,8 +73,10 @@
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(67, 136);
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(67, 98);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(74, 14);
             this.label3.TabIndex = 2;
@@ -81,14 +84,14 @@
             // 
             // txtName
             // 
-            this.txtName.Location = new System.Drawing.Point(158, 102);
+            this.txtName.Location = new System.Drawing.Point(158, 64);
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(168, 20);
             this.txtName.TabIndex = 3;
             // 
             // txtDiscription
             // 
-            this.txtDiscription.Location = new System.Drawing.Point(158, 136);
+            this.txtDiscription.Location = new System.Drawing.Point(158, 98);
             this.txtDiscription.Multiline = true;
             this.txtDiscription.Name = "txtDiscription";
             this.txtDiscription.Size = new System.Drawing.Size(168, 48);
@@ -133,9 +136,9 @@
             this.gvData.BackgroundColor = System.Drawing.Color.WhiteSmoke;
             this.gvData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.gvData.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.gvData.Location = new System.Drawing.Point(0, 288);
+            this.gvData.Location = new System.Drawing.Point(0, 273);
             this.gvData.Name = "gvData";
-            this.gvData.Size = new System.Drawing.Size(475, 170);
+            this.gvData.Size = new System.Drawing.Size(475, 185);
             this.gvData.TabIndex = 8;
             this.gvData.ColumnHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.gvData_ColumnHeaderMouseClick);
             this.gvData.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.gvData_RowHeaderMouseClick);
@@ -143,7 +146,9 @@
             // lblID
             // 
             this.lblID.AutoSize = true;
-            this.lblID.Location = new System.Drawing.Point(334, 48);
+            this.lblID.BackColor = System.Drawing.Color.Transparent;
+            this.lblID.ForeColor = System.Drawing.Color.White;
+            this.lblID.Location = new System.Drawing.Point(334, 10);
             this.lblID.Name = "lblID";
             this.lblID.Size = new System.Drawing.Size(13, 13);
             this.lblID.TabIndex = 9;
@@ -152,8 +157,10 @@
             // lblSearchKey
             // 
             this.lblSearchKey.AutoSize = true;
+            this.lblSearchKey.BackColor = System.Drawing.Color.Transparent;
             this.lblSearchKey.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSearchKey.Location = new System.Drawing.Point(80, 267);
+            this.lblSearchKey.ForeColor = System.Drawing.Color.White;
+            this.lblSearchKey.Location = new System.Drawing.Point(80, 229);
             this.lblSearchKey.Name = "lblSearchKey";
             this.lblSearchKey.Size = new System.Drawing.Size(47, 14);
             this.lblSearchKey.TabIndex = 10;
@@ -161,7 +168,7 @@
             // 
             // txtSearchBy
             // 
-            this.txtSearchBy.Location = new System.Drawing.Point(171, 262);
+            this.txtSearchBy.Location = new System.Drawing.Point(171, 224);
             this.txtSearchBy.Name = "txtSearchBy";
             this.txtSearchBy.Size = new System.Drawing.Size(160, 20);
             this.txtSearchBy.TabIndex = 11;
@@ -180,33 +187,24 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.BackColor = System.Drawing.Color.Transparent;
             this.groupBox1.Controls.Add(this.btnInsert);
             this.groupBox1.Controls.Add(this.btnClear);
             this.groupBox1.Controls.Add(this.btnUpdate);
             this.groupBox1.Controls.Add(this.btnDelete);
-            this.groupBox1.Location = new System.Drawing.Point(61, 190);
+            this.groupBox1.Location = new System.Drawing.Point(61, 152);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(372, 54);
             this.groupBox1.TabIndex = 14;
             this.groupBox1.TabStop = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(12, 12);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(100, 77);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 15;
-            this.pictureBox1.TabStop = false;
             // 
             // FrmBrands
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
+            this.BackgroundImage = global::VWMS.Properties.Resources.final;
             this.ClientSize = new System.Drawing.Size(475, 458);
-            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.txtSearchBy);
             this.Controls.Add(this.lblSearchKey);
@@ -224,7 +222,6 @@
             this.Load += new System.EventHandler(this.FrmBrands_Load);
             ((System.ComponentModel.ISupportInitialize)(this.gvData)).EndInit();
             this.groupBox1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -246,6 +243,5 @@
         private System.Windows.Forms.TextBox txtSearchBy;
         private System.Windows.Forms.Button btnClear;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

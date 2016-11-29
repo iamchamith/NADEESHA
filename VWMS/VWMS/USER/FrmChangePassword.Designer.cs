@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmChangePassword));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -37,15 +36,15 @@
             this.txtNewPassword = new System.Windows.Forms.TextBox();
             this.txtCOnfirmNewPassword = new System.Windows.Forms.TextBox();
             this.btnChangePassword = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(95, 22);
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(31, 22);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(191, 20);
             this.label1.TabIndex = 0;
@@ -54,6 +53,8 @@
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.ForeColor = System.Drawing.Color.White;
             this.label2.Location = new System.Drawing.Point(96, 80);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(126, 13);
@@ -63,6 +64,8 @@
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.ForeColor = System.Drawing.Color.White;
             this.label3.Location = new System.Drawing.Point(123, 128);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(99, 13);
@@ -72,6 +75,8 @@
             // label4
             // 
             this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
+            this.label4.ForeColor = System.Drawing.Color.White;
             this.label4.Location = new System.Drawing.Point(71, 161);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(151, 13);
@@ -112,22 +117,12 @@
             this.btnChangePassword.UseVisualStyleBackColor = true;
             this.btnChangePassword.Click += new System.EventHandler(this.btnChangePassword_Click);
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(3, 2);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(86, 68);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 8;
-            this.pictureBox1.TabStop = false;
-            // 
             // FrmChangePassword
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::VWMS.Properties.Resources.final;
             this.ClientSize = new System.Drawing.Size(476, 235);
-            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnChangePassword);
             this.Controls.Add(this.txtCOnfirmNewPassword);
             this.Controls.Add(this.txtNewPassword);
@@ -139,7 +134,6 @@
             this.Name = "FrmChangePassword";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CHANGE PASSWORD";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -155,6 +149,5 @@
         private System.Windows.Forms.TextBox txtNewPassword;
         private System.Windows.Forms.TextBox txtCOnfirmNewPassword;
         private System.Windows.Forms.Button btnChangePassword;
-        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

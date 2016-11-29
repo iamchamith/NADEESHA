@@ -73,6 +73,16 @@ namespace VWMS.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _47028453_blue_wallpaper {
+            get {
+                object obj = ResourceManager.GetObject("47028453-blue-wallpaper", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap branding_png {
             get {
                 object obj = ResourceManager.GetObject("branding-png", resourceCulture);
@@ -106,6 +116,16 @@ namespace VWMS.Properties {
         internal static System.Drawing.Bitmap DDS_Home_Inventory_Icon {
             get {
                 object obj = ResourceManager.GetObject("DDS_Home_Inventory-Icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap final {
+            get {
+                object obj = ResourceManager.GetObject("final", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

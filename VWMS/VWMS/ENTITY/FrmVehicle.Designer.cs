@@ -57,13 +57,11 @@
             this.txtSearchBy = new System.Windows.Forms.TextBox();
             this.button3 = new System.Windows.Forms.Button();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -71,6 +69,8 @@
             // lblOwnerID
             // 
             this.lblOwnerID.AutoSize = true;
+            this.lblOwnerID.BackColor = System.Drawing.Color.Transparent;
+            this.lblOwnerID.ForeColor = System.Drawing.Color.Transparent;
             this.lblOwnerID.Location = new System.Drawing.Point(535, 45);
             this.lblOwnerID.Name = "lblOwnerID";
             this.lblOwnerID.Size = new System.Drawing.Size(13, 13);
@@ -123,9 +123,13 @@
             // lnkOwner
             // 
             this.lnkOwner.AutoSize = true;
+            this.lnkOwner.BackColor = System.Drawing.Color.Transparent;
+            this.lnkOwner.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lnkOwner.ForeColor = System.Drawing.Color.White;
+            this.lnkOwner.LinkColor = System.Drawing.Color.White;
             this.lnkOwner.Location = new System.Drawing.Point(573, 38);
             this.lnkOwner.Name = "lnkOwner";
-            this.lnkOwner.Size = new System.Drawing.Size(49, 13);
+            this.lnkOwner.Size = new System.Drawing.Size(54, 13);
             this.lnkOwner.TabIndex = 33;
             this.lnkOwner.TabStop = true;
             this.lnkOwner.Text = "OWNER";
@@ -143,7 +147,9 @@
             // label6
             // 
             this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.White;
             this.label6.Location = new System.Drawing.Point(66, 230);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(74, 14);
@@ -199,7 +205,9 @@
             // label5
             // 
             this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.White;
             this.label5.Location = new System.Drawing.Point(44, 197);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(93, 14);
@@ -209,7 +217,9 @@
             // label4
             // 
             this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.White;
             this.label4.Location = new System.Drawing.Point(44, 164);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(96, 14);
@@ -219,7 +229,9 @@
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.White;
             this.label3.Location = new System.Drawing.Point(93, 127);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(44, 14);
@@ -229,7 +241,9 @@
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.White;
             this.label2.Location = new System.Drawing.Point(101, 96);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(36, 14);
@@ -239,7 +253,9 @@
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(44, 65);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(98, 14);
@@ -262,8 +278,10 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Calibri", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(124, 9);
+            this.label7.BackColor = System.Drawing.Color.Transparent;
+            this.label7.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.White;
+            this.label7.Location = new System.Drawing.Point(12, 19);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(153, 23);
             this.label7.TabIndex = 41;
@@ -294,6 +312,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.BackColor = System.Drawing.Color.Transparent;
             this.groupBox1.Controls.Add(this.btnNavReser);
             this.groupBox1.Controls.Add(this.button2);
             this.groupBox1.Controls.Add(this.btnInsert);
@@ -333,7 +352,9 @@
             // lblSearchKey
             // 
             this.lblSearchKey.AutoSize = true;
+            this.lblSearchKey.BackColor = System.Drawing.Color.Transparent;
             this.lblSearchKey.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSearchKey.ForeColor = System.Drawing.Color.White;
             this.lblSearchKey.Location = new System.Drawing.Point(44, 349);
             this.lblSearchKey.Name = "lblSearchKey";
             this.lblSearchKey.Size = new System.Drawing.Size(47, 14);
@@ -363,16 +384,6 @@
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
             // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Image = global::VWMS.Properties.Resources.Car_icon;
-            this.pictureBox3.Location = new System.Drawing.Point(12, 12);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(61, 50);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox3.TabIndex = 50;
-            this.pictureBox3.TabStop = false;
-            // 
             // pictureBox2
             // 
             this.pictureBox2.Image = global::VWMS.Properties.Resources.noPhotoAvailable;
@@ -398,8 +409,8 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.BackgroundImage = global::VWMS.Properties.Resources.final;
             this.ClientSize = new System.Drawing.Size(895, 542);
-            this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.lblSearchKey);
@@ -431,7 +442,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.groupBox1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
@@ -472,6 +482,5 @@
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
-        private System.Windows.Forms.PictureBox pictureBox3;
     }
 }

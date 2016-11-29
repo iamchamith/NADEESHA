@@ -61,9 +61,9 @@
             this.gvData.BackgroundColor = System.Drawing.Color.WhiteSmoke;
             this.gvData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.gvData.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.gvData.Location = new System.Drawing.Point(0, 314);
+            this.gvData.Location = new System.Drawing.Point(0, 295);
             this.gvData.Name = "gvData";
-            this.gvData.Size = new System.Drawing.Size(484, 148);
+            this.gvData.Size = new System.Drawing.Size(484, 167);
             this.gvData.TabIndex = 17;
             this.gvData.ColumnHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.gvData_ColumnHeaderMouseClick);
             this.gvData.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.gvData_RowHeaderMouseClick);
@@ -86,7 +86,9 @@
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.White;
             this.label3.Location = new System.Drawing.Point(100, 152);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(74, 14);
@@ -96,7 +98,9 @@
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.White;
             this.label2.Location = new System.Drawing.Point(136, 70);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(38, 14);
@@ -106,17 +110,21 @@
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Calibri", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(134, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(75, 24);
+            this.label1.Size = new System.Drawing.Size(88, 24);
             this.label1.TabIndex = 9;
-            this.label1.Text = "Laburur";
+            this.label1.Text = "LABOURS";
             // 
             // TYPE
             // 
             this.TYPE.AutoSize = true;
+            this.TYPE.BackColor = System.Drawing.Color.Transparent;
             this.TYPE.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TYPE.ForeColor = System.Drawing.Color.White;
             this.TYPE.Location = new System.Drawing.Point(71, 98);
             this.TYPE.Name = "TYPE";
             this.TYPE.Size = new System.Drawing.Size(103, 14);
@@ -142,7 +150,9 @@
             // lblSearchKey
             // 
             this.lblSearchKey.AutoSize = true;
+            this.lblSearchKey.BackColor = System.Drawing.Color.Transparent;
             this.lblSearchKey.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSearchKey.ForeColor = System.Drawing.Color.White;
             this.lblSearchKey.Location = new System.Drawing.Point(25, 272);
             this.lblSearchKey.Name = "lblSearchKey";
             this.lblSearchKey.Size = new System.Drawing.Size(47, 14);
@@ -152,7 +162,9 @@
             // lblID
             // 
             this.lblID.AutoSize = true;
-            this.lblID.Location = new System.Drawing.Point(236, 11);
+            this.lblID.BackColor = System.Drawing.Color.Transparent;
+            this.lblID.ForeColor = System.Drawing.Color.White;
+            this.lblID.Location = new System.Drawing.Point(333, 20);
             this.lblID.Name = "lblID";
             this.lblID.Size = new System.Drawing.Size(13, 13);
             this.lblID.TabIndex = 22;
@@ -169,7 +181,9 @@
             // label4
             // 
             this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.White;
             this.label4.Location = new System.Drawing.Point(149, 127);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(25, 14);
@@ -245,6 +259,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.BackColor = System.Drawing.Color.Transparent;
             this.groupBox1.Controls.Add(this.btnInsert);
             this.groupBox1.Controls.Add(this.btnClear);
             this.groupBox1.Controls.Add(this.btnUpdate);
@@ -270,6 +285,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
+            this.BackgroundImage = global::VWMS.Properties.Resources.final;
             this.ClientSize = new System.Drawing.Size(484, 462);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.button1);
@@ -291,7 +307,7 @@
             this.Name = "FrmLabour";
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Laburur";
+            this.Text = "LABOURS";
             this.Load += new System.EventHandler(this.FrmLabour_Load);
             ((System.ComponentModel.ISupportInitialize)(this.gvData)).EndInit();
             this.groupBox1.ResumeLayout(false);

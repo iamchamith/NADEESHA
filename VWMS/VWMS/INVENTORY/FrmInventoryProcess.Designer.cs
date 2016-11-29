@@ -63,27 +63,28 @@
             this.label4 = new System.Windows.Forms.Label();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.dgvInventory = new System.Windows.Forms.DataGridView();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvInventory)).BeginInit();
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Transparent;
             this.label1.Location = new System.Drawing.Point(176, 16);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(178, 23);
@@ -94,6 +95,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.Transparent;
             this.label2.Location = new System.Drawing.Point(101, 62);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(49, 15);
@@ -104,7 +106,8 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(81, 77);
+            this.label3.ForeColor = System.Drawing.Color.Transparent;
+            this.label3.Location = new System.Drawing.Point(81, 97);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(69, 15);
             this.label3.TabIndex = 2;
@@ -114,7 +117,8 @@
             // 
             this.lbl.AutoSize = true;
             this.lbl.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl.Location = new System.Drawing.Point(35, 92);
+            this.lbl.ForeColor = System.Drawing.Color.Transparent;
+            this.lbl.Location = new System.Drawing.Point(35, 120);
             this.lbl.Name = "lbl";
             this.lbl.Size = new System.Drawing.Size(115, 15);
             this.lbl.TabIndex = 3;
@@ -124,7 +128,8 @@
             // 
             this.lblAvaiableQuantity.AutoSize = true;
             this.lblAvaiableQuantity.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAvaiableQuantity.Location = new System.Drawing.Point(156, 90);
+            this.lblAvaiableQuantity.ForeColor = System.Drawing.Color.Transparent;
+            this.lblAvaiableQuantity.Location = new System.Drawing.Point(156, 118);
             this.lblAvaiableQuantity.Name = "lblAvaiableQuantity";
             this.lblAvaiableQuantity.Size = new System.Drawing.Size(107, 15);
             this.lblAvaiableQuantity.TabIndex = 4;
@@ -134,7 +139,8 @@
             // 
             this.lblItemName.AutoSize = true;
             this.lblItemName.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblItemName.Location = new System.Drawing.Point(156, 75);
+            this.lblItemName.ForeColor = System.Drawing.Color.Transparent;
+            this.lblItemName.Location = new System.Drawing.Point(156, 95);
             this.lblItemName.Name = "lblItemName";
             this.lblItemName.Size = new System.Drawing.Size(72, 15);
             this.lblItemName.TabIndex = 5;
@@ -144,6 +150,7 @@
             // 
             this.lblID.AutoSize = true;
             this.lblID.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblID.ForeColor = System.Drawing.Color.Transparent;
             this.lblID.Location = new System.Drawing.Point(156, 60);
             this.lblID.Name = "lblID";
             this.lblID.Size = new System.Drawing.Size(14, 15);
@@ -155,6 +162,8 @@
             // 
             this.linkLabel1.AutoSize = true;
             this.linkLabel1.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.linkLabel1.ForeColor = System.Drawing.Color.Transparent;
+            this.linkLabel1.LinkColor = System.Drawing.Color.White;
             this.linkLabel1.Location = new System.Drawing.Point(249, 60);
             this.linkLabel1.Name = "linkLabel1";
             this.linkLabel1.Size = new System.Drawing.Size(73, 15);
@@ -167,7 +176,8 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(89, 110);
+            this.label8.ForeColor = System.Drawing.Color.Transparent;
+            this.label8.Location = new System.Drawing.Point(92, 148);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(61, 15);
             this.label8.TabIndex = 8;
@@ -176,7 +186,7 @@
             // numericUpDown1
             // 
             this.numericUpDown1.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericUpDown1.Location = new System.Drawing.Point(156, 108);
+            this.numericUpDown1.Location = new System.Drawing.Point(159, 146);
             this.numericUpDown1.Maximum = new decimal(new int[] {
             10000,
             0,
@@ -199,7 +209,7 @@
             // btnInsert
             // 
             this.btnInsert.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnInsert.Location = new System.Drawing.Point(76, 154);
+            this.btnInsert.Location = new System.Drawing.Point(76, 178);
             this.btnInsert.Name = "btnInsert";
             this.btnInsert.Size = new System.Drawing.Size(87, 27);
             this.btnInsert.TabIndex = 10;
@@ -210,7 +220,7 @@
             // btnDelete
             // 
             this.btnDelete.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDelete.Location = new System.Drawing.Point(170, 154);
+            this.btnDelete.Location = new System.Drawing.Point(170, 178);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(87, 27);
             this.btnDelete.TabIndex = 12;
@@ -234,6 +244,7 @@
             // 
             this.rdOut.AutoSize = true;
             this.rdOut.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rdOut.ForeColor = System.Drawing.Color.Transparent;
             this.rdOut.Location = new System.Drawing.Point(110, 22);
             this.rdOut.Name = "rdOut";
             this.rdOut.Size = new System.Drawing.Size(86, 19);
@@ -248,6 +259,7 @@
             this.rdIn.AutoSize = true;
             this.rdIn.Checked = true;
             this.rdIn.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rdIn.ForeColor = System.Drawing.Color.Transparent;
             this.rdIn.Location = new System.Drawing.Point(16, 22);
             this.rdIn.Name = "rdIn";
             this.rdIn.Size = new System.Drawing.Size(75, 19);
@@ -260,7 +272,7 @@
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(267, 154);
+            this.button1.Location = new System.Drawing.Point(267, 178);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(87, 27);
             this.button1.TabIndex = 18;
@@ -295,15 +307,17 @@
             this.groupBox2.Controls.Add(this.label6);
             this.groupBox2.Controls.Add(this.label5);
             this.groupBox2.Controls.Add(this.label4);
+            this.groupBox2.ForeColor = System.Drawing.Color.White;
             this.groupBox2.Location = new System.Drawing.Point(25, 26);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(977, 196);
+            this.groupBox2.Size = new System.Drawing.Size(588, 196);
             this.groupBox2.TabIndex = 21;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "SEARCH";
             // 
             // button2
             // 
+            this.button2.ForeColor = System.Drawing.Color.Black;
             this.button2.Location = new System.Drawing.Point(469, 128);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(90, 37);
@@ -316,6 +330,7 @@
             // 
             this.lblItemID.AutoSize = true;
             this.lblItemID.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblItemID.ForeColor = System.Drawing.Color.White;
             this.lblItemID.Location = new System.Drawing.Point(283, 110);
             this.lblItemID.Name = "lblItemID";
             this.lblItemID.Size = new System.Drawing.Size(14, 15);
@@ -326,6 +341,7 @@
             // 
             this.chkStockMode.AutoSize = true;
             this.chkStockMode.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkStockMode.ForeColor = System.Drawing.Color.White;
             this.chkStockMode.Location = new System.Drawing.Point(342, 146);
             this.chkStockMode.Name = "chkStockMode";
             this.chkStockMode.Size = new System.Drawing.Size(111, 19);
@@ -337,6 +353,7 @@
             // 
             this.chkItem.AutoSize = true;
             this.chkItem.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkItem.ForeColor = System.Drawing.Color.White;
             this.chkItem.Location = new System.Drawing.Point(342, 107);
             this.chkItem.Name = "chkItem";
             this.chkItem.Size = new System.Drawing.Size(111, 19);
@@ -348,6 +365,7 @@
             // 
             this.chkToDate.AutoSize = true;
             this.chkToDate.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkToDate.ForeColor = System.Drawing.Color.White;
             this.chkToDate.Location = new System.Drawing.Point(342, 65);
             this.chkToDate.Name = "chkToDate";
             this.chkToDate.Size = new System.Drawing.Size(111, 19);
@@ -360,6 +378,7 @@
             // 
             this.chkFromDate.AutoSize = true;
             this.chkFromDate.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkFromDate.ForeColor = System.Drawing.Color.White;
             this.chkFromDate.Location = new System.Drawing.Point(342, 16);
             this.chkFromDate.Name = "chkFromDate";
             this.chkFromDate.Size = new System.Drawing.Size(111, 19);
@@ -392,10 +411,12 @@
             // linkLabel2
             // 
             this.linkLabel2.AutoSize = true;
-            this.linkLabel2.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.linkLabel2.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.linkLabel2.ForeColor = System.Drawing.Color.White;
+            this.linkLabel2.LinkColor = System.Drawing.Color.White;
             this.linkLabel2.Location = new System.Drawing.Point(129, 109);
             this.linkLabel2.Name = "linkLabel2";
-            this.linkLabel2.Size = new System.Drawing.Size(72, 15);
+            this.linkLabel2.Size = new System.Drawing.Size(73, 15);
             this.linkLabel2.TabIndex = 8;
             this.linkLabel2.TabStop = true;
             this.linkLabel2.Text = "LOAD ITEMS";
@@ -421,6 +442,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.White;
             this.label7.Location = new System.Drawing.Point(34, 148);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(70, 15);
@@ -431,6 +453,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.White;
             this.label6.Location = new System.Drawing.Point(72, 113);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(34, 15);
@@ -441,6 +464,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.White;
             this.label5.Location = new System.Drawing.Point(53, 67);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(51, 15);
@@ -451,6 +475,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.White;
             this.label4.Location = new System.Drawing.Point(36, 22);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(69, 15);
@@ -471,6 +496,7 @@
             // 
             // tabPage1
             // 
+            this.tabPage1.BackgroundImage = global::VWMS.Properties.Resources.final;
             this.tabPage1.Controls.Add(this.pictureBox1);
             this.tabPage1.Controls.Add(this.label9);
             this.tabPage1.Controls.Add(this.label10);
@@ -498,16 +524,6 @@
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "PROCESS";
             this.tabPage1.UseVisualStyleBackColor = true;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::VWMS.Properties.Resources.DDS_Home_Inventory_Icon;
-            this.pictureBox1.Location = new System.Drawing.Point(8, 7);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(87, 70);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 34;
-            this.pictureBox1.TabStop = false;
             // 
             // label9
             // 
@@ -545,6 +561,7 @@
             // 
             // tabPage2
             // 
+            this.tabPage2.BackgroundImage = global::VWMS.Properties.Resources.final;
             this.tabPage2.Controls.Add(this.dataGridView1);
             this.tabPage2.Controls.Add(this.groupBox2);
             this.tabPage2.Location = new System.Drawing.Point(4, 24);
@@ -564,6 +581,16 @@
             this.dataGridView1.RowTemplate.Height = 33;
             this.dataGridView1.Size = new System.Drawing.Size(615, 192);
             this.dataGridView1.TabIndex = 22;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::VWMS.Properties.Resources.DDS_Home_Inventory_Icon;
+            this.pictureBox1.Location = new System.Drawing.Point(8, 7);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(87, 70);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 34;
+            this.pictureBox1.TabStop = false;
             // 
             // FrmInventoryProcess
             // 
@@ -586,10 +613,10 @@
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvInventory)).EndInit();
             this.tabPage2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }

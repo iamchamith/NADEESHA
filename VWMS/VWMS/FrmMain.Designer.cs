@@ -43,12 +43,12 @@
             this.cUSTOMERToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.wORKSTATIONToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.iNVENTORYToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.pROCESSToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.iTEMSToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.uSERToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.rEGISTRATIONToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cHANGESETTINGSToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.pROCESSToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.iTEMSToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -184,6 +184,22 @@
             this.iNVENTORYToolStripMenuItem.Text = "INVENTORY";
             this.iNVENTORYToolStripMenuItem.Click += new System.EventHandler(this.iNVENTORYToolStripMenuItem_Click);
             // 
+            // pROCESSToolStripMenuItem
+            // 
+            this.pROCESSToolStripMenuItem.Image = global::VWMS.Properties.Resources.MODEL;
+            this.pROCESSToolStripMenuItem.Name = "pROCESSToolStripMenuItem";
+            this.pROCESSToolStripMenuItem.Size = new System.Drawing.Size(146, 24);
+            this.pROCESSToolStripMenuItem.Text = "PROCESS";
+            this.pROCESSToolStripMenuItem.Click += new System.EventHandler(this.pROCESSToolStripMenuItem_Click);
+            // 
+            // iTEMSToolStripMenuItem
+            // 
+            this.iTEMSToolStripMenuItem.Image = global::VWMS.Properties.Resources.branding_png;
+            this.iTEMSToolStripMenuItem.Name = "iTEMSToolStripMenuItem";
+            this.iTEMSToolStripMenuItem.Size = new System.Drawing.Size(146, 24);
+            this.iTEMSToolStripMenuItem.Text = "ITEMS";
+            this.iTEMSToolStripMenuItem.Click += new System.EventHandler(this.iTEMSToolStripMenuItem_Click_1);
+            // 
             // uSERToolStripMenuItem
             // 
             this.uSERToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -216,27 +232,11 @@
             this.toolStripMenuItem1.Size = new System.Drawing.Size(39, 23);
             this.toolStripMenuItem1.Text = "---";
             // 
-            // pROCESSToolStripMenuItem
-            // 
-            this.pROCESSToolStripMenuItem.Image = global::VWMS.Properties.Resources.MODEL;
-            this.pROCESSToolStripMenuItem.Name = "pROCESSToolStripMenuItem";
-            this.pROCESSToolStripMenuItem.Size = new System.Drawing.Size(152, 24);
-            this.pROCESSToolStripMenuItem.Text = "PROCESS";
-            this.pROCESSToolStripMenuItem.Click += new System.EventHandler(this.pROCESSToolStripMenuItem_Click);
-            // 
-            // iTEMSToolStripMenuItem
-            // 
-            this.iTEMSToolStripMenuItem.Image = global::VWMS.Properties.Resources.branding_png;
-            this.iTEMSToolStripMenuItem.Name = "iTEMSToolStripMenuItem";
-            this.iTEMSToolStripMenuItem.Size = new System.Drawing.Size(152, 24);
-            this.iTEMSToolStripMenuItem.Text = "ITEMS";
-            this.iTEMSToolStripMenuItem.Click += new System.EventHandler(this.iTEMSToolStripMenuItem_Click_1);
-            // 
             // FrmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImage = global::VWMS.Properties.Resources.final;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.ClientSize = new System.Drawing.Size(873, 431);
             this.Controls.Add(this.menuStrip1);

@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmModels));
             this.gvData = new System.Windows.Forms.DataGridView();
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnUpdate = new System.Windows.Forms.Button();
@@ -47,10 +46,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.TYPE = new System.Windows.Forms.Label();
             this.btnRefresh = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.gvData)).BeginInit();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // gvData
@@ -59,9 +56,9 @@
             this.gvData.BackgroundColor = System.Drawing.Color.WhiteSmoke;
             this.gvData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.gvData.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.gvData.Location = new System.Drawing.Point(0, 334);
+            this.gvData.Location = new System.Drawing.Point(0, 319);
             this.gvData.Name = "gvData";
-            this.gvData.Size = new System.Drawing.Size(605, 156);
+            this.gvData.Size = new System.Drawing.Size(605, 171);
             this.gvData.TabIndex = 28;
             this.gvData.ColumnHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.gvData_ColumnHeaderMouseClick);
             this.gvData.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.gvData_RowHeaderMouseClick);
@@ -128,7 +125,9 @@
             // lblID
             // 
             this.lblID.AutoSize = true;
+            this.lblID.BackColor = System.Drawing.Color.Transparent;
             this.lblID.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblID.ForeColor = System.Drawing.Color.White;
             this.lblID.Location = new System.Drawing.Point(302, 12);
             this.lblID.Name = "lblID";
             this.lblID.Size = new System.Drawing.Size(14, 15);
@@ -138,7 +137,7 @@
             // txtSearchBy
             // 
             this.txtSearchBy.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSearchBy.Location = new System.Drawing.Point(173, 294);
+            this.txtSearchBy.Location = new System.Drawing.Point(175, 277);
             this.txtSearchBy.Name = "txtSearchBy";
             this.txtSearchBy.Size = new System.Drawing.Size(180, 23);
             this.txtSearchBy.TabIndex = 35;
@@ -147,7 +146,10 @@
             // linkLabel1
             // 
             this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.linkLabel1.BackColor = System.Drawing.Color.Transparent;
+            this.linkLabel1.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.linkLabel1.ForeColor = System.Drawing.Color.White;
+            this.linkLabel1.LinkColor = System.Drawing.Color.White;
             this.linkLabel1.Location = new System.Drawing.Point(374, 59);
             this.linkLabel1.Name = "linkLabel1";
             this.linkLabel1.Size = new System.Drawing.Size(65, 14);
@@ -169,6 +171,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.BackColor = System.Drawing.Color.Transparent;
             this.groupBox1.Controls.Add(this.btnInsert);
             this.groupBox1.Controls.Add(this.btnClear);
             this.groupBox1.Controls.Add(this.btnUpdate);
@@ -182,17 +185,21 @@
             // label5
             // 
             this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.White;
             this.label5.Location = new System.Drawing.Point(126, 86);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(75, 14);
+            this.label5.Size = new System.Drawing.Size(78, 14);
             this.label5.TabIndex = 21;
-            this.label5.Text = "MODEL CODE";
+            this.label5.Text = "MODEL NAME";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.White;
             this.label6.Location = new System.Drawing.Point(126, 116);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(74, 14);
@@ -202,8 +209,10 @@
             // lblSearchKey
             // 
             this.lblSearchKey.AutoSize = true;
+            this.lblSearchKey.BackColor = System.Drawing.Color.Transparent;
             this.lblSearchKey.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSearchKey.Location = new System.Drawing.Point(83, 294);
+            this.lblSearchKey.ForeColor = System.Drawing.Color.White;
+            this.lblSearchKey.Location = new System.Drawing.Point(85, 277);
             this.lblSearchKey.Name = "lblSearchKey";
             this.lblSearchKey.Size = new System.Drawing.Size(47, 14);
             this.lblSearchKey.TabIndex = 34;
@@ -212,8 +221,10 @@
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(120, 12);
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(12, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(146, 23);
             this.label1.TabIndex = 20;
@@ -222,7 +233,9 @@
             // TYPE
             // 
             this.TYPE.AutoSize = true;
+            this.TYPE.BackColor = System.Drawing.Color.Transparent;
             this.TYPE.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TYPE.ForeColor = System.Drawing.Color.White;
             this.TYPE.Location = new System.Drawing.Point(155, 55);
             this.TYPE.Name = "TYPE";
             this.TYPE.Size = new System.Drawing.Size(36, 14);
@@ -240,23 +253,13 @@
             this.btnRefresh.UseVisualStyleBackColor = true;
             this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(19, 12);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(95, 78);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 41;
-            this.pictureBox1.TabStop = false;
-            // 
             // FrmModels
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
+            this.BackgroundImage = global::VWMS.Properties.Resources.final;
             this.ClientSize = new System.Drawing.Size(605, 490);
-            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btnRefresh);
             this.Controls.Add(this.linkLabel1);
@@ -278,7 +281,6 @@
             this.Load += new System.EventHandler(this.FrmModels_Load);
             ((System.ComponentModel.ISupportInitialize)(this.gvData)).EndInit();
             this.groupBox1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -304,6 +306,5 @@
         private System.Windows.Forms.Label lblSearchKey;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label TYPE;
-        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
