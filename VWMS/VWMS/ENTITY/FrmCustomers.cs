@@ -108,7 +108,7 @@ namespace VWMS.ENTITY
                     Address = txtAddress.Text,
                     Email = txtEmail.Text,
                     Name = txtName.Text,
-                    Nic = txtName.Text,
+                    Nic = txtNIC.Text,
                     Phone = txtPhone.Text,
                     RegDate = DateTime.Today,
                     UserEmale = Properties.Settings.Default.EMAIL,

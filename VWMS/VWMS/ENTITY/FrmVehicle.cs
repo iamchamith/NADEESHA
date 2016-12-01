@@ -214,7 +214,7 @@ namespace VWMS.ENTITY
 
             if (isOk == false)
             {
-                MessageBox.Show(msg.ToString(), "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                Helper.ErrorMessage(msg.ToString(), "Validation Errors");
             }
 
             return isOk;

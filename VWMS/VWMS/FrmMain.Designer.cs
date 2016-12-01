@@ -122,7 +122,7 @@
             this.bRANDToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("bRANDToolStripMenuItem.Image")));
             this.bRANDToolStripMenuItem.Name = "bRANDToolStripMenuItem";
             this.bRANDToolStripMenuItem.Size = new System.Drawing.Size(192, 24);
-            this.bRANDToolStripMenuItem.Text = "MAKE";
+            this.bRANDToolStripMenuItem.Text = "BRANDS";
             this.bRANDToolStripMenuItem.Click += new System.EventHandler(this.bRANDToolStripMenuItem_Click);
             // 
             // mODELToolStripMenuItem
