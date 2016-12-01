@@ -24,7 +24,7 @@ namespace VWMS
         }
 
         void UserInfo() {
-            toolStripMenuItem1.Text = string.Format("hi {0} login as {1}",
+            toolStripMenuItem1.Text = string.Format("Hi {0} login as {1}",
                Properties.Settings.Default.NAME,
                ((EUser)int.Parse(Properties.Settings.Default.STATE)).ToString());
         }

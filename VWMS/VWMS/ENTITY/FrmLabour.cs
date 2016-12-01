@@ -11,6 +11,7 @@ using App.Model;
 using App.BL.DbServices;
 using System.Collections.Generic;
 using static App.Model.Enums;
+using BL.BL.HELPER;
 
 namespace VWMS.ENTITY
 {
@@ -67,14 +68,14 @@ namespace VWMS.ENTITY
                 msg.Append("Enrollment Type is required \n");
                 isOk = false;
             }
-            if (string.IsNullOrEmpty(txtNIC.Text))
+            if (!Validation.IsNIC(txtNIC.Text))
             {
-                msg.Append("NIC required \n");
+                msg.Append("Invalied NIC \n");
                 isOk = false;
             }
             if (isOk == false)
             {
-                MessageBox.Show(msg.ToString(), "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                Helper.ErrorMessage(msg.ToString(), "Error");
             }
             return isOk;
         }
@@ -185,7 +186,7 @@ namespace VWMS.ENTITY
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                LoadInfo();
             }
         }
 

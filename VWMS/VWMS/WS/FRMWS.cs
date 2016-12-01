@@ -333,7 +333,7 @@ namespace VWMS.WS
             {
                 var x = new VehicleJobTaskLabourDbService().UpdatevehicleTaskLaborur(new VehicleJobTaskLabourViewModel
                 {
-                    CloseDateTime = DateTime.Today,
+                    CloseDateTime = DateTime.Now,
                     Discription = txtTaskLabourDiscription.Text,
                     IsClosed = (int)Enums.EIsClosed.Closed,
                     LabourId = Convert.ToInt32(lblTaskLabourEmpID.Text),

@@ -310,7 +310,7 @@
             this.btnJobInsert.Name = "btnJobInsert";
             this.btnJobInsert.Size = new System.Drawing.Size(75, 23);
             this.btnJobInsert.TabIndex = 6;
-            this.btnJobInsert.Text = "INSERT";
+            this.btnJobInsert.Text = "OPEN";
             this.btnJobInsert.UseVisualStyleBackColor = true;
             this.btnJobInsert.Click += new System.EventHandler(this.btnJobInsert_Click);
             // 

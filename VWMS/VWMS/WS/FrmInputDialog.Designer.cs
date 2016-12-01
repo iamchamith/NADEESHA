@@ -58,7 +58,7 @@
             this.btnClosed.Name = "btnClosed";
             this.btnClosed.Size = new System.Drawing.Size(75, 23);
             this.btnClosed.TabIndex = 2;
-            this.btnClosed.Text = "Closed";
+            this.btnClosed.Text = "CLEAR";
             this.btnClosed.UseVisualStyleBackColor = true;
             this.btnClosed.Click += new System.EventHandler(this.btnClosed_Click);
             // 
@@ -68,7 +68,7 @@
             this.btnOk.Name = "btnOk";
             this.btnOk.Size = new System.Drawing.Size(75, 23);
             this.btnOk.TabIndex = 3;
-            this.btnOk.Text = "Ok";
+            this.btnOk.Text = "OK";
             this.btnOk.UseVisualStyleBackColor = true;
             this.btnOk.Click += new System.EventHandler(this.btnOk_Click);
             // 

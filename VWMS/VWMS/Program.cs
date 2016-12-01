@@ -149,33 +149,36 @@ namespace BL.BL.HELPER
         // validate NIC
         public static bool IsNIC(string strNIC)
         {
-            //880240684V
-
-            bool isOK = true;
-
-            if (strNIC.Length == 10)
+            try
             {
-                try
+
+                bool isOK = true;
+
+                if (strNIC.Length == 10)
                 {
-                    int i = int.Parse(strNIC.Substring(0, 9));
+                    try
+                    {
+                        int i = int.Parse(strNIC.Substring(0, 9));
 
-                    if (strNIC.Substring(9, 1).Equals("V"))
-                    {
-                        isOK = true;
+                        if (strNIC.Substring(9, 1).ToUpper().Equals("V"))
+                        {
+                            isOK = true;
+                        }
+                        else
+                        {
+                            isOK = false;
+                        }
                     }
-                    else
-                    {
-                        isOK = false;
-                    }
+                    catch { isOK = false; }
                 }
-                catch { isOK = false; }
-            }
-            else
-            {
-                isOK = false;
-            }
+                else
+                {
+                    isOK = false;
+                }
 
-            return isOK;
+                return isOK;
+            }
+            catch { return false; }
 
         }
 

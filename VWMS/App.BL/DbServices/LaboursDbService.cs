@@ -42,7 +42,7 @@ namespace App.BL.DbServices
                     x.Discription = obj.Discription;
                     x.Nic = obj.Nic;
                     x.UserEmail = obj.UserEmail;
-                    x.Type = 1;
+                    x.Type = obj.Type;
                     dba.SaveChanges();
                     return new DetailModel { State = true };
                 }

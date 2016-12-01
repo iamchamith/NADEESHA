@@ -33,7 +33,7 @@ namespace VWMS.WS
 
         private void btnClosed_Click(object sender, EventArgs e)
         {
-            this.Close();
+            txtValue.Clear();
         }
 
         private void btnOk_Click(object sender, EventArgs e)
