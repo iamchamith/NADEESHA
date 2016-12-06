@@ -1,5 +1,6 @@
 ﻿using App.BL.DbServices;
 using App.Model;
+using App.Model.ViewModel;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -125,5 +126,25 @@ namespace App.BL
                 throw;
             }
         }
+
+
+        public DetailModel GetUserInfo() {
+
+            try
+            {
+                var obj = dba.Database.SqlQuery<UserReportViewModel>("select email as Email, state as State, name as Name, nic as Nic  from[user]").ToList();
+
+                return new DetailModel
+                {
+                    Content = obj
+                };
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
+
     }
 }

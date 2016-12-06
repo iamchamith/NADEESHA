@@ -42,6 +42,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.cmbUserType = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
+            this.btnReport = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.gvusers)).BeginInit();
             this.SuspendLayout();
             // 
@@ -102,7 +103,7 @@
             // 
             // btnSave
             // 
-            this.btnSave.Location = new System.Drawing.Point(89, 166);
+            this.btnSave.Location = new System.Drawing.Point(41, 166);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(75, 23);
             this.btnSave.TabIndex = 8;
@@ -112,7 +113,7 @@
             // 
             // btnUpdate
             // 
-            this.btnUpdate.Location = new System.Drawing.Point(180, 166);
+            this.btnUpdate.Location = new System.Drawing.Point(132, 166);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(75, 23);
             this.btnUpdate.TabIndex = 9;
@@ -122,7 +123,7 @@
             // 
             // btnDelete
             // 
-            this.btnDelete.Location = new System.Drawing.Point(269, 166);
+            this.btnDelete.Location = new System.Drawing.Point(221, 166);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(75, 23);
             this.btnDelete.TabIndex = 10;
@@ -132,7 +133,7 @@
             // 
             // btnClear
             // 
-            this.btnClear.Location = new System.Drawing.Point(360, 166);
+            this.btnClear.Location = new System.Drawing.Point(312, 166);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(75, 23);
             this.btnClear.TabIndex = 11;
@@ -191,12 +192,23 @@
             this.label5.TabIndex = 15;
             this.label5.Text = "USER UPDATE";
             // 
+            // btnReport
+            // 
+            this.btnReport.Location = new System.Drawing.Point(414, 166);
+            this.btnReport.Name = "btnReport";
+            this.btnReport.Size = new System.Drawing.Size(75, 23);
+            this.btnReport.TabIndex = 16;
+            this.btnReport.Text = "Report";
+            this.btnReport.UseVisualStyleBackColor = true;
+            this.btnReport.Click += new System.EventHandler(this.btnReport_Click);
+            // 
             // FrmUpdateUser
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::VWMS.Properties.Resources.final;
             this.ClientSize = new System.Drawing.Size(501, 458);
+            this.Controls.Add(this.btnReport);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.cmbUserType);
             this.Controls.Add(this.label2);
@@ -237,5 +249,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox cmbUserType;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Button btnReport;
     }
 }

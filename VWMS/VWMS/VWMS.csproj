@@ -190,6 +190,12 @@
       <DependentUpon>SearchItemReport.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="REPORTING\UserReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>UserReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="USER\FrmChangePassword.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -291,6 +297,10 @@
     <EmbeddedResource Include="REPORTING\SearchItemReport.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>SearchItemReport.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="REPORTING\UserReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>UserReport.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="USER\FrmChangePassword.resx">
       <DependentUpon>FrmChangePassword.cs</DependentUpon>

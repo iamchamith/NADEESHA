@@ -65,8 +65,46 @@ namespace VWMS.REPORTING
             {
                 CustomerReport(id);
             }
+            else if (eReports == Enums.EReports.UserReport)
+            {
+                UserReportInfo();
+            }
         }
 
+        public void UserReportInfo() {
+
+            try
+            {
+                var data = (List<UserReportViewModel>)new UserDbService().GetUserInfo().Content;
+                DSReports da = new DSReports();
+                foreach (var item in data)
+                {
+                    da.Tables["Userreport"].Rows.Add(item.Email, UserKind(item.State.Value), item.Name, item.Nic);
+                }
+
+                UserReport test = new UserReport();
+                test.SetDataSource(da.Tables["Userreport"]);
+
+                crystalReportViewer1.ReportSource = test;
+            }
+            catch { throw; }
+
+        }
+        string UserKind(int i)
+        {
+            if (i == 1)
+            {
+                return "Admin";
+            }
+            else if (i == 2)
+            {
+                return "Maneger";
+            }
+            else
+            {
+                return "Stock keeper";
+            }
+        }
         public void CustomerReport(int id)
         {
             try
@@ -154,6 +192,8 @@ namespace VWMS.REPORTING
             }
 
         }
+
+       
 
         public void CustomerReport()
         {

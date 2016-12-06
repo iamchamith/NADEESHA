@@ -79,6 +79,7 @@
     <Compile Include="ViewModel\LabourViewModel.cs" />
     <Compile Include="ViewModel\SearchInventoryReport.cs" />
     <Compile Include="ViewModel\TaskViewModel.cs" />
+    <Compile Include="ViewModel\UserReportViewModel.cs" />
     <Compile Include="ViewModel\UserViewModel.cs" />
     <Compile Include="ViewModel\VehicleJobTaskItemViewModel.cs" />
     <Compile Include="ViewModel\VehicleJobTaskLabourViewModel.cs" />

@@ -11,6 +11,7 @@ using App.Model;
 using App.Dal;
 using App.BL;
 using BL.BL.HELPER;
+using VWMS.REPORTING;
 
 namespace VWMS.USER
 {
@@ -160,6 +161,10 @@ namespace VWMS.USER
             txtUserName.Enabled = true;
 
         }
- 
+
+        private void btnReport_Click(object sender, EventArgs e)
+        {
+            new FrmReport(Enums.EReports.UserReport).ShowDialog();
+        }
     }
 }
