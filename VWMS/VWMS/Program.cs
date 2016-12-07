@@ -23,8 +23,9 @@ namespace VWMS
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FrmLogin());
             new AutoMapperConfig();
+            Application.Run(new FrmLogin());
+            
         }
     }
 
@@ -88,6 +89,7 @@ namespace VWMS
 
             return dataTable;
         }
+ 
     }
     #endregion
 
@@ -203,5 +205,7 @@ namespace BL.BL.HELPER
 
         }
     }
+
+
 }
 #endregion

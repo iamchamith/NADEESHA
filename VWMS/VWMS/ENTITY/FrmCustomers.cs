@@ -246,8 +246,14 @@ namespace VWMS.ENTITY
 
         private void btnGo_Click(object sender, EventArgs e)
         {
-            objVG.LoadCustomer(objreG.Select(string.Format("ID = " + lblID.Text + "")).CopyToDataTable());
-            this.Close();
+            try
+            {
+                objVG.LoadCustomer(objreG.Select(string.Format("ID = " + lblID.Text + "")).CopyToDataTable());
+                this.Close();
+            }
+            catch {
+                Helper.ErrorMessage("Please select the customer");
+            }
         }
         private void button4_Click(object sender, EventArgs e)
         {

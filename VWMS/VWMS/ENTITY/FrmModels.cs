@@ -46,7 +46,7 @@ namespace VWMS.ENTITY
             }
             if (string.IsNullOrEmpty(txtName.Text))
             {
-                msg.Append("Model Code required \n");
+                msg.Append("Model Name required \n");
                 isOk = false;
             }
             if (!isOk)

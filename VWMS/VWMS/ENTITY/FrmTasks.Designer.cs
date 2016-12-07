@@ -207,6 +207,7 @@
             this.Name = "FrmTasks";
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "LABOUR TASKS";
             this.Load += new System.EventHandler(this.FrmTasks_Load);
             ((System.ComponentModel.ISupportInitialize)(this.gvData)).EndInit();
             this.groupBox1.ResumeLayout(false);

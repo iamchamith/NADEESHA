@@ -15,7 +15,7 @@ namespace App.BL
         public Repo()
         {
             dba = new DBase();
-            Automapper();
+ 
         }
 
         public DetailModel Error(Exception ex)
@@ -30,35 +30,7 @@ namespace App.BL
             };
         }
 
-        void Automapper()
-        {
-            Mapper.CreateMap<VehicleJobTaskItemViewModel, VehicleJobTaskItem>();
-            Mapper.CreateMap<VehicleJobTaskItem, VehicleJobTaskItemViewModel>();
-
-            Mapper.CreateMap<VehicleJobTaskLabourViewModel, VehicleJobTaskLabour>();
-            Mapper.CreateMap<VehicleJobTaskLabour, VehicleJobTaskLabourViewModel>();
-
-            Mapper.CreateMap<VehicleJobTaskViewModel, VehicleJobTask>();
-            Mapper.CreateMap<VehicleJobTask, VehicleJobTaskViewModel>();
-
-            Mapper.CreateMap<VehicleJobViewModel, VehicleJob>();
-            Mapper.CreateMap<VehicleJob, VehicleJobViewModel>();
-
-            Mapper.CreateMap<LabourViewModel, Labour>();
-            Mapper.CreateMap<Labour, LabourViewModel>();
-
-            Mapper.CreateMap<App.Model.Task, TaskViewModel>();
-            Mapper.CreateMap<TaskViewModel, App.Model.Task>();
-
-            Mapper.CreateMap<Vehicle, VehicleViewModel>();
-            Mapper.CreateMap<VehicleViewModel, Vehicle>();
-             
-            Mapper.CreateMap<User, UserViewModel>();
-            Mapper.CreateMap<UserViewModel, User>();
-
-            Mapper.CreateMap<Item, ItemViewModel>();
-            Mapper.CreateMap<ItemViewModel, Item>();
-        }
+        
     }
 
 }

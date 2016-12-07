@@ -201,17 +201,7 @@ namespace VWMS.ENTITY
                 isOk = false;
 
             }
-            if (!BL.BL.HELPER.Validation.IsNumber(txtChassiNumber.Text))
-            {
-                msg.Append(" Invalid Chassi No \n");
-                isOk = false;
-            }
-            if (!BL.BL.HELPER.Validation.IsNumber(txtEngineNo.Text))
-            {
-                msg.Append(" Invalid Engine No \n");
-                isOk = false;
-            }
-
+             
             if (isOk == false)
             {
                 Helper.ErrorMessage(msg.ToString(), "Validation Errors");
