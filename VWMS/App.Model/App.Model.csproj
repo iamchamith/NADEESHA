@@ -73,6 +73,7 @@
     <Compile Include="VehicleJobTaskLabour.cs" />
     <Compile Include="ViewModel\CustomerInvoiceViewModel.cs" />
     <Compile Include="ViewModel\Enums.cs" />
+    <Compile Include="ViewModel\InventorySearchViewModel.cs" />
     <Compile Include="ViewModel\ItemViewModel.cs" />
     <Compile Include="ViewModel\JobItemReportViewModel.cs" />
     <Compile Include="ViewModel\JobLaborReportInfo.cs" />

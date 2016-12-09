@@ -12,6 +12,7 @@ using App.BL;
 using App.Dal;
 using App.Model;
 using static App.Model.Enums;
+using BL.BL.HELPER;
 
 namespace VWMS.ENTITY
 {
@@ -61,17 +62,17 @@ namespace VWMS.ENTITY
                 msg.Append("Category Name  required \n");
                 isOk = false;
             }
-            if (!BL.BL.HELPER.Validation.IsNumber(txtPriceIn.Text))
+            if (!BL.BL.HELPER.Validation.IsNumber(txtPriceIn.Text) || !Validation.IsPossitive(txtPriceIn.Text))
             {
                 msg.Append("Invalid Price In \n");
                 isOk = false;
             }
-            if (!BL.BL.HELPER.Validation.IsNumber(txtPriceOut.Text))
+            if (!BL.BL.HELPER.Validation.IsNumber(txtPriceOut.Text) || !Validation.IsPossitive(txtPriceOut.Text))
             {
                 msg.Append("Invalid Price Out \n");
                 isOk = false;
             }
-            if (!BL.BL.HELPER.Validation.IsNumber(txtReOrderLevel.Text))
+            if (!BL.BL.HELPER.Validation.IsNumber(txtReOrderLevel.Text) || !Validation.IsPossitive(txtReOrderLevel.Text))
             {
                 msg.Append("Invalid Reoder leval \n");
                 isOk = false;

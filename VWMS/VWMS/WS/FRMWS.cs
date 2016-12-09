@@ -136,16 +136,17 @@ namespace VWMS.WS
                 EnableFunctionsByCurrentJobState();
                 btnJobUpdate.Enabled = !IsCurrentJobFinished;
                 lblItemCost.Text = lblItemAmount.Text = $"Rs {new VehicleJobTaskItemDbService().SelectJobItemCost(int.Parse(lblJobID.Text)).Content.ToString()}";
-                lblFinalAmount.Text = $"Rs {(double.Parse(lblItemCost.Text.Replace("Rs","")) + double.Parse(lbllabururAmount.Text.Replace("Rs", ""))).ToString()}";
+                lblFinalAmount.Text = $"Rs {(double.Parse(lblItemCost.Text.Replace("Rs", "")) + double.Parse(lbllabururAmount.Text.Replace("Rs", ""))).ToString()}";
                 LoadJobItemInfo(int.Parse(lblJobID.Text));
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 Helper.ErrorMessage(ex.Message);
             }
         }
 
-        void LoadJobItemInfo(int jobId) {
+        void LoadJobItemInfo(int jobId)
+        {
 
             try
             {
@@ -177,6 +178,11 @@ namespace VWMS.WS
 
         private void btnInsert_Click(object sender, EventArgs e)
         {
+            if (lblTaskId.Text == "0")
+            {
+                Helper.ErrorMessage("Please select a task");
+                return;
+            }
             if (!Helper.Confirmation())
             {
                 return;
@@ -482,7 +488,10 @@ namespace VWMS.WS
             {
                 int availableqty = Convert.ToInt32(lblAvaiableQuantity.Text);
                 int qty = Convert.ToInt32(txtQuantity.Text);
-
+                if (lblItemsID.Text == "0")
+                {
+                    Helper.ErrorMessage("Please select an Item");return;
+                }
                 try
                 {
                     new VehicleJobTaskItemDbService().CreateJobTaskItem(new VehicleJobTaskItemViewModel
@@ -532,7 +541,7 @@ namespace VWMS.WS
             {
                 lblItemsID.Text = gvMaterials.Rows[e.RowIndex].Cells[2].Value.ToString();
                 //select item base info
-              
+
                 lblItemName.Text = ((ItemViewModel)new ItemDbService().Read(int.Parse(gvMaterials.Rows[e.RowIndex].Cells["ItemId"].Value.ToString())).Content).Name;
                 lblAvaiableQuantity.Text = gvMaterials.Rows[e.RowIndex].Cells["Quantity"].Value.ToString();
 
@@ -543,7 +552,7 @@ namespace VWMS.WS
                 lbltasksID.Text = gvMaterials.Rows[e.RowIndex].Cells[1].Value.ToString();
                 updateQuantityOld = int.Parse(txtQuantity.Text);
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 Console.WriteLine(ex.Message);
                 MessageBox.Show("some problem with selected item");
@@ -562,7 +571,7 @@ namespace VWMS.WS
 
         #region cost
         double finalAmount = 0.0;
-        
+
 
         #endregion
 
@@ -598,9 +607,9 @@ namespace VWMS.WS
                     TaskCost = int.Parse(txtLabourCharge.Text),
                     ID = Convert.ToInt32(lblJobTaskID.Text)
                 });
-
-                Helper.SuccessMessage("job close is success");
                 LoadJobTasks();
+                Helper.SuccessMessage("job close is success");
+
             }
             catch (Exception ex)
             {

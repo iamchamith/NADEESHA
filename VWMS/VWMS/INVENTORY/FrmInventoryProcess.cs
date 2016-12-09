@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using App.BL;
 using App.Model;
 using static App.Model.Enums;
+using App.Model.ViewModel;
 
 namespace VWMS.INVENTORY
 {
@@ -93,7 +94,7 @@ namespace VWMS.INVENTORY
         {
 
         }
-         
+
         int types = 0;
         private void rdIn_CheckedChanged(object sender, EventArgs e)
         {
@@ -171,7 +172,7 @@ namespace VWMS.INVENTORY
                 }
                 lblItemName.Text = ((ItemViewModel)(new ItemDbService().Read(int.Parse(dgvInventory.Rows[e.RowIndex].Cells[1].Value.ToString())).Content)).Name;
             }
-            catch(Exception ex) { Helper.ErrorMessage(ex.Message); }
+            catch (Exception ex) { Helper.ErrorMessage(ex.Message); }
         }
 
         private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -258,8 +259,21 @@ namespace VWMS.INVENTORY
 
         private void button2_Click_1(object sender, EventArgs e)
         {
-            var x = new REPORTING.FrmReport(Enums.EReports.SearchItemReport);
-            x.ShowDialog();
+            dataGridView1.DataSource = Helper.CreateDataTable<InventorySearchViewModel>(
+                (List<InventorySearchViewModel>)new InventoryInfomationDbService()
+                .SearchInventory(new App.Model.ViewModel.InventorySearchRequest
+            {
+                FromDate = dtFromDate.Value,
+                IsFromDate = chkFromDate.Checked,
+                IsToDate = chkToDate.Checked,
+                IsItem = chkItem.Checked,
+                IsStock = chkStockMode.Checked,
+                ToDate = dtToDate.Value,
+                Item = int.Parse(lblItemID.Text),
+                StockType = cmbStockMode.SelectedIndex,
+            }).Content);
+            //var x = new REPORTING.FrmReport(Enums.EReports.SearchItemReport);
+            //x.ShowDialog();
         }
     }
 }

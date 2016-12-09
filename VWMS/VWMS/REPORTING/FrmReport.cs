@@ -117,7 +117,7 @@ namespace VWMS.REPORTING
                 {
                     ds.Tables["JobItemsForCustomer"].Rows.Add(items.TaskName.ToString(),
                         items.Name.ToString(), items.ItemId.ToString(), items.Quantity.ToString(),
-                        items.Id.ToString(), $"$ {items.Price.ToString()}");
+                        items.Id.ToString(), $"Rs {items.Price.ToString()}");
                 }
 
                 RptReciptForCustomer objcus = new RptReciptForCustomer();
@@ -128,9 +128,9 @@ namespace VWMS.REPORTING
                 txtItemCost = (TextObject)objcus.ReportDefinition.ReportObjects["txtItemCost"];
                 txtLabourCost = (TextObject)objcus.ReportDefinition.ReportObjects["txtLabourCost"];
                 txtGrandTotal = (TextObject)objcus.ReportDefinition.ReportObjects["txtGrandTotal"];
-                txtItemCost.Text = $"$ {data.ItemSum}";
-                txtLabourCost.Text = $"$ {data.labourCost}";
-                txtGrandTotal.Text = $"$ {data.ItemSum + data.labourCost}";
+                txtItemCost.Text = $"Rs {data.ItemSum}";
+                txtLabourCost.Text = $"Rs {data.labourCost}";
+                txtGrandTotal.Text = $"Rs {data.ItemSum + data.labourCost}";
 
 
 

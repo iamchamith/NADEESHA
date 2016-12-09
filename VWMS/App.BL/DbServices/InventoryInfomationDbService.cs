@@ -117,7 +117,58 @@ namespace App.BL
             }
         }
 
-        public DetailModel TestCrud(string taskName,string discript) {
+        public DetailModel SearchInventory(InventorySearchRequest obj)
+        {
+
+            try
+            {
+                string sql = @"SELECT ID as InvoiceId, ItemID, Qty, Type, RegDate 
+                                FROM InventoryInfomation     WHERE ";
+                if (obj.IsFromDate)
+                {
+                    sql += $" RegDate > '{obj.FromDate.ToShortDateString()}'   AND   ";
+                }
+                if (obj.IsToDate)
+                {
+                    sql += $" RegDate < '{obj.ToDate.ToShortDateString()}'   AND   ";
+                }
+                if (obj.IsItem)
+                {
+                    sql += $" ItemId = '{obj.Item}'   AND   ";
+                }
+                if (obj.IsStock)
+                {
+                    sql += $" [Type]  = '{obj.StockType}'   AND   ";
+                }
+
+                var d = dba.Database.SqlQuery<InventorySearch>(sql.Substring(0, sql.Length - 7));
+                var data = new List<InventorySearchViewModel>();
+                foreach (var item in d)
+                {
+                    data.Add(new InventorySearchViewModel
+                    {
+                        InvoiceId = item.InvoiceId,
+                        ItemId = item.ItemId,
+                        Qty = item.Qty,
+                        RegDate = item.RegDate + "",
+                        Type = item.Type == 0 ? "Stock In" : "Stock Out"
+
+                    });
+                }
+                return new DetailModel
+                {
+                    Content = data
+                };
+            }
+            catch (Exception ex)
+            {
+                var e = ex;
+                throw;
+            }
+        }
+
+        public DetailModel TestCrud(string taskName, string discript)
+        {
 
             string sql = @"insert into dbo.Tasks(TaskName, Discription) values(@TaskName, @Discription)";
             try
@@ -125,7 +176,9 @@ namespace App.BL
                 return new DetailModel
                 {
                     State = true,
-                    Content = dba.Database.SqlQuery<int>(sql, new { TaskName = taskName,
+                    Content = dba.Database.SqlQuery<int>(sql, new
+                    {
+                        TaskName = taskName,
                         Discription = discript
                     })
                 };
@@ -136,7 +189,9 @@ namespace App.BL
             }
         }
 
-       
+
+
+
 
     }
 }

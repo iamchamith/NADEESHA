@@ -25,7 +25,7 @@ namespace VWMS
             Application.SetCompatibleTextRenderingDefault(false);
             new AutoMapperConfig();
             Application.Run(new FrmLogin());
-            
+
         }
     }
 
@@ -89,7 +89,7 @@ namespace VWMS
 
             return dataTable;
         }
- 
+
     }
     #endregion
 
@@ -148,6 +148,12 @@ namespace BL.BL.HELPER
             return double.TryParse(strnumber, out outDouble);
         }
 
+        public static bool IsPossitive(string strnumber)
+        {
+            double outDouble = 0.0;
+            if (!double.TryParse(strnumber, out outDouble)) { return false; }
+            return outDouble > 0;
+        }
         // validate NIC
         public static bool IsNIC(string strNIC)
         {

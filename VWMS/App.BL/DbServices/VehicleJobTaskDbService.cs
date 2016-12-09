@@ -78,10 +78,11 @@ namespace App.BL
 
             try
             {
+                var data = dba.VehicleJobTasks.Where(p => p.JobId == jobId).ToList()
+                    .Select(x => AutoMapper.Mapper.Map<VehicleJobTaskViewModel>(x)).ToList();
                 return new DetailModel
                 {
-                    Content = dba.VehicleJobTasks.Where(p => p.JobId == jobId).ToList()
-                    .Select(x => AutoMapper.Mapper.Map<VehicleJobTaskViewModel>(x)).ToList()
+                    Content = data
                 };
             }
             catch
