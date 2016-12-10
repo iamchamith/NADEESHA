@@ -213,7 +213,7 @@
             this.btnInsert.Name = "btnInsert";
             this.btnInsert.Size = new System.Drawing.Size(87, 27);
             this.btnInsert.TabIndex = 10;
-            this.btnInsert.Text = "INSERT";
+            this.btnInsert.Text = "PROCESS";
             this.btnInsert.UseVisualStyleBackColor = true;
             this.btnInsert.Click += new System.EventHandler(this.btnInsert_Click);
             // 
@@ -543,9 +543,8 @@
             this.label9.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.Location = new System.Drawing.Point(488, 160);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(57, 15);
+            this.label9.Size = new System.Drawing.Size(0, 15);
             this.label9.TabIndex = 33;
-            this.label9.Text = "STOCK IN";
             // 
             // label10
             // 
@@ -554,9 +553,9 @@
             this.label10.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.Location = new System.Drawing.Point(488, 130);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(68, 15);
+            this.label10.Size = new System.Drawing.Size(85, 30);
             this.label10.TabIndex = 32;
-            this.label10.Text = "STOCK OUT";
+            this.label10.Text = "STOCK IN - 0\r\nSTOCK OUT - 1";
             // 
             // dgvInventory
             // 
